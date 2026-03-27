@@ -76,7 +76,7 @@
   - [Multimodal Instruction Tuning & SFT](#multimodal-instruction-tuning-sft)
   - [Multimodal RLHF & Preference Alignment](#multimodal-rlhf-preference-alignment)
   - [Hallucination Mitigation & Safety](#hallucination-mitigation-safety)
-  - [Individual Analysis Papers <kbd>Analysis</kbd>](#individual-analysis-papers-analysis)
+  - [Individual Analysis Papers](#individual-analysis-papers-analysis)
 - [7. Benchmarks, Datasets & Evaluation](#7-benchmarks-datasets-evaluation)
   - [Unified Benchmarks (U+G / Interleaved / Omni)](#unified-benchmarks-ug-interleaved-omni)
   - [Pretraining Datasets](#pretraining-datasets)
