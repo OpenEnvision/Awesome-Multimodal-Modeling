@@ -20,7 +20,6 @@
   <img src="https://img.shields.io/badge/Image%20%2B%20Text-Primary-0f172a?style=flat-square&logo=googlephotos&logoColor=white" alt="Image and Text Focus">
   <img src="https://img.shields.io/badge/Early%20%2F%20Late%20Fusion-Taxonomy-334155?style=flat-square&logo=apachespark&logoColor=white" alt="Fusion Taxonomy">
   <img src="https://img.shields.io/badge/NMMs%20vs%20UMMs-Architecture%20First-7c3aed?style=flat-square&logo=semanticweb&logoColor=white" alt="Architecture-first Taxonomy">
-  <img src="https://img.shields.io/badge/2025%2B-Omni%20Trends-0891b2?style=flat-square&logo=googlegemini&logoColor=white" alt="Omni Trends">
 </p>
 
 <p>
