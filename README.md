@@ -131,23 +131,6 @@ This repository provides a **structured, community-maintained** survey of multim
 
 > Classification note: for ambiguous models sitting between `MLLM`, `UMM`, and strict `NMM`, this list records the category that best matches the **training recipe and architectural coupling**, not just the paper title.
 
-### Related Awesome Lists
-
-- [isLinXu](https://github.com/isLinXu/awesome-native-multimodal-models)
-- [John-Ge](https://github.com/John-Ge/Awesome-Native-Multimodal-Models)
-- [pliang279](https://github.com/pliang279/awesome-multimodal-ml)
-- [BradyFU](https://github.com/BradyFU/Awesome-Multimodal-Large-Language-Models)
-- [Eurus-Holmes](https://github.com/Eurus-Holmes/Awesome-Multimodal-Research)
-- [showlab](https://github.com/showlab/Awesome-Unified-Multimodal-Models)
-- [yfzhang114](https://github.com/yfzhang114/Awesome-Multimodal-Large-Language-Models)
-- [SkalskiP](https://github.com/SkalskiP/awesome-foundation-and-multimodal-models)
-- [Yutong-Zhou-cv](https://github.com/Yutong-Zhou-cv/Awesome-Multimodality)
-- [Purshow](https://github.com/Purshow/Awesome-Unified-Multimodal)
-
-### Publishing Note
-
-> Replace `your-org-or-name/awesome-multimodal-models` with your actual GitHub repository slug before publishing.
-
 <p align="right"><a href="#awesome-multimodal-models">Back to Top</a></p>
 
 ---
