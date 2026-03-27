@@ -1,6 +1,6 @@
 # Awesome README Data
 
-This folder is the source of truth for `README-awesome-multimodal-models.md`.
+This folder is the source of truth for `README.md`.
 
 ## Files
 
@@ -18,7 +18,7 @@ python3 scripts/generate_awesome_readme.py \
   --meta data/meta.json \
   --content data/content.json \
   --tables data/tables.json \
-  --output README-awesome-multimodal-models.md
+  --output README.md
 ```
 
 ## Bootstrap / Migration
@@ -27,7 +27,7 @@ If you ever need to rebuild the JSON data from a hand-edited README, use:
 
 ```bash
 python3 scripts/migrate_awesome_readme_to_data.py \
-  --input README-awesome-multimodal-models.md \
+  --input README.md \
   --content-output data/content.json \
   --tables-output data/tables.json
 ```

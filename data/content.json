@@ -5,7 +5,7 @@
       "blocks": [
         {
           "type": "markdown",
-          "text": "This repository provides a **structured, community-maintained** survey of multimodal models, covering the full evolutionary arc from early fusion methods to today's natively-trained omni-models. We emphasize **precise architectural definitions** and classification, especially for the often-conflated categories of Unified Multimodal Models (UMMs) and Native Multimodal Models (NMMs).\n\n> **Scope**: Primary focus on **image + text** modalities; audio/video/3D are annotated where present. Omni/any-to-any models are marked with <kbd>Omni</kbd>.\n\n**Related Awesome Lists** (see [§9](#9-resources)):\n[isLinXu](https://github.com/isLinXu/awesome-native-multimodal-models) · [John-Ge](https://github.com/John-Ge/Awesome-Native-Multimodal-Models) · [pliang279](https://github.com/pliang279/awesome-multimodal-ml) · [BradyFU](https://github.com/BradyFU/Awesome-Multimodal-Large-Language-Models) · [Eurus-Holmes](https://github.com/Eurus-Holmes/Awesome-Multimodal-Research) · [showlab](https://github.com/showlab/Awesome-Unified-Multimodal-Models) · [yfzhang114](https://github.com/yfzhang114/Awesome-Multimodal-Large-Language-Models) · [SkalskiP](https://github.com/SkalskiP/awesome-foundation-and-multimodal-models) · [Yutong-Zhou-cv](https://github.com/Yutong-Zhou-cv/Awesome-Multimodality) · [Purshow](https://github.com/Purshow/Awesome-Unified-Multimodal)\n\n> Replace `your-org-or-name/awesome-multimodal-models` with your actual GitHub repository slug before publishing."
+          "text": "This repository provides a **structured, community-maintained** survey of multimodal models, covering the full evolutionary arc from early fusion methods to today's natively-trained omni-models. We emphasize **precise architectural definitions** and classification, especially for the often-conflated categories of Unified Multimodal Models (UMMs) and Native Multimodal Models (NMMs).\n\n> **Scope**: Primary focus on **image + text** modalities; audio/video/3D are annotated where present. Omni/any-to-any models are marked with <kbd>Omni</kbd>."
         }
       ],
       "subsections": [
@@ -29,6 +29,26 @@
             {
               "type": "markdown",
               "text": "> Classification note: for ambiguous models sitting between `MLLM`, `UMM`, and strict `NMM`, this list records the category that best matches the **training recipe and architectural coupling**, not just the paper title."
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Related Awesome Lists",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "- [isLinXu](https://github.com/isLinXu/awesome-native-multimodal-models)\n- [John-Ge](https://github.com/John-Ge/Awesome-Native-Multimodal-Models)\n- [pliang279](https://github.com/pliang279/awesome-multimodal-ml)\n- [BradyFU](https://github.com/BradyFU/Awesome-Multimodal-Large-Language-Models)\n- [Eurus-Holmes](https://github.com/Eurus-Holmes/Awesome-Multimodal-Research)\n- [showlab](https://github.com/showlab/Awesome-Unified-Multimodal-Models)\n- [yfzhang114](https://github.com/yfzhang114/Awesome-Multimodal-Large-Language-Models)\n- [SkalskiP](https://github.com/SkalskiP/awesome-foundation-and-multimodal-models)\n- [Yutong-Zhou-cv](https://github.com/Yutong-Zhou-cv/Awesome-Multimodality)\n- [Purshow](https://github.com/Purshow/Awesome-Unified-Multimodal)"
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Publishing Note",
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "> Replace `your-org-or-name/awesome-multimodal-models` with your actual GitHub repository slug before publishing."
             }
           ],
           "subsections": []
