@@ -60,7 +60,6 @@
   - [Multimodal Instruction Tuning](#multimodal-instruction-tuning)
   - [Foundation MLLMs](#foundation-mllms)
   - [Multimodal In-Context Learning & Chain-of-Thought](#multimodal-in-context-learning-chain-of-thought)
-  - [Multimodal Hallucination](#multimodal-hallucination)
   - [Evaluation & RLHF](#evaluation-rlhf)
 - [4. Unified Multimodal Models (UMMs)](#4-unified-multimodal-models-umms)
   - [4.1 Taxonomy by Generation Paradigm](#41-taxonomy-by-generation-paradigm)
@@ -463,7 +462,7 @@ We identify **5 Architectural Waves** in multimodal model development:
 
 ## 3. Multimodal Large Language Models (MLLMs)
 
-**In this section:** [Multimodal Instruction Tuning](#multimodal-instruction-tuning) · [Foundation MLLMs](#foundation-mllms) · [Multimodal In-Context Learning & Chain-of-Thought](#multimodal-in-context-learning-chain-of-thought) · [Multimodal Hallucination](#multimodal-hallucination) · [Evaluation & RLHF](#evaluation-rlhf)
+**In this section:** [Multimodal Instruction Tuning](#multimodal-instruction-tuning) · [Foundation MLLMs](#foundation-mllms) · [Multimodal In-Context Learning & Chain-of-Thought](#multimodal-in-context-learning-chain-of-thought) · [Evaluation & RLHF](#evaluation-rlhf)
 
 > Models that connect a **pretrained visual encoder** to a **pretrained LLM** via a projector. Primarily understanding-focused (text output). Defined by the modular, non-end-to-end-from-scratch training paradigm.
 
@@ -510,16 +509,6 @@ We identify **5 Architectural Waves** in multimodal model development:
 | **GPT-4V(ision)** Technical Report | OpenAI 2023 | [Paper](https://arxiv.org/abs/2303.08774) <kbd>Closed</kbd> | Proprietary; strong baseline |
 | **LLaVA-Plus**: Learning to Use Tools for Visual Understanding | ArXiv 2023 | [Paper](https://arxiv.org/abs/2311.05437) | Tool-use augmented MLLM |
 | **MMICL**: Empowering Vision-language Model with Multi-Modal In-Context Learning | ArXiv 2023 | [Paper](https://arxiv.org/abs/2309.07915) | Multi-image in-context |
-
-### Multimodal Hallucination
-
-| Paper | Venue | Links | Notes |
-|---|---|---|---|
-| **HallusionBench**: An Advanced Diagnostic Suite | CVPR 2024 | [Paper](https://arxiv.org/abs/2310.14566) [Code](https://github.com/tianyi-lab/HallusionBench) | Visual illusion + knowledge conflicts |
-| **POPE**: Evaluating Object Hallucination | EMNLP 2023 | [Paper](https://arxiv.org/abs/2305.10355) [Code](https://github.com/AoiDragon/POPE) | Polling-based object probing |
-| **RLHF-V**: Aligning Large Multimodal Models with Human Feedback | CVPR 2024 | [Paper](https://arxiv.org/abs/2312.02814) | Human feedback for hallucination reduction |
-| **Woodpecker**: Hallucination Correction for MLLMs | ArXiv 2023 | [Paper](https://arxiv.org/abs/2310.16045) [Code](https://github.com/BradyFU/Woodpecker) | Training-free hallucination correction |
-| **LRV-Instruction**: Mitigating Object Hallucinations via Negative Tuning | ArXiv 2023 | [Paper](https://arxiv.org/abs/2306.14565) | Negative instruction data |
 
 ### Evaluation & RLHF
 
