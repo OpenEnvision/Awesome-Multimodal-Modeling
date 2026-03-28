@@ -83,9 +83,6 @@
   - [Instruction / Fine-tuning Datasets](#instruction-fine-tuning-datasets)
   - [Evaluation Protocols](#evaluation-protocols)
 - [8. Applications, Extensions & Future Directions](#8-applications-extensions-future-directions)
-  - [Robotics & Embodied AI](#robotics-embodied-ai)
-  - [Autonomous Driving](#autonomous-driving)
-  - [Healthcare & Medical Imaging](#healthcare-medical-imaging)
   - [Open Challenges & Future Directions](#open-challenges-future-directions)
 - [9. Resources](#9-resources)
   - [Related Awesome Lists](#related-awesome-lists-1)
@@ -901,31 +898,7 @@ Vision tokens and text tokens are routed to different expert sets by design, usi
 
 ## 8. Applications, Extensions & Future Directions
 
-**In this section:** [Robotics & Embodied AI](#robotics-embodied-ai) · [Autonomous Driving](#autonomous-driving) · [Healthcare & Medical Imaging](#healthcare-medical-imaging) · [Open Challenges & Future Directions](#open-challenges-future-directions)
-
-### Robotics & Embodied AI
-
-| Paper | Venue | Links | Notes |
-|---|---|---|---|
-| **PaLM-E**: An Embodied Multimodal Language Model | ICML 2023 | [Paper](https://arxiv.org/abs/2303.03378) <kbd>Closed</kbd> | Sensor data + language + vision |
-| **RT-2**: Vision-Language-Action Models | CoRL 2023 | [Paper](https://arxiv.org/abs/2307.15818) <kbd>Closed</kbd> | VLM → robot actions |
-| **Octo**: An Open-Source Generalist Robot Policy | RSS 2024 | [Paper](https://arxiv.org/abs/2405.12213) [Code](https://github.com/octo-models/octo) <kbd>Open</kbd> | Open generalist robot |
-| **OpenVLA**: An Open-Source Vision-Language-Action Model | CoRL 2024 | [Paper](https://arxiv.org/abs/2406.09246) [Code](https://github.com/openvla/openvla) <kbd>Open</kbd> | Fully open VLA |
-
-### Autonomous Driving
-
-| Paper | Venue | Links | Notes |
-|---|---|---|---|
-| **DriveVLM**: The Convergence of Autonomous Driving and LLMs | CoRL 2024 | [Paper](https://arxiv.org/abs/2402.12289) | VLM for driving reasoning |
-| **LMDrive**: Language-Guided Autonomous Driving | CVPR 2024 | [Paper](https://arxiv.org/abs/2312.07488) [Code](https://github.com/opendilab/LMDrive) <kbd>Open</kbd> | Language command → driving actions |
-
-### Healthcare & Medical Imaging
-
-| Paper | Venue | Links | Notes |
-|---|---|---|---|
-| **LLaVA-Med**: Training a Large Language-and-Vision Assistant | NeurIPS 2023 | [Paper](https://arxiv.org/abs/2306.00890) [Code](https://github.com/microsoft/LLaVA-Med) <kbd>Open</kbd> | Medical visual question answering |
-| **Med-Flamingo**: A Multimodal Medical Few-shot Learner | ML4H 2023 | [Paper](https://arxiv.org/abs/2307.15189) [Code](https://github.com/snap-stanford/med-flamingo) <kbd>Open</kbd> | Few-shot medical VQA |
-| **CheXagent**: Towards a Foundation Model for Chest X-Ray Analysis | ArXiv 2024 | [Paper](https://arxiv.org/abs/2401.12208) | Radiology-specialized MLLM |
+**In this section:** [Open Challenges & Future Directions](#open-challenges-future-directions)
 
 ### Open Challenges & Future Directions
 
