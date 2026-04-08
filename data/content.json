@@ -82,7 +82,7 @@
               "blocks": [
                 {
                   "type": "markdown",
-                  "text": "<img src=\"https://img.shields.io/badge/Category-MLLM-2563eb?style=flat-square\" alt=\"MLLM category\"> <img src=\"https://img.shields.io/badge/Pattern-Modular%20Late%20Fusion-1e40af?style=flat-square\" alt=\"Modular late fusion\">\n> *Modular Late-Fusion paradigm*\n\nCombine a **frozen or fine-tuned pretrained vision encoder** (e.g., ViT/CLIP) with a **pretrained LLM** (e.g., LLaMA, Vicuna) via a lightweight **projector/adapter** (e.g., MLP, Q-Former). The vision encoder and LLM are **not jointly trained from scratch**. Understanding-only (no native image generation).\n\nKey characteristics:\n- ✅ Pretrained vision encoder (frozen or fine-tuned)\n- ✅ Pretrained LLM backbone\n- ✅ Projector layer (MLP / Q-Former / cross-attention)\n- ❌ No joint pretraining from scratch\n- ❌ No native image generation\n\nExamples: **LLaVA**, **Qwen-VL**, **InternVL**, **MiniCPM-V**, **mPLUG-Owl**"
+                  "text": "<img src=\"https://img.shields.io/badge/Category-MLLM-2563eb?style=flat-square\" alt=\"MLLM category\"> <img src=\"https://img.shields.io/badge/Pattern-Modular%20Late%20Fusion-1e40af?style=flat-square\" alt=\"Modular late fusion\">\n> *Pretrained-backbone multimodal language models*\n\nCombine a **pretrained visual backbone or visual abstractor** (e.g., ViT/CLIP/SigLIP, Q-Former, cross-attention adapter) with a **pretrained LLM** through a connector. The defining property is inheritance from strong pretrained unimodal backbones rather than joint multimodal pretraining from scratch. These models are primarily **text-output understanding/reasoning systems**, even when auxiliary generators are attached externally.\n\nKey characteristics:\n- ✅ Pretrained visual encoder / abstractor\n- ✅ Pretrained LLM backbone\n- ✅ Connector layer or cross-attention bridge\n- ❌ No end-to-end multimodal pretraining from scratch\n- ❌ No native image generation inside the same backbone\n\nExamples: **LLaVA**, **Qwen-VL**, **InternVL**, **MiniCPM-V**, **CogVLM**"
                 }
               ]
             },
@@ -91,7 +91,7 @@
               "blocks": [
                 {
                   "type": "markdown",
-                  "text": "<img src=\"https://img.shields.io/badge/Category-UMM-7c3aed?style=flat-square\" alt=\"UMM category\"> <img src=\"https://img.shields.io/badge/Focus-Understanding%20%2B%20Generation-6d28d9?style=flat-square\" alt=\"Understanding and generation\">\n> *Single framework for Understanding + Generation (U+G)*\n\nA **single model** that handles both image understanding and image generation within one framework. May still rely on pretrained components (vision encoder, LLM, modular tokenizers), but unifies the U+G pipeline. The defining feature is **U+G unification**, not necessarily training from scratch.\n\nKey characteristics:\n- ✅ Unified understanding + generation\n- ✅ Single model / shared weights\n- ⚠️ May use pretrained vision/language components\n- ⚠️ May use modular / decoupled tokenizers\n\nExamples: **Show-o**, **Emu3**, **Janus**, **BAGEL**, **BLIP3-o**"
+                  "text": "<img src=\"https://img.shields.io/badge/Category-UMM-7c3aed?style=flat-square\" alt=\"UMM category\"> <img src=\"https://img.shields.io/badge/Focus-Understanding%20%2B%20Generation-6d28d9?style=flat-square\" alt=\"Understanding and generation\">\n> *Single framework for Understanding + Generation (U+G)*\n\nA **single framework** that handles both multimodal understanding and visual generation. UMMs may reuse pretrained components or modular tokenizers; the defining feature is **U+G unification**, not whether the model is trained from scratch.\n\nKey characteristics:\n- ✅ Unified understanding + generation\n- ✅ Shared model interface or shared backbone for U+G\n- ⚠️ May use pretrained components\n- ⚠️ May use decoupled encoders / modular tokenizers\n- ⚠️ If a model is also natively trained from scratch, its architectural details belong primarily in **NMMs (§5)**\n\nExamples: **Show-o**, **Janus**, **OpenUni**, **BAGEL**, **BLIP3-o**"
                 }
               ]
             },
@@ -124,7 +124,7 @@
           "blocks": [
             {
               "type": "markdown",
-              "text": "```\nMultimodal Models\n├── Traditional Multimodal Models                    [§2]\n│   ├── Contrastive (CLIP, SigLIP, ALIGN)\n│   ├── Generative Pretraining (BLIP series)\n│   └── Fusion: Early / Late / Hybrid\n│\n├── Multimodal LLMs (MLLMs) — Modular Late Fusion    [§3]\n│   ├── Pretrained Vision Encoder + Projector + LLM\n│   └── Understanding Only\n│\n├── Unified Multimodal Models (UMMs) — U+G           [§4]\n│   ├── Diffusion-Based\n│   ├── Autoregressive (AR)\n│   │   ├── Pixel-Encoding\n│   │   └── Semantic-Encoding\n│   ├── Hybrid AR + Diffusion\n│   └── Any-to-Any / Omni <kbd>Omni</kbd>\n│\n└── Native Multimodal Models (NMMs) — Scratch        [§5]\n    ├── Early Fusion (single Transformer, minimal modality params)\n    ├── Late Fusion (separate components, all from scratch)\n    ├── MoE-Based\n    │   ├── Modality-Agnostic Routing\n    │   └── Modality-Aware Routing\n    └── Advanced: Omni <kbd>Omni</kbd> / Any-to-Any / Hybrid AR+Diffusion\n```"
+              "text": "```\nMultimodal Models\n├── Traditional Multimodal Models                    [§2]\n│   ├── Alignment / Retrieval / Captioning\n│   ├── Contrastive & Generative Pretraining\n│   └── Early / Late / Hybrid Fusion\n│\n├── Multimodal LLMs (MLLMs) — Pretrained Backbones   [§3]\n│   ├── Vision Encoder / Abstractor + LLM\n│   ├── Instruction Tuning / Reasoning / Tool Use\n│   └── Text Output Only\n│\n├── Unified Multimodal Models (UMMs) — U+G           [§4]\n│   ├── Text-and-Image Unified Models\n│   ├── Any-to-Any / Omni Extensions <kbd>Omni</kbd>\n│   └── Benchmarks for Unified Evaluation\n│\n└── Native Multimodal Models (NMMs) — Scratch        [§5]\n    ├── Early Fusion (single Transformer, minimal modality params)\n    ├── Late Fusion (separate components, all from scratch)\n    ├── MoE-Based\n    │   ├── Modality-Agnostic Routing\n    │   └── Modality-Aware Routing\n    └── Advanced: Omni <kbd>Omni</kbd> / Any-to-Any / Hybrid AR+Diffusion\n```"
             }
           ],
           "subsections": []
@@ -232,7 +232,7 @@
       "blocks": [
         {
           "type": "markdown",
-          "text": "> Pre-2023 multimodal models that established the core vocabulary of cross-modal alignment, fusion strategies, and contrastive pretraining."
+          "text": "> Pre-chat-MLLM and non-native multimodal systems that established the basic vocabulary of alignment, fusion, retrieval, captioning, and multimodal pretraining."
         }
       ],
       "subsections": [
@@ -287,7 +287,7 @@
               ]
             },
             {
-              "title": "Knowledge Graphs & Missing Modality Handling",
+              "title": "Unified Backbones & Robustness",
               "blocks": [
                 {
                   "type": "table",
@@ -304,7 +304,7 @@
       "blocks": [
         {
           "type": "markdown",
-          "text": "> Models that connect a **pretrained visual encoder** to a **pretrained LLM** via a projector. Primarily understanding-focused (text output). Defined by the modular, non-end-to-end-from-scratch training paradigm."
+          "text": "> Models that connect a **pretrained visual encoder / abstractor** to a **pretrained LLM**. Primarily text-output understanding and reasoning systems, defined by inherited pretrained unimodal backbones rather than multimodal pretraining from scratch."
         }
       ],
       "subsections": [
@@ -337,26 +337,6 @@
             }
           ],
           "subsections": []
-        },
-        {
-          "title": "Multimodal Hallucination",
-          "blocks": [
-            {
-              "type": "table",
-              "ref": "3-multimodal-large-language-models-mllms.multimodal-hallucination.table19"
-            }
-          ],
-          "subsections": []
-        },
-        {
-          "title": "Evaluation & RLHF",
-          "blocks": [
-            {
-              "type": "table",
-              "ref": "3-multimodal-large-language-models-mllms.evaluation-rlhf.table20"
-            }
-          ],
-          "subsections": []
         }
       ]
     },
@@ -365,113 +345,43 @@
       "blocks": [
         {
           "type": "markdown",
-          "text": "> Models that unify **image understanding and image generation** within a single framework. The defining property is U+G unification — not necessarily training from scratch."
+          "text": "> Models that unify **multimodal understanding and visual generation** within one framework. The defining property is **U+G unification**, not necessarily training from scratch."
+        },
+        {
+          "type": "markdown",
+          "text": "> **Boundary with NMMs:** if a unified model's central contribution is **native end-to-end multimodal pretraining from scratch**, we document its architectural details primarily in **§5 NMMs** and keep §4 focused on the unified U+G perspective."
         }
       ],
       "subsections": [
         {
-          "title": "4.1 Taxonomy by Generation Paradigm",
-          "blocks": [],
-          "subsections": [
-            {
-              "title": "Diffusion-Based UMMs",
-              "blocks": [
-                {
-                  "type": "table",
-                  "ref": "4-unified-multimodal-models-umms.41-taxonomy-by-generation-paradigm.diffusion-based-umms.table21"
-                }
-              ]
-            },
-            {
-              "title": "Autoregressive (AR) UMMs — Pixel-Encoding",
-              "blocks": [
-                {
-                  "type": "table",
-                  "ref": "4-unified-multimodal-models-umms.41-taxonomy-by-generation-paradigm.autoregressive-ar-umms-pixel-encoding.table22"
-                }
-              ]
-            },
-            {
-              "title": "Autoregressive (AR) UMMs — Semantic-Encoding",
-              "blocks": [
-                {
-                  "type": "table",
-                  "ref": "4-unified-multimodal-models-umms.41-taxonomy-by-generation-paradigm.autoregressive-ar-umms-semantic-encoding.table23"
-                }
-              ]
-            },
-            {
-              "title": "Hybrid AR + Diffusion",
-              "blocks": [
-                {
-                  "type": "table",
-                  "ref": "4-unified-multimodal-models-umms.41-taxonomy-by-generation-paradigm.hybrid-ar-diffusion.table24"
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "title": "4.2 Key Models (Chronological)",
+          "title": "4.1 Text-and-Image Unified Models",
           "blocks": [
             {
-              "type": "markdown",
-              "text": "> This section emphasizes **representative unified systems**. Some entries combine a unified prompting/training interface with modular visual specialists; we include them when they materially advance joint understanding + generation."
+              "type": "table",
+              "ref": "4-unified-multimodal-models-umms.41-taxonomy-by-generation-paradigm.diffusion-based-umms.table21"
             }
           ],
-          "subsections": [
-            {
-              "title": "2023–2024",
-              "blocks": [
-                {
-                  "type": "table",
-                  "ref": "4-unified-multimodal-models-umms.42-key-models-chronological.20232024.table25"
-                }
-              ]
-            },
-            {
-              "title": "2025+",
-              "blocks": [
-                {
-                  "type": "table",
-                  "ref": "4-unified-multimodal-models-umms.42-key-models-chronological.2025.table26"
-                }
-              ]
-            },
-            {
-              "title": "Any-to-Any & Omni Extensions <kbd>Omni</kbd>",
-              "blocks": [
-                {
-                  "type": "table",
-                  "ref": "4-unified-multimodal-models-umms.42-key-models-chronological.any-to-any-omni-extensions-kbdomnikbd.table27"
-                }
-              ]
-            }
-          ]
+          "subsections": []
         },
         {
-          "title": "4.3 Tokenization & Architecture Trends",
-          "blocks": [],
-          "subsections": [
+          "title": "4.2 Any-to-Any Multimodal models",
+          "blocks": [
             {
-              "title": "Unified Token Space",
-              "blocks": [
-                {
-                  "type": "table",
-                  "ref": "4-unified-multimodal-models-umms.43-tokenization-architecture-trends.unified-token-space.table28"
-                }
-              ]
-            },
-            {
-              "title": "Decoupled vs Shared Encoders",
-              "blocks": [
-                {
-                  "type": "table",
-                  "ref": "4-unified-multimodal-models-umms.43-tokenization-architecture-trends.decoupled-vs-shared-encoders.table29"
-                }
-              ]
+              "type": "table",
+              "ref": "4-unified-multimodal-models-umms.41-taxonomy-by-generation-paradigm.autoregressive-ar-umms-pixel-encoding.table22"
             }
-          ]
+          ],
+          "subsections": []
+        },
+        {
+          "title": "4.3 Benchmark for Evaluation",
+          "blocks": [
+            {
+              "type": "table",
+              "ref": "4-unified-multimodal-models-umms.41-taxonomy-by-generation-paradigm.autoregressive-ar-umms-semantic-encoding.table23"
+            }
+          ],
+          "subsections": []
         }
       ]
     },
@@ -481,6 +391,10 @@
         {
           "type": "markdown",
           "text": "> **The most restrictive category.** NMMs are trained **completely from scratch** on multimodal data — no pretrained LLM or vision encoder is used as initialization. All weights are jointly learned end-to-end."
+        },
+        {
+          "type": "markdown",
+          "text": "> **What recent arXiv work emphasizes:** native multimodality is increasingly defined by end-to-end multimodal pretraining, tokenizer/representation co-design, and scaling strategies that explicitly address the asymmetry between vision and language."
         }
       ],
       "subsections": [
@@ -488,6 +402,19 @@
           "title": "5.1 Foundational Components",
           "blocks": [],
           "subsections": [
+            {
+              "title": "Design Analyses & Scaling Laws",
+              "blocks": [
+                {
+                  "type": "markdown",
+                  "text": "Recent arXiv papers sharpen the definition of NMMs and identify the main bottlenecks in native multimodal pretraining."
+                },
+                {
+                  "type": "table",
+                  "ref": "5-native-multimodal-models-nmms.51-foundational-components.design-analyses-scaling-laws.table30a"
+                }
+              ]
+            },
             {
               "title": "Image & Video Tokenizers",
               "blocks": [
@@ -527,6 +454,10 @@
               "text": "> Single Transformer decoder processes tokenized text and image inputs from layer 1, with minimal modality-specific parameters (only a linear patch embedding for images). No separate image encoder component."
             },
             {
+              "type": "markdown",
+              "text": "Recent scaling-law evidence suggests early-fusion NMMs are often stronger at lower parameter counts and simpler to deploy when paired with sufficiently strong visual representations."
+            },
+            {
               "type": "table",
               "ref": "5-native-multimodal-models-nmms.52-early-fusion-nmms.table33"
             }
@@ -549,7 +480,12 @@
         },
         {
           "title": "5.4 MoE-Based NMMs",
-          "blocks": [],
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "Recent NMM work increasingly treats MoE as a native multimodal scaling mechanism, not just an efficiency trick: MoE helps reconcile the different capacity and data demands of language and vision while enabling modality specialization."
+            }
+          ],
           "subsections": [
             {
               "title": "Modality-Agnostic Routing (Learned Router)",
@@ -581,7 +517,12 @@
         },
         {
           "title": "5.5 Advanced NMMs",
-          "blocks": [],
+          "blocks": [
+            {
+              "type": "markdown",
+              "text": "The latest arXiv-native multimodal papers increasingly blur the boundaries between omni understanding, any-to-any generation, world modeling, and RL-enhanced post-training."
+            }
+          ],
           "subsections": [
             {
               "title": "Omni Models (audio + video + image + text) <kbd>Omni</kbd>",
@@ -670,45 +611,60 @@
       ]
     },
     {
-      "title": "7. Benchmarks, Datasets & Evaluation",
-      "blocks": [],
+      "title": "7. Dataset",
+      "blocks": [
+        {
+          "type": "markdown",
+          "text": "> We classify datasets by their **primary use case** and list each dataset only once to minimize overlap: understanding-first corpora, pure T2I corpora, instruction-based editing, interleaved documents/conversations, and other **text+image-to-image** settings with an explicit visual input beyond standard editing."
+        }
+      ],
       "subsections": [
         {
-          "title": "Unified Benchmarks (U+G / Interleaved / Omni)",
+          "title": "Multimodal Understanding",
           "blocks": [
             {
               "type": "table",
-              "ref": "7-benchmarks-datasets-evaluation.unified-benchmarks-ug-interleaved-omni.table45"
+              "ref": "7-dataset.multimodal-understanding.table45"
             }
           ],
           "subsections": []
         },
         {
-          "title": "Pretraining Datasets",
+          "title": "Text-to-Image",
           "blocks": [
             {
               "type": "table",
-              "ref": "7-benchmarks-datasets-evaluation.pretraining-datasets.table46"
+              "ref": "7-dataset.text-to-image.table46"
             }
           ],
           "subsections": []
         },
         {
-          "title": "Instruction / Fine-tuning Datasets",
+          "title": "Image Editing",
           "blocks": [
             {
               "type": "table",
-              "ref": "7-benchmarks-datasets-evaluation.instruction-fine-tuning-datasets.table47"
+              "ref": "7-dataset.image-editing.table47"
             }
           ],
           "subsections": []
         },
         {
-          "title": "Evaluation Protocols",
+          "title": "Interleaved Image-Text",
           "blocks": [
             {
               "type": "table",
-              "ref": "7-benchmarks-datasets-evaluation.evaluation-protocols.table48"
+              "ref": "7-dataset.interleaved-image-text.table48"
+            }
+          ],
+          "subsections": []
+        },
+        {
+          "title": "Other Text+Image-to-Image",
+          "blocks": [
+            {
+              "type": "table",
+              "ref": "7-dataset.other-textimage-to-image.table54"
             }
           ],
           "subsections": []

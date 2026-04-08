@@ -299,6 +299,12 @@
         "Dual-stream BERT for V+L"
       ],
       [
+        "**LXMERT**: Learning Cross-Modality Encoder Representations from Transformers",
+        "EMNLP 2019",
+        "[Paper](https://arxiv.org/abs/1908.07490)",
+        "Tri-encoder design with object relationships and cross-modality layers"
+      ],
+      [
         "**VisualBERT**: A Simple and Performant Baseline for Vision and Language",
         "ArXiv 2019",
         "[Paper](https://arxiv.org/abs/1908.03557)",
@@ -494,10 +500,22 @@
     ],
     "rows": [
       [
-        "**ViLBERT-MT**: Multi-Task Learning for Multimodal Intelligence",
-        "CVPR 2020",
-        "[Paper](https://arxiv.org/abs/2003.14560)",
-        "Multi-task with KG integration"
+        "**ALBEF**: Align Before Fuse",
+        "NeurIPS 2021",
+        "[Paper](https://arxiv.org/abs/2107.07651)",
+        "Align-before-fuse recipe with momentum distillation"
+      ],
+      [
+        "**VLMo**: Unified Vision-Language Pre-Training with Mixture-of-Modality-Experts",
+        "NeurIPS 2022",
+        "[Paper](https://arxiv.org/abs/2111.02358)",
+        "Unified backbone with mixture-of-modality experts"
+      ],
+      [
+        "**BEiT-3**: Image as a Foreign Language",
+        "ArXiv 2022",
+        "[Paper](https://arxiv.org/abs/2208.10442)",
+        "Multiway unified pretraining across vision and language"
       ],
       [
         "**MURAL**: Multimodal, Multitask Retrieval Across Languages",
@@ -540,10 +558,10 @@
         "Stronger CLIP + MLP + better data"
       ],
       [
-        "**LLaVA-NeXT** (1.6): Improved Reasoning, OCR, World Knowledge",
-        "2024",
-        "[Code](https://github.com/LLaVA-VL/LLaVA-NeXT) <kbd>Open</kbd>",
-        "Dynamic resolution"
+        "**MiniGPT-4**: Enhancing Vision-Language Understanding with Advanced Large Language Models",
+        "ArXiv 2023",
+        "[Paper](https://arxiv.org/abs/2304.10592) [Code](https://github.com/Vision-CAIR/MiniGPT-4) <kbd>Open</kbd>",
+        "Efficient visual alignment to Vicuna with a lightweight projection layer"
       ],
       [
         "**mPLUG-Owl**: Modularization Empowers LLMs with Multimodality",
@@ -556,6 +574,12 @@
         "ArXiv 2023",
         "[Paper](https://arxiv.org/abs/2305.03726) [Code](https://github.com/Luodian/Otter)",
         "Built on OpenFlamingo"
+      ],
+      [
+        "**VILA1.5**: Simple Visual Language Model Baselines Improve Large Multimodal Models",
+        "ArXiv 2024",
+        "[Paper](https://arxiv.org/abs/2405.04419) [Code](https://github.com/NVlabs/VILA) <kbd>Open</kbd>",
+        "Strong open instruction-tuned MLLM baseline family"
       ]
     ]
   },
@@ -568,10 +592,22 @@
     ],
     "rows": [
       [
+        "**OpenFlamingo**: An Open-Source Framework for Training Large Autoregressive Vision-Language Models",
+        "ArXiv 2023",
+        "[Paper](https://arxiv.org/abs/2308.01390) [Code](https://github.com/mlfoundations/open_flamingo) <kbd>Open</kbd>",
+        "Open reproduction of Flamingo-style cross-attention MLLMs"
+      ],
+      [
         "**Qwen-VL**: A Versatile Vision-Language Model",
         "ArXiv 2023",
         "[Paper](https://arxiv.org/abs/2308.12966) [HF](https://huggingface.co/Qwen/Qwen-VL) <kbd>Open</kbd>",
         "High-res, multi-lang, bounding box"
+      ],
+      [
+        "**CogVLM**: Visual Expert for Pretrained Language Models",
+        "ArXiv 2023",
+        "[Paper](https://arxiv.org/abs/2311.03079) [Code](https://github.com/THUDM/CogVLM) <kbd>Open</kbd>",
+        "Deep fusion with visual expert modules inside a pretrained LLM"
       ],
       [
         "**Qwen2-VL**",
@@ -664,6 +700,12 @@
         "Strong open-data/open-weight VLM pipeline"
       ],
       [
+        "**MM1**: Methods, Analysis & Insights from Multimodal LLM Pre-training",
+        "ArXiv 2024",
+        "[Paper](https://arxiv.org/abs/2403.09611)",
+        "Large-scale proprietary recipe study for multimodal LLM pretraining"
+      ],
+      [
         "**NVLM 1.0**: Open Frontier-Class Multimodal LLMs",
         "ArXiv 2024",
         "[Paper](https://arxiv.org/abs/2409.11402) [HF](https://huggingface.co/collections/nvidia/nvlm-10-66f571f7f3b1e4fbad96294b) <kbd>Open</kbd>",
@@ -680,6 +722,12 @@
         "ArXiv 2024",
         "[Paper](https://arxiv.org/abs/2408.08872) <kbd>Open</kbd>",
         "Open training recipe, datasets, and safety-tuned variants"
+      ],
+      [
+        "**Eagle 2**: Building Post-Training Data Strategies from Scratch for Frontier Vision-Language Models",
+        "ArXiv 2025",
+        "[Paper](https://arxiv.org/abs/2501.14818)",
+        "Data-centric post-training strategy for competitive frontier open VLMs"
       ]
     ]
   },
@@ -710,6 +758,12 @@
         "Tool-use augmented MLLM"
       ],
       [
+        "**Visual Program Distillation**: Distilling Tools and Programmatic Reasoning into Vision-Language Models",
+        "CVPR 2024",
+        "[Paper](https://arxiv.org/abs/2312.03052)",
+        "Transfers tool-augmented reasoning traces into a standalone VLM"
+      ],
+      [
         "**MMICL**: Empowering Vision-language Model with Multi-Modal In-Context Learning",
         "ArXiv 2023",
         "[Paper](https://arxiv.org/abs/2309.07915)",
@@ -717,167 +771,176 @@
       ]
     ]
   },
-  "3-multimodal-large-language-models-mllms.multimodal-hallucination.table19": {
-    "headers": [
-      "Paper",
-      "Venue",
-      "Links",
-      "Notes"
-    ],
-    "rows": [
-      [
-        "**HallusionBench**: An Advanced Diagnostic Suite",
-        "CVPR 2024",
-        "[Paper](https://arxiv.org/abs/2310.14566) [Code](https://github.com/tianyi-lab/HallusionBench)",
-        "Visual illusion + knowledge conflicts"
-      ],
-      [
-        "**POPE**: Evaluating Object Hallucination",
-        "EMNLP 2023",
-        "[Paper](https://arxiv.org/abs/2305.10355) [Code](https://github.com/AoiDragon/POPE)",
-        "Polling-based object probing"
-      ],
-      [
-        "**RLHF-V**: Aligning Large Multimodal Models with Human Feedback",
-        "CVPR 2024",
-        "[Paper](https://arxiv.org/abs/2312.02814)",
-        "Human feedback for hallucination reduction"
-      ],
-      [
-        "**Woodpecker**: Hallucination Correction for MLLMs",
-        "ArXiv 2023",
-        "[Paper](https://arxiv.org/abs/2310.16045) [Code](https://github.com/BradyFU/Woodpecker)",
-        "Training-free hallucination correction"
-      ],
-      [
-        "**LRV-Instruction**: Mitigating Object Hallucinations via Negative Tuning",
-        "ArXiv 2023",
-        "[Paper](https://arxiv.org/abs/2306.14565)",
-        "Negative instruction data"
-      ]
-    ]
-  },
-  "3-multimodal-large-language-models-mllms.evaluation-rlhf.table20": {
-    "headers": [
-      "Paper",
-      "Venue",
-      "Links",
-      "Notes"
-    ],
-    "rows": [
-      [
-        "**MMBench**: Is Your Multi-modal Model an All-around Player?",
-        "ECCV 2024",
-        "[Paper](https://arxiv.org/abs/2307.06281) [Code](https://github.com/open-compass/MMBench)",
-        "Structured multi-ability evaluation"
-      ],
-      [
-        "**MM-Vet**: Evaluating Large Multimodal Models",
-        "ICML 2024",
-        "[Paper](https://arxiv.org/abs/2308.02490) [Code](https://github.com/yuweihao/MM-Vet)",
-        "Integrated capability evaluation"
-      ],
-      [
-        "**LLaVA-RLHF**",
-        "NeurIPS 2023",
-        "[Paper](https://arxiv.org/abs/2312.00849)",
-        "Factually augmented RLHF"
-      ]
-    ]
-  },
   "4-unified-multimodal-models-umms.41-taxonomy-by-generation-paradigm.diffusion-based-umms.table21": {
     "headers": [
-      "Paper",
+      "Model",
       "Venue",
       "Links",
+      "Paradigm",
       "Notes"
     ],
     "rows": [
       [
-        "**UnCLIP** (DALL-E 2): Hierarchical Text-Conditional Image Generation",
-        "ArXiv 2022",
-        "[Paper](https://arxiv.org/abs/2204.06125) <kbd>Closed</kbd>",
-        "CLIP embeddings + diffusion decoder"
+        "**SEED-X**",
+        "ArXiv 2024",
+        "[Paper](https://arxiv.org/abs/2404.14396) [Code](https://github.com/AILab-CVC/SEED-X) <kbd>Open</kbd>",
+        "Unified multi-granularity AR",
+        "Comprehension + generation with arbitrary image sizes"
       ],
       [
-        "**Stable Diffusion**: High-Resolution Image Synthesis with Latent Diffusion",
-        "CVPR 2022",
-        "[Paper](https://arxiv.org/abs/2112.10752) [Code](https://github.com/CompVis/stable-diffusion) <kbd>Open</kbd>",
-        "Latent diffusion; open source milestone"
+        "**Show-o**",
+        "ArXiv 2024",
+        "[Paper](https://arxiv.org/abs/2408.12528) [Code](https://github.com/showlab/Show-o) <kbd>Open</kbd>",
+        "Hybrid AR+Diffusion",
+        "One transformer for unified understanding and generation"
       ],
       [
-        "**IF**: DeepFloyd IF",
-        "2023",
-        "[Code](https://github.com/deep-floyd/IF) <kbd>Open</kbd>",
-        "Pixel-space cascaded diffusion"
+        "**Janus**",
+        "ArXiv 2024",
+        "[Paper](https://arxiv.org/abs/2410.13848) [Code](https://github.com/deepseek-ai/Janus) <kbd>Open</kbd>",
+        "Decoupled AR",
+        "Separate understanding and generation encoders inside one unified system"
       ],
       [
-        "**UniDiffuser**: One Diffuser for All",
-        "ICML 2023",
-        "[Paper](https://arxiv.org/abs/2303.06555) [Code](https://github.com/thu-ml/unidiffuser) <kbd>Open</kbd>",
-        "Joint text+image distribution"
+        "**Vitron**",
+        "ArXiv 2024",
+        "[Paper](https://arxiv.org/abs/2412.19806) [Code](https://github.com/SkyworkAI/Vitron) <kbd>Open</kbd>",
+        "Unified generalist",
+        "Understanding, generation, segmentation, and editing in one framework"
+      ],
+      [
+        "**Janus-Pro**",
+        "ArXiv 2025",
+        "[Paper](https://arxiv.org/abs/2501.17811) [Code](https://github.com/deepseek-ai/Janus) <kbd>Open</kbd>",
+        "Decoupled AR",
+        "Scaled Janus with stronger generation quality"
+      ],
+      [
+        "**OpenUni**",
+        "ArXiv 2025",
+        "[Paper](https://arxiv.org/abs/2505.23661) [Code](https://github.com/wusize/OpenUni) <kbd>Open</kbd>",
+        "Unified baseline",
+        "Simple baseline for unified multimodal understanding and generation"
+      ],
+      [
+        "**BAGEL**",
+        "ArXiv 2025",
+        "[Paper](https://arxiv.org/abs/2505.14683) [Code](https://github.com/ByteDance-Seed/Bagel) <kbd>Open</kbd>",
+        "AR",
+        "Interleaved training for unified understanding + generation"
+      ],
+      [
+        "**BLIP3-o**",
+        "ArXiv 2025",
+        "[Paper](https://arxiv.org/abs/2505.09568) [Code](https://github.com/JiuhaiChen/BLIP3o) <kbd>Open</kbd>",
+        "AR+Diffusion",
+        "Fully open family of unified multimodal models"
+      ],
+      [
+        "**Show-o2**",
+        "ArXiv 2025",
+        "[Paper](https://arxiv.org/abs/2506.15564) [Code](https://github.com/showlab/Show-o) <kbd>Open</kbd>",
+        "AR+Flow",
+        "Improved unified multimodal model with stronger generation"
       ]
     ]
   },
   "4-unified-multimodal-models-umms.41-taxonomy-by-generation-paradigm.autoregressive-ar-umms-pixel-encoding.table22": {
     "headers": [
-      "Paper",
+      "Model",
       "Venue",
       "Links",
+      "Modalities",
       "Notes"
     ],
     "rows": [
       [
-        "**DALL-E** (v1)",
-        "ICML 2021",
-        "[Paper](https://arxiv.org/abs/2102.12092) <kbd>Closed</kbd>",
-        "dVAE; discrete pixel-level tokens"
+        "**NExT-GPT**",
+        "ArXiv 2023",
+        "[Paper](https://arxiv.org/abs/2309.05519) [Code](https://github.com/NExT-GPT/NExT-GPT) <kbd>Open</kbd>",
+        "image + video + audio + text",
+        "Any-to-any system with an LLM core and modality-specific generators"
       ],
       [
-        "**CogView**: Mastering Text-to-Image Generation via Transformers",
-        "NeurIPS 2021",
-        "[Paper](https://arxiv.org/abs/2105.13290) [Code](https://github.com/THUDM/CogView) <kbd>Open</kbd>",
-        "First Chinese text-to-image"
+        "**CoDi**: Any-to-Any Generation via Composable Diffusion",
+        "NeurIPS 2023",
+        "[Paper](https://arxiv.org/abs/2305.11846) [Code](https://github.com/microsoft/i-Code/tree/main/CoDi) <kbd>Open</kbd>",
+        "image + video + audio + text",
+        "Composable diffusion for cross-modal generation"
       ],
       [
-        "**VQGAN**: Taming Transformers for High-Resolution Image Synthesis",
-        "CVPR 2021",
-        "[Paper](https://arxiv.org/abs/2012.09841) [Code](https://github.com/CompVis/taming-transformers) <kbd>Open</kbd>",
-        "Discrete codebook + transformer"
+        "**UnifiedIO 2** <kbd>Omni</kbd>",
+        "ArXiv 2023",
+        "[Paper](https://arxiv.org/abs/2312.17172) [Code](https://github.com/allenai/unified-io-2) <kbd>Open</kbd>",
+        "image + audio + action + text",
+        "Autoregressive any-to-any model trained with a mixture-of-denoisers objective"
+      ],
+      [
+        "**AnyGPT** <kbd>Omni</kbd>",
+        "ArXiv 2024",
+        "[Paper](https://arxiv.org/abs/2402.12226) [Code](https://github.com/OpenMOSS/AnyGPT) <kbd>Open</kbd>",
+        "speech + image + music + text",
+        "Discrete token interface for many-to-many modality transfer"
+      ],
+      [
+        "**CoDi-2**",
+        "CVPR 2024",
+        "[Paper](https://arxiv.org/abs/2311.18775)",
+        "image + video + audio + text",
+        "In-context interleaved any-to-any generation"
+      ],
+      [
+        "**M2-Omni** <kbd>Omni</kbd>",
+        "ArXiv 2025",
+        "[Paper](https://arxiv.org/abs/2502.18778)",
+        "audio + video + image + text",
+        "Efficient omni any-to-any model"
       ]
     ]
   },
   "4-unified-multimodal-models-umms.41-taxonomy-by-generation-paradigm.autoregressive-ar-umms-semantic-encoding.table23": {
     "headers": [
-      "Paper",
+      "Benchmark",
       "Venue",
       "Links",
-      "Notes"
+      "Focus"
     ],
     "rows": [
       [
-        "**Emu**: Generative Pretraining in Multimodality",
-        "ICLR 2024",
-        "[Paper](https://arxiv.org/abs/2307.05222) [Code](https://github.com/baaivision/Emu) <kbd>Open</kbd>",
-        "Interleaved image-text pretraining"
-      ],
-      [
-        "**Emu2**: Generative Multimodal Models are In-Context Learners",
+        "**GenAI-Bench**",
         "CVPR 2024",
-        "[Paper](https://arxiv.org/abs/2312.13286) [Code](https://github.com/baaivision/Emu2) <kbd>Open</kbd>",
-        "37B scale; strong in-context generation"
+        "[Paper](https://arxiv.org/abs/2406.13743)",
+        "Compositional unified understanding + generation evaluation"
       ],
       [
-        "**Emu3**: Next-Token Prediction is All You Need",
-        "ArXiv 2024",
-        "[Paper](https://arxiv.org/abs/2409.18869) [Code](https://github.com/baaivision/Emu3) <kbd>Open</kbd>",
-        "Single AR model; no diffusion"
+        "**MMIE**",
+        "ICLR 2025",
+        "[Paper](https://arxiv.org/abs/2410.10139) [Code](https://github.com/Lillianwei-h/MMIE)",
+        "Interleaved comprehension and generation benchmark"
       ],
       [
-        "**SEED**: Planting and Harvesting Linguistic Seeds",
-        "ArXiv 2023",
-        "[Paper](https://arxiv.org/abs/2307.08041)",
-        "1D causal image tokens for LLM generation"
+        "**OpenING**",
+        "CVPR 2025",
+        "[Paper](https://arxiv.org/abs/2411.18499)",
+        "Open-ended interleaved image-text generation evaluation"
+      ],
+      [
+        "**UniEval / UniBench**",
+        "ArXiv 2025",
+        "[Paper](https://arxiv.org/abs/2505.10483) [Code](https://github.com/xmed-lab/UniEval) <kbd>Open</kbd>",
+        "Holistic evaluation for unified multimodal understanding and generation"
+      ],
+      [
+        "**T2I-CompBench**",
+        "NeurIPS 2023",
+        "[Paper](https://arxiv.org/abs/2307.06350) [Code](https://github.com/Karine-Huang/T2I-CompBench)",
+        "Text-to-image compositionality benchmark often used for unified generators"
+      ],
+      [
+        "**VTBench**",
+        "ArXiv 2025",
+        "[Paper](https://arxiv.org/abs/2505.13439) [Code](https://github.com/huawei-lin/VTBench) <kbd>Open</kbd>",
+        "Evaluates visual tokenizers critical to unified AR generation systems"
       ]
     ]
   },
@@ -1144,6 +1207,34 @@
       ]
     ]
   },
+  "5-native-multimodal-models-nmms.51-foundational-components.design-analyses-scaling-laws.table30a": {
+    "headers": [
+      "Paper",
+      "Venue",
+      "Links",
+      "Insights"
+    ],
+    "rows": [
+      [
+        "**Scaling Laws for Native Multimodal Models**",
+        "ICCV 2025",
+        "[Paper](https://arxiv.org/abs/2504.07951)",
+        "Early fusion is competitive or stronger at smaller scales; MoE improves native scaling"
+      ],
+      [
+        "**The Narrow Gate**: Localized Image-Text Communication in Native Multimodal Models",
+        "NeurIPS 2025",
+        "[Paper](https://arxiv.org/abs/2412.06646)",
+        "Native models often funnel image-to-text communication through a single post-image token"
+      ],
+      [
+        "**Beyond Language Modeling**: An Exploration of Multimodal Pretraining",
+        "ArXiv 2026",
+        "[Paper](https://arxiv.org/abs/2603.03276)",
+        "Highlights representation autoencoders, vision-language data synergy, and MoE for native pretraining"
+      ]
+    ]
+  },
   "5-native-multimodal-models-nmms.51-foundational-components.image-video-tokenizers.table30": {
     "headers": [
       "Method",
@@ -1199,6 +1290,18 @@
         "ArXiv 2024",
         "[Paper](https://arxiv.org/abs/2409.04410) [Code](https://github.com/TencentARC/Open-MAGVIT2) <kbd>Open</kbd>",
         "Open MAGVIT2 reproduction"
+      ],
+      [
+        "**GigaTok**",
+        "ICCV 2025",
+        "[Paper](https://arxiv.org/abs/2504.08736)",
+        "Billion-scale visual tokenizer for better AR reconstruction and generation"
+      ],
+      [
+        "**ResTok**",
+        "ArXiv 2026",
+        "[Paper](https://arxiv.org/abs/2601.03955) [Code](https://github.com/Kwai-Kolors/ResTok) <kbd>Open</kbd>",
+        "Hierarchical residual 1D tokenizer for fast autoregressive generation"
       ]
     ]
   },
@@ -1249,6 +1352,24 @@
         "ArXiv 2024",
         "[Paper](https://arxiv.org/abs/2408.10840)",
         "Aligned visual tokens for generation"
+      ],
+      [
+        "**V2Flow**",
+        "ArXiv 2025",
+        "[Paper](https://arxiv.org/abs/2503.07493)",
+        "Aligns visual tokens with LLM vocabularies for AR image generation"
+      ],
+      [
+        "**TokLIP**",
+        "ArXiv 2025",
+        "[Paper](https://arxiv.org/abs/2505.05422) [Code](https://github.com/TencentARC/TokLIP) <kbd>Open</kbd>",
+        "Injects CLIP-level semantics into VQ tokens for comprehension and generation"
+      ],
+      [
+        "**Selftok**",
+        "ArXiv 2025",
+        "[Paper](https://arxiv.org/abs/2505.07538)",
+        "AR-prior visual tokens that support pure AR VLMs and RL-friendly generation"
       ]
     ]
   },
@@ -1302,6 +1423,13 @@
         "[Paper](https://arxiv.org/abs/2312.06647) [Code](https://github.com/apple/ml-4m) <kbd>Open</kbd>",
         "—",
         "7+ modalities; masked modeling"
+      ],
+      [
+        "**LongCat-Next**",
+        "[Paper](https://arxiv.org/abs/2603.27538)",
+        "[Code](https://github.com/meituan-longcat/LongCat-Next) <kbd>Open</kbd>",
+        "—",
+        "Discrete native autoregressive model for text, vision, and audio"
       ]
     ]
   },
@@ -1348,6 +1476,18 @@
         "Google 2024",
         "[Paper](https://arxiv.org/abs/2403.05530) <kbd>Closed</kbd>",
         "MoE; 1M context; omni"
+      ],
+      [
+        "**NaViL**",
+        "NeurIPS 2025",
+        "[Paper](https://arxiv.org/abs/2510.08565) [Code](https://github.com/OpenGVLab/NaViL) <kbd>Open</kbd>",
+        "Data-constrained native MLLM recipe with jointly scaled visual encoder and LLM"
+      ],
+      [
+        "**Docopilot**",
+        "ArXiv 2025",
+        "[Paper](https://arxiv.org/abs/2507.14675) [Code](https://github.com/OpenGVLab/Docopilot) <kbd>Open</kbd>",
+        "Document-native multimodal model without retrieval augmentation"
       ]
     ]
   },
@@ -1360,28 +1500,16 @@
     ],
     "rows": [
       [
-        "**MoE-LLaVA**: Mixture of Experts for Large Vision-Language Models",
+        "**Gemini 1.5**",
         "ArXiv 2024",
-        "[Paper](https://arxiv.org/abs/2401.15947) [Code](https://github.com/PKU-YuanGroup/MoE-LLaVA) <kbd>Open</kbd>",
-        "Sparse MoE for efficient MLLM"
+        "[Paper](https://arxiv.org/abs/2403.05530) <kbd>Closed</kbd>",
+        "General-purpose multimodal MoE with long-context routing"
       ],
       [
-        "**LLaVA-MoLE**",
+        "**Aria**: An Open Multimodal Native Mixture-of-Experts Model",
         "ArXiv 2024",
-        "[Paper](https://arxiv.org/abs/2401.16160)",
-        "Mixture-of-LoRA Experts"
-      ],
-      [
-        "**Uni-MoE**",
-        "ArXiv 2024",
-        "[Paper](https://arxiv.org/abs/2405.11273) [Code](https://github.com/HITsz-TMG/UMOE-Scaling-Unified-Multimodal-LLMs) <kbd>Open</kbd>",
-        "MoE for omni-modal input"
-      ],
-      [
-        "**OLMoE**: Open Mixture-of-Experts Language Models",
-        "ArXiv 2024",
-        "[Paper](https://arxiv.org/abs/2409.02060) [Code](https://github.com/allenai/OLMoE) <kbd>Open</kbd>",
-        "Fully open MoE"
+        "[Paper](https://arxiv.org/abs/2410.05993) <kbd>Open</kbd>",
+        "Open native multimodal MoE trained from scratch in four stages"
       ]
     ]
   },
@@ -1400,16 +1528,10 @@
         "Pre-defined modality-based routing; defining paper for NMM MoE taxonomy"
       ],
       [
-        "**MH-MoE**: Multi-Head Mixture-of-Experts",
-        "ArXiv 2024",
-        "[Paper](https://arxiv.org/abs/2404.15045) [Code](https://github.com/microsoft/moe) <kbd>Open</kbd>",
-        "Multi-head routing"
-      ],
-      [
-        "**Jamba**",
-        "ArXiv 2024",
-        "[Paper](https://arxiv.org/abs/2403.19887) [HF](https://huggingface.co/ai21labs/Jamba-v0.1) <kbd>Open</kbd>",
-        "Mamba+Transformer+MoE hybrid"
+        "**DeepOmni / DeepTalk**",
+        "ArXiv 2025",
+        "[Paper](https://arxiv.org/abs/2506.21864) [Code](https://github.com/talkking/DeepTalk) <kbd>Open</kbd>",
+        "Adaptive modality-specific experts for native speech-text interaction"
       ]
     ]
   },
@@ -1428,34 +1550,10 @@
         "1M context; audio+video+image+text"
       ],
       [
-        "**GPT-4o** <kbd>Omni</kbd>",
-        "[Blog](https://openai.com/index/hello-gpt-4o/)",
-        "— <kbd>Closed</kbd>",
-        "Real-time omni model; end-to-end"
-      ],
-      [
-        "**Qwen2-Audio** <kbd>Omni</kbd>",
-        "[Paper](https://arxiv.org/abs/2407.10759)",
-        "[HF](https://huggingface.co/Qwen/Qwen2-Audio-7B) <kbd>Open</kbd>",
-        "Audio + text; instruction following"
-      ],
-      [
-        "**VITA** <kbd>Omni</kbd>",
-        "[Paper](https://arxiv.org/abs/2408.05211)",
-        "[Code](https://github.com/VITA-MLLM/VITA) <kbd>Open</kbd>",
-        "Video+image+text+audio"
-      ],
-      [
-        "**M2-Omni** <kbd>Omni</kbd>",
-        "[Paper](https://arxiv.org/abs/2502.18778)",
-        "—",
-        "Efficient any-to-any"
-      ],
-      [
-        "**InternOmni** <kbd>Omni</kbd>",
-        "[Paper](https://arxiv.org/abs/2408.03280)",
-        "—",
-        "Any-modal understanding"
+        "**Emu3.5** <kbd>Omni</kbd>",
+        "[Paper](https://arxiv.org/abs/2510.26583)",
+        "[Code](https://github.com/baaivision/Emu3.5) <kbd>Open</kbd>",
+        "10T-token native world model with interleaved vision-language outputs"
       ]
     ]
   },
@@ -1468,28 +1566,10 @@
     ],
     "rows": [
       [
-        "**AnyGPT** <kbd>Omni</kbd>",
-        "[Paper](https://arxiv.org/abs/2402.12226)",
-        "[Code](https://github.com/OpenMOSS/AnyGPT) <kbd>Open</kbd>",
-        "Discrete tokens for any modality"
-      ],
-      [
-        "**UnifiedIO 2** <kbd>Omni</kbd>",
-        "[Paper](https://arxiv.org/abs/2312.17172)",
-        "[Code](https://github.com/allenai/unified-io-2) <kbd>Open</kbd>",
-        "Multimodal MoD; diverse output modalities"
-      ],
-      [
-        "**CoDi-2**: In-Context Interleaved Any-to-Any Generation",
-        "CVPR 2024",
-        "[Paper](https://arxiv.org/abs/2311.18775)",
-        "In-context; interleaved generation"
-      ],
-      [
-        "**MiniGPT-5**: Interleaved Vision-and-Language Generation",
-        "ArXiv 2023",
-        "[Paper](https://arxiv.org/abs/2310.02239) [Code](https://github.com/eric-ai-lab/MiniGPT-5) <kbd>Open</kbd>",
-        "Generative vokens"
+        "**HunyuanImage 3.0**",
+        "ArXiv 2025",
+        "[Paper](https://arxiv.org/abs/2509.23951) [Code](https://github.com/Tencent-Hunyuan/HunyuanImage-3.0) <kbd>Open</kbd>",
+        "Native AR understanding + generation with 80B-total MoE"
       ]
     ]
   },
@@ -1501,6 +1581,12 @@
       "Notes"
     ],
     "rows": [
+      [
+        "**Transfusion**",
+        "ArXiv 2024",
+        "[Paper](https://arxiv.org/abs/2408.11039)",
+        "Shared backbone combining AR language modeling with diffusion vision prediction"
+      ],
       [
         "**MAR**: Autoregressive Image Generation without Vector Quantization",
         "NeurIPS 2024",
@@ -1546,6 +1632,12 @@
         "ArXiv 2024",
         "[Paper](https://arxiv.org/abs/2402.04788)",
         "Using MLLMs to judge generation quality"
+      ],
+      [
+        "**Emu3.5**",
+        "ArXiv 2025",
+        "[Paper](https://arxiv.org/abs/2510.26583) [Code](https://github.com/baaivision/Emu3.5) <kbd>Open</kbd>",
+        "Large-scale RL post-training for multimodal reasoning and generation"
       ]
     ]
   },
@@ -1721,119 +1813,7 @@
       ]
     ]
   },
-  "7-benchmarks-datasets-evaluation.unified-benchmarks-ug-interleaved-omni.table45": {
-    "headers": [
-      "Benchmark",
-      "Paper",
-      "Links",
-      "Tasks"
-    ],
-    "rows": [
-      [
-        "**MME**: A Comprehensive Evaluation Benchmark for MLLMs",
-        "ArXiv 2023",
-        "[Paper](https://arxiv.org/abs/2306.13394) [Code](https://github.com/BradyFU/Awesome-Multimodal-Large-Language-Models/tree/Evaluation)",
-        "14 ability dimensions"
-      ],
-      [
-        "**MMBench**",
-        "ECCV 2024",
-        "[Paper](https://arxiv.org/abs/2307.06281) [Code](https://github.com/open-compass/MMBench)",
-        "20 ability dimensions; bilingual"
-      ],
-      [
-        "**SEED-Bench**: Benchmarking MLLMs with 19K Q&As",
-        "CVPR 2024",
-        "[Paper](https://arxiv.org/abs/2307.16125) [Code](https://github.com/AILab-CVC/SEED-Bench)",
-        "12 evaluation dimensions"
-      ],
-      [
-        "**MM-Vet**",
-        "ICML 2024",
-        "[Paper](https://arxiv.org/abs/2308.02490) [Code](https://github.com/yuweihao/MM-Vet)",
-        "Integrated capability evaluation"
-      ],
-      [
-        "**MM-Vet v2**",
-        "ArXiv 2024",
-        "[Paper](https://arxiv.org/abs/2408.00765) [Code](https://github.com/yuweihao/MM-Vet)",
-        "Adds image-text sequence understanding"
-      ],
-      [
-        "**OCRBench**",
-        "ArXiv 2023",
-        "[Paper](https://arxiv.org/abs/2305.07895) [Code](https://github.com/Yuliang-Liu/MultimodalOCR)",
-        "OCR & text understanding"
-      ],
-      [
-        "**MathVista**: Evaluating Math Reasoning in Visual Contexts",
-        "ICLR 2024",
-        "[Paper](https://arxiv.org/abs/2310.02255) [Code](https://github.com/lupantech/MathVista)",
-        "Mathematical visual reasoning"
-      ],
-      [
-        "**MMMU**: A Massive Multi-discipline Multimodal Understanding",
-        "CVPR 2024",
-        "[Paper](https://arxiv.org/abs/2311.16502) [Code](https://github.com/MMMU-Benchmark/MMMU)",
-        "College-level multi-discipline"
-      ],
-      [
-        "**MMMU-Pro**",
-        "ACL 2025",
-        "[Paper](https://aclanthology.org/2025.acl-long.736/) [Code](https://github.com/MMMU-Benchmark/MMMU)",
-        "Harder variant filtering text-only shortcuts"
-      ],
-      [
-        "**GenAI-Bench**",
-        "CVPR 2024",
-        "[Paper](https://arxiv.org/abs/2406.13743)",
-        "U+G compositional eval"
-      ],
-      [
-        "**T2I-CompBench**",
-        "NeurIPS 2023",
-        "[Paper](https://arxiv.org/abs/2307.06350) [Code](https://github.com/Karine-Huang/T2I-CompBench)",
-        "Text-to-image compositionality"
-      ],
-      [
-        "**VideoMME** <kbd>Video</kbd>",
-        "ArXiv 2024",
-        "[Paper](https://arxiv.org/abs/2405.21075) [Code](https://github.com/BradyFU/Video-MME)",
-        "Comprehensive video QA"
-      ],
-      [
-        "**MMStar**",
-        "CVPR 2024",
-        "[Paper](https://arxiv.org/abs/2403.20330) [Code](https://github.com/MMStar-Benchmark/MMStar)",
-        "Multi-ability balanced benchmark"
-      ],
-      [
-        "**WildVision**",
-        "ArXiv 2024",
-        "[Paper](https://arxiv.org/abs/2406.11069)",
-        "Real-world multimodal chat evaluation"
-      ],
-      [
-        "**MMIE**",
-        "ICLR 2025",
-        "[Paper](https://arxiv.org/abs/2410.10139) [Code](https://github.com/Lillianwei-h/MMIE)",
-        "Interleaved comprehension and generation benchmark"
-      ],
-      [
-        "**OpenING**",
-        "CVPR 2025",
-        "[Paper](https://arxiv.org/abs/2411.18499)",
-        "Open-ended interleaved image-text generation"
-      ],
-      [
-        "**UniEval / UniBench**",
-        "ArXiv 2025",
-        "[Paper](https://arxiv.org/abs/2505.10483)",
-        "Unified holistic evaluation for UMMs"
-      ]
-    ]
-  },
-  "7-benchmarks-datasets-evaluation.pretraining-datasets.table46": {
+  "7-dataset.multimodal-understanding.table45": {
     "headers": [
       "Dataset",
       "Paper",
@@ -1847,67 +1827,60 @@
         "NeurIPS 2022",
         "[Paper](https://arxiv.org/abs/2210.08402) [HF](https://huggingface.co/datasets/laion/laion2B-en)",
         "5B image-text pairs",
-        "Large-scale noisy web data"
-      ],
-      [
-        "**CC3M / CC12M**",
-        "ACL 2018",
-        "[Paper](https://aclanthology.org/P18-1238/)",
-        "3M / 12M",
-        "Conceptual Captions"
-      ],
-      [
-        "**COYO-700M**",
-        "ArXiv 2022",
-        "[Code](https://github.com/kakaobrain/coyo-dataset)",
-        "700M",
-        "Web crawled image-text"
+        "Large-scale noisy web corpus for vision-language pretraining"
       ],
       [
         "**DataComp**",
         "NeurIPS 2023",
         "[Paper](https://arxiv.org/abs/2304.14108) [Code](https://github.com/mlfoundations/datacomp)",
         "Variable",
-        "Competition + filtering pipeline"
+        "Standardized large-scale data selection and filtering pipeline"
       ],
       [
-        "**MMC4**: MultiModal Multi-Concept",
+        "**LLaVA-150K**",
         "NeurIPS 2023",
-        "[Paper](https://arxiv.org/abs/2304.06939) [HF](https://huggingface.co/datasets/allenai/mmc4-core)",
-        "101M images",
-        "Interleaved image-text documents"
+        "[Paper](https://arxiv.org/abs/2304.08485) [HF](https://huggingface.co/datasets/liuhaotian/LLaVA-Instruct-150K)",
+        "150K",
+        "GPT-4-generated visual instruction-following data"
       ],
       [
-        "**OBELICS**",
-        "NeurIPS 2023",
-        "[Paper](https://arxiv.org/abs/2306.16527) [HF](https://huggingface.co/datasets/HuggingFaceM4/OBELICS)",
-        "353M images",
-        "Open interleaved web corpus"
+        "**M3IT**",
+        "ArXiv 2023",
+        "[Paper](https://arxiv.org/abs/2306.04387) [HF](https://huggingface.co/datasets/MMInstruction/M3IT)",
+        "2.4M",
+        "Multimodal multilingual instruction tuning across 40 datasets"
       ],
       [
-        "**OmniCorpus**",
-        "ICLR 2025 Spotlight",
-        "[Paper](https://openreview.net/forum?id=kwqhn2VuG4) [Code](https://github.com/OpenGVLab/OmniCorpus)",
-        "8.6B images",
-        "Large interleaved corpus with diverse sources"
+        "**ShareGPT4V**",
+        "ArXiv 2023",
+        "[Paper](https://arxiv.org/abs/2311.12793) [Code](https://github.com/InternLM/InternLM-XComposer/tree/main/projects/ShareGPT4V)",
+        "100K",
+        "High-detail captions distilled from GPT-4V"
+      ],
+      [
+        "**Infinity-MM**",
+        "ArXiv 2024",
+        "[Paper](https://arxiv.org/abs/2410.18558) [HF](https://huggingface.co/datasets/BAAI/Infinity-MM)",
+        "40M",
+        "Large-scale filtered multimodal instruction corpus"
       ],
       [
         "**PixMo**",
-        "CVPR 2025",
-        "[Paper](https://openaccess.thecvf.com/content/CVPR2025/html/Deitke_Molmo_and_PixMo_Open_Weights_and_Open_Data_for_State-of-the-Art_CVPR_2025_paper.html) [Code](https://github.com/allenai/molmo)",
-        "Multi-part dataset",
-        "Open-data recipe for strong VLM pretraining and SFT"
+        "ArXiv 2024",
+        "[Paper](https://arxiv.org/abs/2409.17146) [Code](https://github.com/allenai/molmo)",
+        "Multi-part dataset family",
+        "Open-data suite for captions, Q&A, and pointing supervision"
       ],
       [
-        "**Docmatix**",
-        "ArXiv 2024",
-        "[Paper](https://arxiv.org/abs/2408.12637)",
-        "1.25M docs",
-        "Document-heavy corpus released with Idefics3 recipe"
+        "**SVIT**",
+        "ArXiv 2023",
+        "[Paper](https://arxiv.org/abs/2307.04087) [HF](https://huggingface.co/datasets/BAAI/SVIT)",
+        "4.2M",
+        "Large synthetic visual instruction tuning dataset"
       ]
     ]
   },
-  "7-benchmarks-datasets-evaluation.instruction-fine-tuning-datasets.table47": {
+  "7-dataset.text-to-image.table46": {
     "headers": [
       "Dataset",
       "Paper",
@@ -1917,86 +1890,205 @@
     ],
     "rows": [
       [
-        "**LLaVA-150K**",
+        "**DiffusionDB**",
+        "ACL 2023",
+        "[Paper](https://arxiv.org/abs/2210.14896) [HF](https://huggingface.co/datasets/poloclub/diffusiondb)",
+        "14M images / 1.8M prompts",
+        "Large-scale prompt gallery built from real user generations"
+      ],
+      [
+        "**Pick-a-Pic**",
+        "ArXiv 2023",
+        "[Paper](https://arxiv.org/abs/2305.01569) [HF](https://huggingface.co/datasets/yuvalkirstain/pickapic_v1)",
+        "851K preference pairs",
+        "Open human preference data for T2I alignment and ranking"
+      ],
+      [
+        "**JourneyDB**",
         "NeurIPS 2023",
-        "[Paper](https://arxiv.org/abs/2304.08485) [HF](https://huggingface.co/datasets/liuhaotian/LLaVA-Instruct-150K)",
-        "150K",
-        "GPT-4-generated"
+        "[Paper](https://arxiv.org/abs/2307.00716) [Code](https://journeydb.github.io/)",
+        "4M generated images",
+        "Midjourney prompt-image corpus for generated image understanding"
       ],
       [
-        "**ShareGPT4V**",
-        "ArXiv 2023",
-        "[Paper](https://arxiv.org/abs/2311.12793)",
-        "100K",
-        "GPT-4V captions"
+        "**PASTA**",
+        "ICML 2025",
+        "[Paper](https://arxiv.org/abs/2412.10419) [Data](https://www.kaggle.com/datasets/googleai/pasta-data)",
+        "Sequential preference dataset",
+        "Interactive multi-turn T2I preference and user-choice supervision"
       ],
       [
-        "**LLaVA-1.5 Mix-665K**",
-        "ArXiv 2023",
-        "[HF](https://huggingface.co/datasets/liuhaotian/LLaVA-Instruct-mix665k)",
-        "665K",
-        "Mixed instruction data"
-      ],
-      [
-        "**SVIT**",
-        "ArXiv 2023",
-        "[Paper](https://arxiv.org/abs/2307.04087) [HF](https://huggingface.co/datasets/BAAI/SVIT)",
-        "4.2M",
-        "GPT-4-generated at scale"
-      ],
-      [
-        "**Infinity-MM**",
-        "ArXiv 2024",
-        "[Paper](https://arxiv.org/abs/2410.18558) [HF](https://huggingface.co/datasets/BAAI/Infinity-MM)",
-        "40M",
-        "Large-scale filtered multimodal instruction data"
-      ],
-      [
-        "**CoMM**",
-        "ArXiv 2024",
-        "[Paper](https://arxiv.org/abs/2406.10462)",
-        "227K+",
-        "Coherent interleaved image-text data for U+G tasks"
+        "**ROVI**",
+        "ICCV 2025",
+        "[Paper](https://arxiv.org/abs/2508.01008) [Code](https://github.com/CihangPeng/ROVI)",
+        "1M curated web images",
+        "Instance-grounded open-vocabulary text-to-image generation"
       ]
     ]
   },
-  "7-benchmarks-datasets-evaluation.evaluation-protocols.table48": {
+  "7-dataset.image-editing.table47": {
     "headers": [
-      "Protocol",
+      "Dataset",
       "Paper",
       "Links",
+      "Scale",
       "Notes"
     ],
     "rows": [
       [
-        "**POPE**: Hallucination evaluation",
-        "EMNLP 2023",
-        "[Paper](https://arxiv.org/abs/2305.10355)",
-        "Polling-based object hallucination"
+        "**InstructPix2Pix**",
+        "ICCV 2023",
+        "[Paper](https://arxiv.org/abs/2211.09800) [Code](https://www.timothybrooks.com/instruct-pix2pix)",
+        "Synthetic edit triplets",
+        "Foundational GPT-3 + Stable Diffusion editing data pipeline"
       ],
       [
-        "**HallusionBench**",
-        "CVPR 2024",
-        "[Paper](https://arxiv.org/abs/2310.14566)",
-        "Visual illusion + knowledge conflict"
-      ],
-      [
-        "**LLaVA-Bench (in-the-Wild)**",
+        "**MagicBrush**",
         "NeurIPS 2023",
-        "[Paper](https://arxiv.org/abs/2304.08485)",
-        "Open-ended GPT-4 evaluation"
+        "[Paper](https://arxiv.org/abs/2306.10012) [Code](https://osu-nlp-group.github.io/MagicBrush/)",
+        "10K+ triplets",
+        "Human-annotated real-image editing across single-turn and multi-turn settings"
       ],
       [
-        "**EvalCrafter**",
-        "CVPR 2024",
-        "[Paper](https://arxiv.org/abs/2310.11440)",
-        "Video generation evaluation"
-      ],
-      [
-        "**LMMs-Eval**",
+        "**HQ-Edit**",
         "ArXiv 2024",
-        "[Paper](https://arxiv.org/abs/2407.12772) [Code](https://github.com/EvolvingLMMs-Lab/lmms-eval)",
-        "Unified multi-benchmark evaluation harness"
+        "[Paper](https://arxiv.org/abs/2404.09990) [Code](https://thefllood.github.io/HQEdit_web/)",
+        "200K edits",
+        "High-quality diptychs with detailed editing prompts"
+      ],
+      [
+        "**SEED-Data-Edit**",
+        "ArXiv 2024",
+        "[Paper](https://arxiv.org/abs/2405.04007) [HF](https://huggingface.co/datasets/AILab-CVC/SEED-Data-Edit)",
+        "Hybrid dataset",
+        "Mixes synthetic, web, and multi-turn human-annotated edits"
+      ],
+      [
+        "**HumanEdit**",
+        "ArXiv 2024",
+        "[Paper](https://arxiv.org/abs/2412.04280) [HF](https://huggingface.co/datasets/BryanW/HumanEdit)",
+        "5,751 images",
+        "Human-rewarded dataset with masks and high-resolution edits"
+      ],
+      [
+        "**ImgEdit**",
+        "ArXiv 2025",
+        "[Paper](https://arxiv.org/abs/2505.20275) [Code](https://github.com/PKU-YuanGroup/ImgEdit)",
+        "1.2M edit pairs",
+        "Unified large-scale dataset with single-turn and multi-turn edits"
+      ],
+      [
+        "**Pico-Banana-400K**",
+        "ArXiv 2025",
+        "[Paper](https://arxiv.org/abs/2510.19808)",
+        "400K",
+        "Real-image edit corpus with multi-turn and preference subsets"
+      ],
+      [
+        "**GalaxyEdit**",
+        "ArXiv 2024",
+        "[Paper](https://arxiv.org/abs/2411.13794)",
+        "Large-scale add/remove edits",
+        "Automated editing corpus focused on object addition and removal"
+      ]
+    ]
+  },
+  "7-dataset.interleaved-image-text.table48": {
+    "headers": [
+      "Dataset",
+      "Paper",
+      "Links",
+      "Scale",
+      "Notes"
+    ],
+    "rows": [
+      [
+        "**MMC4**",
+        "NeurIPS 2023",
+        "[Paper](https://arxiv.org/abs/2304.06939) [HF](https://huggingface.co/datasets/allenai/mmc4-core)",
+        "101M images",
+        "Interleaved image-text documents mined from web pages"
+      ],
+      [
+        "**OBELICS**",
+        "NeurIPS 2023",
+        "[Paper](https://arxiv.org/abs/2306.16527) [HF](https://huggingface.co/datasets/HuggingFaceM4/OBELICS)",
+        "353M images",
+        "Open web-scale filtered interleaved corpus"
+      ],
+      [
+        "**MINT-1T**",
+        "ArXiv 2024",
+        "[Paper](https://arxiv.org/abs/2406.11271) [Code](https://github.com/mlfoundations/MINT-1T)",
+        "1T tokens / 3.4B images",
+        "Massive open-source interleaved corpus scaled 10x beyond prior releases"
+      ],
+      [
+        "**CoMM**",
+        "CVPR 2025",
+        "[Paper](https://arxiv.org/abs/2406.10462)",
+        "227K+",
+        "Coherent interleaved data for multimodal understanding and generation"
+      ],
+      [
+        "**Docmatix**",
+        "ArXiv 2024",
+        "[Paper](https://arxiv.org/abs/2408.12637)",
+        "1.25M documents",
+        "Document-heavy multimodal corpus for long-context and OCR-rich training"
+      ],
+      [
+        "**VisCon-100K / 1M**",
+        "ArXiv 2025",
+        "[Paper](https://arxiv.org/abs/2502.10250)",
+        "100K / 1M",
+        "Conversation-style samples converted from interleaved web documents"
+      ],
+      [
+        "**Chitrakshara-IL**",
+        "ArXiv 2026",
+        "[Paper](https://arxiv.org/abs/2603.23521)",
+        "193M images / 50M docs",
+        "Large multilingual interleaved pretraining dataset for Indic languages"
+      ]
+    ]
+  },
+  "7-dataset.other-textimage-to-image.table54": {
+    "headers": [
+      "Dataset",
+      "Paper",
+      "Links",
+      "Scale",
+      "Notes"
+    ],
+    "rows": [
+      [
+        "**ShareGPT-4o-Image**",
+        "ArXiv 2025",
+        "[Paper](https://arxiv.org/abs/2506.18095)",
+        "45K T2I + 46K TI2I",
+        "Mixed corpus with explicit text-and-image-to-image supervision"
+      ],
+      [
+        "**OriPID**",
+        "ICML 2025",
+        "[Paper](https://arxiv.org/abs/2501.02376)",
+        "Origins + guided prompts",
+        "Dataset for text-guided image-to-image origin identification across diffusion models"
+      ],
+      [
+        "**BiomedJourney**",
+        "ArXiv 2023",
+        "[Paper](https://arxiv.org/abs/2310.10765)",
+        "Biomedical triplets",
+        "Prior image + progression text -> counterfactual target image"
+      ],
+      [
+        "**D-ANI**",
+        "ACM MM 2025",
+        "[Paper](https://arxiv.org/abs/2412.17632) [HF](https://huggingface.co/datasets/Renyang/DANI)",
+        "440K+ AIGI samples",
+        "Mixed T2I, I2I, and TI2I corpus for discrepancy analysis"
       ]
     ]
   },
