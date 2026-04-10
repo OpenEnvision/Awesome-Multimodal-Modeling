@@ -3,8 +3,8 @@
 
 <div align="center">
 
-# Awesome Multimodal Models
-<p><strong>A Comprehensive Survey & Curated List of Multimodal Models</strong><br/><sub>From Traditional Fusion to Native & Unified Architectures</sub></p>
+# Awesome Multimodal Modeling
+<p><strong>A Comprehensive Survey & Curated List of Multimodal Modeling</strong><br/><sub>From Traditional Fusion to Native & Unified Architectures</sub></p>
 
 <p>
   <a href="https://awesome.re"><img src="https://awesome.re/badge-flat2.svg" alt="Awesome"></a>
