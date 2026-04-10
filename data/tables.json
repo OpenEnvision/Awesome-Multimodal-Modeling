@@ -1800,126 +1800,126 @@
       ],
       [
         "Vision as a Dialect: Unifying Visual Understanding and Generation via Text-Aligned Representations",
-        "arXiv 2025/06/18",
+        "arXiv 2025",
         "[Paper](https://arxiv.org/abs/2506.18898) [Code](https://github.com/csuhan/Tar) [Demo]",
         "Text-aligned discrete semantic representations",
         "visual understanding, visual generation"
       ],
       [
         "UniFork: Exploring Modality Alignment for Unified Multimodal Understanding and Generation",
-        "arXiv 2025/06/17",
+        "arXiv 2025",
         "[Paper](https://arxiv.org/abs/2506.17202) [Code](https://github.com/tliby/UniFork)",
         "Y-shaped architecture for modality alignment",
         "visual understanding, visual generation"
       ],
       [
         "UniWorld: High-Resolution Semantic Encoders for Unified Visual Understanding and Generation",
-        "arXiv 2025/06/03",
+        "arXiv 2025",
         "[Paper](https://arxiv.org/abs/2506.xxxxx) [Code](https://github.com/xxx/UniWorld)",
         "High-resolution semantic encoders",
         "visual understanding, visual generation"
       ],
       [
         "Pisces: An Auto-regressive Foundation Model for Image Understanding and Generation",
-        "arXiv 2025/06/10",
+        "arXiv 2025",
         "[Paper](https://arxiv.org/abs/2506.xxxxx) [Code](https://github.com/xxx/Pisces)",
         "Auto-regressive foundation model",
         "visual understanding, visual generation"
       ],
       [
         "DualToken: Towards Unifying Visual Understanding and Generation with Dual Visual Vocabularies",
-        "arXiv 2025/03/18",
+        "arXiv 2025",
         "[Paper](https://arxiv.org/abs/2503.xxxxx) [Code](https://github.com/xxx/DualToken)",
         "Dual visual vocabularies",
         "visual understanding, visual generation"
       ],
       [
         "UniTok: A Unified Tokenizer for Visual Generation and Understanding",
-        "arXiv 2025/02/27",
+        "arXiv 2025",
         "[Paper](https://arxiv.org/abs/2502.20321) [Code](https://github.com/xxx/UniTok) [Demo]",
         "Unified tokenizer",
         "visual understanding, visual generation"
       ],
       [
         "QLIP: Text-Aligned Visual Tokenization Unifies Auto-Regressive Multimodal Understanding and Generation",
-        "arXiv 2025/02/05",
+        "arXiv 2025",
         "[Paper](https://arxiv.org/abs/2502.xxxxx) [Code](https://github.com/xxx/QLIP) [Demo]",
         "Text-aligned visual tokenization",
         "visual understanding, visual generation"
       ],
       [
         "MetaMorph: Multimodal Understanding and Generation via Instruction Tuning",
-        "arXiv 2024/12/18",
+        "arXiv 2024",
         "[Paper](https://arxiv.org/abs/2412.xxxxx) [Code](https://github.com/xxx/MetaMorph)",
         "Instruction tuning for unified multimodal",
         "visual understanding, visual generation"
       ],
       [
         "ILLUME: Illuminating Your LLMs to See, Draw, and Self-Enhance",
-        "arXiv 2024/12/09",
+        "arXiv 2024",
         "[Paper](https://arxiv.org/abs/2412.xxxxx)",
         "Self-enhancing unified see-and-draw",
         "visual understanding, visual generation"
       ],
       [
         "PUMA: Empowering Unified MLLM with Multi-granular Visual Generation",
-        "arXiv 2024/10/17",
+        "arXiv 2024",
         "[Paper](https://arxiv.org/abs/2410.xxxxx) [Code](https://github.com/xxx/PUMA)",
         "Multi-granular visual generation",
         "visual understanding, visual generation"
       ],
       [
         "VILA-U: a Unified Foundation Model Integrating Visual Understanding and Generation",
-        "ICLR 2024/09/06",
+        "ICLR 2024",
         "[Paper](https://arxiv.org/abs/2409.xxxxx) [Code](https://github.com/xxx/VILA-U) [Demo]",
         "Unified foundation model",
         "visual understanding, visual generation"
       ],
       [
         "Mini-Gemini: Mining the Potential of Multi-modality Vision Language Models",
-        "arXiv 2024/03/27",
+        "arXiv 2024",
         "[Paper](https://arxiv.org/abs/2403.xxxxx) [Code](https://github.com/xxx/Mini-Gemini) [Demo]",
         "Multi-modality potential mining",
         "visual understanding, visual generation"
       ],
       [
         "MM-Interleaved: Interleaved Image-Text Generative Modeling via Multi-modal Feature Synchronizer",
-        "arXiv 2024/01/18",
+        "arXiv 2024",
         "[Paper](https://arxiv.org/abs/2401.xxxxx) [Code](https://github.com/xxx/MM-Interleaved)",
         "Interleaved image-text generative modeling",
         "visual understanding, visual generation"
       ],
       [
         "VL-GPT: A Generative Pre-trained Transformer for Vision and Language Understanding and Generation",
-        "arXiv 2023/12/14",
+        "arXiv 2023",
         "[Paper](https://arxiv.org/abs/2312.xxxxx) [Code](https://github.com/xxx/VL-GPT)",
         "Generative pre-trained transformer",
         "visual understanding, visual generation"
       ],
       [
         "Generative Multimodal Models are In-Context Learners",
-        "CVPR 2023/12/10",
+        "CVPR 2023",
         "[Paper](https://arxiv.org/abs/2312.xxxxx) [Code](https://github.com/xxx/Emu2) [Demo]",
         "In-context learning generative multimodal",
         "visual understanding, visual generation"
       ],
       [
         "DreamLLM: Synergistic Multimodal Comprehension and Creation",
-        "ICLR 2023/09/20",
+        "ICLR 2023",
         "[Paper](https://arxiv.org/abs/2309.xxxxx) [Code](https://github.com/xxx/DreamLLM)",
         "Synergistic multimodal comprehension and creation",
         "visual understanding, visual generation"
       ],
       [
         "LaVIT: Unified Language-Vision Pretraining in LLM with Dynamic Discrete Visual Tokenization",
-        "ICLR 2023/09/09",
+        "ICLR 2023",
         "[Paper](https://arxiv.org/abs/2309.xxxxx) [Code](https://github.com/xxx/LaVIT)",
         "Dynamic discrete visual tokenization",
         "visual understanding, visual generation"
       ],
       [
         "Emu: Generative Pretraining in Multimodality",
-        "ICLR 2023/07/11",
+        "ICLR 2023",
         "[Paper](https://arxiv.org/abs/2307.xxxxx) [Code](https://github.com/xxx/Emu) [Demo]",
         "Generative pretraining in multimodality",
         "visual understanding, visual generation"
