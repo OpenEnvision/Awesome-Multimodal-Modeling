@@ -1206,13 +1206,6 @@
         "visual understanding, reasoning, spatial"
       ],
       [
-        "Pixtral",
-        "arXiv 2024 ",
-        "[Paper](https://arxiv.org/abs/2410.07073) [HF](https://huggingface.co/mistralai) ",
-        "12B open-weight model with strong instruction following, image+text understanding; competitive with larger open VLMs",
-        "visual understanding"
-      ],
-      [
         "mPLUG-DocOwl 1.5 / 2: Unified Structure Learning for OCR-free Document Understanding",
         "arXiv 2024",
         "[Paper](https://arxiv.org/abs/2403.12895) [Code](https://github.com/X-PLUG/mPLUG-DocOwl)",
