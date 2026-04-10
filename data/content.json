@@ -317,7 +317,7 @@
           ]
         },
         {
-          "title": "4.2 Any-to-Any / Omni Extensions ",
+          "title": "4.2 Any-to-Any / Omni UMMs ",
           "blocks": [
             {
               "type": "markdown",
@@ -463,7 +463,7 @@
           ]
         },
         {
-          "title": "5.5 Advanced NMMs",
+          "title": "5.5 Any-to-Any / Omni NMMs",
           "blocks": [
             {
               "type": "markdown",
