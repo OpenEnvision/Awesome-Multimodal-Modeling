@@ -124,7 +124,7 @@
           "blocks": [
             {
               "type": "markdown",
-              "text": "```\nMultimodal Models\n├── Traditional Multimodal Models                    [§2]\n│   ├── Alignment / Retrieval / Captioning\n│   ├── Contrastive & Generative Pretraining\n│   └── Early / Late / Hybrid Fusion\n│\n├── Multimodal LLMs (MLLMs) — Pretrained Backbones   [§3]\n│   ├── Vision Encoder / Abstractor + LLM\n│   ├── Instruction Tuning / Reasoning / Tool Use\n│   └── Text Output Only\n│\n├── Unified Multimodal Models (UMMs) — U+G           [§4]\n│   ├── Text-and-Image Unified Models\n│   ├── Any-to-Any / Omni Extensions <kbd>Omni</kbd>\n│   └── Benchmarks for Unified Evaluation\n│\n└── Native Multimodal Models (NMMs) — Scratch        [§5]\n    ├── Early Fusion (single Transformer, minimal modality params)\n    ├── Late Fusion (separate components, all from scratch)\n    ├── MoE-Based\n    │   ├── Modality-Agnostic Routing\n    │   └── Modality-Aware Routing\n    └── Advanced: Omni <kbd>Omni</kbd> / Any-to-Any / Hybrid AR+Diffusion\n```"
+              "text": "```\nMultimodal Models\n├── Traditional Multimodal Models                    [§2]\n│   ├── Alignment / Retrieval / Captioning\n│   ├── Contrastive & Generative Pretraining\n│   └── Early / Late / Hybrid Fusion\n│\n├── Multimodal LLMs (MLLMs) — Pretrained Backbones   [§3]\n│   ├── Vision Encoder / Abstractor + LLM\n│   ├── Instruction Tuning / Reasoning / Tool Use\n│   └── Text Output Only\n│\n├── Unified Multimodal Models (UMMs) — U+G           [§4]\n│   ├── Text-and-Image Unified Models\n│   ├── Any-to-Any / Omni Extensions \n│   └── Benchmarks for Unified Evaluation\n│\n└── Native Multimodal Models (NMMs) — Scratch        [§5]\n    ├── Early Fusion (single Transformer, minimal modality params)\n    ├── Late Fusion (separate components, all from scratch)\n    ├── MoE-Based\n    │   ├── Modality-Agnostic Routing\n    │   └── Modality-Aware Routing\n    └── Advanced: Omni / Any-to-Any / Hybrid AR+Diffusion\n```"
             }
           ],
           "subsections": []
@@ -343,7 +343,7 @@
         },
         {
           "type": "markdown",
-          "text": "<p align=\"center\">\n  <img src=\"assets/unified_model.png\" width=\"800\" />\n  <br/>\n  <em>Figure: Unified multimodal model that jointly performs understanding and generation.</em>\n</p>"
+          "text": "<p align=\"center\">\n  <img src=\"assets/unified_model.png\" width=\"800\" />\n  <br/>\n  <em>Overview of representative paradigms and architectures of Unified Multimodal Models (UMMs). Source: https://github.com/AIDC-AI/Awesome-Unified-Multimodal-Models</em>\n</p>"
         }
       ],
       "subsections": [
@@ -554,7 +554,7 @@
           ],
           "subsections": [
             {
-              "title": "Omni Models (audio + video + image + text) <kbd>Omni</kbd>",
+              "title": "Omni Models (audio + video + image + text)",
               "blocks": [
                 {
                   "type": "table",
