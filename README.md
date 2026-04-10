@@ -420,7 +420,7 @@ We identify **5 Architectural Waves** in multimodal model development:
 
 | Paper | Venue | Links | Notes | Task |
 |---|---|---|---|---|
-| **Show, Attend and Tell**: Neural Image Caption Generation with Visual Attention | ICML 2015 | [Paper](https://arxiv.org/pdf/1502.03044) | Pioneering visual attention for image captioning | visual generation |
+| **Show, Attend and Tell**: Neural Image Caption Generation with Visual Attention | ICML 2015 | [Paper](https://arxiv.org/pdf/1502.03044) | Pioneering visual attention for image captioning | visual understanding |
 | **VSE++**: Improving Visual-Semantic Embeddings with Hard Negatives | BMVC 2018 | [Paper](https://arxiv.org/abs/1707.05612) | Hard negatives for stronger visual-semantic embeddings | visual understanding |
 | **ViLBERT**: Pretraining Task-Agnostic Visiolinguistic Representations | NeurIPS 2019 | [Paper](https://arxiv.org/abs/1908.02265) | Dual-stream BERT for V+L | visual understanding |
 | **LXMERT**: Learning Cross-Modality Encoder Representations from Transformers | EMNLP 2019 | [Paper](https://arxiv.org/abs/1908.07490) | Tri-encoder design with object relationships and cross-modality layers | visual understanding |
@@ -445,7 +445,6 @@ We identify **5 Architectural Waves** in multimodal model development:
 | **Multi-Grained Vision Language Pre-Training**: Aligning Texts with Visual Concepts | ICML 2022 | [Paper](https://arxiv.org/pdf/2111.08276) | Multi-grained aligning vision-language pretraining | visual understanding |
 | **MoCo v3**: An Empirical Study of Training Self-Supervised Vision Transformers | ICCV 2021 | [Paper](https://arxiv.org/abs/2104.02057) | Momentum contrastive learning for ViT | visual understanding |
 | **LiT**: Locked-image Tuning for Zero-Shot Transfer | CVPR 2022 | [Paper](https://arxiv.org/abs/2111.07991) | Locked image with contrastive text tuning | visual understanding |
-| **BLIP**: Bootstrapping Language-Image Pre-training | ICML 2022 | [Paper](https://arxiv.org/abs/2201.12086) | Unified understanding and generation via bootstrapping | visual understanding, visual generation |
 
 #### Multimodal Fusion Strategies
 
@@ -458,13 +457,10 @@ We identify **5 Architectural Waves** in multimodal model development:
 
 | Paper | Venue | Links | Notes | Task |
 |---|---|---|---|---|
-| **SimVLM**: Simple Visual Language Model Pretraining with Weak Supervision | ICLR 2022 | [Paper](https://arxiv.org/abs/2108.10904) | Simple prefix language modeling with weak supervision | visual understanding, visual generation |
 | **METER**: An Empirical Study of Training End-to-End Vision-and-Language Transformers | CVPR 2022 | [Paper](https://arxiv.org/abs/2111.02387) | Unified multimodal transformer encoder | visual understanding |
 | **VLMo**: Unified Vision-Language Pre-Training with Mixture-of-Modality-Experts | NeurIPS 2022 | [Paper](https://arxiv.org/abs/2111.02358) | Mixture-of-modality-experts for unified pretraining | visual understanding |
-| **CoCa**: Contrastive Captioners are Image-Text Foundation Models | TMLR 2022 | [Paper](https://arxiv.org/abs/2205.01917) | Joint contrastive and captioning pretraining | visual understanding, visual generation |
 | **ViLT**: Vision-and-Language Transformer Without Convolution | ICML 2021 | [Paper](https://arxiv.org/abs/2102.03334) | Minimal image-specific inductive bias | visual understanding |
 | **Pixel-BERT**: Aligning Image Pixels with Text | ArXiv 2020 | [Paper](https://arxiv.org/abs/2004.00849) | Pixel-level visual features | visual understanding |
-| **FLAVA**: A Foundational Language And Vision Alignment Model | CVPR 2022 | [Paper](https://arxiv.org/abs/2112.04482) | Unified unimodal + multimodal pretraining | visual understanding, visual generation |
 
 ### 2.2 Multimodal Pretraining Foundations
 
@@ -482,16 +478,18 @@ We identify **5 Architectural Waves** in multimodal model development:
 | **OFA**: Unifying Architectures, Tasks, and Modalities Through a Sequence-to-Sequence Learning | ICML 2022 | [Paper](https://arxiv.org/abs/2202.03052) [Code](https://github.com/OFA-Sys/OFA) | Seq2Seq across diverse tasks | visual understanding, visual generation |
 | **Flamingo**: Visual Language Models for Few-Shot Learning | NeurIPS 2022 | [Paper](https://arxiv.org/abs/2204.14198) | Cross-attention + frozen LLM | visual understanding, visual generation |
 | **GIT**: A Generative Image-to-text Transformer for Vision and Language | TMLR 2022 | [Paper](https://arxiv.org/abs/2205.14100) | Simplified generative pretraining | visual understanding, visual generation |
+| **VL-T5**: Unifying Vision-and-Language Tasks via Text Generation | ICML 2021 | [Paper](https://proceedings.mlr.press/v139/cho21a.html) | Multilingual text-generation pretraining (T5) that unifies discriminative vision-language benchmarks via a conditional text output objective | visual understanding, visual generation |
 
 #### Unified Backbones & Robustness
 
 | Paper | Venue | Links | Notes | Task |
 |---|---|---|---|---|
 | **ALBEF**: Align Before Fuse | NeurIPS 2021 | [Paper](https://arxiv.org/abs/2107.07651) | Align-before-fuse recipe with momentum distillation | visual understanding |
-| **VLMo**: Unified Vision-Language Pre-Training with Mixture-of-Modality-Experts | NeurIPS 2022 | [Paper](https://arxiv.org/abs/2111.02358) | Unified backbone with mixture-of-modality experts | visual understanding |
 | **BEiT-3**: Image as a Foreign Language | ArXiv 2022 | [Paper](https://arxiv.org/abs/2208.10442) | Multiway unified pretraining across vision and language | visual understanding, visual generation |
 | **MURAL**: Multimodal, Multitask Retrieval Across Languages | ArXiv 2021 | [Paper](https://arxiv.org/abs/2109.05125) | Multilingual multimodal retrieval | visual understanding |
 | **Imagined then Generated**: Missing Modality Synthesis | NeurIPS 2022 | [Paper](https://arxiv.org/abs/2209.04251) | Robust to missing modality at test time | visual generation |
+| **CMAT**: Cross-modal Alignment and Translation for Missing-Modality Action Recognition | CVIU 2023 | [Paper](https://www.sciencedirect.com/science/article/pii/S1077314223001856) | Contrastive alignment followed by cross-modal feature translation to maintain action recognition performance when modalities drop out | visual understanding |
+| **ALMEA**: Active Learning-Enhanced Multimodal Entity Alignment with Semantic Modality Imputation | arxiv 2026 | [Paper](https://openreview.net/forum?id=iitxXWqODX) | Entity alignment in multimodal knowledge graphs with semantic calibration, modality imputation, and active learning to robustly handle missing modalities | visual understanding |
 
 <p align="right"><a href="#awesome-multimodal-models">Back to Top</a></p>
 

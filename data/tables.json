@@ -298,7 +298,7 @@
         "ICML 2015",
         "[Paper](https://arxiv.org/pdf/1502.03044)",
         "Pioneering visual attention for image captioning",
-        "visual generation"
+        "visual understanding"
       ],
       [
         "**VSE++**: Improving Visual-Semantic Embeddings with Hard Negatives",
@@ -443,13 +443,6 @@
         "[Paper](https://arxiv.org/abs/2111.07991)",
         "Locked image with contrastive text tuning",
         "visual understanding"
-      ],
-      [
-        "**BLIP**: Bootstrapping Language-Image Pre-training",
-        "ICML 2022",
-        "[Paper](https://arxiv.org/abs/2201.12086)",
-        "Unified understanding and generation via bootstrapping",
-        "visual understanding, visual generation"
       ]
     ]
   },
@@ -492,13 +485,6 @@
     ],
     "rows": [
       [
-        "**SimVLM**: Simple Visual Language Model Pretraining with Weak Supervision",
-        "ICLR 2022",
-        "[Paper](https://arxiv.org/abs/2108.10904)",
-        "Simple prefix language modeling with weak supervision",
-        "visual understanding, visual generation"
-      ],
-      [
         "**METER**: An Empirical Study of Training End-to-End Vision-and-Language Transformers",
         "CVPR 2022",
         "[Paper](https://arxiv.org/abs/2111.02387)",
@@ -513,13 +499,6 @@
         "visual understanding"
       ],
       [
-        "**CoCa**: Contrastive Captioners are Image-Text Foundation Models",
-        "TMLR 2022",
-        "[Paper](https://arxiv.org/abs/2205.01917)",
-        "Joint contrastive and captioning pretraining",
-        "visual understanding, visual generation"
-      ],
-      [
         "**ViLT**: Vision-and-Language Transformer Without Convolution",
         "ICML 2021",
         "[Paper](https://arxiv.org/abs/2102.03334)",
@@ -532,13 +511,6 @@
         "[Paper](https://arxiv.org/abs/2004.00849)",
         "Pixel-level visual features",
         "visual understanding"
-      ],
-      [
-        "**FLAVA**: A Foundational Language And Vision Alignment Model",
-        "CVPR 2022",
-        "[Paper](https://arxiv.org/abs/2112.04482)",
-        "Unified unimodal + multimodal pretraining",
-        "visual understanding, visual generation"
       ]
     ]
   },
@@ -606,6 +578,13 @@
         "[Paper](https://arxiv.org/abs/2205.14100)",
         "Simplified generative pretraining",
         "visual understanding, visual generation"
+      ],
+      [
+        "**VL-T5**: Unifying Vision-and-Language Tasks via Text Generation",
+        "ICML 2021",
+        "[Paper](https://proceedings.mlr.press/v139/cho21a.html)",
+        "Multilingual text-generation pretraining (T5) that unifies discriminative vision-language benchmarks via a conditional text output objective",
+        "visual understanding, visual generation"
       ]
     ]
   },
@@ -623,13 +602,6 @@
         "NeurIPS 2021",
         "[Paper](https://arxiv.org/abs/2107.07651)",
         "Align-before-fuse recipe with momentum distillation",
-        "visual understanding"
-      ],
-      [
-        "**VLMo**: Unified Vision-Language Pre-Training with Mixture-of-Modality-Experts",
-        "NeurIPS 2022",
-        "[Paper](https://arxiv.org/abs/2111.02358)",
-        "Unified backbone with mixture-of-modality experts",
         "visual understanding"
       ],
       [
@@ -652,6 +624,20 @@
         "[Paper](https://arxiv.org/abs/2209.04251)",
         "Robust to missing modality at test time",
         "visual generation"
+      ],
+      [
+        "**CMAT**: Cross-modal Alignment and Translation for Missing-Modality Action Recognition",
+        "CVIU 2023",
+        "[Paper](https://www.sciencedirect.com/science/article/pii/S1077314223001856)",
+        "Contrastive alignment followed by cross-modal feature translation to maintain action recognition performance when modalities drop out",
+        "visual understanding"
+      ],
+      [
+        "**ALMEA**: Active Learning-Enhanced Multimodal Entity Alignment with Semantic Modality Imputation",
+        "arxiv 2026",
+        "[Paper](https://openreview.net/forum?id=iitxXWqODX)",
+        "Entity alignment in multimodal knowledge graphs with semantic calibration, modality imputation, and active learning to robustly handle missing modalities",
+        "visual understanding"
       ]
     ]
   },
