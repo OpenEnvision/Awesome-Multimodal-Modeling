@@ -418,34 +418,34 @@ We identify **5 Architectural Waves** in multimodal model development:
 
 #### Multimodal Representations & Alignment
 
-| Paper | Venue | Links | Notes |
-|---|---|---|---|
-| **Show, Attend and Tell**: Neural Image Caption Generation with Visual Attention | ICML 2015 | [Paper](https://arxiv.org/pdf/1502.03044) | Pioneering visual attention for image captioning |
-| **VSE++**: Improving Visual-Semantic Embeddings with Hard Negatives | BMVC 2018 | [Paper](https://arxiv.org/abs/1707.05612) | Hard negatives for stronger visual-semantic embeddings |
-| **ViLBERT**: Pretraining Task-Agnostic Visiolinguistic Representations | NeurIPS 2019 | [Paper](https://arxiv.org/abs/1908.02265) | Dual-stream BERT for V+L |
-| **LXMERT**: Learning Cross-Modality Encoder Representations from Transformers | EMNLP 2019 | [Paper](https://arxiv.org/abs/1908.07490) | Tri-encoder design with object relationships and cross-modality layers |
-| **VisualBERT**: A Simple and Performant Baseline for Vision and Language | ArXiv 2019 | [Paper](https://arxiv.org/abs/1908.03557) | Single-stream V+L transformer |
-| **UNITER**: Universal Image-Text Representation Learning | ECCV 2020 | [Paper](https://arxiv.org/abs/1909.11740) | Conditional masking + alignment |
-| **Oscar**: Object Semantics Aligned Pre-training | ECCV 2020 | [Paper](https://arxiv.org/abs/2004.06871) | Object tags as anchor points |
-| **VinVL**: Revisiting Visual Representations in Vision-Language Models | CVPR 2021 | [Paper](https://arxiv.org/abs/2101.00529) | Stronger visual features |
-| **Align before Fuse**: Vision and Language Representation Learning with Momentum Distillation | NeurIPS 2021 | [Paper](https://arxiv.org/abs/2107.07651) | Momentum distillation for better vision-language alignment |
+| Paper | Venue | Links | Notes | Task |
+|---|---|---|---|---|
+| **Show, Attend and Tell**: Neural Image Caption Generation with Visual Attention | ICML 2015 | [Paper](https://arxiv.org/pdf/1502.03044) | Pioneering visual attention for image captioning | visual generation |
+| **VSE++**: Improving Visual-Semantic Embeddings with Hard Negatives | BMVC 2018 | [Paper](https://arxiv.org/abs/1707.05612) | Hard negatives for stronger visual-semantic embeddings | visual understanding |
+| **ViLBERT**: Pretraining Task-Agnostic Visiolinguistic Representations | NeurIPS 2019 | [Paper](https://arxiv.org/abs/1908.02265) | Dual-stream BERT for V+L | visual understanding |
+| **LXMERT**: Learning Cross-Modality Encoder Representations from Transformers | EMNLP 2019 | [Paper](https://arxiv.org/abs/1908.07490) | Tri-encoder design with object relationships and cross-modality layers | visual understanding |
+| **VisualBERT**: A Simple and Performant Baseline for Vision and Language | ArXiv 2019 | [Paper](https://arxiv.org/abs/1908.03557) | Single-stream V+L transformer | visual understanding |
+| **UNITER**: Universal Image-Text Representation Learning | ECCV 2020 | [Paper](https://arxiv.org/abs/1909.11740) | Conditional masking + alignment | visual understanding |
+| **Oscar**: Object Semantics Aligned Pre-training | ECCV 2020 | [Paper](https://arxiv.org/abs/2004.06871) | Object tags as anchor points | visual understanding |
+| **VinVL**: Revisiting Visual Representations in Vision-Language Models | CVPR 2021 | [Paper](https://arxiv.org/abs/2101.00529) | Stronger visual features | visual understanding |
+| **Align before Fuse**: Vision and Language Representation Learning with Momentum Distillation | NeurIPS 2021 | [Paper](https://arxiv.org/abs/2107.07651) | Momentum distillation for better vision-language alignment | visual understanding |
 
 #### Contrastive Learning
 
-| Paper | Venue | Links | Notes |
-|---|---|---|---|
-| **CLIP**: Learning Transferable Visual Models From Natural Language Supervision | ICML 2021 | [Paper](https://arxiv.org/abs/2103.00020) [HF](https://huggingface.co/openai/clip-vit-large-patch14) | Foundational contrastive V+L pretraining |
-| **ALIGN**: Scaling Up Visual and Vision-Language Representation Learning | ICML 2021 | [Paper](https://arxiv.org/abs/2102.05918) | Noisy web-scale image-text pairs |
-| **SigLIP**: Sigmoid Loss for Language Image Pre-Training | ICCV 2023 | [Paper](https://arxiv.org/abs/2303.15343) [HF](https://huggingface.co/google/siglip-so400m-patch14-384) | Sigmoid loss; more stable than softmax |
-| **DeCLIP**: Supervision Exists Everywhere | ICLR 2022 | [Paper](https://arxiv.org/abs/2110.05208) | Data-efficient CLIP |
-| **SLIP**: Self-supervision meets Language-Image Pre-training | ECCV 2022 | [Paper](https://arxiv.org/abs/2112.12750) | CLIP + self-supervised learning |
-| **EVA-CLIP**: Improved Training Techniques for CLIP at Scale | ArXiv 2023 | [Paper](https://arxiv.org/abs/2303.15389) | Reconstructive training + CLIP |
-| **FILIP**: Fine-grained Interactive Language-Image Pre-training | ICLR 2022 | [Paper](https://arxiv.org/abs/2111.07783) | Fine-grained token-wise late interaction |
-| **GLIP**: Grounded Language-Image Pre-training | CVPR 2022 | [Paper](https://arxiv.org/abs/2112.03857) | Grounded object-level vision-language pretraining |
-| **Multi-Grained Vision Language Pre-Training**: Aligning Texts with Visual Concepts | ICML 2022 | [Paper](https://arxiv.org/pdf/2111.08276) | Multi-grained aligning vision-language pretraining |
-| **MoCo v3**: An Empirical Study of Training Self-Supervised Vision Transformers | ICCV 2021 | [Paper](https://arxiv.org/abs/2104.02057) | Momentum contrastive learning for ViT |
-| **LiT**: Locked-image Tuning for Zero-Shot Transfer | CVPR 2022 | [Paper](https://arxiv.org/abs/2111.07991) | Locked image with contrastive text tuning |
-| **BLIP**: Bootstrapping Language-Image Pre-training | ICML 2022 | [Paper](https://arxiv.org/abs/2201.12086) | Unified understanding and generation via bootstrapping |
+| Paper | Venue | Links | Notes | Task |
+|---|---|---|---|---|
+| **CLIP**: Learning Transferable Visual Models From Natural Language Supervision | ICML 2021 | [Paper](https://arxiv.org/abs/2103.00020) [HF](https://huggingface.co/openai/clip-vit-large-patch14) | Foundational contrastive V+L pretraining | visual understanding |
+| **ALIGN**: Scaling Up Visual and Vision-Language Representation Learning | ICML 2021 | [Paper](https://arxiv.org/abs/2102.05918) | Noisy web-scale image-text pairs | visual understanding |
+| **SigLIP**: Sigmoid Loss for Language Image Pre-Training | ICCV 2023 | [Paper](https://arxiv.org/abs/2303.15343) [HF](https://huggingface.co/google/siglip-so400m-patch14-384) | Sigmoid loss; more stable than softmax | visual understanding |
+| **DeCLIP**: Supervision Exists Everywhere | ICLR 2022 | [Paper](https://arxiv.org/abs/2110.05208) | Data-efficient CLIP | visual understanding |
+| **SLIP**: Self-supervision meets Language-Image Pre-training | ECCV 2022 | [Paper](https://arxiv.org/abs/2112.12750) | CLIP + self-supervised learning | visual understanding |
+| **EVA-CLIP**: Improved Training Techniques for CLIP at Scale | ArXiv 2023 | [Paper](https://arxiv.org/abs/2303.15389) | Reconstructive training + CLIP | visual understanding |
+| **FILIP**: Fine-grained Interactive Language-Image Pre-training | ICLR 2022 | [Paper](https://arxiv.org/abs/2111.07783) | Fine-grained token-wise late interaction | visual understanding |
+| **GLIP**: Grounded Language-Image Pre-training | CVPR 2022 | [Paper](https://arxiv.org/abs/2112.03857) | Grounded object-level vision-language pretraining | visual understanding |
+| **Multi-Grained Vision Language Pre-Training**: Aligning Texts with Visual Concepts | ICML 2022 | [Paper](https://arxiv.org/pdf/2111.08276) | Multi-grained aligning vision-language pretraining | visual understanding |
+| **MoCo v3**: An Empirical Study of Training Self-Supervised Vision Transformers | ICCV 2021 | [Paper](https://arxiv.org/abs/2104.02057) | Momentum contrastive learning for ViT | visual understanding |
+| **LiT**: Locked-image Tuning for Zero-Shot Transfer | CVPR 2022 | [Paper](https://arxiv.org/abs/2111.07991) | Locked image with contrastive text tuning | visual understanding |
+| **BLIP**: Bootstrapping Language-Image Pre-training | ICML 2022 | [Paper](https://arxiv.org/abs/2201.12086) | Unified understanding and generation via bootstrapping | visual understanding, visual generation |
 
 #### Multimodal Fusion Strategies
 
@@ -456,15 +456,15 @@ We identify **5 Architectural Waves** in multimodal model development:
 | **Hybrid Fusion** | Multiple fusion points across layers | UNITER, VLP |
 | **Cross-Attention Fusion** | Explicit cross-modal attention | Flamingo, BLIP-2 |
 
-| Paper | Venue | Links | Notes |
-|---|---|---|---|
-| **SimVLM**: Simple Visual Language Model Pretraining with Weak Supervision | ICLR 2022 | [Paper](https://arxiv.org/abs/2108.10904) | Simple prefix language modeling with weak supervision |
-| **METER**: An Empirical Study of Training End-to-End Vision-and-Language Transformers | CVPR 2022 | [Paper](https://arxiv.org/abs/2111.02387) | Unified multimodal transformer encoder |
-| **VLMo**: Unified Vision-Language Pre-Training with Mixture-of-Modality-Experts | NeurIPS 2022 | [Paper](https://arxiv.org/abs/2111.02358) | Mixture-of-modality-experts for unified pretraining |
-| **CoCa**: Contrastive Captioners are Image-Text Foundation Models | TMLR 2022 | [Paper](https://arxiv.org/abs/2205.01917) | Joint contrastive and captioning pretraining |
-| **ViLT**: Vision-and-Language Transformer Without Convolution | ICML 2021 | [Paper](https://arxiv.org/abs/2102.03334) | Minimal image-specific inductive bias |
-| **Pixel-BERT**: Aligning Image Pixels with Text | ArXiv 2020 | [Paper](https://arxiv.org/abs/2004.00849) | Pixel-level visual features |
-| **FLAVA**: A Foundational Language And Vision Alignment Model | CVPR 2022 | [Paper](https://arxiv.org/abs/2112.04482) | Unified unimodal + multimodal pretraining |
+| Paper | Venue | Links | Notes | Task |
+|---|---|---|---|---|
+| **SimVLM**: Simple Visual Language Model Pretraining with Weak Supervision | ICLR 2022 | [Paper](https://arxiv.org/abs/2108.10904) | Simple prefix language modeling with weak supervision | visual understanding, visual generation |
+| **METER**: An Empirical Study of Training End-to-End Vision-and-Language Transformers | CVPR 2022 | [Paper](https://arxiv.org/abs/2111.02387) | Unified multimodal transformer encoder | visual understanding |
+| **VLMo**: Unified Vision-Language Pre-Training with Mixture-of-Modality-Experts | NeurIPS 2022 | [Paper](https://arxiv.org/abs/2111.02358) | Mixture-of-modality-experts for unified pretraining | visual understanding |
+| **CoCa**: Contrastive Captioners are Image-Text Foundation Models | TMLR 2022 | [Paper](https://arxiv.org/abs/2205.01917) | Joint contrastive and captioning pretraining | visual understanding, visual generation |
+| **ViLT**: Vision-and-Language Transformer Without Convolution | ICML 2021 | [Paper](https://arxiv.org/abs/2102.03334) | Minimal image-specific inductive bias | visual understanding |
+| **Pixel-BERT**: Aligning Image Pixels with Text | ArXiv 2020 | [Paper](https://arxiv.org/abs/2004.00849) | Pixel-level visual features | visual understanding |
+| **FLAVA**: A Foundational Language And Vision Alignment Model | CVPR 2022 | [Paper](https://arxiv.org/abs/2112.04482) | Unified unimodal + multimodal pretraining | visual understanding, visual generation |
 
 ### 2.2 Multimodal Pretraining Foundations
 
@@ -472,26 +472,26 @@ We identify **5 Architectural Waves** in multimodal model development:
 
 #### Generative Pretraining
 
-| Paper | Venue | Links | Notes |
-|---|---|---|---|
-| **DALL-E**: Zero-Shot Text-to-Image Generation | ICML 2021 | [Paper](https://arxiv.org/abs/2102.12092) | dVAE + autoregressive image generation |
-| **BLIP**: Bootstrapping Language-Image Pre-training | ICML 2022 | [Paper](https://arxiv.org/abs/2201.12086) [Code](https://github.com/salesforce/BLIP) | CapFilt for noisy web data |
-| **BLIP-2**: Bootstrapping Language-Image Pre-training with Frozen Image Encoders | ICML 2023 | [Paper](https://arxiv.org/abs/2301.12597) [Code](https://github.com/salesforce/LAVIS/tree/main/projects/blip2) | Q-Former bridging ViT + LLM |
-| **CoCa**: Contrastive Captioners are Image-Text Foundation Models | TMLR 2022 | [Paper](https://arxiv.org/abs/2205.01917) | Contrastive + generative joint training |
-| **SimVLM**: Simple Visual Language Model Pretraining | ICLR 2022 | [Paper](https://arxiv.org/abs/2108.10904) | Minimal inductive bias; prefix LM |
-| **OFA**: Unifying Architectures, Tasks, and Modalities Through a Sequence-to-Sequence Learning | ICML 2022 | [Paper](https://arxiv.org/abs/2202.03052) [Code](https://github.com/OFA-Sys/OFA) | Seq2Seq across diverse tasks |
-| **Flamingo**: Visual Language Models for Few-Shot Learning | NeurIPS 2022 | [Paper](https://arxiv.org/abs/2204.14198) | Cross-attention + frozen LLM |
-| **GIT**: A Generative Image-to-text Transformer for Vision and Language | TMLR 2022 | [Paper](https://arxiv.org/abs/2205.14100) | Simplified generative pretraining |
+| Paper | Venue | Links | Notes | Task |
+|---|---|---|---|---|
+| **DALL-E**: Zero-Shot Text-to-Image Generation | ICML 2021 | [Paper](https://arxiv.org/abs/2102.12092) | dVAE + autoregressive image generation | visual generation |
+| **BLIP**: Bootstrapping Language-Image Pre-training | ICML 2022 | [Paper](https://arxiv.org/abs/2201.12086) [Code](https://github.com/salesforce/BLIP) | CapFilt for noisy web data | visual understanding, visual generation |
+| **BLIP-2**: Bootstrapping Language-Image Pre-training with Frozen Image Encoders | ICML 2023 | [Paper](https://arxiv.org/abs/2301.12597) [Code](https://github.com/salesforce/LAVIS/tree/main/projects/blip2) | Q-Former bridging ViT + LLM | visual understanding, visual generation |
+| **CoCa**: Contrastive Captioners are Image-Text Foundation Models | TMLR 2022 | [Paper](https://arxiv.org/abs/2205.01917) | Contrastive + generative joint training | visual understanding, visual generation |
+| **SimVLM**: Simple Visual Language Model Pretraining | ICLR 2022 | [Paper](https://arxiv.org/abs/2108.10904) | Minimal inductive bias; prefix LM | visual understanding, visual generation |
+| **OFA**: Unifying Architectures, Tasks, and Modalities Through a Sequence-to-Sequence Learning | ICML 2022 | [Paper](https://arxiv.org/abs/2202.03052) [Code](https://github.com/OFA-Sys/OFA) | Seq2Seq across diverse tasks | visual understanding, visual generation |
+| **Flamingo**: Visual Language Models for Few-Shot Learning | NeurIPS 2022 | [Paper](https://arxiv.org/abs/2204.14198) | Cross-attention + frozen LLM | visual understanding, visual generation |
+| **GIT**: A Generative Image-to-text Transformer for Vision and Language | TMLR 2022 | [Paper](https://arxiv.org/abs/2205.14100) | Simplified generative pretraining | visual understanding, visual generation |
 
 #### Unified Backbones & Robustness
 
-| Paper | Venue | Links | Notes |
-|---|---|---|---|
-| **ALBEF**: Align Before Fuse | NeurIPS 2021 | [Paper](https://arxiv.org/abs/2107.07651) | Align-before-fuse recipe with momentum distillation |
-| **VLMo**: Unified Vision-Language Pre-Training with Mixture-of-Modality-Experts | NeurIPS 2022 | [Paper](https://arxiv.org/abs/2111.02358) | Unified backbone with mixture-of-modality experts |
-| **BEiT-3**: Image as a Foreign Language | ArXiv 2022 | [Paper](https://arxiv.org/abs/2208.10442) | Multiway unified pretraining across vision and language |
-| **MURAL**: Multimodal, Multitask Retrieval Across Languages | ArXiv 2021 | [Paper](https://arxiv.org/abs/2109.05125) | Multilingual multimodal retrieval |
-| **Imagined then Generated**: Missing Modality Synthesis | NeurIPS 2022 | [Paper](https://arxiv.org/abs/2209.04251) | Robust to missing modality at test time |
+| Paper | Venue | Links | Notes | Task |
+|---|---|---|---|---|
+| **ALBEF**: Align Before Fuse | NeurIPS 2021 | [Paper](https://arxiv.org/abs/2107.07651) | Align-before-fuse recipe with momentum distillation | visual understanding |
+| **VLMo**: Unified Vision-Language Pre-Training with Mixture-of-Modality-Experts | NeurIPS 2022 | [Paper](https://arxiv.org/abs/2111.02358) | Unified backbone with mixture-of-modality experts | visual understanding |
+| **BEiT-3**: Image as a Foreign Language | ArXiv 2022 | [Paper](https://arxiv.org/abs/2208.10442) | Multiway unified pretraining across vision and language | visual understanding, visual generation |
+| **MURAL**: Multimodal, Multitask Retrieval Across Languages | ArXiv 2021 | [Paper](https://arxiv.org/abs/2109.05125) | Multilingual multimodal retrieval | visual understanding |
+| **Imagined then Generated**: Missing Modality Synthesis | NeurIPS 2022 | [Paper](https://arxiv.org/abs/2209.04251) | Robust to missing modality at test time | visual generation |
 
 <p align="right"><a href="#awesome-multimodal-models">Back to Top</a></p>
 
