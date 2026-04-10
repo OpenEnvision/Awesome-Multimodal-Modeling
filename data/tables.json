@@ -2657,288 +2657,523 @@
   "headers": ["Dataset", "Paper", "Links", "Scale", "Notes"],
   "rows": [
     [
-      "**LAION-5B**",
-      "NeurIPS 2022",
-      "[Paper](https://arxiv.org/abs/2210.08402) [HF](https://huggingface.co/datasets/laion/laion2B-en)",
-      "5B image-text pairs",
-      "Largest open web-scale noisy corpus for vision-language pretraining"
-    ],
-    [
-      "**DataComp**",
-      "NeurIPS 2023",
-      "[Paper](https://arxiv.org/abs/2304.14108) [Code](https://github.com/mlfoundations/datacomp)",
-      "Variable (up to billions)",
-      "Benchmark and pipeline for dataset curation and filtering"
-    ],
-    [
-      "**LLaVA-150K**",
-      "NeurIPS 2023",
-      "[Paper](https://arxiv.org/abs/2304.08485) [HF](https://huggingface.co/datasets/liuhaotian/LLaVA-Instruct-150K)",
-      "150K",
-      "GPT-4-generated visual instruction tuning dataset"
-    ],
-    [
-      "**M3IT**",
-      "ArXiv 2023",
-      "[Paper](https://arxiv.org/abs/2306.04387) [HF](https://huggingface.co/datasets/MMInstruction/M3IT)",
-      "2.4M",
-      "Multilingual multimodal instruction tuning across 40 datasets"
-    ],
-    [
-      "**ShareGPT4V**",
-      "ArXiv 2023",
-      "[Paper](https://arxiv.org/abs/2311.12793) [Code](https://github.com/InternLM/InternLM-XComposer/tree/main/projects/ShareGPT4V)",
-      "100K",
-      "High-quality dense captions distilled from GPT-4V"
+      "**Honey-Data-15M**",
+      "arXiv 2025",
+      "[Paper](https://arxiv.org/pdf/2510.13795) [HF](https://huggingface.co/datasets/Open-Bee/Honey-Data-15M)",
+      "15M image-text pairs",
+      "High-quality curated corpus for fully open MLLMs (Bee project)"
     ],
     [
       "**Infinity-MM**",
-      "ArXiv 2024",
-      "[Paper](https://arxiv.org/abs/2410.18558) [HF](https://huggingface.co/datasets/BAAI/Infinity-MM)",
-      "40M",
-      "Large-scale curated multimodal instruction corpus"
+      "arXiv 2024",
+      "[Paper](https://arxiv.org/pdf/2410.18558) [HF](https://huggingface.co/datasets/BAAI/Infinity-MM)",
+      "40M multimodal instructions",
+      "Large-scale high-quality instruction tuning dataset"
     ],
     [
-      "**PixMo**",
-      "ArXiv 2024",
-      "[Paper](https://arxiv.org/abs/2409.17146) [Code](https://github.com/allenai/molmo)",
-      "Multi-part (~10M+)",
-      "Rich supervision including grounding, Q&A, and pointing"
-    ],
-    [
-      "**SVIT**",
-      "ArXiv 2023",
-      "[Paper](https://arxiv.org/abs/2307.04087) [HF](https://huggingface.co/datasets/BAAI/SVIT)",
-      "4.2M",
-      "Synthetic visual instruction tuning dataset"
+      "**LLaVA-OneVision**",
+      "TMLR 2024",
+      "[Paper](https://arxiv.org/pdf/2408.03326) [HF](https://huggingface.co/datasets/lmms-lab/LLaVA-OneVision-Data)",
+      "4.8M samples",
+      "Unified dataset for cross-task visual instruction transfer"
     ],
     [
       "**Cambrian-10M**",
       "NeurIPS 2024",
       "[Paper](https://arxiv.org/abs/2406.16860) [HF](https://huggingface.co/datasets/nyu-visionx/Cambrian-10M)",
-      "~10M",
-      "Vision-centric instruction tuning pool; curated subset Cambrian-7M also available"
+      "10M samples",
+      "Vision-centric multimodal training data for Cambrian models"
     ],
     [
-      "**WebVid-10M**",
-      "ICCV 2021",
-      "[Paper](https://arxiv.org/abs/2104.00650)",
-      "10.7M video-text pairs",
-      "Large-scale web-scraped video-text dataset; widely used for video-language pretraining"
+      "**ShareGPT4V**",
+      "ECCV 2023",
+      "[Paper](https://arxiv.org/pdf/2311.12793) [HF](https://huggingface.co/datasets/Lin-Chen/ShareGPT4V)",
+      "100K samples",
+      "High-quality caption refinement for multimodal chat models"
     ],
     [
-      "**InternVid**",
-      "ICLR 2024",
-      "[Paper](https://arxiv.org/abs/2307.06942) [HF](https://huggingface.co/datasets/OpenGVLab/InternVid)",
-      "234M clips",
-      "Large-scale video-text dataset with high video-text correlation via ViCLIP"
+      "**CapsFusion-120M**",
+      "CVPR 2023",
+      "[Paper](https://arxiv.org/pdf/2310.20550) [HF](https://huggingface.co/datasets/BAAI/CapsFusion-120M)",
+      "120M image-text pairs",
+      "Filtered and fused captions for improved alignment quality"
     ],
     [
-      "**HD-VILA-100M**",
-      "CVPR 2022",
-      "[Paper](https://arxiv.org/abs/2111.10337)",
-      "100M clips",
-      "High-resolution diverse video-language dataset from YouTube"
+      "**GRIT**",
+      "ICLR 2023",
+      "[Paper](https://arxiv.org/pdf/2306.14824) [HF](https://huggingface.co/datasets/zzliang/GRIT)",
+      "20M grounded samples",
+      "Grounded image-text data with entity-level alignment (Kosmos-2)"
     ],
     [
-      "**Panda-70M**",
-      "CVPR 2024",
-      "[Paper](https://arxiv.org/abs/2402.19479) [Code](https://github.com/snap-research/Panda-70M)",
-      "70M clips",
-      "High-quality semantically coherent video captions via multi-modal teacher models"
+      "**DataComp-1B**",
+      "NeurIPS 2023",
+      "[Paper](https://arxiv.org/pdf/2304.14108) [HF](https://huggingface.co/datasets/mlfoundations/datacomp_1b)",
+      "1.4B image-text pairs",
+      "Benchmark suite for dataset curation strategies"
+    ],
+    [
+      "**LAION-COCO**",
+      "-",
+      "[Paper](https://laion.ai/blog/laion-coco/) [HF](https://huggingface.co/datasets/laion/laion-coco)",
+      "600M synthetic captions",
+      "Synthetic captions generated from LAION data"
+    ],
+    [
+      "**COYO-700M**",
+      "-",
+      "[Paper](https://github.com/kakaobrain/coyo-dataset) [HF](https://huggingface.co/datasets/kakaobrain/coyo-700m)",
+      "747M image-text pairs",
+      "Large-scale web dataset with improved filtering"
+    ],
+    [
+      "**LAION-5B**",
+      "NeurIPS 2022",
+      "[Paper](https://arxiv.org/pdf/2210.08402)",
+      "5.9B image-text pairs",
+      "Largest open web-scale noisy corpus for vision-language pretraining"
+    ],
+    [
+      "**Wukong-100M**",
+      "NeurIPS 2022",
+      "[Paper](https://arxiv.org/pdf/2202.06767)",
+      "100M Chinese image-text pairs",
+      "Large-scale Chinese multimodal pretraining dataset"
+    ],
+    [
+      "**RedCaps**",
+      "NeurIPS 2021",
+      "[Paper](https://arxiv.org/pdf/2111.11431) [HF](https://huggingface.co/datasets/kdexd/red_caps)",
+      "12M image-text pairs",
+      "Human-written captions from Reddit image posts"
     ]
   ]
 },
-
 "7-dataset.multimodal-understanding.table45bench": {
   "headers": ["Dataset", "Paper", "Links", "Scale", "Notes"],
   "rows": [
     [
-      "**VQAv2**",
-      "CVPR 2017",
-      "[Paper](https://arxiv.org/abs/1612.00837) [Site](https://visualqa.org/)",
-      "265K questions",
-      "Balanced visual question answering benchmark; canonical image understanding eval"
+      "**General-Bench**",
+      "ICML 2025",
+      "[Paper](https://arxiv.org/abs/2505.04620) [Code](https://github.com/path2generalist/General-Level)",
+      "-",
+      "General-Level and General-Bench for multimodal generalist evaluation"
+    ],
+    [
+      "**MM-Vet v2**",
+      "arXiv 2024",
+      "[Paper](https://arxiv.org/abs/2408.00765) [Code](https://github.com/yuweihao/MM-Vet/tree/main/v2)",
+      "-",
+      "Challenging benchmark for integrated multimodal capabilities"
+    ],
+    [
+      "**OwlEval**",
+      "arXiv 2024",
+      "[Paper](https://arxiv.org/abs/2304.14178) [Code](https://github.com/X-PLUG/mPLUG-Owl)",
+      "-",
+      "Evaluation suite from mPLUG-Owl for multimodal performance"
+    ],
+    [
+      "**oVQA**",
+      "ICLR 2024",
+      "[Paper](https://arxiv.org/abs/2402.07270) [Code](https://github.com/lmb-freiburg/ovqa)",
+      "-",
+      "Open-ended VQA benchmark using classification datasets"
+    ],
+    [
+      "**SEED-Bench-2**",
+      "arXiv 2023",
+      "[Paper](https://arxiv.org/abs/2311.17092) [Code](https://github.com/AILab-CVC/SEED-Bench/tree/main/SEED-Bench-2)",
+      "-",
+      "Advanced multimodal LLM benchmark with richer tasks"
+    ],
+    [
+      "**MMMU**",
+      "CVPR 2023",
+      "[Paper](https://arxiv.org/abs/2311.16502) [Code](https://github.com/MMMU-Benchmark/MMMU)",
+      "-",
+      "Massive multi-discipline benchmark for expert-level reasoning"
+    ],
+    [
+      "**MM-Vet**",
+      "ICML 2023",
+      "[Paper](https://arxiv.org/abs/2308.02490) [Code](https://github.com/yuweihao/MM-Vet)",
+      "-",
+      "Evaluation of integrated multimodal capabilities"
+    ],
+    [
+      "**SEED-Bench**",
+      "CVPR 2023",
+      "[Paper](https://arxiv.org/abs/2307.16125) [Code](https://github.com/AILab-CVC/SEED-Bench)",
+      "-",
+      "Benchmark for generative comprehension in multimodal LLMs"
+    ],
+    [
+      "**MMBench**",
+      "ECCV 2023",
+      "[Paper](https://arxiv.org/abs/2307.06281) [Code](https://github.com/open-compass/MMBench)",
+      "-",
+      "Comprehensive evaluation for multimodal general capability"
+    ],
+    [
+      "**LAMM**",
+      "NeurIPS 2023",
+      "[Paper](https://arxiv.org/abs/2306.06687) [Code](https://github.com/OpenLAMM/LAMM)",
+      "-",
+      "Instruction-tuning dataset and benchmark for multimodal models"
+    ],
+    [
+      "**HaluEval**",
+      "EMNLP 2023",
+      "[Paper](https://arxiv.org/abs/2305.11747) [Code](https://github.com/RUCAIBox/HaluEval)",
+      "-",
+      "Benchmark for hallucination evaluation in LLMs and VLMs"
     ],
     [
       "**GQA**",
       "CVPR 2019",
-      "[Paper](https://arxiv.org/abs/1902.09506) [Site](https://cs.stanford.edu/people/dorarad/gqa/)",
-      "22M questions",
-      "Compositional visual reasoning and scene graph understanding"
+      "[Paper](https://arxiv.org/abs/1902.09506) [Code](https://github.com/salesforce/LAVIS/blob/main/dataset_card/gqa.md)",
+      "-",
+      "Dataset for compositional visual reasoning and QA"
     ],
     [
-      "**TextVQA**",
-      "CVPR 2019",
-      "[Paper](https://arxiv.org/abs/1904.08920) [HF](https://huggingface.co/datasets/textvqa/textvqa)",
-      "45K questions",
-      "Scene text reading and reasoning; key OCR-VQA benchmark"
-    ],
-    [
-      "**DocVQA**",
-      "WACV 2021",
-      "[Paper](https://arxiv.org/abs/2007.00398) [Site](https://www.docvqa.org/)",
-      "50K questions",
-      "Document image visual question answering; covers forms, tables, lists"
-    ],
-    [
-      "**ScienceQA**",
-      "NeurIPS 2022",
-      "[Paper](https://arxiv.org/abs/2209.09513) [HF](https://huggingface.co/datasets/derek-thomas/ScienceQA)",
-      "21K questions",
-      "Multimodal science QA with chain-of-thought rationales across K-12 subjects"
-    ],
-    [
-      "**MMBench**",
-      "ECCV 2024",
-      "[Paper](https://arxiv.org/abs/2307.06281) [Code](https://github.com/open-compass/MMBench)",
-      "~3K questions",
-      "Bilingual all-around VLM benchmark covering 20 fine-grained ability dimensions"
-    ],
-    [
-      "**MMMU**",
-      "CVPR 2024",
-      "[Paper](https://arxiv.org/abs/2311.16502) [Site](https://mmmu-benchmark.github.io/)",
-      "11.5K questions",
-      "Massive multi-discipline multimodal understanding requiring college-level knowledge"
-    ],
-    [
-      "**OCRBench**",
-      "ArXiv 2023",
-      "[Paper](https://arxiv.org/abs/2305.07895) [Code](https://github.com/Yuliang-Liu/MultimodalOCR)",
-      "1K questions",
-      "Comprehensive OCR evaluation across text recognition, VQA, document QA, and KIE"
-    ],
-    [
-      "**MathVista**",
-      "ICLR 2024",
-      "[Paper](https://arxiv.org/abs/2310.02255) [Site](https://mathvista.github.io/)",
-      "6.1K questions",
-      "Mathematical reasoning in visual contexts aggregating 31 multimodal math datasets"
-    ],
-    [
-      "**VideoMME**",
-      "CVPR 2025",
-      "[Paper](https://arxiv.org/abs/2405.21075) [Site](https://video-mme.github.io/)",
-      "2.7K questions",
-      "First comprehensive video analysis benchmark for multimodal LLMs; short/medium/long videos"
+      "**VQA**",
+      "ICCV 2015",
+      "[Paper](https://arxiv.org/abs/1505.00468) [Project](https://visualqa.org/index.html)",
+      "-",
+      "Classic visual question answering benchmark"
     ]
   ]
 },
-
 "7-dataset.text-to-image.table46": {
   "headers": ["Dataset", "Paper", "Links", "Scale", "Notes"],
   "rows": [
     [
+      "**FLUX-Reason-6M**",
+      "arXiv 2025",
+      "[Paper](https://arxiv.org/pdf/2509.09680) [HF](https://huggingface.co/datasets/LucasFang/FLUX-Reason-6M)",
+      "6M samples",
+      "Large-scale dataset for reasoning-driven text-to-image generation"
+    ],
+    [
+      "**Echo-4o-Image**",
+      "arXiv 2025",
+      "[Paper](https://arxiv.org/abs/2508.09987) [HF](https://huggingface.co/datasets/Yejy53/Echo-4o-Image)",
+      "106K samples",
+      "Synthetic dataset leveraging GPT-4o image generation"
+    ],
+    [
+      "**Poster100K**",
+      "arXiv 2025",
+      "[Paper](https://arxiv.org/pdf/2506.10741) [HF](https://huggingface.co/datasets/PosterCraft/Poster100K)",
+      "100K samples",
+      "High-quality aesthetic poster generation dataset"
+    ],
+    [
+      "**Text-Render-2M**",
+      "arXiv 2025",
+      "[Paper](https://arxiv.org/pdf/2506.10741) [HF](https://huggingface.co/datasets/PosterCraft/Text-Render-2M)",
+      "2M samples",
+      "Dataset for visual text rendering in images"
+    ],
+    [
+      "**ShareGPT-4o-Image**",
+      "arXiv 2025",
+      "[Paper](https://arxiv.org/pdf/2506.18095) [HF](https://huggingface.co/datasets/FreedomIntelligence/ShareGPT-4o-Image)",
+      "45K samples",
+      "Aligns multimodal models with GPT-4o-level image generation"
+    ],
+    [
+      "**BLIP3o-60K**",
+      "arXiv 2025",
+      "[Paper](https://arxiv.org/pdf/2505.09568) [HF](https://huggingface.co/datasets/BLIP3o/BLIP3o-60k)",
+      "60K samples",
+      "High-quality curated data for unified multimodal generation"
+    ],
+    [
+      "**TextAtlas5M**",
+      "arXiv 2025",
+      "[Paper](https://arxiv.org/pdf/2502.07870) [HF](https://huggingface.co/datasets/CSU-JPG/TextAtlas5M)",
+      "5M samples",
+      "Dense text rendering dataset for text-rich image generation"
+    ],
+    [
+      "**EliGen TrainSet**",
+      "arXiv 2025",
+      "[Paper](https://arxiv.org/pdf/2501.01097)",
+      "500K samples",
+      "Entity-level controllable generation dataset with regional attention"
+    ],
+    [
+      "**PD12M**",
+      "arXiv 2024",
+      "[Paper](https://arxiv.org/pdf/2410.23144) [HF](https://huggingface.co/datasets/Spawning/PD12M)",
+      "12M samples",
+      "Public-domain aesthetic dataset with governance mechanisms"
+    ],
+    [
+      "**SFHQ-T2I**",
+      "-",
+      "[Link](https://www.kaggle.com/datasets/selfishgene/sfhq-t2i-synthetic-faces-from-text-2-image-models)",
+      "122K samples",
+      "Synthetic face dataset generated by T2I models"
+    ],
+    [
+      "**Text-to-Image-2M**",
+      "-",
+      "[HF](https://huggingface.co/datasets/jackyhate/text-to-image-2M)",
+      "2M samples",
+      "General-purpose web-collected image-text dataset"
+    ],
+    [
+      "**DenseFusion-1M**",
+      "NeurIPS 2024",
+      "[Paper](https://arxiv.org/pdf/2407.08303) [HF](https://huggingface.co/datasets/BAAI/DenseFusion-1M)",
+      "1M samples",
+      "Merged expert captions for enhanced multimodal perception"
+    ],
+    [
+      "**Megalith-10M**",
+      "-",
+      "[HF](https://huggingface.co/datasets/madebyollin/megalith-10m)",
+      "10M samples",
+      "Large-scale general-purpose image-text dataset"
+    ],
+    [
+      "**PixelProse**",
+      "arXiv 2024",
+      "[Paper](https://arxiv.org/pdf/2406.10328) [HF](https://huggingface.co/datasets/tomg-group-umd/pixelprose)",
+      "16M samples",
+      "Dense caption dataset for detailed image description"
+    ],
+    [
+      "**DOCCI**",
+      "ECCV 2024",
+      "[Paper](https://arxiv.org/pdf/2404.19753) [HF](https://huggingface.co/datasets/google/docci)",
+      "15K samples",
+      "Paired contrasting image descriptions for compositional reasoning"
+    ],
+    [
+      "**CosmicMan-HQ**",
+      "CVPR 2024",
+      "[Paper](https://arxiv.org/pdf/2404.01294) [HF](https://huggingface.co/datasets/cosmicman/CosmicManHQ-1.0)",
+      "6M samples",
+      "High-quality human-centric dataset for T2I models"
+    ],
+    [
+      "**AnyWord-3M**",
+      "ICLR 2023",
+      "[Paper](https://arxiv.org/pdf/2311.03054) [HF](https://huggingface.co/datasets/stzhao/AnyWord-3M)",
+      "3M samples",
+      "Multilingual text rendering dataset"
+    ],
+    [
+      "**JourneyDB**",
+      "NeurIPS 2023",
+      "[Paper](https://arxiv.org/pdf/2307.00716) [HF](https://huggingface.co/datasets/JourneyDB/JourneyDB)",
+      "4M samples",
+      "High-quality prompts and generations for benchmarking"
+    ],
+    [
+      "**RenderedText**",
+      "-",
+      "[HF](https://huggingface.co/datasets/wendlerc/RenderedText)",
+      "12M samples",
+      "Synthetic rendered text images dataset"
+    ],
+    [
+      "**Mario-10M**",
+      "NeurIPS 2023",
+      "[Paper](https://arxiv.org/pdf/2305.10855) [HF](https://huggingface.co/datasets/JingyeChen22/TextDiffuser-MARIO-10M)",
+      "10M samples",
+      "Text-centric diffusion dataset for visual text generation"
+    ],
+    [
+      "**SAM**",
+      "ICCV 2023",
+      "[Paper](https://arxiv.org/abs/2304.02643)",
+      "11M images",
+      "Segmentation dataset widely used for controllable generation"
+    ],
+    [
       "**LAION-Aesthetics**",
       "Blog 2022",
-      "[Blog](https://laion.ai/blog/laion-aesthetics/) [HF](https://huggingface.co/datasets/laion/laion-aesthetics-v2)",
+      "[Blog](https://laion.ai/blog/laion-aesthetics/)",
       "120M (5+), 12M (6+)",
       "Aesthetic-filtered subset of LAION-5B; used to train Stable Diffusion v1"
     ],
     [
       "**CC-12M**",
       "CVPR 2021",
-      "[Paper](https://arxiv.org/abs/2102.08981) [HF](https://huggingface.co/datasets/conceptual_12m)",
-      "12M",
-      "Conceptual 12M: web-crawled image-text pairs emphasizing long-tail visual concepts"
-    ],
-    [
-      "**PixelProse**",
-      "ArXiv 2024",
-      "[Paper](https://arxiv.org/abs/2406.10328) [HF](https://huggingface.co/datasets/tomg-group-umd/pixelprose)",
-      "16M+",
-      "Synthetically generated dense image captions via cutting-edge VLMs for T2I training"
-    ],
-    [
-      "**PD12M**",
-      "ArXiv 2024",
-      "[Paper](https://arxiv.org/abs/2410.23144)",
-      "12.4M",
-      "Largest public domain image-text dataset (CC0-licensed) with synthetic captions"
-    ],
-    [
-      "**SAM**",
-      "ICCV 2023",
-      "[Paper](https://arxiv.org/abs/2304.02643) [Site](https://segment-anything.com/)",
-      "11M images / 1B masks",
-      "Segment Anything dataset; images used for T2I training via re-captioning"
-    ],
-    [
-      "**DiffusionDB**",
-      "ACL 2023",
-      "[Paper](https://arxiv.org/abs/2210.14896) [HF](https://huggingface.co/datasets/poloclub/diffusiondb)",
-      "14M images / 1.8M prompts",
-      "Large-scale prompt-image dataset from real users"
-    ],
-    [
-      "**Pick-a-Pic**",
-      "ArXiv 2023",
-      "[Paper](https://arxiv.org/abs/2305.01569) [HF](https://huggingface.co/datasets/yuvalkirstain/pickapic_v1)",
-      "851K pairs",
-      "Human preference dataset for T2I alignment"
-    ],
-    [
-      "**JourneyDB**",
-      "NeurIPS 2023",
-      "[Paper](https://arxiv.org/abs/2307.00716) [Code](https://journeydb.github.io/)",
-      "4M images",
-      "Midjourney-based prompt-image corpus"
-    ],
-    [
-      "**PASTA**",
-      "ICML 2025",
-      "[Paper](https://arxiv.org/abs/2412.10419)",
-      "Sequential preference data",
-      "Multi-turn interactive preference dataset for T2I alignment"
-    ],
-    [
-      "**ROVI**",
-      "ICCV 2025",
-      "[Paper](https://arxiv.org/abs/2508.01008)",
-      "1M",
-      "Instance-grounded open-vocabulary T2I dataset"
+      "[Paper](https://arxiv.org/pdf/2102.08981)",
+      "12M samples",
+      "Web-scale dataset for long-tail concept learning"
     ]
   ]
 },
-
 "7-dataset.text-to-image.table46bench": {
   "headers": ["Dataset", "Paper", "Links", "Scale", "Notes"],
   "rows": [
     [
-      "**T2I-CompBench**",
-      "NeurIPS 2023",
+      "**GenExam**",
+      "arXiv 2025",
+      "[Paper](https://arxiv.org/abs/2509.14232) [Code](https://github.com/OpenGVLab/GenExam)",
+      "Evaluation benchmark",
+      "Multidisciplinary exam-style benchmark for text-to-image generation"
+    ],
+    [
+      "**OneIG-Bench**",
+      "arXiv 2025",
+      "[Paper](https://arxiv.org/abs/2506.07977) [Code](https://github.com/OneIG-Bench/OneIG-Benchmark)",
+      "Evaluation benchmark",
+      "Omni-dimensional evaluation across multiple generation aspects"
+    ],
+    [
+      "**WISE**",
+      "arXiv 2025",
+      "[Paper](https://arxiv.org/abs/2503.07265) [Code](https://github.com/PKU-YuanGroup/WISE)",
+      "Evaluation benchmark",
+      "World knowledge-informed semantic evaluation for T2I"
+    ],
+    [
+      "**MMIG-Bench**",
+      "arXiv 2025",
+      "[Paper](https://arxiv.org/abs/2505.19415) [Code](https://github.com/hanghuacs/MMIG-Bench)",
+      "Evaluation benchmark",
+      "Comprehensive and explainable multimodal image generation evaluation"
+    ],
+    [
+      "**WorldGenBench**",
+      "arXiv 2025",
+      "[Paper](https://arxiv.org/abs/2505.01490) [HF](https://huggingface.co/datasets/worldrl/WorldGenBench)",
+      "Evaluation benchmark",
+      "Reasoning-driven generation with integrated world knowledge"
+    ],
+    [
+      "**DreamBench++**",
+      "ICLR 2025",
+      "[Paper](https://arxiv.org/abs/2406.16855) [Code](https://github.com/yuangpeng/dreambench_plus)",
+      "Evaluation benchmark",
+      "Human-aligned benchmark for personalized image generation"
+    ],
+    [
+      "**T2I-CompBench++**",
+      "TPAMI 2025",
       "[Paper](https://arxiv.org/abs/2307.06350) [Code](https://github.com/Karine-Huang/T2I-CompBench)",
-      "Evaluation-focused",
-      "Comprehensive compositional T2I benchmarking; covers attribute binding, spatial, non-spatial"
+      "Evaluation benchmark",
+      "Enhanced compositionality benchmark for text-to-image models"
     ],
     [
-      "**DrawBench**",
-      "NeurIPS 2022",
-      "[Paper](https://arxiv.org/abs/2205.11487)",
-      "200 prompts",
-      "Challenging prompt suite from the Imagen paper for comprehensive T2I evaluation"
-    ],
-    [
-      "**DrawBench++**",
-      "ArXiv 2024",
-      "[Paper](https://arxiv.org/abs/2406.14453)",
-      "Prompt set",
-      "Extended and more challenging prompt set for evaluating T2I models"
+      "**ConceptMix**",
+      "NeurIPS 2024",
+      "[Paper](https://arxiv.org/abs/2408.14339) [Code](https://github.com/princetonvisualai/ConceptMix)",
+      "Evaluation benchmark",
+      "Compositional generation with controllable difficulty"
     ],
     [
       "**GenAI-Bench**",
       "CVPR 2024",
       "[Paper](https://arxiv.org/abs/2406.13743) [Code](https://github.com/linzhiqiu/t2v_metrics)",
-      "1.6K prompts",
-      "Evaluates compositional T2I/T2V generation with VQAScore metric"
+      "Evaluation benchmark",
+      "Compositional visual generation evaluation metrics and tasks"
+    ],
+    [
+      "**Commonsense-T2I**",
+      "COLM 2024",
+      "[Paper](https://arxiv.org/abs/2406.07546) [Code](https://github.com/zeyofu/Commonsense-T2I)",
+      "Evaluation benchmark",
+      "Tests commonsense reasoning in text-to-image generation"
+    ],
+    [
+      "**VQAScore**",
+      "ECCV 2024",
+      "[Paper](https://arxiv.org/abs/2404.01291) [Code](https://github.com/linzhiqiu/t2v_metrics)",
+      "Metric / evaluation",
+      "Uses image-to-text QA to evaluate T2I faithfulness"
+    ],
+    [
+      "**FlashEval**",
+      "CVPR 2024",
+      "[Paper](https://arxiv.org/abs/2403.16379) [Code](https://github.com/thu-nics/FlashEval)",
+      "Evaluation benchmark",
+      "Fast and accurate evaluation for diffusion models"
+    ],
+    [
+      "**DPG-Bench**",
+      "arXiv 2024",
+      "[Paper](https://arxiv.org/abs/2403.05135) [Code](https://github.com/TencentQQGYLab/ELLA/tree/main/dpg_bench)",
+      "Evaluation benchmark",
+      "Evaluates semantic alignment via LLM-enhanced diffusion"
+    ],
+    [
+      "**HEIM**",
+      "NeurIPS 2023",
+      "[Paper](https://arxiv.org/abs/2311.04287) [Code](https://github.com/stanford-crfm/helm)",
+      "Evaluation benchmark",
+      "Holistic evaluation framework for T2I models"
+    ],
+    [
+      "**DSG-1K**",
+      "ICLR 2023",
+      "[Paper](https://arxiv.org/abs/2310.18235) [Code](https://github.com/j-min/DSG)",
+      "Evaluation benchmark",
+      "Scene-graph based fine-grained evaluation"
+    ],
+    [
+      "**GenEval**",
+      "NeurIPS 2023",
+      "[Paper](https://arxiv.org/abs/2310.11513) [Code](https://github.com/djghosh13/geneval)",
+      "Evaluation benchmark",
+      "Object-centric evaluation of text-image alignment"
+    ],
+    [
+      "**T2I-CompBench**",
+      "NeurIPS 2023",
+      "[Paper](https://arxiv.org/abs/2307.06350) [Code](https://github.com/Karine-Huang/T2I-CompBench)",
+      "Evaluation benchmark",
+      "Comprehensive compositional T2I benchmark (attributes, relations, bindings)"
+    ],
+    [
+      "**DreamSim**",
+      "NeurIPS 2023",
+      "[Paper](https://arxiv.org/abs/2306.09344) [Code](https://github.com/ssundaram21/dreamsim)",
+      "Metric / evaluation",
+      "Learns human visual similarity for generative evaluation"
+    ],
+    [
+      "**HRS-Bench**",
+      "ICCV 2023",
+      "[Paper](https://arxiv.org/abs/2304.05390) [Code](https://github.com/eslambakr/HRS_benchmark)",
+      "Evaluation benchmark",
+      "Holistic, reliable and scalable benchmark"
+    ],
+    [
+      "**TIFA**",
+      "ICCV 2023",
+      "[Paper](https://arxiv.org/abs/2303.11897) [Code](https://github.com/Yushi-Hu/tifa)",
+      "Metric / evaluation",
+      "QA-based faithfulness evaluation for generated images"
     ],
     [
       "**PartiPrompts**",
-      "ArXiv 2022",
-      "[Paper](https://arxiv.org/abs/2206.10789)",
-      "1.6K prompts",
-      "Challenging prompt benchmark from Google Parti covering 12 categories and skill levels"
+      "TMLR 2022",
+      "[Paper](https://arxiv.org/abs/2206.10789) [Code](https://github.com/google-research/parti)",
+      "Benchmark prompts",
+      "Diverse prompt suite for evaluating generative richness"
+    ],
+    [
+      "**DrawBench**",
+      "NeurIPS 2022",
+      "[Paper](https://arxiv.org/abs/2205.11487)",
+      "Benchmark prompts",
+      "Human-evaluated benchmark for diffusion models (Imagen)"
+    ],
+    [
+      "**PaintSkills (DALL-Eval)**",
+      "ICCV 2022",
+      "[Paper](https://arxiv.org/abs/2202.04053) [Code](https://github.com/j-min/DallEval)",
+      "Evaluation benchmark",
+      "Tests reasoning and bias in T2I systems"
     ]
   ]
 },
