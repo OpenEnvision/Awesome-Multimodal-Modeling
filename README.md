@@ -444,6 +444,7 @@ Multimodal Models
 | Youtu-VL: Unleashing Visual Potential via Unified Vision-Language Supervision | arXiv 2026 | [Paper](https://arxiv.org/abs/2601.19798) | Tri-modal (V+A+L) unified framework; parameter-efficient tuning, seamless cross-modal reasoning for mobile/IoT deployment. | visual understanding |
 | Seed1.5-VL Technical Report | arXiv 2025 | [Paper](https://arxiv.org/pdf/2505.07062) | 20B MoE + 532M ViT; native-resolution vision-language foundation model; efficient asymmetric architecture. | visual understanding |
 | Kwai Keye-VL 1.5 Technical Report | arXiv 2025 | [Paper](https://arxiv.org/pdf/2509.01563) | Adaptive Slow-Fast encoding; 8B parameter scale with 128K long-context; SOTA video reasoning & human-preference aligned. | visual understanding |
+| MiniMax-01: Scaling Foundation Models with Lightning Attention | arXiv 2025 | [Paper](https://arxiv.org/pdf/2501.08313) | Hybrid Lightning-Softmax Attention; MoE-based (45.9B active) multimodal; 4M long-context with near-zero prefill latency. | visual understanding |
 
 ### 3.2 Omni MLLMs
 

@@ -1344,6 +1344,13 @@
         "[Paper](https://arxiv.org/pdf/2509.01563)",
         "Adaptive Slow-Fast encoding; 8B parameter scale with 128K long-context; SOTA video reasoning & human-preference aligned.",
         "visual understanding"
+      ],
+      [
+        "MiniMax-01: Scaling Foundation Models with Lightning Attention",
+        "arXiv 2025",
+        "[Paper](https://arxiv.org/pdf/2501.08313)",
+        "Hybrid Lightning-Softmax Attention; MoE-based (45.9B active) multimodal; 4M long-context with near-zero prefill latency.",
+        "visual understanding"
       ]
     ]
   },
