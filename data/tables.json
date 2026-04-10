@@ -1045,200 +1045,25 @@
     ],
     "rows": [
       [
-        "Qwen-VL: A Versatile Vision-Language Model",
-        "arXiv 2023",
-        "[Paper](https://arxiv.org/abs/2308.12966) [HF](https://huggingface.co/Qwen/Qwen-VL) ",
-        "High-res, multi-lang, bounding box",
+        "Penguin-VL: Exploring the Efficiency Limits of VLM with LLM-based Vision Encoders",
+        "arXiv 2026",
+        "[Paper](https://arxiv.org/pdf/2603.06569)",
+        "LLM-initialized vision encoder (non-CLIP); text-to-vision weight reuse, generative-aligned visual features, optimized for dense perception.",
         "visual understanding"
       ],
       [
-        "CogVLM: Visual Expert for Pretrained Language Models",
-        "arXiv 2023",
-        "[Paper](https://arxiv.org/abs/2311.03079) [Code](https://github.com/THUDM/CogVLM) ",
-        "Deep fusion with visual expert modules inside a pretrained LLM",
+        "Youtu-VL: Unleashing Visual Potential via Unified Vision-Language Supervision",
+        "arXiv 2026",
+        "[Paper](https://arxiv.org/abs/2601.19798)",
+        "Tri-modal (V+A+L) unified framework; parameter-efficient tuning, seamless cross-modal reasoning for mobile/IoT deployment.",
         "visual understanding"
       ],
       [
-        "Qwen2-VL",
-        "arXiv 2024",
-        "[Paper](https://arxiv.org/abs/2409.12191) [HF](https://huggingface.co/Qwen/Qwen2-VL-7B-Instruct) ",
-        "Dynamic resolution; native video",
+        "STEP3-VL-10B Technical Report",
+        "arXiv 2026",
+        "[Paper](https://arxiv.org/pdf/2601.09668)",
+        "10B-scale foundation multimodal; unified unfrozen pre-training + PaCoRe test-time scaling, frontier-level reasoning with compact footprint.",
         "visual understanding"
-      ],
-      [
-        "Qwen2.5-VL: Technical Report",
-        "arXiv 2025",
-        "[Paper](https://arxiv.org/abs/2502.13923) [HF](https://huggingface.co/Qwen/Qwen2.5-VL-7B-Instruct) ",
-        "Stronger document, grounding, and video capabilities",
-        "visual understanding"
-      ],
-      [
-        "InternVL: Scaling up Vision Foundation Models",
-        "CVPR 2024",
-        "[Paper](https://arxiv.org/abs/2312.14238) [Code](https://github.com/OpenGVLab/InternVL) ",
-        "Progressively aligned ViT + LLM",
-        "visual understanding"
-      ],
-      [
-        "InternVL2",
-        "Model release 2024",
-        "[HF](https://huggingface.co/OpenGVLab/InternVL2-8B) ",
-        "Instruction-tuned InternVL family release with strong multilingual and OCR capabilities",
-        "visual understanding"
-      ],
-      [
-        "MiniCPM-V: A GPT-4V Level MLLM on Your Phone",
-        "arXiv 2024",
-        "[Paper](https://arxiv.org/abs/2408.01800) [Code](https://github.com/OpenBMB/MiniCPM-V)  ",
-        "On-device efficient MLLM",
-        "visual understanding"
-      ],
-      [
-        "Cambrian-1: A Fully Open, Vision-Centric Exploration",
-        "NeurIPS 2024",
-        "[Paper](https://arxiv.org/abs/2406.16860) [Code](https://github.com/cambrian-mllm/cambrian) ",
-        "Spatial Vision Aggregator",
-        "visual understanding"
-      ],
-      [
-        "PaliGemma: A Versatile 3B VLM for Transfer",
-        "arXiv 2024",
-        "[Paper](https://arxiv.org/abs/2407.07726) [HF](https://huggingface.co/google/paligemma-3b-mix-224)  ",
-        "SigLIP encoder + Gemma backbone; strong transfer model",
-        "visual understanding"
-      ],
-      [
-        "LLaVA-HR: High Resolution MLLMs",
-        "CVPR 2024",
-        "[Paper](https://arxiv.org/abs/2403.03003)",
-        "Mixture-of-Resolution Adaptation",
-        "visual understanding"
-      ],
-      [
-        "LLaVA-OneVision: Easy Visual Task Transfer",
-        "arXiv 2024",
-        "[Paper](https://arxiv.org/abs/2408.03326) [Code](https://github.com/LLaVA-VL/LLaVA-NeXT) ",
-        "Single model for image, multi-image, and video transfer",
-        "visual understanding"
-      ],
-      [
-        "InternLM-XComposer2",
-        "arXiv 2024",
-        "[Paper](https://arxiv.org/abs/2401.16420) [Code](https://github.com/InternLM/InternLM-XComposer) ",
-        "Compositional visual grounding",
-        "visual understanding"
-      ],
-      [
-        "mPLUG-Owl3",
-        "arXiv 2024",
-        "[Paper](https://arxiv.org/abs/2408.04840) [Code](https://github.com/X-PLUG/mPLUG-Owl) ",
-        "Long visual sequences",
-        "visual understanding"
-      ],
-      [
-        "Idefics2",
-        "arXiv 2024",
-        "[Paper](https://arxiv.org/abs/2405.02246) [HF](https://huggingface.co/HuggingFaceM4/idefics2-8b) ",
-        "Fully open; built on Mistral",
-        "visual understanding"
-      ],
-      [
-        "Idefics3",
-        "arXiv 2024",
-        "[Paper](https://arxiv.org/abs/2408.12637) [HF](https://huggingface.co/HuggingFaceM4/Idefics3-8B-Llama3) ",
-        "Open-data recipe with strong document understanding",
-        "visual understanding"
-      ],
-      [
-        "Phi-3-Vision",
-        "arXiv 2024",
-        "[Paper](https://arxiv.org/abs/2404.14219) [HF](https://huggingface.co/microsoft/Phi-3-vision-128k-instruct)  ",
-        "Small but capable",
-        "visual understanding"
-      ],
-      [
-        "Molmo / PixMo",
-        "CVPR 2025",
-        "[Paper](https://openaccess.thecvf.com/content/CVPR2025/html/Deitke_Molmo_and_PixMo_Open_Weights_and_Open_Data_for_State-of-the-Art_CVPR_2025_paper.html) [Code](https://github.com/allenai/molmo) ",
-        "Strong open-data/open-weight VLM pipeline",
-        "visual understanding"
-      ],
-      [
-        "MM1: Methods, Analysis & Insights from Multimodal LLM Pre-training",
-        "arXiv 2024",
-        "[Paper](https://arxiv.org/abs/2403.09611)",
-        "Large-scale proprietary recipe study for multimodal LLM pretraining",
-        "visual understanding"
-      ],
-      [
-        "NVLM 1.0: Open Frontier-Class Multimodal LLMs",
-        "arXiv 2024",
-        "[Paper](https://arxiv.org/abs/2409.11402) [HF](https://huggingface.co/collections/nvidia/nvlm-10-66f571f7f3b1e4fbad96294b) ",
-        "Hybrid multimodal design with strong OCR and reasoning",
-        "visual understanding"
-      ],
-      [
-        "DeepSeek-VL2: Mixture-of-Experts Vision-Language Models",
-        "arXiv 2024",
-        "[Paper](https://arxiv.org/abs/2412.10302) [Code](https://github.com/deepseek-ai/DeepSeek-VL2) ",
-        "MoE VLM with dynamic tiling and efficient inference",
-        "visual understanding"
-      ],
-      [
-        "xGen-MM (BLIP-3)",
-        "arXiv 2024",
-        "[Paper](https://arxiv.org/abs/2408.08872) ",
-        "Open training recipe, datasets, and safety-tuned variants",
-        "visual understanding"
-      ],
-      [
-        "Eagle 2: Building Post-Training Data Strategies from Scratch for Frontier Vision-Language Models",
-        "arXiv 2025",
-        "[Paper](https://arxiv.org/abs/2501.14818)",
-        "Data-centric post-training strategy for competitive frontier open VLMs",
-        "visual understanding"
-      ],
-      [
-        "Qwen3-VL",
-        "arXiv 2025",
-        "[Paper](https://arxiv.org/abs/2511.21631) [HF](https://huggingface.co/Qwen) ",
-        "Frontier-grade vision/OCR (32+ languages), video analysis, agentic capabilities, strong multimodal reasoning; includes large MoE variants (e.g., 235B)",
-        "visual understanding, video, omni"
-      ],
-      [
-        "GLM-4.5V / GLM-4.6V",
-        "-",
-        "[HF](https://huggingface.co/zai-org) ",
-        "MoE architecture (e.g., 106B total / 12B active); excels in 3D spatial reasoning, visual reasoning, long documents, and multimodal tool use; SOTA among open models on many benchmarks",
-        "visual understanding, reasoning, spatial"
-      ],
-      [
-        "Pixtral",
-        "arXiv 2024 ",
-        "[Paper](https://arxiv.org/abs/2410.07073) [HF](https://huggingface.co/mistralai) ",
-        "12B open-weight model with strong instruction following, image+text understanding; competitive with larger open VLMs",
-        "visual understanding"
-      ],
-      [
-        "mPLUG-DocOwl 1.5 / 2: Unified Structure Learning for OCR-free Document Understanding",
-        "arXiv 2024",
-        "[Paper](https://arxiv.org/abs/2403.12895) [Code](https://github.com/X-PLUG/mPLUG-DocOwl)",
-        "OCR-free document understanding with unified structure learning; excels at long documents and complex layouts",
-        "document understanding, OCR"
-      ],
-      [
-        "General OCR Theory: Towards OCR-2.0 via a Unified End-to-end Model",
-        "arXiv 2024",
-        "[Paper](https://arxiv.org/abs/2409.01704) [HF/Code](https://github.com/Ucas-HaoranWei/GOT-OCR2.0)",
-        "Specialized end-to-end OCR model with grounding (boxes + points); strong on scientific papers, slides, and mixed visual-text docs",
-        "OCR, grounding"
-      ],
-      [
-        "DeepSeek-OCR",
-        "arXiv 2025",
-        "[Paper](https://arxiv.org/abs/2510.18234) [HF](https://huggingface.co/deepseek-ai)",
-        "Lightweight ~3B MoE vision model optimized for high-volume OCR, document digitization, charts and formulas; efficient inference",
-        "OCR, document"
       ],
       [
         "DeepSeek-OCR-2",
@@ -1248,18 +1073,18 @@
         "OCR, document"
       ],
       [
-        "PaddleOCR-VL",
-        "arXiv 2025",
-        "[HF / Official](https://github.com/PaddlePaddle/PaddleOCR)",
-        "Lightweight (0.9B+) multimodal OCR with 109 languages support; excellent chart-to-HTML/Markdown conversion and high-throughput",
-        "OCR, multilingual document"
-      ],
-      [
         "GLM-OCR",
         "arXiv 2026",
         "[Paper](https://arxiv.org/abs/2603.10910)",
         "GLM-OCR is an efficient 0.9B-parameter compact multimodal model designed for real-world document understanding.",
         "OCR, structured extraction"
+      ],
+      [
+        "Kwai Keye-VL 1.5 Technical Report",
+        "arXiv 2025",
+        "[Paper](https://arxiv.org/pdf/2509.01563)",
+        "Adaptive Slow-Fast encoding; 8B parameter scale with 128K long-context; SOTA video reasoning & human-preference aligned.",
+        "visual understanding"
       ],
       [
         "olmOCR / olmOCR-2",
@@ -1269,10 +1094,24 @@
         "OCR, structured extraction"
       ],
       [
-        "LLaMA 3.2 Vision",
-        "arXiv 2024",
-        "[Paper](https://arxiv.org/abs/2407.21783) [HF](https://huggingface.co/meta-llama/Llama-3.2-11B-Vision-Instruct) ",
-        "Adapter-based vision addition to Llama 3.2; strong OCR, document VQA, 128K context",
+        "PaddleOCR-VL",
+        "arXiv 2025",
+        "[HF / Official](https://github.com/PaddlePaddle/PaddleOCR)",
+        "Lightweight (0.9B+) multimodal OCR with 109 languages support; excellent chart-to-HTML/Markdown conversion and high-throughput",
+        "OCR, multilingual document"
+      ],
+      [
+        "DeepSeek-OCR",
+        "arXiv 2025",
+        "[Paper](https://arxiv.org/abs/2510.18234) [HF](https://huggingface.co/deepseek-ai)",
+        "Lightweight ~3B MoE vision model optimized for high-volume OCR, document digitization, charts and formulas; efficient inference",
+        "OCR, document"
+      ],
+      [
+        "Ovis2",
+        "arXiv 2025",
+        "[HF](https://huggingface.co/AIDC-AI/Ovis2-34B) ",
+        "Embedding table / projector architecture; excellent document understanding and fine-grained quantization",
         "visual understanding, document"
       ],
       [
@@ -1283,11 +1122,25 @@
         "visual understanding, agentic, video"
       ],
       [
-        "Ovis2",
+        "Seed1.5-VL Technical Report",
         "arXiv 2025",
-        "[HF](https://huggingface.co/AIDC-AI/Ovis2-34B) ",
-        "Embedding table / projector architecture; excellent document understanding and fine-grained quantization",
-        "visual understanding, document"
+        "[Paper](https://arxiv.org/pdf/2505.07062)",
+        "20B MoE + 532M ViT; native-resolution vision-language foundation model; efficient asymmetric architecture.",
+        "visual understanding"
+      ],
+      [
+        "Qwen3-VL",
+        "arXiv 2025",
+        "[Paper](https://arxiv.org/abs/2511.21631) [HF](https://huggingface.co/Qwen) ",
+        "Frontier-grade vision/OCR (32+ languages), video analysis, agentic capabilities, strong multimodal reasoning; includes large MoE variants (e.g., 235B)",
+        "visual understanding, video, omni"
+      ],
+      [
+        "Eagle 2: Building Post-Training Data Strategies from Scratch for Frontier Vision-Language Models",
+        "arXiv 2025",
+        "[Paper](https://arxiv.org/abs/2501.14818)",
+        "Data-centric post-training strategy for competitive frontier open VLMs",
+        "visual understanding"
       ],
       [
         "SmolVLM",
@@ -1311,38 +1164,17 @@
         "visual understanding, on-device"
       ],
       [
-        "Penguin-VL: Exploring the Efficiency Limits of VLM with LLM-based Vision Encoders",
-        "arXiv 2026",
-        "[Paper](https://arxiv.org/pdf/2603.06569)",
-        "LLM-initialized vision encoder (non-CLIP); text-to-vision weight reuse, generative-aligned visual features, optimized for dense perception.",
+        "Molmo / PixMo",
+        "CVPR 2025",
+        "[Paper](https://openaccess.thecvf.com/content/CVPR2025/html/Deitke_Molmo_and_PixMo_Open_Weights_and_Open_Data_for_State-of-the-Art_CVPR_2025_paper.html) [Code](https://github.com/allenai/molmo) ",
+        "Strong open-data/open-weight VLM pipeline",
         "visual understanding"
       ],
       [
-        "STEP3-VL-10B Technical Report",
-        "arXiv 2026",
-        "[Paper](https://arxiv.org/pdf/2601.09668)",
-        "10B-scale foundation multimodal; unified unfrozen pre-training + PaCoRe test-time scaling, frontier-level reasoning with compact footprint.",
-        "visual understanding"
-      ],
-      [
-        "Youtu-VL: Unleashing Visual Potential via Unified Vision-Language Supervision",
-        "arXiv 2026",
-        "[Paper](https://arxiv.org/abs/2601.19798)",
-        "Tri-modal (V+A+L) unified framework; parameter-efficient tuning, seamless cross-modal reasoning for mobile/IoT deployment.",
-        "visual understanding"
-      ],
-      [
-        "Seed1.5-VL Technical Report",
+        "Qwen2.5-VL: Technical Report",
         "arXiv 2025",
-        "[Paper](https://arxiv.org/pdf/2505.07062)",
-        "20B MoE + 532M ViT; native-resolution vision-language foundation model; efficient asymmetric architecture.",
-        "visual understanding"
-      ],
-      [
-        "Kwai Keye-VL 1.5 Technical Report",
-        "arXiv 2025",
-        "[Paper](https://arxiv.org/pdf/2509.01563)",
-        "Adaptive Slow-Fast encoding; 8B parameter scale with 128K long-context; SOTA video reasoning & human-preference aligned.",
+        "[Paper](https://arxiv.org/abs/2502.13923) [HF](https://huggingface.co/Qwen/Qwen2.5-VL-7B-Instruct) ",
+        "Stronger document, grounding, and video capabilities",
         "visual understanding"
       ],
       [
@@ -1350,6 +1182,167 @@
         "arXiv 2025",
         "[Paper](https://arxiv.org/pdf/2501.08313)",
         "Hybrid Lightning-Softmax Attention; MoE-based (45.9B active) multimodal; 4M long-context with near-zero prefill latency.",
+        "visual understanding"
+      ],
+      [
+        "LLaVA-OneVision: Easy Visual Task Transfer",
+        "arXiv 2024",
+        "[Paper](https://arxiv.org/abs/2408.03326) [Code](https://github.com/LLaVA-VL/LLaVA-NeXT) ",
+        "Single model for image, multi-image, and video transfer",
+        "visual understanding"
+      ],
+      [
+        "mPLUG-Owl3",
+        "arXiv 2024",
+        "[Paper](https://arxiv.org/abs/2408.04840) [Code](https://github.com/X-PLUG/mPLUG-Owl) ",
+        "Long visual sequences",
+        "visual understanding"
+      ],
+      [
+        "Idefics3",
+        "arXiv 2024",
+        "[Paper](https://arxiv.org/abs/2408.12637) [HF](https://huggingface.co/HuggingFaceM4/Idefics3-8B-Llama3) ",
+        "Open-data recipe with strong document understanding",
+        "visual understanding"
+      ],
+      [
+        "MiniCPM-V: A GPT-4V Level MLLM on Your Phone",
+        "arXiv 2024",
+        "[Paper](https://arxiv.org/abs/2408.01800) [Code](https://github.com/OpenBMB/MiniCPM-V)  ",
+        "On-device efficient MLLM",
+        "visual understanding"
+      ],
+      [
+        "xGen-MM (BLIP-3)",
+        "arXiv 2024",
+        "[Paper](https://arxiv.org/abs/2408.08872) ",
+        "Open training recipe, datasets, and safety-tuned variants",
+        "visual understanding"
+      ],
+      [
+        "DeepSeek-VL2: Mixture-of-Experts Vision-Language Models",
+        "arXiv 2024",
+        "[Paper](https://arxiv.org/abs/2412.10302) [Code](https://github.com/deepseek-ai/DeepSeek-VL2) ",
+        "MoE VLM with dynamic tiling and efficient inference",
+        "visual understanding"
+      ],
+      [
+        "Pixtral",
+        "arXiv 2024 ",
+        "[Paper](https://arxiv.org/abs/2410.07073) [HF](https://huggingface.co/mistralai) ",
+        "12B open-weight model with strong instruction following, image+text understanding; competitive with larger open VLMs",
+        "visual understanding"
+      ],
+      [
+        "NVLM 1.0: Open Frontier-Class Multimodal LLMs",
+        "arXiv 2024",
+        "[Paper](https://arxiv.org/abs/2409.11402) [HF](https://huggingface.co/collections/nvidia/nvlm-10-66f571f7f3b1e4fbad96294b) ",
+        "Hybrid multimodal design with strong OCR and reasoning",
+        "visual understanding"
+      ],
+      [
+        "Qwen2-VL",
+        "arXiv 2024",
+        "[Paper](https://arxiv.org/abs/2409.12191) [HF](https://huggingface.co/Qwen/Qwen2-VL-7B-Instruct) ",
+        "Dynamic resolution; native video",
+        "visual understanding"
+      ],
+      [
+        "Cambrian-1: A Fully Open, Vision-Centric Exploration",
+        "NeurIPS 2024",
+        "[Paper](https://arxiv.org/abs/2406.16860) [Code](https://github.com/cambrian-mllm/cambrian) ",
+        "Spatial Vision Aggregator",
+        "visual understanding"
+      ],
+      [
+        "PaliGemma: A Versatile 3B VLM for Transfer",
+        "arXiv 2024",
+        "[Paper](https://arxiv.org/abs/2407.07726) [HF](https://huggingface.co/google/paligemma-3b-mix-224)  ",
+        "SigLIP encoder + Gemma backbone; strong transfer model",
+        "visual understanding"
+      ],
+      [
+        "LLaMA 3.2 Vision",
+        "arXiv 2024",
+        "[Paper](https://arxiv.org/abs/2407.21783) [HF](https://huggingface.co/meta-llama/Llama-3.2-11B-Vision-Instruct) ",
+        "Adapter-based vision addition to Llama 3.2; strong OCR, document VQA, 128K context",
+        "visual understanding, document"
+      ],
+      [
+        "Idefics2",
+        "arXiv 2024",
+        "[Paper](https://arxiv.org/abs/2405.02246) [HF](https://huggingface.co/HuggingFaceM4/idefics2-8b) ",
+        "Fully open; built on Mistral",
+        "visual understanding"
+      ],
+      [
+        "InternLM-XComposer2",
+        "arXiv 2024",
+        "[Paper](https://arxiv.org/abs/2401.16420) [Code](https://github.com/InternLM/InternLM-XComposer) ",
+        "Compositional visual grounding",
+        "visual understanding"
+      ],
+      [
+        "Phi-3-Vision",
+        "arXiv 2024",
+        "[Paper](https://arxiv.org/abs/2404.14219) [HF](https://huggingface.co/microsoft/Phi-3-vision-128k-instruct)  ",
+        "Small but capable",
+        "visual understanding"
+      ],
+      [
+        "LLaVA-HR: High Resolution MLLMs",
+        "CVPR 2024",
+        "[Paper](https://arxiv.org/abs/2403.03003)",
+        "Mixture-of-Resolution Adaptation",
+        "visual understanding"
+      ],
+      [
+        "InternVL: Scaling up Vision Foundation Models",
+        "CVPR 2024",
+        "[Paper](https://arxiv.org/abs/2312.14238) [Code](https://github.com/OpenGVLab/InternVL) ",
+        "Progressively aligned ViT + LLM",
+        "visual understanding"
+      ],
+      [
+        "InternVL2",
+        "Model release 2024",
+        "[HF](https://huggingface.co/OpenGVLab/InternVL2-8B) ",
+        "Instruction-tuned InternVL family release with strong multilingual and OCR capabilities",
+        "visual understanding"
+      ],
+      [
+        "mPLUG-DocOwl 1.5 / 2: Unified Structure Learning for OCR-free Document Understanding",
+        "arXiv 2024",
+        "[Paper](https://arxiv.org/abs/2403.12895) [Code](https://github.com/X-PLUG/mPLUG-DocOwl)",
+        "OCR-free document understanding with unified structure learning; excels at long documents and complex layouts",
+        "document understanding, OCR"
+      ],
+      [
+        "General OCR Theory: Towards OCR-2.0 via a Unified End-to-end Model",
+        "arXiv 2024",
+        "[Paper](https://arxiv.org/abs/2409.01704) [HF/Code](https://github.com/Ucas-HaoranWei/GOT-OCR2.0)",
+        "Specialized end-to-end OCR model with grounding (boxes + points); strong on scientific papers, slides, and mixed visual-text docs",
+        "OCR, grounding"
+      ],
+      [
+        "MM1: Methods, Analysis & Insights from Multimodal LLM Pre-training",
+        "arXiv 2024",
+        "[Paper](https://arxiv.org/abs/2403.09611)",
+        "Large-scale proprietary recipe study for multimodal LLM pretraining",
+        "visual understanding"
+      ],
+      [
+        "CogVLM: Visual Expert for Pretrained Language Models",
+        "arXiv 2023",
+        "[Paper](https://arxiv.org/abs/2311.03079) [Code](https://github.com/THUDM/CogVLM) ",
+        "Deep fusion with visual expert modules inside a pretrained LLM",
+        "visual understanding"
+      ],
+      [
+        "Qwen-VL: A Versatile Vision-Language Model",
+        "arXiv 2023",
+        "[Paper](https://arxiv.org/abs/2308.12966) [HF](https://huggingface.co/Qwen/Qwen-VL) ",
+        "High-res, multi-lang, bounding box",
         "visual understanding"
       ]
     ]
