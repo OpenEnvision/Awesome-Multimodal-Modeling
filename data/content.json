@@ -173,21 +173,21 @@
       ],
       "subsections": [
         {
-          "title": "3.1 Multimodal Instruction Tuning",
+          "title": "3.1 Foundation MLLMs",
           "blocks": [
             {
               "type": "table",
-              "ref": "3-multimodal-large-language-models-mllms.multimodal-instruction-tuning.table16"
+              "ref": "3-multimodal-large-language-models-mllms.foundation-mllms.table17"
             }
           ],
           "subsections": []
         },
         {
-          "title": "3.2 Foundation MLLMs",
+          "title": "3.2 Omni MLLMs",
           "blocks": [
             {
               "type": "table",
-              "ref": "3-multimodal-large-language-models-mllms.foundation-mllms.table17"
+              "ref": "3-multimodal-large-language-models-mllms.multimodal-in-context-learning-chain-of-thought.table18"
             }
           ],
           "subsections": []
