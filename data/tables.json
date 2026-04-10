@@ -2872,6 +2872,22 @@
         "interleaved generation, world modeling, any-to-image"
       ],
       [
+        "LongCat-Next",
+        "arXiv 2026",
+        "[Paper](https://arxiv.org/abs/2603.27538)",
+        "—",
+        "Discrete Native Any-resolution Visual Transformer",
+        "vision-language understanding"
+      ],
+      [
+        "Qwen3.5",
+        "-",
+        "[Blog](https://qwen.ai/blog?id=qwen3.5)",
+        "—",
+        "Discrete Native Any-resolution Visual Transformer",
+        "vision-language understanding"
+      ],
+      [
         "NEO",
         "arXiv 2025",
         "[Paper](https://arxiv.org/pdf/2510.14979)",
@@ -2894,6 +2910,13 @@
         "8B",
         "Next-token prediction over VQ image tokens; native multimodal decoder-only; minimal modality-specific params",
         "visual understanding, visual generation"
+      ],
+      [
+        "Pixtral",
+        "arXiv 2024 ",
+        "[Paper](https://arxiv.org/abs/2410.07073) [HF](https://huggingface.co/mistralai) ",
+        "12B open-weight model with strong instruction following, image+text understanding; competitive with larger open VLMs",
+        "visual understanding"
       ],
       [
         "Show-o",
@@ -2937,6 +2960,22 @@
         "[Blog](https://huggingface.co/blog/sensenova/neo-unify)",
         "—",
         "NEO as a cornerstone for scalable and powerful native VLM development, paired with a rich set of reusable components that foster a cost-effective and extensible ecosystem",
+        "vision-language understanding"
+      ],
+      [
+        "InternVL3.5",
+        "arXiv 2025",
+        "[Paper](https://arxiv.org/pdf/2508.18265)",
+        "—",
+        "A pre-trained ViT encoder with a visual expert that uses cross-attention for deep but late-style fusion to the LLM, preserving its capabilities.",
+        "vision-language understanding"
+      ],
+      [
+        "InternVL3",
+        "arXiv 2025",
+        "[Paper](https://arxiv.org/pdf/2504.10479)",
+        "—",
+        "A pre-trained InternViT encoder coupled with a cross-attention visual expert, employing a deep but late-fusion strategy to ensure seamless multimodal alignment while strictly preserving native LLM reasoning and linguistic proficiency.",
         "vision-language understanding"
       ],
       [
