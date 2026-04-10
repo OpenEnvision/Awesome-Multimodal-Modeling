@@ -2641,18 +2641,6 @@
     ],
     "rows": [
       [
-        "Scaling Laws for Native Multimodal Models",
-        "ArXiv 2025",
-        "[Paper](https://arxiv.org/abs/2504.07951)",
-        "Early-fusion NMMs match or outperform late-fusion at low compute; early-fusion needs fewer params; MoE with modality-agnostic routing boosts sparse NMM scaling"
-      ],
-      [
-        "The Narrow Gate: Localized Image-Text Communication in Native Multimodal Models",
-        "ArXiv 2024",
-        "[Paper](https://arxiv.org/abs/2412.06646)",
-        "Native models often funnel image-to-text communication through a single post-image token"
-      ],
-      [
         "Beyond Language Modeling: An Exploration of Multimodal Pretraining",
         "ArXiv 2026",
         "[Paper](https://arxiv.org/abs/2603.03276)",
@@ -2669,7 +2657,20 @@
         "ArXiv 2025",
         "[Paper](https://arxiv.org/abs/2509.26625) ",
         "reveals that LLMs develop latent visual priors during text-only pre-training, where reasoning-centric data (code and math) builds transferable visual reasoning skills while broad corpora foster perception, enabling models to 'see' before ever processing an image."
+      ],
+      [
+        "Scaling Laws for Native Multimodal Models",
+        "ArXiv 2025",
+        "[Paper](https://arxiv.org/abs/2504.07951)",
+        "Early-fusion NMMs match or outperform late-fusion at low compute; early-fusion needs fewer params; MoE with modality-agnostic routing boosts sparse NMM scaling"
+      ],
+      [
+        "The Narrow Gate: Localized Image-Text Communication in Native Multimodal Models",
+        "ArXiv 2024",
+        "[Paper](https://arxiv.org/abs/2412.06646)",
+        "Native models often funnel image-to-text communication through a single post-image token"
       ]
+      
     ]
   },
   "5-native-multimodal-models-nmms.51-foundational-components.image-video-tokenizers.table30": {
@@ -2863,6 +2864,14 @@
     ],
     "rows": [
       [
+        "Emu3.5",
+        "Nature 2026",
+        "[Paper](https://arxiv.org/abs/2510.26583) [Code](https://github.com/baaivision/Emu3.5)",
+        "Large-scale (trillion+ tokens)",
+        "Native world model; next-state prediction on interleaved video/text; Discrete Diffusion Adaptation for efficiency",
+        "interleaved generation, world modeling, any-to-image"
+      ],
+      [
         "Chameleon",
         "arXiv 2024",
         "[Paper](https://arxiv.org/abs/2405.09818) [Code](https://github.com/facebookresearch/chameleon)",
@@ -2877,14 +2886,6 @@
         "8B",
         "Next-token prediction over VQ image tokens; native multimodal decoder-only; minimal modality-specific params",
         "visual understanding, visual generation"
-      ],
-      [
-        "Emu3.5",
-        "arXiv 2025",
-        "[Paper](https://arxiv.org/abs/2510.26583) [Code](https://github.com/baaivision/Emu3.5)",
-        "Large-scale (trillion+ tokens)",
-        "Native world model; next-state prediction on interleaved video/text; Discrete Diffusion Adaptation for efficiency",
-        "interleaved generation, world modeling, any-to-image"
       ],
       [
         "Show-o",
@@ -2923,38 +2924,6 @@
     ],
     "rows": [
       [
-        "LLaVA",
-        "arXiv 2023",
-        "[Paper](https://arxiv.org/abs/2304.08485) [Code](https://github.com/haotian-liu/LLaVA)",
-        "7B / 13B+",
-        "CLIP Vision Encoder (frozen/pretrained) + linear projection to LLM (Vicuna/LLaMA); vision tokens inserted into LLM input; common late-fusion baseline",
-        "visual instruction tuning, VQA, image captioning"
-      ],
-      [
-        "Flamingo",
-        "arXiv 2022",
-        "[Paper](https://arxiv.org/abs/2204.14198)",
-        "80B",
-        "Perceiver Resampler + frozen vision encoder (e.g., CLIP-like) + frozen LLM; cross-attention for late multimodal interaction",
-        "few-shot visual question answering, captioning"
-      ],
-      [
-        "BLIP-2",
-        "arXiv 2023",
-        "[Paper](https://arxiv.org/abs/2301.12597)",
-        "—",
-        "Q-Former bridges frozen vision encoder and LLM; late alignment of visual features to text",
-        "vision-language understanding, generation"
-      ],
-      [
-        "CLIP",
-        "arXiv 2021",
-        "[Paper](https://arxiv.org/abs/2103.00020)",
-        "400M+",
-        "Dual-encoder (Vision Transformer + Text Transformer); contrastive alignment at embedding level; classic late-fusion foundation",
-        "zero-shot image classification, retrieval"
-      ],
-      [
         "CogVLM",
         "arXiv 2023",
         "[Paper](https://arxiv.org/abs/2311.03079)",
@@ -2969,6 +2938,38 @@
         "—",
         "Instruction-tuned on BLIP-2 style; frozen vision encoder + LLM with late projection",
         "general-purpose vision-language with instructions"
+      ],
+      [
+        "LLaVA",
+        "arXiv 2023",
+        "[Paper](https://arxiv.org/abs/2304.08485) [Code](https://github.com/haotian-liu/LLaVA)",
+        "7B / 13B+",
+        "CLIP Vision Encoder (frozen/pretrained) + linear projection to LLM (Vicuna/LLaMA); vision tokens inserted into LLM input; common late-fusion baseline",
+        "visual instruction tuning, VQA, image captioning"
+      ],
+      [
+        "BLIP-2",
+        "arXiv 2023",
+        "[Paper](https://arxiv.org/abs/2301.12597)",
+        "—",
+        "Q-Former bridges frozen vision encoder and LLM; late alignment of visual features to text",
+        "vision-language understanding, generation"
+      ],
+      [
+        "Flamingo",
+        "arXiv 2022",
+        "[Paper](https://arxiv.org/abs/2204.14198)",
+        "80B",
+        "Perceiver Resampler + frozen vision encoder (e.g., CLIP-like) + frozen LLM; cross-attention for late multimodal interaction",
+        "few-shot visual question answering, captioning"
+      ],
+      [
+        "CLIP",
+        "arXiv 2021",
+        "[Paper](https://arxiv.org/abs/2103.00020)",
+        "400M+",
+        "Dual-encoder (Vision Transformer + Text Transformer); contrastive alignment at embedding level; classic late-fusion foundation",
+        "zero-shot image classification, retrieval"
       ],
       [
         "IDEFICS",
