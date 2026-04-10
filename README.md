@@ -82,7 +82,6 @@
   - [4. Unified Multimodal Models (UMMs)](#4-unified-multimodal-models-umms)
     - [4.1 Text-and-Image Unified Models](#41-text-and-image-unified-models)
     - [4.2 Any-to-Any Multimodal models](#42-any-to-any-multimodal-models)
-    - [4.3 Benchmark for Evaluation](#43-benchmark-for-evaluation)
   - [5. Native Multimodal Models (NMMs)](#5-native-multimodal-models-nmms)
     - [5.1 Foundational Components](#51-foundational-components)
       - [Design Analyses \& Scaling Laws](#design-analyses--scaling-laws)
@@ -622,7 +621,7 @@ We identify **5 Architectural Waves** in multimodal model development:
 | **CoDi-2** | CVPR 2024 | [Paper](https://arxiv.org/abs/2311.18775) | image + video + audio + text | In-context interleaved any-to-any generation |
 | **M2-Omni** <kbd>Omni</kbd> | ArXiv 2025 | [Paper](https://arxiv.org/abs/2502.18778) | audio + video + image + text | Efficient omni any-to-any model |
 
-### 4.3 Benchmark for Evaluation
+<!-- ### 4.3 Benchmark for Evaluation
 
 | Benchmark | Venue | Links | Focus |
 |---|---|---|---|
@@ -631,7 +630,7 @@ We identify **5 Architectural Waves** in multimodal model development:
 | **OpenING** | CVPR 2025 | [Paper](https://arxiv.org/abs/2411.18499) | Open-ended interleaved image-text generation evaluation |
 | **UniEval / UniBench** | ArXiv 2025 | [Paper](https://arxiv.org/abs/2505.10483) [Code](https://github.com/xmed-lab/UniEval) <kbd>Open</kbd> | Holistic evaluation for unified multimodal understanding and generation |
 | **T2I-CompBench** | NeurIPS 2023 | [Paper](https://arxiv.org/abs/2307.06350) [Code](https://github.com/Karine-Huang/T2I-CompBench) | Text-to-image compositionality benchmark often used for unified generators |
-| **VTBench** | ArXiv 2025 | [Paper](https://arxiv.org/abs/2505.13439) [Code](https://github.com/huawei-lin/VTBench) <kbd>Open</kbd> | Evaluates visual tokenizers critical to unified AR generation systems |
+| **VTBench** | ArXiv 2025 | [Paper](https://arxiv.org/abs/2505.13439) [Code](https://github.com/huawei-lin/VTBench) <kbd>Open</kbd> | Evaluates visual tokenizers critical to unified AR generation systems | -->
 
 <p align="right"><a href="#awesome-multimodal-models">Back to Top</a></p>
 
