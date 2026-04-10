@@ -118,11 +118,11 @@
       ],
       "subsections": [
         {
-          "title": "2.1 Core Concepts & Early Works",
+          "title": "2.1 Multimodel Representations & Alignment",
           "blocks": [],
           "subsections": [
             {
-              "title": "Multimodal Representations & Alignment",
+              "title": "Multimodal Representations",
               "blocks": [
                 {
                   "type": "table",
@@ -131,7 +131,7 @@
               ]
             },
             {
-              "title": "Contrastive Learning",
+              "title": "Multimodal Fusion",
               "blocks": [
                 {
                   "type": "table",
@@ -140,42 +140,25 @@
               ]
             },
             {
-              "title": "Multimodal Fusion Strategies",
+              "title": "Multimodal Alignment",
               "blocks": [
                 {
                   "type": "table",
                   "ref": "2-traditional-multimodal-models.21-core-concepts-early-works.multimodal-fusion-strategies.table12"
-                },
-                {
-                  "type": "table",
-                  "ref": "2-traditional-multimodal-models.21-core-concepts-early-works.multimodal-fusion-strategies.table13"
                 }
               ]
             }
           ]
         },
         {
-          "title": "2.2 Multimodal Pretraining Foundations",
-          "blocks": [],
-          "subsections": [
+          "title": "2.2 Multimodal Pretraining",
+          "blocks": [
             {
-              "title": "Generative Pretraining",
-              "blocks": [
-                {
-                  "type": "table",
-                  "ref": "2-traditional-multimodal-models.22-multimodal-pretraining-foundations.generative-pretraining.table14"
-                }
-              ]
-            },
-            {
-              "title": "Unified Backbones & Robustness",
-              "blocks": [
-                {
-                  "type": "table",
-                  "ref": "2-traditional-multimodal-models.22-multimodal-pretraining-foundations.knowledge-graphs-missing-modality-handling.table15"
-                }
-              ]
+              "type": "table",
+              "ref": "2-traditional-multimodal-models.22-multimodal-pretraining-foundations.generative-pretraining.table14"
             }
+          ],
+          "subsections": [
           ]
         }
       ]
