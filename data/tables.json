@@ -1469,20 +1469,6 @@
         "multimodal tokens"
       ],
       [
-        "AnyGPT: Unified Multimodal LLM with Discrete Sequence Modeling",
-        "ACL 2024",
-        "[Paper](https://aclanthology.org/2024.acl-long.521.pdf) [Code](https://github.com/OpenMOSS/AnyGPT)",
-        "Unified multimodal LLM using discrete sequence modeling",
-        "unified discrete multimodal"
-      ],
-      [
-        "Unified-IO 2: Scaling Autoregressive Multimodal Models with Vision, Language, Audio, and Actions",
-        "CVPR 2023",
-        "[Paper](https://arxiv.org/abs/2312.17172) [Code](https://github.com/allenai/unified-io-2)",
-        "Large-scale autoregressive multimodal model including actions",
-        "unified multimodal with actions"
-      ],
-      [
         "EMOVA: Empowering Language Models to See, Hear and Speak with Vivid Emotions",
         "CVPR 2024",
         "[Paper](https://arxiv.org/abs/2409.18042) [Code](https://github.com/emova-ollm/EMOVA)",
