@@ -346,51 +346,18 @@
       ],
       "subsections": [
         {
-          "title": "5.1 Foundational Components",
-          "blocks": [],
-          "subsections": [
+          "title": "5.1 Design Analyses & Scaling Laws",
+          "blocks": [
             {
-              "title": "Design Analyses & Scaling Laws",
-              "blocks": [
-                {
-                  "type": "markdown",
-                  "text": "Recent arXiv papers sharpen the definition of NMMs and identify the main bottlenecks in native multimodal pretraining."
-                },
-                {
-                  "type": "table",
-                  "ref": "5-native-multimodal-models-nmms.51-foundational-components.design-analyses-scaling-laws.table30a"
-                }
-              ]
+              "type": "markdown",
+              "text": "Recent arXiv papers sharpen the definition of NMMs and identify the main bottlenecks in native multimodal pretraining."
             },
             {
-              "title": "Image & Video Tokenizers",
-              "blocks": [
-                {
-                  "type": "markdown",
-                  "text": "Discrete tokenizers are critical building blocks for NMMs that use tokenized representations.\n\n##### Discrete Tokenizers (VQ-Family)"
-                },
-                {
-                  "type": "table",
-                  "ref": "5-native-multimodal-models-nmms.51-foundational-components.image-video-tokenizers.table30"
-                },
-                {
-                  "type": "markdown",
-                  "text": "##### Continuous Tokenizers (VAE-Family)"
-                },
-                {
-                  "type": "table",
-                  "ref": "5-native-multimodal-models-nmms.51-foundational-components.image-video-tokenizers.table31"
-                },
-                {
-                  "type": "markdown",
-                  "text": "##### Text-Aligned / Semantic Tokenizers"
-                },
-                {
-                  "type": "table",
-                  "ref": "5-native-multimodal-models-nmms.51-foundational-components.image-video-tokenizers.table32"
-                }
-              ]
+              "type": "table",
+              "ref": "5-native-multimodal-models-nmms.51-foundational-components.design-analyses-scaling-laws.table30a"
             }
+          ],
+          "subsections": [
           ]
         },
         {
@@ -426,44 +393,7 @@
           "subsections": []
         },
         {
-          "title": "5.4 MoE-Based NMMs",
-          "blocks": [
-            {
-              "type": "markdown",
-              "text": "Recent NMM work increasingly treats MoE as a native multimodal scaling mechanism, not just an efficiency trick: MoE helps reconcile the different capacity and data demands of language and vision while enabling modality specialization."
-            }
-          ],
-          "subsections": [
-            {
-              "title": "Modality-Agnostic Routing (Learned Router)",
-              "blocks": [
-                {
-                  "type": "markdown",
-                  "text": "The router learns to assign tokens to experts without explicit knowledge of their modality type. Routing is jointly trained with the full model."
-                },
-                {
-                  "type": "table",
-                  "ref": "5-native-multimodal-models-nmms.54-moe-based-nmms.modality-agnostic-routing-learned-router.table35"
-                }
-              ]
-            },
-            {
-              "title": "Modality-Aware Routing (Pre-defined Rules)",
-              "blocks": [
-                {
-                  "type": "markdown",
-                  "text": "Vision tokens and text tokens are routed to different expert sets by design, using modality type as a hard routing signal."
-                },
-                {
-                  "type": "table",
-                  "ref": "5-native-multimodal-models-nmms.54-moe-based-nmms.modality-aware-routing-pre-defined-rules.table36"
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "title": "5.5 Any-to-Any / Omni NMMs",
+          "title": "5.4 Any-to-Any / Omni NMMs",
           "blocks": [
             {
               "type": "markdown",

@@ -2637,37 +2637,38 @@
       "Paper",
       "Venue",
       "Links",
-      "Insights",
-      "Task"
+      "Insights"
     ],
     "rows": [
       [
-        "**Scaling Laws for Native Multimodal Models**",
+        "Scaling Laws for Native Multimodal Models",
         "ArXiv 2025",
         "[Paper](https://arxiv.org/abs/2504.07951)",
-        "Early-fusion NMMs match or outperform late-fusion at low compute; early-fusion needs fewer params; MoE with modality-agnostic routing boosts sparse NMM scaling",
-        "visual understanding, visual generation"
+        "Early-fusion NMMs match or outperform late-fusion at low compute; early-fusion needs fewer params; MoE with modality-agnostic routing boosts sparse NMM scaling"
       ],
       [
-        "**The Narrow Gate**: Localized Image-Text Communication in Native Multimodal Models",
+        "The Narrow Gate: Localized Image-Text Communication in Native Multimodal Models",
         "ArXiv 2024",
         "[Paper](https://arxiv.org/abs/2412.06646)",
-        "Native models often funnel image-to-text communication through a single post-image token",
-        "visual understanding, visual generation"
+        "Native models often funnel image-to-text communication through a single post-image token"
       ],
       [
-        "**Beyond Language Modeling**: An Exploration of Multimodal Pretraining",
+        "Beyond Language Modeling: An Exploration of Multimodal Pretraining",
         "ArXiv 2026",
         "[Paper](https://arxiv.org/abs/2603.03276)",
-        "Highlights representation autoencoders, vision-language data synergy, and MoE for native pretraining",
-        "visual understanding, visual generation"
+        "Highlights representation autoencoders, vision-language data synergy, and MoE for native pretraining"
       ],
       [
-        "**NaViL**: Rethinking Scaling Properties of Native Multimodal Large Language Models under Data Constraints",
+        "NaViL: Rethinking Scaling Properties of Native Multimodal Large Language Models under Data Constraints",
         "ArXiv 2025",
         "[Paper](https://arxiv.org/abs/2510.08565) [Code](https://github.com/OpenGVLab/NaViL)",
-        "End-to-end native MLLM scaling shows positive correlation between visual encoder and LLM size under data constraints; optimal meta-architecture balances cost and performance",
-        "visual understanding, visual generation"
+        "End-to-end native MLLM scaling shows positive correlation between visual encoder and LLM size under data constraints; optimal meta-architecture balances cost and performance"
+      ],
+      [
+        "Learning to See Before Seeing: Demystifying LLM Visual Priors from Language Pre-training",
+        "ArXiv 2025",
+        "[Paper](https://arxiv.org/abs/2509.26625) ",
+        "reveals that LLMs develop latent visual priors during text-only pre-training, where reasoning-centric data (code and math) builds transferable visual reasoning skills while broad corpora foster perception, enabling models to 'see' before ever processing an image."
       ]
     ]
   },
