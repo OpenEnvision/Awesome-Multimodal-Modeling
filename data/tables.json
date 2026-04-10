@@ -2872,6 +2872,14 @@
         "interleaved generation, world modeling, any-to-image"
       ],
       [
+        "NEO",
+        "arXiv 2025",
+        "[Paper](https://arxiv.org/pdf/2510.14979)",
+        "—",
+        "NEO as a cornerstone for scalable and powerful native VLM development, paired with a rich set of reusable components that foster a cost-effective and extensible ecosystem",
+        "vision-language understanding"
+      ],
+      [
         "Chameleon",
         "arXiv 2024",
         "[Paper](https://arxiv.org/abs/2405.09818) [Code](https://github.com/facebookresearch/chameleon)",
@@ -2924,12 +2932,20 @@
     ],
     "rows": [
       [
+        "NEO-Unify",
+        "-",
+        "[Blog](https://huggingface.co/blog/sensenova/neo-unify)",
+        "—",
+        "NEO as a cornerstone for scalable and powerful native VLM development, paired with a rich set of reusable components that foster a cost-effective and extensible ecosystem",
+        "vision-language understanding"
+      ],
+      [
         "CogVLM",
         "arXiv 2023",
         "[Paper](https://arxiv.org/abs/2311.03079)",
         "—",
         "ViT Encoder + visual expert with cross-attention to LLM; deep but late-style fusion preserving LLM capabilities",
-        "cross-modal benchmarks, VQA, captioning"
+        "vision-language understanding"
       ],
       [
         "InstructBLIP",
@@ -2937,7 +2953,7 @@
         "[Paper](https://arxiv.org/abs/2305.06500)",
         "—",
         "Instruction-tuned on BLIP-2 style; frozen vision encoder + LLM with late projection",
-        "general-purpose vision-language with instructions"
+        "vision-language understanding"
       ],
       [
         "LLaVA",
