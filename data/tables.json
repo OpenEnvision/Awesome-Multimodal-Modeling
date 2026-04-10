@@ -924,21 +924,21 @@
       ],
       [
         "**InternVL3** / **InternVL 3.0**",
-        "ArXiv 2025 / Model release 2025",
+        "ArXiv 2025 ",
         "[Paper](https://arxiv.org/abs/2504.10479) [HF](https://huggingface.co/OpenGVLab) ",
         "Expanded scaling with strong OCR, document parsing, scientific charts, video, and long multimodal context; variants up to 78B",
         "visual understanding, document, video"
       ],
       [
         "**GLM-4.5V / GLM-4.6V**",
-        "Model release 2025",
+        "-",
         "[HF](https://huggingface.co/zai-org) ",
         "MoE architecture (e.g., 106B total / 12B active); excels in 3D spatial reasoning, visual reasoning, long documents, and multimodal tool use; SOTA among open models on many benchmarks",
         "visual understanding, reasoning, spatial"
       ],
       [
         "**Pixtral**",
-        "ArXiv 2024 / Mistral 2024-2025",
+        "ArXiv 2024 ",
         "[Paper](https://arxiv.org/abs/2410.07073) [HF](https://huggingface.co/mistralai) ",
         "12B open-weight model with strong instruction following, image+text understanding; competitive with larger open VLMs",
         "visual understanding"
@@ -963,6 +963,48 @@
         "[API Docs](https://developers.openai.com/api/docs/models)",
         "Expanded multimodal (text/vision/audio) with improved reasoning, agentic workflows, and context; builds on GPT-4o with better integration and reduced hallucinations",
         "visual understanding, omni, reasoning"
+      ],
+      [
+        "**mPLUG-DocOwl 1.5 / 2**: Unified Structure Learning for OCR-free Document Understanding",
+        "ArXiv 2024",
+        "[Paper](https://arxiv.org/abs/2403.12895) [Code](https://github.com/X-PLUG/mPLUG-DocOwl)",
+        "OCR-free document understanding with unified structure learning; excels at long documents and complex layouts",
+        "document understanding, OCR"
+      ],
+      [
+        "**GOT-OCR 2.0**: General OCR Theory for Large Vision-Language Models",
+        "ArXiv 2024",
+        "[Paper](https://arxiv.org/abs/2405.10720) [HF/Code](https://github.com/Ucas-HaoranWei/GOT-OCR2.0)",
+        "Specialized end-to-end OCR model with grounding (boxes + points); strong on scientific papers, slides, and mixed visual-text docs",
+        "OCR, grounding"
+      ],
+      [
+        "**DeepSeek-OCR**",
+        "ArXiv 2025",
+        "[Paper](https://arxiv.org/abs/2510.18234) [HF](https://huggingface.co/deepseek-ai)",
+        "Lightweight ~3B MoE vision model optimized for high-volume OCR, document digitization, charts and formulas; efficient inference",
+        "OCR, document"
+      ],
+      [
+        "**PaddleOCR-VL**",
+        "Arxiv 2025",
+        "[HF / Official](https://github.com/PaddlePaddle/PaddleOCR)",
+        "Lightweight (0.9B+) multimodal OCR with 109 languages support; excellent chart-to-HTML/Markdown conversion and high-throughput",
+        "OCR, multilingual document"
+      ],
+      [
+        "**Chandra-OCR**",
+        "-",
+        "[Project](https://www.datalab.to/)",
+        "9B model (fine-tuned on Qwen3-VL) achieving top scores on olmOCR-Bench; strong layout awareness and complex document parsing",
+        "OCR, document parsing"
+      ],
+      [
+        "**olmOCR / olmOCR-2**",
+        "-",
+        "[Code](https://github.com/reducto/olmOCR)",
+        "Efficient low-VRAM OCR model based on Qwen2.5-VL fine-tune; excels at preserving semantic structure and markdown output",
+        "OCR, structured extraction"
       ]
     ]
   },
