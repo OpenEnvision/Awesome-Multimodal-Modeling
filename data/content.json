@@ -631,7 +631,7 @@
       ]
     },
     {
-      "title": "7. Dataset",
+      "title": "7. Benchmark & Dataset",
       "blocks": [
         {
           "type": "markdown",
@@ -641,53 +641,123 @@
       "subsections": [
         {
           "title": "7.1 Multimodal Understanding",
-          "blocks": [
+          "blocks": [],
+          "subsections": [
             {
-              "type": "table",
-              "ref": "7-dataset.multimodal-understanding.table45"
+              "title": "Benchmarks",
+              "blocks": [
+                {
+                  "type": "table",
+                  "ref": "7-dataset.multimodal-understanding.table45"
+                }
+              ]
+            },
+            {
+              "title": "Datasets",
+              "blocks": [
+                {
+                  "type": "table",
+                  "ref": "7-dataset.multimodal-understanding.table45"
+                }
+              ]
             }
-          ],
-          "subsections": []
+          ]
         },
         {
           "title": "7.2 Text-to-Image",
-          "blocks": [
+          "blocks": [],
+          "subsections": [
             {
-              "type": "table",
-              "ref": "7-dataset.text-to-image.table46"
+              "title": "Benchmarks",
+              "blocks": [
+                {
+                  "type": "table",
+                  "ref": "7-dataset.text-to-image.table46"
+                }
+              ]
+            },
+            {
+              "title": "Datasets",
+              "blocks": [
+                {
+                  "type": "table",
+                  "ref": "7-dataset.text-to-image.table46"
+                }
+              ]
             }
-          ],
-          "subsections": []
+          ]
         },
         {
           "title": "7.3 Image Editing",
-          "blocks": [
+          "blocks": [],
+          "subsections": [
             {
-              "type": "table",
-              "ref": "7-dataset.image-editing.table47"
+              "title": "Benchmarks",
+              "blocks": [
+                {
+                  "type": "table",
+                  "ref": "7-dataset.image-editing.table47"
+                }
+              ]
+            },
+            {
+              "title": "Datasets",
+              "blocks": [
+                {
+                  "type": "table",
+                  "ref": "7-dataset.image-editing.table47"
+                }
+              ]
             }
-          ],
-          "subsections": []
+          ]
         },
         {
           "title": "7.4 Interleaved Image-Text",
-          "blocks": [
+          "blocks": [],
+          "subsections": [
             {
-              "type": "table",
-              "ref": "7-dataset.interleaved-image-text.table48"
+              "title": "Benchmarks",
+              "blocks": [
+                {
+                  "type": "table",
+                  "ref": "7-dataset.interleaved-image-text.table48"
+                }
+              ]
+            },
+            {
+              "title": "Datasets",
+              "blocks": [
+                {
+                  "type": "table",
+                  "ref": "7-dataset.interleaved-image-text.table48"
+                }
+              ]
             }
-          ],
-          "subsections": []
+          ]
         },
         {
           "title": "7.5 Other Text+Image-to-Image",
-          "blocks": [
+          "blocks": [],
+          "subsections": [
             {
-              "type": "table",
-              "ref": "7-dataset.other-textimage-to-image.table54"
+              "title": "Benchmarks",
+              "blocks": [
+                {
+                  "type": "table",
+                  "ref": "7-dataset.other-textimage-to-image.table54"
+                }
+              ]
+            },
+            {
+              "title": "Datasets",
+              "blocks": [
+                {
+                  "type": "table",
+                  "ref": "7-dataset.other-textimage-to-image.table54"
+                }
+              ]
             }
-          ],
-          "subsections": []
+          ]
         }
       ]
     },

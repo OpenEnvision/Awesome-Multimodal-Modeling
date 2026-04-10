@@ -77,8 +77,8 @@
     },
     {
       "href": "#7-benchmarks-datasets-evaluation",
-      "image": "https://img.shields.io/badge/Benchmarks-0f766e?style=for-the-badge&logo=datadog&logoColor=white",
-      "alt": "Benchmarks"
+      "image": "https://img.shields.io/badge/Datasets-0f766e?style=for-the-badge&logo=datadog&logoColor=white",
+      "alt": "Datasets"
     },
     {
       "href": "#8-resources",

@@ -28,11 +28,11 @@
   <a href="#4-unified-multimodal-models-umms"><img src="https://img.shields.io/badge/UMMs-7c3aed?style=for-the-badge&logo=buffer&logoColor=white" alt="UMMs"></a>
   <a href="#5-native-multimodal-models-nmms"><img src="https://img.shields.io/badge/NMMs-b91c1c?style=for-the-badge&logo=reactivex&logoColor=white" alt="NMMs"></a>
   <a href="#6-post-training-alignment-analysis"><img src="https://img.shields.io/badge/Post--Training-0f766e?style=for-the-badge&logo=googlescholar&logoColor=white" alt="Post-Training"></a>
-  <a href="#7-benchmarks-datasets-evaluation"><img src="https://img.shields.io/badge/Benchmarks-0f766e?style=for-the-badge&logo=datadog&logoColor=white" alt="Benchmarks"></a>
+  <a href="#7-benchmarks-datasets-evaluation"><img src="https://img.shields.io/badge/Datasets-0f766e?style=for-the-badge&logo=datadog&logoColor=white" alt="Datasets"></a>
   <a href="#8-resources"><img src="https://img.shields.io/badge/Resources-475569?style=for-the-badge&logo=github&logoColor=white" alt="Resources"></a>
 </p>
 
-<p><sub><a href="#1-introduction-definitions">Overview</a> · <a href="#2-traditional-multimodal-models">Traditional</a> · <a href="#3-multimodal-large-language-models-mllms">MLLMs</a> · <a href="#4-unified-multimodal-models-umms">UMMs</a> · <a href="#5-native-multimodal-models-nmms">NMMs</a> · <a href="#6-post-training-alignment-analysis">Post-Training</a> · <a href="#7-benchmarks-datasets-evaluation">Benchmarks</a> · <a href="#8-resources">Resources</a></sub></p>
+<p><sub><a href="#1-introduction-definitions">Overview</a> · <a href="#2-traditional-multimodal-models">Traditional</a> · <a href="#3-multimodal-large-language-models-mllms">MLLMs</a> · <a href="#4-unified-multimodal-models-umms">UMMs</a> · <a href="#5-native-multimodal-models-nmms">NMMs</a> · <a href="#6-post-training-alignment-analysis">Post-Training</a> · <a href="#7-benchmarks-datasets-evaluation">Datasets</a> · <a href="#8-resources">Resources</a></sub></p>
 
 </div>
 
@@ -72,7 +72,7 @@
   - [6.2 Multimodal RLHF & Preference Alignment](#62-multimodal-rlhf-preference-alignment)
   - [6.3 Hallucination Mitigation & Safety](#63-hallucination-mitigation-safety)
   - [6.4 Individual Analysis Papers](#64-individual-analysis-papers)
-- [7. Dataset](#7-dataset)
+- [7. Benchmark & Dataset](#7-benchmark-dataset)
   - [7.1 Multimodal Understanding](#71-multimodal-understanding)
   - [7.2 Text-to-Image](#72-text-to-image)
   - [7.3 Image Editing](#73-image-editing)
@@ -878,13 +878,32 @@ The latest arXiv-native multimodal papers increasingly blur the boundaries betwe
 
 ---
 
-## 7. Dataset
+## 7. Benchmark & Dataset
 
 **In this section:** [7.1 Multimodal Understanding](#71-multimodal-understanding) · [7.2 Text-to-Image](#72-text-to-image) · [7.3 Image Editing](#73-image-editing) · [7.4 Interleaved Image-Text](#74-interleaved-image-text) · [7.5 Other Text+Image-to-Image](#75-other-textimage-to-image)
 
 > We classify datasets by their **primary use case** and list each dataset only once to minimize overlap: understanding-first corpora, pure T2I corpora, instruction-based editing, interleaved documents/conversations, and other **text+image-to-image** settings with an explicit visual input beyond standard editing.
 
 ### 7.1 Multimodal Understanding
+
+**Subtopics:** [Benchmarks](#benchmarks) · [Datasets](#datasets)
+
+#### Benchmarks
+
+| Dataset | Paper | Links | Scale | Notes |
+|---|---|---|---|---|
+| **LAION-5B** | NeurIPS 2022 | [Paper](https://arxiv.org/abs/2210.08402) [HF](https://huggingface.co/datasets/laion/laion2B-en) | 5B image-text pairs | Largest open web-scale noisy corpus for vision-language pretraining |
+| **DataComp** | NeurIPS 2023 | [Paper](https://arxiv.org/abs/2304.14108) [Code](https://github.com/mlfoundations/datacomp) | Variable (up to billions) | Benchmark and pipeline for dataset curation and filtering |
+| **LLaVA-150K** | NeurIPS 2023 | [Paper](https://arxiv.org/abs/2304.08485) [HF](https://huggingface.co/datasets/liuhaotian/LLaVA-Instruct-150K) | 150K | GPT-4-generated visual instruction tuning dataset |
+| **M3IT** | ArXiv 2023 | [Paper](https://arxiv.org/abs/2306.04387) [HF](https://huggingface.co/datasets/MMInstruction/M3IT) | 2.4M | Multilingual multimodal instruction tuning across 40 datasets |
+| **ShareGPT4V** | ArXiv 2023 | [Paper](https://arxiv.org/abs/2311.12793) [Code](https://github.com/InternLM/InternLM-XComposer/tree/main/projects/ShareGPT4V) | 100K | High-quality dense captions distilled from GPT-4V |
+| **Infinity-MM** | ArXiv 2024 | [Paper](https://arxiv.org/abs/2410.18558) [HF](https://huggingface.co/datasets/BAAI/Infinity-MM) | 40M | Large-scale curated multimodal instruction corpus |
+| **PixMo** | ArXiv 2024 | [Paper](https://arxiv.org/abs/2409.17146) [Code](https://github.com/allenai/molmo) | Multi-part (~10M+) | Rich supervision including grounding, Q&A, and pointing |
+| **SVIT** | ArXiv 2023 | [Paper](https://arxiv.org/abs/2307.04087) [HF](https://huggingface.co/datasets/BAAI/SVIT) | 4.2M | Synthetic visual instruction tuning dataset |
+| **IDEFICS-80M** | ICLR 2024 | [Paper](https://arxiv.org/abs/2306.16527) | 80M | Filtered multimodal instruction data for open VLMs |
+| **OpenFlamingo-Instruction** | ArXiv 2024 | [Paper](https://arxiv.org/abs/2308.01390) | Millions | Instruction tuning mixture aligned with Flamingo-style models |
+
+#### Datasets
 
 | Dataset | Paper | Links | Scale | Notes |
 |---|---|---|---|---|
@@ -901,6 +920,22 @@ The latest arXiv-native multimodal papers increasingly blur the boundaries betwe
 
 ### 7.2 Text-to-Image
 
+**Subtopics:** [Benchmarks](#benchmarks-1) · [Datasets](#datasets-1)
+
+#### Benchmarks
+
+| Dataset | Paper | Links | Scale | Notes |
+|---|---|---|---|---|
+| **DiffusionDB** | ACL 2023 | [Paper](https://arxiv.org/abs/2210.14896) [HF](https://huggingface.co/datasets/poloclub/diffusiondb) | 14M images / 1.8M prompts | Large-scale prompt-image dataset from real users |
+| **Pick-a-Pic** | ArXiv 2023 | [Paper](https://arxiv.org/abs/2305.01569) [HF](https://huggingface.co/datasets/yuvalkirstain/pickapic_v1) | 851K pairs | Human preference dataset for T2I alignment |
+| **JourneyDB** | NeurIPS 2023 | [Paper](https://arxiv.org/abs/2307.00716) [Code](https://journeydb.github.io/) | 4M images | Midjourney-based prompt-image corpus |
+| **PASTA** | ICML 2025 | [Paper](https://arxiv.org/abs/2412.10419) | Sequential preference data | Multi-turn interactive preference dataset |
+| **ROVI** | ICCV 2025 | [Paper](https://arxiv.org/abs/2508.01008) | 1M | Instance-grounded open-vocabulary T2I dataset |
+| **T2I-CompBench** | CVPR 2024 | [Paper](https://arxiv.org/abs/2307.06350) | Evaluation-focused | Compositional text-to-image benchmarking dataset |
+| **DrawBench++** | ArXiv 2024 | [Paper](https://arxiv.org/abs/2406.14453) | Prompt set | Challenging prompts for evaluating T2I models |
+
+#### Datasets
+
 | Dataset | Paper | Links | Scale | Notes |
 |---|---|---|---|---|
 | **DiffusionDB** | ACL 2023 | [Paper](https://arxiv.org/abs/2210.14896) [HF](https://huggingface.co/datasets/poloclub/diffusiondb) | 14M images / 1.8M prompts | Large-scale prompt-image dataset from real users |
@@ -912,6 +947,24 @@ The latest arXiv-native multimodal papers increasingly blur the boundaries betwe
 | **DrawBench++** | ArXiv 2024 | [Paper](https://arxiv.org/abs/2406.14453) | Prompt set | Challenging prompts for evaluating T2I models |
 
 ### 7.3 Image Editing
+
+**Subtopics:** [Benchmarks](#benchmarks-2) · [Datasets](#datasets-2)
+
+#### Benchmarks
+
+| Dataset | Paper | Links | Scale | Notes |
+|---|---|---|---|---|
+| **InstructPix2Pix** | ICCV 2023 | [Paper](https://arxiv.org/abs/2211.09800) | Synthetic triplets | GPT-3 + Stable Diffusion generated editing dataset |
+| **MagicBrush** | NeurIPS 2023 | [Paper](https://arxiv.org/abs/2306.10012) | 10K+ | Human-annotated multi-turn editing dataset |
+| **HQ-Edit** | ArXiv 2024 | [Paper](https://arxiv.org/abs/2404.09990) | 200K | High-quality instruction-based editing pairs |
+| **SEED-Data-Edit** | ArXiv 2024 | [Paper](https://arxiv.org/abs/2405.04007) | Hybrid | Mix of synthetic and human multi-turn edits |
+| **HumanEdit** | ArXiv 2024 | [Paper](https://arxiv.org/abs/2412.04280) | 5.7K | Human preference and mask-based editing dataset |
+| **ImgEdit** | ArXiv 2025 | [Paper](https://arxiv.org/abs/2505.20275) | 1.2M | Large-scale unified editing dataset |
+| **Pico-Banana-400K** | ArXiv 2025 | [Paper](https://arxiv.org/abs/2510.19808) | 400K | Real-image editing with multi-turn + preference subsets |
+| **GalaxyEdit** | ArXiv 2024 | [Paper](https://arxiv.org/abs/2411.13794) | Large-scale | Focused on object addition/removal |
+| **EditBench** | CVPR 2025 | [Paper](https://arxiv.org/abs/2503.01234) | Benchmark | Evaluation dataset for editing faithfulness and realism |
+
+#### Datasets
 
 | Dataset | Paper | Links | Scale | Notes |
 |---|---|---|---|---|
@@ -927,6 +980,23 @@ The latest arXiv-native multimodal papers increasingly blur the boundaries betwe
 
 ### 7.4 Interleaved Image-Text
 
+**Subtopics:** [Benchmarks](#benchmarks-3) · [Datasets](#datasets-3)
+
+#### Benchmarks
+
+| Dataset | Paper | Links | Scale | Notes |
+|---|---|---|---|---|
+| **MMC4** | NeurIPS 2023 | [Paper](https://arxiv.org/abs/2304.06939) [HF](https://huggingface.co/datasets/allenai/mmc4-core) | 101M images | Interleaved multimodal web documents |
+| **OBELICS** | NeurIPS 2023 | [Paper](https://arxiv.org/abs/2306.16527) [HF](https://huggingface.co/datasets/HuggingFaceM4/OBELICS) | 353M images | Large-scale filtered interleaved corpus |
+| **MINT-1T** | ArXiv 2024 | [Paper](https://arxiv.org/abs/2406.11271) | 1T tokens / 3.4B images | Largest open interleaved dataset |
+| **CoMM** | CVPR 2025 | [Paper](https://arxiv.org/abs/2406.10462) | 227K | High-coherence multimodal documents |
+| **Docmatix** | ArXiv 2024 | [Paper](https://arxiv.org/abs/2408.12637) | 1.25M docs | Document-centric multimodal dataset (OCR-heavy) |
+| **VisCon-1M** | ArXiv 2025 | [Paper](https://arxiv.org/abs/2502.10250) | 1M | Conversation-style interleaved multimodal data |
+| **Chitrakshara-IL** | ArXiv 2026 | [Paper](https://arxiv.org/abs/2603.23521) | 193M images / 50M docs | Multilingual Indic interleaved dataset |
+| **WebLI-Interleaved** | ICLR 2024 | [Paper](https://arxiv.org/abs/2309.07870) | Billions | Google’s multilingual interleaved dataset |
+
+#### Datasets
+
 | Dataset | Paper | Links | Scale | Notes |
 |---|---|---|---|---|
 | **MMC4** | NeurIPS 2023 | [Paper](https://arxiv.org/abs/2304.06939) [HF](https://huggingface.co/datasets/allenai/mmc4-core) | 101M images | Interleaved multimodal web documents |
@@ -939,6 +1009,21 @@ The latest arXiv-native multimodal papers increasingly blur the boundaries betwe
 | **WebLI-Interleaved** | ICLR 2024 | [Paper](https://arxiv.org/abs/2309.07870) | Billions | Google’s multilingual interleaved dataset |
 
 ### 7.5 Other Text+Image-to-Image
+
+**Subtopics:** [Benchmarks](#benchmarks-4) · [Datasets](#datasets-4)
+
+#### Benchmarks
+
+| Dataset | Paper | Links | Scale | Notes |
+|---|---|---|---|---|
+| **ShareGPT-4o-Image** | ArXiv 2025 | [Paper](https://arxiv.org/abs/2506.18095) | 45K T2I + 46K TI2I | Mixed T2I and text-image-to-image supervision |
+| **OriPID** | ICML 2025 | [Paper](https://arxiv.org/abs/2501.02376) | Prompt-guided | Image origin identification dataset |
+| **BiomedJourney** | ArXiv 2023 | [Paper](https://arxiv.org/abs/2310.10765) | Biomedical triplets | Text-guided medical image progression |
+| **D-ANI** | ACM MM 2025 | [Paper](https://arxiv.org/abs/2412.17632) | 440K+ | Mixed T2I, I2I, TI2I for discrepancy analysis |
+| **TI2I-Bench** | ArXiv 2025 | [Paper](https://arxiv.org/abs/2504.08921) | Benchmark | Evaluation dataset for text+image conditioned generation |
+| **ControlNet-Data** | CVPR 2024 | [Paper](https://arxiv.org/abs/2302.05543) | Millions | Conditioned generation dataset (edges, depth, pose) |
+
+#### Datasets
 
 | Dataset | Paper | Links | Scale | Notes |
 |---|---|---|---|---|
