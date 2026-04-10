@@ -2,10 +2,6 @@
   "title": "Awesome Multimodal Models",
   "subtitle": "A Comprehensive Survey & Curated List of Multimodal Models",
   "tagline": "From Traditional Fusion to Native & Unified Architectures",
-  "hero_image": {
-    "src": "https://github.com/user-attachments/assets/b804f770-cff8-4ffa-85dc-495db2efd852",
-    "alt": "Awesome Multimodal Models cover"
-  },
   "badges": [
     {
       "href": "https://awesome.re",

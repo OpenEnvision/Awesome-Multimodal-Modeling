@@ -130,16 +130,6 @@
           "subsections": []
         },
         {
-          "title": "Tag Legend",
-          "blocks": [
-            {
-              "type": "table",
-              "ref": "1-introduction-definitions.tag-legend.table4"
-            }
-          ],
-          "subsections": []
-        },
-        {
           "title": "1.3 Timeline & Landmark Models (2017–2026)",
           "blocks": [
             {
@@ -309,7 +299,7 @@
       ],
       "subsections": [
         {
-          "title": "Multimodal Instruction Tuning",
+          "title": "3.1 Multimodal Instruction Tuning",
           "blocks": [
             {
               "type": "table",
@@ -319,7 +309,7 @@
           "subsections": []
         },
         {
-          "title": "Foundation MLLMs",
+          "title": "3.2 Foundation MLLMs",
           "blocks": [
             {
               "type": "table",
@@ -329,7 +319,7 @@
           "subsections": []
         },
         {
-          "title": "Multimodal In-Context Learning & Chain-of-Thought",
+          "title": "3.3 Multimodal In-Context Learning & Chain-of-Thought",
           "blocks": [
             {
               "type": "table",
@@ -369,16 +359,6 @@
             {
               "type": "table",
               "ref": "4-unified-multimodal-models-umms.41-taxonomy-by-generation-paradigm.autoregressive-ar-umms-pixel-encoding.table22"
-            }
-          ],
-          "subsections": []
-        },
-        {
-          "title": "4.3 Benchmark for Evaluation",
-          "blocks": [
-            {
-              "type": "table",
-              "ref": "4-unified-multimodal-models-umms.41-taxonomy-by-generation-paradigm.autoregressive-ar-umms-semantic-encoding.table23"
             }
           ],
           "subsections": []
@@ -569,7 +549,7 @@
       "blocks": [],
       "subsections": [
         {
-          "title": "Multimodal Instruction Tuning & SFT",
+          "title": "6.1 Multimodal Instruction Tuning & SFT",
           "blocks": [
             {
               "type": "table",
@@ -579,7 +559,7 @@
           "subsections": []
         },
         {
-          "title": "Multimodal RLHF & Preference Alignment",
+          "title": "6.2 Multimodal RLHF & Preference Alignment",
           "blocks": [
             {
               "type": "table",
@@ -589,7 +569,7 @@
           "subsections": []
         },
         {
-          "title": "Hallucination Mitigation & Safety",
+          "title": "6.3 Hallucination Mitigation & Safety",
           "blocks": [
             {
               "type": "table",
@@ -599,7 +579,7 @@
           "subsections": []
         },
         {
-          "title": "Individual Analysis Papers <kbd>Analysis</kbd>",
+          "title": "6.4 Individual Analysis Papers",
           "blocks": [
             {
               "type": "table",
@@ -620,7 +600,7 @@
       ],
       "subsections": [
         {
-          "title": "Multimodal Understanding",
+          "title": "7.1 Multimodal Understanding",
           "blocks": [
             {
               "type": "table",
@@ -630,7 +610,7 @@
           "subsections": []
         },
         {
-          "title": "Text-to-Image",
+          "title": "7.2 Text-to-Image",
           "blocks": [
             {
               "type": "table",
@@ -640,7 +620,7 @@
           "subsections": []
         },
         {
-          "title": "Image Editing",
+          "title": "7.3 Image Editing",
           "blocks": [
             {
               "type": "table",
@@ -650,7 +630,7 @@
           "subsections": []
         },
         {
-          "title": "Interleaved Image-Text",
+          "title": "7.4 Interleaved Image-Text",
           "blocks": [
             {
               "type": "table",
@@ -660,7 +640,7 @@
           "subsections": []
         },
         {
-          "title": "Other Text+Image-to-Image",
+          "title": "7.5 Other Text+Image-to-Image",
           "blocks": [
             {
               "type": "table",
@@ -676,7 +656,7 @@
       "blocks": [],
       "subsections": [
         {
-          "title": "Robotics & Embodied AI",
+          "title": "8.1 Robotics & Embodied AI",
           "blocks": [
             {
               "type": "table",
@@ -686,7 +666,7 @@
           "subsections": []
         },
         {
-          "title": "Autonomous Driving",
+          "title": "8.2 Autonomous Driving",
           "blocks": [
             {
               "type": "table",
@@ -696,7 +676,7 @@
           "subsections": []
         },
         {
-          "title": "Healthcare & Medical Imaging",
+          "title": "8.3 Healthcare & Medical Imaging",
           "blocks": [
             {
               "type": "table",
@@ -706,7 +686,7 @@
           "subsections": []
         },
         {
-          "title": "Open Challenges & Future Directions",
+          "title": "8.4 Open Challenges & Future Directions",
           "blocks": [
             {
               "type": "table",
@@ -722,7 +702,7 @@
       "blocks": [],
       "subsections": [
         {
-          "title": "Related Awesome Lists",
+          "title": "9.1 Related Awesome Lists",
           "blocks": [
             {
               "type": "table",
@@ -732,7 +712,7 @@
           "subsections": []
         },
         {
-          "title": "Slides & Survey Papers",
+          "title": "9.2 Slides & Survey Papers",
           "blocks": [
             {
               "type": "table",
@@ -742,7 +722,7 @@
           "subsections": []
         },
         {
-          "title": "Code Repositories & Tools",
+          "title": "9.3 Code Repositories & Tools",
           "blocks": [
             {
               "type": "table",
