@@ -1392,6 +1392,13 @@
         "audio-visual dialogue"
       ],
       [
+        "OneLLM: One Framework to Align All Modalities with Languag",
+        "CVPR 2024",
+        "[Paper](https://arxiv.org/pdf/2312.03700)",
+        "Mixture of Matryoshka experts for efficient audio-visual speech recognition",
+        "all-in-one LLM"
+      ],
+      [
         "MoME: Mixture of Matryoshka Experts for Audio-Visual Speech Recognition",
         "NeurIPS 2025",
         "[Paper](https://arxiv.org/abs/2510.04136)",
