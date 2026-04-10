@@ -468,6 +468,30 @@
     ],
     "rows": [
       [
+        "**SimVLM**: Simple Visual Language Model Pretraining with Weak Supervision",
+        "ICLR 2022",
+        "[Paper](https://arxiv.org/abs/2108.10904)",
+        "Simple prefix language modeling with weak supervision"
+      ],
+      [
+        "**METER**: An Empirical Study of Training End-to-End Vision-and-Language Transformers",
+        "CVPR 2022",
+        "[Paper](https://arxiv.org/abs/2111.02387)",
+        "Unified multimodal transformer encoder"
+      ],
+      [
+        "**VLMo**: Unified Vision-Language Pre-Training with Mixture-of-Modality-Experts",
+        "NeurIPS 2022",
+        "[Paper](https://arxiv.org/abs/2111.02358)",
+        "Mixture-of-modality-experts for unified pretraining"
+      ],
+      [
+        "**CoCa**: Contrastive Captioners are Image-Text Foundation Models",
+        "TMLR 2022",
+        "[Paper](https://arxiv.org/abs/2205.01917)",
+        "Joint contrastive and captioning pretraining"
+      ],
+      [
         "**ViLT**: Vision-and-Language Transformer Without Convolution",
         "ICML 2021",
         "[Paper](https://arxiv.org/abs/2102.03334)",
