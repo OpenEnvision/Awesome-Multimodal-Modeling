@@ -3103,25 +3103,57 @@
     ],
     "rows": [
       [
-        "**Gemini 1.5 Pro**",
+        "Qwen3.5",
+        "-",
+        "[Blog](https://qwen.ai/blog?id=qwen3.5)",
+        "—",
+        "Discrete Native Any-resolution Visual Transformer",
+        "vision-language understanding"
+      ],
+      [
+        "ERNIE 5.0 Technical Report",
+        "arXiv",
+        "[paper](https://arxiv.org/pdf/2602.04705)",
+        "—",
+        "a natively autoregressive foundation model desinged for unified multimodal understanding and generation across text, image, video, and audio",
+        "vision-language understanding, omni"
+      ],
+      [
+        "GPT-5",
+        "arXiv",
+        "[paper](https://arxiv.org/pdf/2601.03267)",
+        "—",
+        "GPT5 desinged for unified multimodal understanding and generation across text, image, video, and audio",
+        "vision-language understanding, omni"
+      ],
+      [
+        "Gemini 3/3.1",
+        "-",
+        "[Blog](https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-3-1-pro/)",
+        "audio+video+image+text",
+        "visual understanding, omni"
+      ],
+      [
+        "Gemini 2.5",
+        "arXiv 2025",
+        "[Paper](https://arxiv.org/pdf/2507.06261)",
+        "audio+video+image+text",
+        "visual understanding, omni"
+      ],
+      [
+        "ShapeLLM-Omni",
+        "arXiv",
+        "[paper](https://arxiv.org/abs/2506.01853)",
+        "—",
+        " a novel framework for unified 3D object generation and understanding based on a fully autoregressive next-token prediction paradigm",
+        "vision-language understanding, omni, 3D grounding"
+      ],
+      [
+        "Gemini 1.5 ",
         "Arxiv 2024",
         "[Paper](https://arxiv.org/abs/2403.05530)",
         "1M context; audio+video+image+text",
         "visual understanding, omni"
-      ],
-      [
-        "**Emu3.5**",
-        "Nature 2026",
-        "[Paper](https://arxiv.org/abs/2510.26583) [Code](https://github.com/baaivision/Emu3.5)",
-        "10T-token native world model with interleaved vision-language outputs",
-        "visual understanding, visual generation"
-      ],
-      [
-        "**Llama 4**",
-        "Meta 2025",
-        "[Blog](https://ai.meta.com/blog/llama-4-multimodal-intelligence/)",
-        "Native multimodal family with strong text-image understanding and long-context multimodal reasoning",
-        "visual understanding"
       ]
     ]
   },

@@ -34,81 +34,47 @@
 <details open>
 <summary><strong>Browse the list</strong></summary>
 
-- [Awesome Multimodal Modeling](#awesome-multimodal-modeling)
-  - [Table of Contents](#table-of-contents)
-  - [About This List](#about-this-list)
-    - [At a Glance](#at-a-glance)
-    - [Curation Principles](#curation-principles)
-  - [1. Introduction \& Definitions](#1-introduction--definitions)
-    - [1.1 Multimodal Model Evolution Stages](#11-multimodal-model-evolution-stages)
-      - [Traditional Multimodal Models](#traditional-multimodal-models)
-      - [Multimodal Large Language Models (MLLMs)](#multimodal-large-language-models-mllms)
-      - [Unified Multimodal Models (UMMs)](#unified-multimodal-models-umms)
-      - [Native Multimodal Models (NMMs)](#native-multimodal-models-nmms)
-        - [NMM — Early Fusion](#nmm--early-fusion)
-        - [NMM — Late Fusion](#nmm--late-fusion)
-    - [1.2 Scope \& Taxonomy](#12-scope--taxonomy)
-    - [1.3 Architecture Diagrams](#13-architecture-diagrams)
-  - [2. Traditional Multimodal Models](#2-traditional-multimodal-models)
-    - [2.1 Multimodel Representations \& Alignment](#21-multimodel-representations--alignment)
-      - [Multimodal Representations](#multimodal-representations)
-      - [Multimodal Fusion](#multimodal-fusion)
-      - [Multimodal Alignment](#multimodal-alignment)
-    - [2.2 Multimodal Pretraining](#22-multimodal-pretraining)
-  - [3. Multimodal Large Language Models (MLLMs)](#3-multimodal-large-language-models-mllms)
-    - [3.1 Foundation MLLMs](#31-foundation-mllms)
-    - [3.2 Omni MLLMs](#32-omni-mllms)
-  - [4. Unified Multimodal Models (UMMs)](#4-unified-multimodal-models-umms)
-    - [4.1 Taxonomy by Generation Paradigm](#41-taxonomy-by-generation-paradigm)
-      - [Diffusion-Based UMMs](#diffusion-based-umms)
-      - [Autoregressive (AR) UMMs](#autoregressive-ar-umms)
-        - [Pixel Encoding](#pixel-encoding)
-        - [Semantic Encoding](#semantic-encoding)
-        - [Learnable Query Encoding](#learnable-query-encoding)
-        - [Hybrid Encoding (Pseduo)](#hybrid-encoding-pseduo)
-        - [Hybrid Encoding (Joint)](#hybrid-encoding-joint)
-      - [Hybrid (AR + Diffusion) UMMs](#hybrid-ar--diffusion-umms)
-        - [Pixel Encoding](#pixel-encoding-1)
-        - [Hybrid Encoding](#hybrid-encoding)
-    - [4.2 Any-to-Any / Omni UMMs](#42-any-to-any--omni-umms)
-  - [5. Native Multimodal Models (NMMs)](#5-native-multimodal-models-nmms)
-    - [5.1 Design Analyses \& Scaling Laws](#51-design-analyses--scaling-laws)
-    - [5.2 Early Fusion NMMs](#52-early-fusion-nmms)
-    - [5.3 Late Fusion NMMs](#53-late-fusion-nmms)
-    - [5.4 Any-to-Any / Omni NMMs](#54-any-to-any--omni-nmms)
-      - [Omni Models (audio + video + image + text)](#omni-models-audio--video--image--text)
-      - [Any-to-Any Generation](#any-to-any-generation)
-      - [Hybrid AR + Diffusion NMMs](#hybrid-ar--diffusion-nmms)
-  - [6. Post-Training, Alignment \& Analysis](#6-post-training-alignment--analysis)
-    - [6.1 Multimodal Instruction Tuning \& SFT](#61-multimodal-instruction-tuning--sft)
-    - [6.2 Multimodal RLHF \& Preference Alignment](#62-multimodal-rlhf--preference-alignment)
-    - [6.3 Hallucination Mitigation \& Safety](#63-hallucination-mitigation--safety)
-    - [6.4 Individual Analysis Papers](#64-individual-analysis-papers)
-  - [7. Benchmark \& Dataset](#7-benchmark--dataset)
-    - [7.1 Multimodal Understanding](#71-multimodal-understanding)
-      - [Benchmarks](#benchmarks)
-      - [Datasets](#datasets)
-    - [7.2 Text-to-Image](#72-text-to-image)
-      - [Benchmarks](#benchmarks-1)
-      - [Datasets](#datasets-1)
-    - [7.3 Image Editing](#73-image-editing)
-      - [Benchmarks](#benchmarks-2)
-      - [Datasets](#datasets-2)
-    - [7.4 Interleaved Image-Text](#74-interleaved-image-text)
-      - [Benchmarks](#benchmarks-3)
-      - [Datasets](#datasets-3)
-    - [7.5 Other Text+Image-to-Image](#75-other-textimage-to-image)
-      - [Benchmarks](#benchmarks-4)
-      - [Datasets](#datasets-4)
-  - [8. Resources](#8-resources)
-    - [8.1 Related Awesome Lists](#81-related-awesome-lists)
-    - [8.2 Slides \& Survey Papers](#82-slides--survey-papers)
-    - [8.3 Code Repositories \& Tools](#83-code-repositories--tools)
-  - [How to Contribute](#how-to-contribute)
-    - [Validation Rules](#validation-rules)
-    - [Entry Format](#entry-format)
-  - [Citation](#citation)
-  - [License](#license)
+- [About This List](#about-this-list)
+  - [At a Glance](#at-a-glance)
+  - [Curation Principles](#curation-principles)
+- [1. Introduction & Definitions](#1-introduction-definitions)
+  - [1.1 Multimodal Model Evolution Stages](#11-multimodal-model-evolution-stages)
+  - [1.2 Scope & Taxonomy](#12-scope-taxonomy)
+  - [1.3 Architecture Diagrams](#13-architecture-diagrams)
+- [2. Traditional Multimodal Models](#2-traditional-multimodal-models)
+  - [2.1 Multimodel Representations & Alignment](#21-multimodel-representations-alignment)
+  - [2.2 Multimodal Pretraining](#22-multimodal-pretraining)
+- [3. Multimodal Large Language Models (MLLMs)](#3-multimodal-large-language-models-mllms)
+  - [3.1 Foundation MLLMs](#31-foundation-mllms)
+  - [3.2 Omni MLLMs](#32-omni-mllms)
+- [4. Unified Multimodal Models (UMMs)](#4-unified-multimodal-models-umms)
+  - [4.1 Taxonomy by Generation Paradigm](#41-taxonomy-by-generation-paradigm)
+  - [4.2 Any-to-Any / Omni UMMs ](#42-any-to-any-omni-umms)
+- [5. Native Multimodal Models (NMMs)](#5-native-multimodal-models-nmms)
+  - [5.1 Design Analyses & Scaling Laws](#51-design-analyses-scaling-laws)
+  - [5.2 Early Fusion NMMs](#52-early-fusion-nmms)
+  - [5.3 Late Fusion NMMs](#53-late-fusion-nmms)
+  - [5.4 Any-to-Any / Omni NMMs](#54-any-to-any-omni-nmms)
+- [6. Post-Training, Alignment & Analysis](#6-post-training-alignment-analysis)
+  - [6.1 Multimodal Instruction Tuning & SFT](#61-multimodal-instruction-tuning-sft)
+  - [6.2 Multimodal RLHF & Preference Alignment](#62-multimodal-rlhf-preference-alignment)
+  - [6.3 Hallucination Mitigation & Safety](#63-hallucination-mitigation-safety)
+  - [6.4 Individual Analysis Papers](#64-individual-analysis-papers)
+- [7. Benchmark & Dataset](#7-benchmark-dataset)
+  - [7.1 Multimodal Understanding](#71-multimodal-understanding)
+  - [7.2 Text-to-Image](#72-text-to-image)
+  - [7.3 Image Editing](#73-image-editing)
+  - [7.4 Interleaved Image-Text](#74-interleaved-image-text)
+  - [7.5 Other Text+Image-to-Image](#75-other-textimage-to-image)
+- [8. Resources](#8-resources)
+  - [8.1 Related Awesome Lists](#81-related-awesome-lists)
+  - [8.2 Slides & Survey Papers](#82-slides-survey-papers)
+  - [8.3 Code Repositories & Tools](#83-code-repositories-tools)
+- [How to Contribute](#how-to-contribute)
+  - [Validation Rules](#validation-rules)
+  - [Entry Format](#entry-format)
+- [Citation](#citation)
+- [License](#license)
 
 </details>
 
@@ -264,7 +230,7 @@ Multimodal Models
 │                                                                 │
 │  [Image] ──► [CNN/ViT Encoder] ──┐                              │
 │                                  ├──► [Fusion] ──► [Output]     │
-│  [Text]  ──► [LSTM/BERT]     ──┘                                │
+│  [Text]  ──► [LSTM/BERT]       ──┘                              │
 └─────────────────────────────────────────────────────────────────┘
 
 ┌─────────────────────────────────────────────────────────────────┐
@@ -292,7 +258,7 @@ Multimodal Models
 │           NMM — EARLY FUSION (Trained from Scratch)             │
 │                                                                 │
 │  [Text tokens] ──┐                                              │
-│                  ├──► [Single Decoder Transformer] ──► [Text]   │
+│                  └──► [Single Decoder Transformer] ──► [Text]   │
 │  [Image patches ──► Linear Patchify] ──┘                        │
 │   (raw pixels, minimal preprocessing)                           │
 │   Multimodal interaction from Layer 1                           │
@@ -716,9 +682,12 @@ Recent scaling-law evidence suggests early-fusion NMMs are often stronger at low
 | Model | Paper | Links | Training Scale | Notes | Task |
 |---|---|---|---|---|---|
 | Emu3.5 | Nature 2026 | [Paper](https://arxiv.org/abs/2510.26583) [Code](https://github.com/baaivision/Emu3.5) | Large-scale (trillion+ tokens) | Native world model; next-state prediction on interleaved video/text; Discrete Diffusion Adaptation for efficiency | interleaved generation, world modeling, any-to-image |
+| LongCat-Next | arXiv 2026 | [Paper](https://arxiv.org/abs/2603.27538) | — | Discrete Native Any-resolution Visual Transformer | vision-language understanding |
+| Qwen3.5 | - | [Blog](https://qwen.ai/blog?id=qwen3.5) | — | Discrete Native Any-resolution Visual Transformer | vision-language understanding |
 | NEO | arXiv 2025 | [Paper](https://arxiv.org/pdf/2510.14979) | — | NEO as a cornerstone for scalable and powerful native VLM development, paired with a rich set of reusable components that foster a cost-effective and extensible ecosystem | vision-language understanding |
 | Chameleon | arXiv 2024 | [Paper](https://arxiv.org/abs/2405.09818) [Code](https://github.com/facebookresearch/chameleon) | 7B / 34B | Mixed-modal early-fusion token-based; unified discrete tokenizer for text+image; autoregressive next-token prediction from scratch | visual understanding, image/text generation, interleaved |
 | Emu3 | arXiv 2024 | [Paper](https://arxiv.org/abs/2409.18869) [Code](https://github.com/baaivision/Emu3) | 8B | Next-token prediction over VQ image tokens; native multimodal decoder-only; minimal modality-specific params | visual understanding, visual generation |
+| Pixtral | arXiv 2024  | [Paper](https://arxiv.org/abs/2410.07073) [HF](https://huggingface.co/mistralai)  | 12B open-weight model with strong instruction following, image+text understanding; competitive with larger open VLMs | visual understanding |
 | Show-o | arXiv 2024 | [Paper](https://arxiv.org/abs/2408.12528) | — | Early-fusion mixed-modal; autoregressive text + parallel image token generation; unified transformer | image/text generation, understanding |
 | Transfusion | arXiv 2024 | [Paper](https://arxiv.org/abs/2408.11039) | — | Early-fusion with discrete image tokens; unified modeling of text (autoregressive) and image (diffusion-like) | mixed-modal generation |
 | Anole | arXiv 2024 | [Paper](https://arxiv.org/abs/2412.06646) (related discussion) | — | Open autoregressive native multimodal; interleaved image-text generation; early token-level fusion | interleaved image-text generation |
@@ -730,6 +699,8 @@ Recent scaling-law evidence suggests early-fusion NMMs are often stronger at low
 | Model | Paper | Links | Training Scale | Notes | Task |
 |---|---|---|---|---|---|
 | NEO-Unify | - | [Blog](https://huggingface.co/blog/sensenova/neo-unify) | — | NEO as a cornerstone for scalable and powerful native VLM development, paired with a rich set of reusable components that foster a cost-effective and extensible ecosystem | vision-language understanding |
+| InternVL3.5 | arXiv 2025 | [Paper](https://arxiv.org/pdf/2508.18265) | — | A pre-trained ViT encoder with a visual expert that uses cross-attention for deep but late-style fusion to the LLM, preserving its capabilities. | vision-language understanding |
+| InternVL3 | arXiv 2025 | [Paper](https://arxiv.org/pdf/2504.10479) | — | A pre-trained InternViT encoder coupled with a cross-attention visual expert, employing a deep but late-fusion strategy to ensure seamless multimodal alignment while strictly preserving native LLM reasoning and linguistic proficiency. | vision-language understanding |
 | CogVLM | arXiv 2023 | [Paper](https://arxiv.org/abs/2311.03079) | — | ViT Encoder + visual expert with cross-attention to LLM; deep but late-style fusion preserving LLM capabilities | vision-language understanding |
 | InstructBLIP | arXiv 2023 | [Paper](https://arxiv.org/abs/2305.06500) | — | Instruction-tuned on BLIP-2 style; frozen vision encoder + LLM with late projection | vision-language understanding |
 | LLaVA | arXiv 2023 | [Paper](https://arxiv.org/abs/2304.08485) [Code](https://github.com/haotian-liu/LLaVA) | 7B / 13B+ | CLIP Vision Encoder (frozen/pretrained) + linear projection to LLM (Vicuna/LLaMA); vision tokens inserted into LLM input; common late-fusion baseline | visual instruction tuning, VQA, image captioning |
@@ -740,34 +711,17 @@ Recent scaling-law evidence suggests early-fusion NMMs are often stronger at low
 
 ### 5.4 Any-to-Any / Omni NMMs
 
-**Subtopics:** [Omni Models (audio + video + image + text)](#omni-models-audio-video-image-text) · [Any-to-Any Generation](#any-to-any-generation) · [Hybrid AR + Diffusion NMMs](#hybrid-ar-diffusion-nmms)
-
 The latest arXiv-native multimodal papers increasingly blur the boundaries between omni understanding, any-to-any generation, world modeling, and RL-enhanced post-training.
 
-#### Omni Models (audio + video + image + text)
-
 | Model | Paper | Links | Notes | Task |
 |---|---|---|---|---|
-| **Gemini 1.5 Pro** | Arxiv 2024 | [Paper](https://arxiv.org/abs/2403.05530) | 1M context; audio+video+image+text | visual understanding, omni |
-| **Emu3.5** | Nature 2026 | [Paper](https://arxiv.org/abs/2510.26583) [Code](https://github.com/baaivision/Emu3.5) | 10T-token native world model with interleaved vision-language outputs | visual understanding, visual generation |
-| **Llama 4** | Meta 2025 | [Blog](https://ai.meta.com/blog/llama-4-multimodal-intelligence/) | Native multimodal family with strong text-image understanding and long-context multimodal reasoning | visual understanding |
-
-#### Any-to-Any Generation
-
-| Model | Paper | Links | Notes | Task |
-|---|---|---|---|---|
-| **HunyuanImage 3.0** | ArXiv 2025 | [Paper](https://arxiv.org/abs/2509.23951) [Code](https://github.com/Tencent-Hunyuan/HunyuanImage-3.0) | Native AR understanding + generation with 80B-total MoE | visual understanding, visual generation |
-| **OmniGen2** | ArXiv 2025 | [Paper](https://arxiv.org/abs/2506.18871) [Code](https://github.com/VectorSpaceLab/OmniGen2) | Advanced multimodal generation with native any-to-any capabilities | visual understanding, visual generation |
-
-#### Hybrid AR + Diffusion NMMs
-
-| Model | Paper | Links | Notes | Task |
-|---|---|---|---|---|
-| **Transfusion** | ArXiv 2024 | [Paper](https://arxiv.org/abs/2408.11039) | Shared backbone combining AR language modeling with diffusion vision prediction | visual understanding, visual generation |
-| **MAR**: Autoregressive Image Generation without Vector Quantization | NeurIPS 2024 | [Paper](https://arxiv.org/abs/2406.11838) [Code](https://github.com/LTH14/mar) | Diffusion head on AR backbone | visual generation |
-| **HART**: Hybrid Autoregressive Transformer | ArXiv 2024 | [Paper](https://arxiv.org/abs/2410.10812) [Code](https://github.com/mit-han-lab/hart) | Discrete tokens + residual diffusion | visual generation |
-| **MMAR**: Towards Lossless Multi-Modal Auto-Regressive Probabilistic Modeling | NeurIPS 2024 | [Paper](https://arxiv.org/abs/2410.10798) | Continuous image + AR modeling | visual generation |
-| **MammothModa2** | ArXiv 2025 | [Paper](https://arxiv.org/abs/2511.18262) [Code](https://github.com/bytedance/mammothmoda) | AR-Diffusion framework for unified U+G | visual understanding, visual generation |
+| Qwen3.5 | - | [Blog](https://qwen.ai/blog?id=qwen3.5) | — | Discrete Native Any-resolution Visual Transformer | vision-language understanding |
+| ERNIE 5.0 Technical Report | arXiv | [paper](https://arxiv.org/pdf/2602.04705) | — | a natively autoregressive foundation model desinged for unified multimodal understanding and generation across text, image, video, and audio | vision-language understanding, omni |
+| GPT-5 | arXiv | [paper](https://arxiv.org/pdf/2601.03267) | — | GPT5 desinged for unified multimodal understanding and generation across text, image, video, and audio | vision-language understanding, omni |
+| Gemini 3/3.1 | - | [Blog](https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-3-1-pro/) | audio+video+image+text | visual understanding, omni |
+| Gemini 2.5 | arXiv 2025 | [Paper](https://arxiv.org/pdf/2507.06261) | audio+video+image+text | visual understanding, omni |
+| ShapeLLM-Omni | arXiv | [paper](https://arxiv.org/abs/2506.01853) | — |  a novel framework for unified 3D object generation and understanding based on a fully autoregressive next-token prediction paradigm | vision-language understanding, omni, 3D grounding |
+| Gemini 1.5  | Arxiv 2024 | [Paper](https://arxiv.org/abs/2403.05530) | 1M context; audio+video+image+text | visual understanding, omni |
 
 <p align="right"><a href="#awesome-multimodal-models">Back to Top</a></p>
 
