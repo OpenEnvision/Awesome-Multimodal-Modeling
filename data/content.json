@@ -344,21 +344,66 @@
       ],
       "subsections": [
         {
-          "title": "4.1 Text-and-Image Unified Models",
+          "title": "4.1 Taxonomy by Generation Paradigm",
           "blocks": [
             {
-              "type": "table",
-              "ref": "4-unified-multimodal-models-umms.41-taxonomy-by-generation-paradigm.diffusion-based-umms.table21"
+              "type": "markdown",
+              "text": "Unified models are categorized according to their core generation mechanism for visual output (while supporting strong multimodal understanding). This taxonomy highlights trade-offs in fidelity, reasoning, efficiency, and training stability."
             }
           ],
-          "subsections": []
+          "subsections": [
+            {
+              "title": "Diffusion-Based UMMs",
+              "blocks": [
+                {
+                  "type": "table",
+                  "ref": "4-unified-multimodal-models-umms.41-taxonomy-by-generation-paradigm.diffusion-based-umms.table21"
+                }
+              ],
+              "subsections": []
+            },
+            {
+              "title": "Autoregressive (AR) UMMs – Pixel Encoding",
+              "blocks": [
+                {
+                  "type": "table",
+                  "ref": "4-unified-multimodal-models-umms.41-taxonomy-by-generation-paradigm.autoregressive-ar-umms-pixel-encoding.table22"
+                }
+              ],
+              "subsections": []
+            },
+            {
+              "title": "Autoregressive (AR) UMMs – Semantic Encoding",
+              "blocks": [
+                {
+                  "type": "table",
+                  "ref": "4-unified-multimodal-models-umms.41-taxonomy-by-generation-paradigm.autoregressive-ar-umms-semantic-encoding.table23"
+                }
+              ],
+              "subsections": []
+            },
+            {
+              "title": "Hybrid AR + Diffusion UMMs",
+              "blocks": [
+                {
+                  "type": "table",
+                  "ref": "4-unified-multimodal-models-umms.41-taxonomy-by-generation-paradigm.hybrid-ar-diffusion.table24"
+                }
+              ],
+              "subsections": []
+            }
+          ]
         },
         {
-          "title": "4.2 Any-to-Any Multimodal models",
+          "title": "4.2 Any-to-Any / Omni Extensions ",
           "blocks": [
             {
+              "type": "markdown",
+              "text": "Models that extend unified understanding + generation beyond text and image to support **any-to-any** modality conversion (audio, video, speech, etc.). These often build on the paradigms above but emphasize native omni-modal tokenization, long-context handling, and cross-modal generation."
+            },
+            {
               "type": "table",
-              "ref": "4-unified-multimodal-models-umms.41-taxonomy-by-generation-paradigm.autoregressive-ar-umms-pixel-encoding.table22"
+              "ref": "4-unified-multimodal-models-umms.42-key-models-chronological.any-to-any-omni-extensions-kbdomnikbd.table27"
             }
           ],
           "subsections": []
@@ -652,57 +697,11 @@
       ]
     },
     {
-      "title": "8. Applications, Extensions & Future Directions",
+      "title": "8. Resources",
       "blocks": [],
       "subsections": [
         {
-          "title": "8.1 Robotics & Embodied AI",
-          "blocks": [
-            {
-              "type": "table",
-              "ref": "8-applications-extensions-future-directions.robotics-embodied-ai.table49"
-            }
-          ],
-          "subsections": []
-        },
-        {
-          "title": "8.2 Autonomous Driving",
-          "blocks": [
-            {
-              "type": "table",
-              "ref": "8-applications-extensions-future-directions.autonomous-driving.table50"
-            }
-          ],
-          "subsections": []
-        },
-        {
-          "title": "8.3 Healthcare & Medical Imaging",
-          "blocks": [
-            {
-              "type": "table",
-              "ref": "8-applications-extensions-future-directions.healthcare-medical-imaging.table51"
-            }
-          ],
-          "subsections": []
-        },
-        {
-          "title": "8.4 Open Challenges & Future Directions",
-          "blocks": [
-            {
-              "type": "table",
-              "ref": "8-applications-extensions-future-directions.open-challenges-future-directions.table52"
-            }
-          ],
-          "subsections": []
-        }
-      ]
-    },
-    {
-      "title": "9. Resources",
-      "blocks": [],
-      "subsections": [
-        {
-          "title": "9.1 Related Awesome Lists",
+          "title": "8.1 Related Awesome Lists",
           "blocks": [
             {
               "type": "table",
@@ -712,7 +711,7 @@
           "subsections": []
         },
         {
-          "title": "9.2 Slides & Survey Papers",
+          "title": "8.2 Slides & Survey Papers",
           "blocks": [
             {
               "type": "table",
@@ -722,7 +721,7 @@
           "subsections": []
         },
         {
-          "title": "9.3 Code Repositories & Tools",
+          "title": "8.3 Code Repositories & Tools",
           "blocks": [
             {
               "type": "table",

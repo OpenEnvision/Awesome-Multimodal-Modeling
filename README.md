@@ -29,11 +29,10 @@
   <a href="#5-native-multimodal-models-nmms"><img src="https://img.shields.io/badge/NMMs-b91c1c?style=for-the-badge&logo=reactivex&logoColor=white" alt="NMMs"></a>
   <a href="#6-post-training-alignment-analysis"><img src="https://img.shields.io/badge/Post--Training-0f766e?style=for-the-badge&logo=googlescholar&logoColor=white" alt="Post-Training"></a>
   <a href="#7-benchmarks-datasets-evaluation"><img src="https://img.shields.io/badge/Benchmarks-0f766e?style=for-the-badge&logo=datadog&logoColor=white" alt="Benchmarks"></a>
-  <a href="#8-applications-extensions-future-directions"><img src="https://img.shields.io/badge/Applications-9333ea?style=for-the-badge&logo=rocket&logoColor=white" alt="Applications"></a>
-  <a href="#9-resources"><img src="https://img.shields.io/badge/Resources-475569?style=for-the-badge&logo=github&logoColor=white" alt="Resources"></a>
+  <a href="#8-resources"><img src="https://img.shields.io/badge/Resources-475569?style=for-the-badge&logo=github&logoColor=white" alt="Resources"></a>
 </p>
 
-<p><sub><a href="#1-introduction-definitions">Overview</a> · <a href="#2-traditional-multimodal-models">Traditional</a> · <a href="#3-multimodal-large-language-models-mllms">MLLMs</a> · <a href="#4-unified-multimodal-models-umms">UMMs</a> · <a href="#5-native-multimodal-models-nmms">NMMs</a> · <a href="#6-post-training-alignment-analysis">Post-Training</a> · <a href="#7-benchmarks-datasets-evaluation">Benchmarks</a> · <a href="#8-applications-extensions-future-directions">Applications</a> · <a href="#9-resources">Resources</a></sub></p>
+<p><sub><a href="#1-introduction-definitions">Overview</a> · <a href="#2-traditional-multimodal-models">Traditional</a> · <a href="#3-multimodal-large-language-models-mllms">MLLMs</a> · <a href="#4-unified-multimodal-models-umms">UMMs</a> · <a href="#5-native-multimodal-models-nmms">NMMs</a> · <a href="#6-post-training-alignment-analysis">Post-Training</a> · <a href="#7-benchmarks-datasets-evaluation">Benchmarks</a> · <a href="#8-resources">Resources</a></sub></p>
 
 </div>
 
@@ -60,8 +59,8 @@
   - [3.2 Foundation MLLMs](#32-foundation-mllms)
   - [3.3 Multimodal In-Context Learning & Chain-of-Thought](#33-multimodal-in-context-learning-chain-of-thought)
 - [4. Unified Multimodal Models (UMMs)](#4-unified-multimodal-models-umms)
-  - [4.1 Text-and-Image Unified Models](#41-text-and-image-unified-models)
-  - [4.2 Any-to-Any Multimodal models](#42-any-to-any-multimodal-models)
+  - [4.1 Taxonomy by Generation Paradigm](#41-taxonomy-by-generation-paradigm)
+  - [4.2 Any-to-Any / Omni Extensions ](#42-any-to-any-omni-extensions)
 - [5. Native Multimodal Models (NMMs)](#5-native-multimodal-models-nmms)
   - [5.1 Foundational Components](#51-foundational-components)
   - [5.2 Early Fusion NMMs](#52-early-fusion-nmms)
@@ -79,15 +78,10 @@
   - [7.3 Image Editing](#73-image-editing)
   - [7.4 Interleaved Image-Text](#74-interleaved-image-text)
   - [7.5 Other Text+Image-to-Image](#75-other-textimage-to-image)
-- [8. Applications, Extensions & Future Directions](#8-applications-extensions-future-directions)
-  - [8.1 Robotics & Embodied AI](#81-robotics-embodied-ai)
-  - [8.2 Autonomous Driving](#82-autonomous-driving)
-  - [8.3 Healthcare & Medical Imaging](#83-healthcare-medical-imaging)
-  - [8.4 Open Challenges & Future Directions](#84-open-challenges-future-directions)
-- [9. Resources](#9-resources)
-  - [9.1 Related Awesome Lists](#91-related-awesome-lists)
-  - [9.2 Slides & Survey Papers](#92-slides-survey-papers)
-  - [9.3 Code Repositories & Tools](#93-code-repositories-tools)
+- [8. Resources](#8-resources)
+  - [8.1 Related Awesome Lists](#81-related-awesome-lists)
+  - [8.2 Slides & Survey Papers](#82-slides-survey-papers)
+  - [8.3 Code Repositories & Tools](#83-code-repositories-tools)
 - [How to Contribute](#how-to-contribute)
   - [Validation Rules](#validation-rules)
   - [Entry Format](#entry-format)
@@ -563,36 +557,86 @@ We identify **5 Architectural Waves** in multimodal model development:
 
 ## 4. Unified Multimodal Models (UMMs)
 
-**In this section:** [4.1 Text-and-Image Unified Models](#41-text-and-image-unified-models) · [4.2 Any-to-Any Multimodal models](#42-any-to-any-multimodal-models)
+**In this section:** [4.1 Taxonomy by Generation Paradigm](#41-taxonomy-by-generation-paradigm) · [4.2 Any-to-Any / Omni Extensions ](#42-any-to-any-omni-extensions)
 
 > Models that unify **multimodal understanding and visual generation** within one framework. The defining property is **U+G unification**, not necessarily training from scratch.
 
 > **Boundary with NMMs:** if a unified model's central contribution is **native end-to-end multimodal pretraining from scratch**, we document its architectural details primarily in **§5 NMMs** and keep §4 focused on the unified U+G perspective.
 
-### 4.1 Text-and-Image Unified Models
+### 4.1 Taxonomy by Generation Paradigm
+
+**Subtopics:** [Diffusion-Based UMMs](#diffusion-based-umms) · [Autoregressive (AR) UMMs – Pixel Encoding](#autoregressive-ar-umms-pixel-encoding) · [Autoregressive (AR) UMMs – Semantic Encoding](#autoregressive-ar-umms-semantic-encoding) · [Hybrid AR + Diffusion UMMs](#hybrid-ar-diffusion-umms)
+
+Unified models are categorized according to their core generation mechanism for visual output (while supporting strong multimodal understanding). This taxonomy highlights trade-offs in fidelity, reasoning, efficiency, and training stability.
+
+#### Diffusion-Based UMMs
 
 | Model | Venue | Links | Paradigm | Notes | Task |
 |---|---|---|---|---|---|
-| **SEED-X** | ArXiv 2024 | [Paper](https://arxiv.org/abs/2404.14396) [Code](https://github.com/AILab-CVC/SEED-X)  | Unified multi-granularity AR | Comprehension + generation with arbitrary image sizes | visual understanding, visual generation |
-| **Show-o** | ArXiv 2024 | [Paper](https://arxiv.org/abs/2408.12528) [Code](https://github.com/showlab/Show-o)  | Hybrid AR+Diffusion | One transformer for unified understanding and generation | visual understanding, visual generation |
-| **Janus** | ArXiv 2024 | [Paper](https://arxiv.org/abs/2410.13848) [Code](https://github.com/deepseek-ai/Janus)  | Decoupled AR | Separate understanding and generation encoders inside one unified system | visual understanding, visual generation |
-| **Vitron** | ArXiv 2024 | [Paper](https://arxiv.org/abs/2412.19806) [Code](https://github.com/SkyworkAI/Vitron)  | Unified generalist | Understanding, generation, segmentation, and editing in one framework | visual understanding, visual generation |
-| **Janus-Pro** | ArXiv 2025 | [Paper](https://arxiv.org/abs/2501.17811) [Code](https://github.com/deepseek-ai/Janus)  | Decoupled AR | Scaled Janus with stronger generation quality | visual understanding, visual generation |
-| **OpenUni** | ArXiv 2025 | [Paper](https://arxiv.org/abs/2505.23661) [Code](https://github.com/wusize/OpenUni)  | Unified baseline | Simple baseline for unified multimodal understanding and generation | visual understanding, visual generation |
-| **BAGEL** | ArXiv 2025 | [Paper](https://arxiv.org/abs/2505.14683) [Code](https://github.com/ByteDance-Seed/Bagel)  | AR | Interleaved training for unified understanding + generation | visual understanding, visual generation |
-| **BLIP3-o** | ArXiv 2025 | [Paper](https://arxiv.org/abs/2505.09568) [Code](https://github.com/JiuhaiChen/BLIP3o)  | AR+Diffusion | Fully open family of unified multimodal models | visual understanding, visual generation |
-| **Show-o2** | ArXiv 2025 | [Paper](https://arxiv.org/abs/2506.15564) [Code](https://github.com/showlab/Show-o)  | AR+Flow | Improved unified multimodal model with stronger generation | visual understanding, visual generation |
+| **Dual Diffusion** | ArXiv 2024 | [Paper](https://arxiv.org/abs/2501.00289) [Code](https://github.com/zijieli-Jlee/Dual-Diffusion) | Dual Diffusion | Unified image generation + understanding via bidirectional diffusion | visual understanding, visual generation |
+| **UniDisc** | ArXiv 2025 | [Paper](https://arxiv.org/abs/2503.20853) [Code](https://github.com/alexanderswerdlow/unidisc) | Unified Discrete Diffusion | Discrete diffusion for multimodal U+G | visual understanding, visual generation |
+| **MMaDA** | ArXiv 2025 | [Paper](https://arxiv.org/abs/2505.15809) [Code](https://github.com/Gen-Verse/MMaDA) | Multimodal Large Diffusion LM | Diffusion LM for unified understanding/generation | visual understanding, visual generation |
+| **FUDOKI** | ArXiv 2025 | [Paper](https://arxiv.org/abs/2505.20147) | Discrete Flow-based Unified | Kinetic-optimal velocities for U+G | visual understanding, visual generation |
+| **Muddit** | ArXiv 2025 | [Paper](https://arxiv.org/abs/2505.23606) [Code](https://github.com/M-E-AGI-Lab/Muddit) | Unified Discrete Diffusion | Liberating generation beyond T2I | visual understanding, visual generation |
+| **Lavida-O** | ArXiv 2025 | [Paper](https://arxiv.org/abs/2509.19244) [Code](https://github.com/jacklishufan/LaViDa-O) | Elastic Large Masked Diffusion | Elastic masked diffusion for U+G | visual understanding, visual generation |
+| **UniModel** | ArXiv 2025 | [Paper](https://arxiv.org/abs/2511.16917) | Visual-Only MMDiT Framework | Visual-only unified multimodal U+G | visual understanding, visual generation |
 
-### 4.2 Any-to-Any Multimodal models
+#### Autoregressive (AR) UMMs – Pixel Encoding
 
 | Model | Venue | Links | Modalities | Notes | Task |
 |---|---|---|---|---|---|
-| **NExT-GPT** | ArXiv 2023 | [Paper](https://arxiv.org/abs/2309.05519) [Code](https://github.com/NExT-GPT/NExT-GPT)  | image + video + audio + text | Any-to-any system with an LLM core and modality-specific generators | visual understanding, visual generation, omni |
-| **CoDi**: Any-to-Any Generation via Composable Diffusion | NeurIPS 2023 | [Paper](https://arxiv.org/abs/2305.11846) [Code](https://github.com/microsoft/i-Code/tree/main/CoDi)  | image + video + audio + text | Composable diffusion for cross-modal generation | visual generation, omni |
-| **UnifiedIO 2**  | ArXiv 2023 | [Paper](https://arxiv.org/abs/2312.17172) [Code](https://github.com/allenai/unified-io-2)  | image + audio + action + text | Autoregressive any-to-any model trained with a mixture-of-denoisers objective | visual understanding, visual generation, omni |
-| **AnyGPT**  | ArXiv 2024 | [Paper](https://arxiv.org/abs/2402.12226) [Code](https://github.com/OpenMOSS/AnyGPT)  | speech + image + music + text | Discrete token interface for many-to-many modality transfer | visual understanding, visual generation, omni |
-| **CoDi-2** | CVPR 2024 | [Paper](https://arxiv.org/abs/2311.18775) | image + video + audio + text | In-context interleaved any-to-any generation | visual generation, omni |
-| **M2-Omni**  | ArXiv 2025 | [Paper](https://arxiv.org/abs/2502.18778) | audio + video + image + text | Efficient omni any-to-any model | visual understanding, visual generation, omni |
+| **LWM** | ArXiv 2024 | [Paper](https://arxiv.org/abs/2402.08268) | video + language | World model on million-length video and language with blockwise ring attention | visual understanding, visual generation |
+| **Chameleon** | ArXiv 2024 | [Paper](https://arxiv.org/abs/2405.09818) [Code](https://github.com/facebookresearch/chameleon) | image + text | Mixed-modal early-fusion foundation models; token-by-token generation | visual understanding, visual generation |
+| **ANOLE** | ArXiv 2024 | [Paper](https://arxiv.org/abs/2407.06135) [Code](https://github.com/GAIR-NLP/anole) | image + text | Open autoregressive native LMM for interleaved image-text generation | visual understanding, visual generation |
+| **Emu3** | ArXiv 2024 | [Paper](https://arxiv.org/abs/2409.18869) [Code](https://github.com/baaivision/Emu3) | image + text | Next-token prediction is all you need; single next-token model | visual understanding, visual generation |
+| **MMAR** | ArXiv 2024 | [Paper](https://arxiv.org/abs/2410.10798) | image + text | Lossless multi-modal auto-regressive probabilistic modeling | visual understanding, visual generation |
+| **Orthus** | ArXiv 2024 | [Paper](https://arxiv.org/abs/2412.00127) [Code](https://github.com/zhijie-group/Orthus) | image + text | Autoregressive interleaved image-text generation with modality-specific heads | visual understanding, visual generation |
+| **SynerGen-VL** | ArXiv 2024 | [Paper](https://arxiv.org/abs/2412.09604) | image + text | Synergistic image understanding and generation with vision experts and token folding | visual understanding, visual generation |
+| **Liquid** | ArXiv 2024 | [Paper](https://arxiv.org/abs/2412.04332) [Code](https://github.com/FoundationVision/Liquid) | image + text | Language models are scalable and unified multi-modal generators | visual understanding, visual generation |
+| **UGen** | ArXiv 2025 | [Paper](https://arxiv.org/abs/2503.21193) | image + text | Unified autoregressive multimodal model with progressive vocabulary learning | visual understanding, visual generation |
+| **Harmon** | ArXiv 2025 | [Paper](https://arxiv.org/abs/2503.21979) [Code](https://github.com/wusize/Harmon) | image + text | Shared MAR encoder for semantic + fine-grained harmony; SOTA GenEval | visual understanding, visual generation |
+| **TokLIP** | ArXiv 2025 | [Paper](https://arxiv.org/abs/2505.05422) [Code](https://github.com/TencentARC/TokLIP) | image + text | Marry visual tokens to CLIP for U+G | visual understanding, visual generation |
+| **Selftok** | ArXiv 2025 | [Paper](https://arxiv.org/abs/2505.07538) [Code](https://github.com/selftok-team/SelftokTokenizer) | image + text | Discrete visual tokens for AR / Diffusion / Reasoning | visual understanding, visual generation |
+| **OneCat** | ArXiv 2025 | [Paper](https://arxiv.org/abs/2509.03498) [Code](https://github.com/onecat-ai/OneCAT) | image + text | Pure decoder-only unified U+G | visual understanding, visual generation |
+| **Uni-X** | ArXiv 2025 | [Paper](https://arxiv.org/abs/2509.24365) [Code](https://github.com/CURRENTF/Uni-X) | image + text | Two-end-separated architecture mitigating modality conflict | visual understanding, visual generation |
+| **Emu3.5** | ArXiv 2025 | [Paper](https://arxiv.org/abs/2510.26583) [Code](https://github.com/baaivision/Emu3.5) | image + text | Native multimodal world learner; next-token only | visual understanding, visual generation |
+
+#### Autoregressive (AR) UMMs – Semantic Encoding
+
+| Benchmark | Venue | Links | Focus | Task |
+|---|---|---|---|---|
+| **GenAI-Bench** | CVPR 2024 | [Paper](https://arxiv.org/abs/2406.13743) | Compositional unified understanding + generation evaluation | visual understanding, visual generation |
+| **MMIE** | ICLR 2025 | [Paper](https://arxiv.org/abs/2410.10139) [Code](https://github.com/Lillianwei-h/MMIE) | Interleaved comprehension and generation benchmark | visual understanding, visual generation |
+| **OpenING** | CVPR 2025 | [Paper](https://arxiv.org/abs/2411.18499) | Open-ended interleaved image-text generation evaluation | visual understanding, visual generation |
+| **UniEval / UniBench** | ArXiv 2025 | [Paper](https://arxiv.org/abs/2505.10483) [Code](https://github.com/xmed-lab/UniEval) | Holistic evaluation for unified multimodal understanding and generation | visual understanding, visual generation |
+| **T2I-CompBench** | NeurIPS 2023 | [Paper](https://arxiv.org/abs/2307.06350) [Code](https://github.com/Karine-Huang/T2I-CompBench) | Text-to-image compositionality benchmark often used for unified generators | visual generation |
+| **VTBench** | ArXiv 2025 | [Paper](https://arxiv.org/abs/2505.13439) [Code](https://github.com/huawei-lin/VTBench) | Evaluates visual tokenizers critical to unified AR generation systems | visual generation |
+| **MME-Unify** | ICLR 2026 | [Paper](https://arxiv.org/abs/2504.03641) [Code](https://github.com/MME-Benchmarks/MME-Unify) | Comprehensive U-MLLM evaluation (comprehension + generation + mixed) | visual understanding, visual generation |
+| **Uni-MMMU** | ArXiv 2026 | [Paper](https://arxiv.org/abs/2510.13759) | Massive multi-discipline bidirectional Gen-Und benchmark; 8 reasoning-centric domains (science, math, puzzles) | visual understanding, visual generation |
+
+#### Hybrid AR + Diffusion UMMs
+
+| Paper | Venue | Links | Notes | Task |
+|---|---|---|---|---|
+| **Transfusion**: Predict the Next Token and Diffuse the Next Image | ArXiv 2024 | [Paper](https://arxiv.org/abs/2408.11039) | U+G via joint AR+diffusion training | visual understanding, visual generation |
+| **Show-o**: One Single Transformer to Unify Multimodal Understanding and Generation | ArXiv 2024 | [Paper](https://arxiv.org/abs/2408.12528) [Code](https://github.com/showlab/Show-o) | Discrete+continuous tokens; AR+diffusion | visual understanding, visual generation |
+| **BLIP3-o**: A Family of Fully Open Unified Multimodal Models | ArXiv 2025 | [Paper](https://arxiv.org/abs/2505.09568) [Code](https://github.com/JiuhaiChen/BLIP3o) | BLIP successor with U+G unification (AR+Diffusion) | visual understanding, visual generation |
+| **BAGEL** | ArXiv 2025 | [Paper](https://arxiv.org/abs/2505.14683) [Code](https://github.com/ByteDance-Seed/Bagel) | AR-Diffusion framework; interleaved training for unified U+G | visual understanding, visual generation |
+| **MammothModa2** | ArXiv 2025 | [Paper](https://arxiv.org/abs/2511.18262) [Code](https://github.com/bytedance/mammothmoda) | AR-Diffusion framework for unified U+G | visual understanding, visual generation |
+
+### 4.2 Any-to-Any / Omni Extensions 
+
+Models that extend unified understanding + generation beyond text and image to support **any-to-any** modality conversion (audio, video, speech, etc.). These often build on the paradigms above but emphasize native omni-modal tokenization, long-context handling, and cross-modal generation.
+
+| Model | Paper | Links | Notes | Task |
+|---|---|---|---|---|
+| **NExT-GPT** | [Paper](https://arxiv.org/abs/2309.05519) | [Code](https://github.com/NExT-GPT/NExT-GPT) | Any-to-any; encoder+LLM+diffusion decoders | visual understanding, visual generation, omni |
+| **CoDi**: Any-to-Any Generation via Composable Diffusion | [Paper](https://arxiv.org/abs/2305.11846) | [Code](https://github.com/microsoft/i-Code/tree/main/CoDi) | Composable cross-modal diffusion | visual generation, omni |
+| **M2-Omni** | [Paper](https://arxiv.org/abs/2502.18778) | — | Efficient omni-modal | visual understanding, visual generation, omni |
+| **AnyGPT** | [Paper](https://arxiv.org/abs/2402.12226) | [Code](https://github.com/OpenMOSS/AnyGPT) | Discrete tokens; any-to-any | visual understanding, visual generation, omni |
+| **UnifiedIO 2** | [Paper](https://arxiv.org/abs/2312.17172) | [Code](https://github.com/allenai/unified-io-2) | Multimodal mixture-of-denoisers | visual understanding, visual generation, omni |
+| **AR-Omni** | [Paper](https://arxiv.org/abs/2601.17761) | — | Single Transformer any-to-any via shared discrete embeddings | visual understanding, visual generation, omni |
+| **NExT-OMNI** | [Paper](https://arxiv.org/abs/2510.13721) | — | Discrete flow omnimodal foundation | visual understanding, visual generation, omni |
 
 <p align="right"><a href="#awesome-multimodal-models">Back to Top</a></p>
 
@@ -870,57 +914,11 @@ The latest arXiv-native multimodal papers increasingly blur the boundaries betwe
 
 ---
 
-## 8. Applications, Extensions & Future Directions
+## 8. Resources
 
-**In this section:** [8.1 Robotics & Embodied AI](#81-robotics-embodied-ai) · [8.2 Autonomous Driving](#82-autonomous-driving) · [8.3 Healthcare & Medical Imaging](#83-healthcare-medical-imaging) · [8.4 Open Challenges & Future Directions](#84-open-challenges-future-directions)
+**In this section:** [8.1 Related Awesome Lists](#81-related-awesome-lists) · [8.2 Slides & Survey Papers](#82-slides-survey-papers) · [8.3 Code Repositories & Tools](#83-code-repositories-tools)
 
-### 8.1 Robotics & Embodied AI
-
-| Paper | Venue | Links | Notes |
-|---|---|---|---|
-| **PaLM-E**: An Embodied Multimodal Language Model | ICML 2023 | [Paper](https://arxiv.org/abs/2303.03378) | Sensor data + language + vision |
-| **RT-2**: Vision-Language-Action Models | CoRL 2023 | [Paper](https://arxiv.org/abs/2307.15818) | VLM → robot actions |
-| **Octo**: An Open-Source Generalist Robot Policy | RSS 2024 | [Paper](https://arxiv.org/abs/2405.12213) [Code](https://github.com/octo-models/octo)  | Open generalist robot |
-| **OpenVLA**: An Open-Source Vision-Language-Action Model | CoRL 2024 | [Paper](https://arxiv.org/abs/2406.09246) [Code](https://github.com/openvla/openvla)  | Fully open VLA |
-
-### 8.2 Autonomous Driving
-
-| Paper | Venue | Links | Notes |
-|---|---|---|---|
-| **DriveVLM**: The Convergence of Autonomous Driving and LLMs | CoRL 2024 | [Paper](https://arxiv.org/abs/2402.12289) | VLM for driving reasoning |
-| **LMDrive**: Language-Guided Autonomous Driving | CVPR 2024 | [Paper](https://arxiv.org/abs/2312.07488) [Code](https://github.com/opendilab/LMDrive)  | Language command → driving actions |
-
-### 8.3 Healthcare & Medical Imaging
-
-| Paper | Venue | Links | Notes |
-|---|---|---|---|
-| **LLaVA-Med**: Training a Large Language-and-Vision Assistant | NeurIPS 2023 | [Paper](https://arxiv.org/abs/2306.00890) [Code](https://github.com/microsoft/LLaVA-Med)  | Medical visual question answering |
-| **Med-Flamingo**: A Multimodal Medical Few-shot Learner | ML4H 2023 | [Paper](https://arxiv.org/abs/2307.15189) [Code](https://github.com/snap-stanford/med-flamingo)  | Few-shot medical VQA |
-| **CheXagent**: Towards a Foundation Model for Chest X-Ray Analysis | ArXiv 2024 | [Paper](https://arxiv.org/abs/2401.12208) | Radiology-specialized MLLM |
-
-### 8.4 Open Challenges & Future Directions
-
-| Challenge | Description | Key References |
-|---|---|---|
-| **Modality Imbalance** | Vision tokens vs text tokens imbalance during training | [MoMa](https://arxiv.org/abs/2407.21770), [Chameleon](https://arxiv.org/abs/2405.09818) |
-| **Scalability of NMMs** | Training from scratch at GPT-4 scale remains expensive | [PaLI-X](https://arxiv.org/abs/2305.18565), [Gemini](https://arxiv.org/abs/2312.11805) |
-| **U+G Conflict** | Shared encoder optimization conflicts between understanding & generation | [Janus](https://arxiv.org/abs/2410.13848) |
-| **Efficient Inference** | KV cache, token compression for long visual contexts | [MiniCPM-V](https://arxiv.org/abs/2408.01800), [LLaVA-HR](https://arxiv.org/abs/2403.03003) |
-| **3D & Embodied** | Extending 2D multimodal models to 3D spatial reasoning | [PaLM-E](https://arxiv.org/abs/2303.03378), [RT-2](https://arxiv.org/abs/2307.15818) |
-| **Alignment for Generation** | RLHF / DPO for image generation quality & safety | [VPO](https://arxiv.org/abs/2405.19673) |
-| **Missing Modality Robustness** | Graceful degradation when a modality is absent at inference | [Imagined then Generated](https://arxiv.org/abs/2209.04251) |
-| **Bias & Fairness** | Demographic bias in vision-language aligned models | — |
-| **Long Context Multimodal** | Handling hours-long video or book-length documents | [Gemini 1.5](https://arxiv.org/abs/2403.05530), [LWM](https://arxiv.org/abs/2402.08268) |
-
-<p align="right"><a href="#awesome-multimodal-models">Back to Top</a></p>
-
----
-
-## 9. Resources
-
-**In this section:** [9.1 Related Awesome Lists](#91-related-awesome-lists) · [9.2 Slides & Survey Papers](#92-slides-survey-papers) · [9.3 Code Repositories & Tools](#93-code-repositories-tools)
-
-### 9.1 Related Awesome Lists
+### 8.1 Related Awesome Lists
 
 | Repository | Focus | Author |
 |---|---|---|
@@ -935,7 +933,7 @@ The latest arXiv-native multimodal papers increasingly blur the boundaries betwe
 | [Awesome-Multimodality](https://github.com/Yutong-Zhou-cv/Awesome-Multimodality) | General multimodality | Yutong-Zhou-cv |
 | [Awesome-Unified-Multimodal](https://github.com/Purshow/Awesome-Unified-Multimodal) | Unified models | Purshow |
 
-### 9.2 Slides & Survey Papers
+### 8.2 Slides & Survey Papers
 
 | Type | Resource | Notes |
 |---|---|---|
@@ -944,7 +942,7 @@ The latest arXiv-native multimodal papers increasingly blur the boundaries betwe
 | Report | [The Dawn of LMMs: Preliminary Explorations with GPT-4V](https://arxiv.org/abs/2309.17421) | Early capability analysis around GPT-4V |
 | Survey | [Multimodal Foundation Models: From Specialists to General-Purpose Assistants](https://arxiv.org/abs/2309.10020) | Broader foundation-model view across multimodal systems |
 
-### 9.3 Code Repositories & Tools
+### 8.3 Code Repositories & Tools
 
 | Tool | Description | Link |
 |---|---|---|

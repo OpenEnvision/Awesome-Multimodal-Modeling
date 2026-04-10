@@ -81,12 +81,7 @@
       "alt": "Benchmarks"
     },
     {
-      "href": "#8-applications-extensions-future-directions",
-      "image": "https://img.shields.io/badge/Applications-9333ea?style=for-the-badge&logo=rocket&logoColor=white",
-      "alt": "Applications"
-    },
-    {
-      "href": "#9-resources",
+      "href": "#8-resources",
       "image": "https://img.shields.io/badge/Resources-475569?style=for-the-badge&logo=github&logoColor=white",
       "alt": "Resources"
     }

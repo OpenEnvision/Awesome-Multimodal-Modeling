@@ -1051,75 +1051,59 @@
     ],
     "rows": [
       [
-        "**SEED-X**",
-        "ArXiv 2024",
-        "[Paper](https://arxiv.org/abs/2404.14396) [Code](https://github.com/AILab-CVC/SEED-X) ",
-        "Unified multi-granularity AR",
-        "Comprehension + generation with arbitrary image sizes",
-        "visual understanding, visual generation"
-      ],
-      [
-        "**Show-o**",
-        "ArXiv 2024",
-        "[Paper](https://arxiv.org/abs/2408.12528) [Code](https://github.com/showlab/Show-o) ",
-        "Hybrid AR+Diffusion",
-        "One transformer for unified understanding and generation",
-        "visual understanding, visual generation"
-      ],
-      [
-        "**Janus**",
-        "ArXiv 2024",
-        "[Paper](https://arxiv.org/abs/2410.13848) [Code](https://github.com/deepseek-ai/Janus) ",
-        "Decoupled AR",
-        "Separate understanding and generation encoders inside one unified system",
-        "visual understanding, visual generation"
-      ],
-      [
-        "**Vitron**",
-        "ArXiv 2024",
-        "[Paper](https://arxiv.org/abs/2412.19806) [Code](https://github.com/SkyworkAI/Vitron) ",
-        "Unified generalist",
-        "Understanding, generation, segmentation, and editing in one framework",
-        "visual understanding, visual generation"
-      ],
-      [
-        "**Janus-Pro**",
+        "**Dual Diffusion**",
         "ArXiv 2025",
-        "[Paper](https://arxiv.org/abs/2501.17811) [Code](https://github.com/deepseek-ai/Janus) ",
-        "Decoupled AR",
-        "Scaled Janus with stronger generation quality",
+        "[Paper](https://arxiv.org/abs/2501.00289) [Code](https://github.com/zijieli-Jlee/Dual-Diffusion)",
+        "Dual Diffusion",
+        "Unified image generation + understanding via bidirectional diffusion",
         "visual understanding, visual generation"
       ],
       [
-        "**OpenUni**",
+        "**UniDisc**",
         "ArXiv 2025",
-        "[Paper](https://arxiv.org/abs/2505.23661) [Code](https://github.com/wusize/OpenUni) ",
-        "Unified baseline",
-        "Simple baseline for unified multimodal understanding and generation",
+        "[Paper](https://arxiv.org/abs/2503.20853) [Code](https://github.com/alexanderswerdlow/unidisc)",
+        "Unified Discrete Diffusion",
+        "Discrete diffusion for multimodal U+G",
         "visual understanding, visual generation"
       ],
       [
-        "**BAGEL**",
+        "**MMaDA**",
         "ArXiv 2025",
-        "[Paper](https://arxiv.org/abs/2505.14683) [Code](https://github.com/ByteDance-Seed/Bagel) ",
-        "AR",
-        "Interleaved training for unified understanding + generation",
+        "[Paper](https://arxiv.org/abs/2505.15809) [Code](https://github.com/Gen-Verse/MMaDA)",
+        "Multimodal Large Diffusion LM",
+        "Diffusion LM for unified understanding/generation",
         "visual understanding, visual generation"
       ],
       [
-        "**BLIP3-o**",
+        "**FUDOKI**",
         "ArXiv 2025",
-        "[Paper](https://arxiv.org/abs/2505.09568) [Code](https://github.com/JiuhaiChen/BLIP3o) ",
-        "AR+Diffusion",
-        "Fully open family of unified multimodal models",
+        "[Paper](https://arxiv.org/abs/2505.20147)",
+        "Discrete Flow-based Unified",
+        "Kinetic-optimal velocities for U+G",
         "visual understanding, visual generation"
       ],
       [
-        "**Show-o2**",
+        "**Muddit**",
         "ArXiv 2025",
-        "[Paper](https://arxiv.org/abs/2506.15564) [Code](https://github.com/showlab/Show-o) ",
-        "AR+Flow",
-        "Improved unified multimodal model with stronger generation",
+        "[Paper](https://arxiv.org/abs/2505.23606) [Code](https://github.com/M-E-AGI-Lab/Muddit)",
+        "Unified Discrete Diffusion",
+        "Liberating generation beyond T2I",
+        "visual understanding, visual generation"
+      ],
+      [
+        "**Lavida-O**",
+        "ArXiv 2025",
+        "[Paper](https://arxiv.org/abs/2509.19244) [Code](https://github.com/adobe-research/LaVida-O)",
+        "Elastic Large Masked Diffusion",
+        "Elastic masked diffusion for U+G",
+        "visual understanding, visual generation"
+      ],
+      [
+        "**UniModel**",
+        "ArXiv 2025",
+        "[Paper](https://arxiv.org/abs/2511.16917)",
+        "Visual-Only MMDiT Framework",
+        "Visual-only unified multimodal U+G",
         "visual understanding, visual generation"
       ]
     ]
@@ -1135,52 +1119,124 @@
     ],
     "rows": [
       [
-        "**NExT-GPT**",
-        "ArXiv 2023",
-        "[Paper](https://arxiv.org/abs/2309.05519) [Code](https://github.com/NExT-GPT/NExT-GPT) ",
-        "image + video + audio + text",
-        "Any-to-any system with an LLM core and modality-specific generators",
-        "visual understanding, visual generation, omni"
-      ],
-      [
-        "**CoDi**: Any-to-Any Generation via Composable Diffusion",
-        "NeurIPS 2023",
-        "[Paper](https://arxiv.org/abs/2305.11846) [Code](https://github.com/microsoft/i-Code/tree/main/CoDi) ",
-        "image + video + audio + text",
-        "Composable diffusion for cross-modal generation",
-        "visual generation, omni"
-      ],
-      [
-        "**UnifiedIO 2** ",
-        "ArXiv 2023",
-        "[Paper](https://arxiv.org/abs/2312.17172) [Code](https://github.com/allenai/unified-io-2) ",
-        "image + audio + action + text",
-        "Autoregressive any-to-any model trained with a mixture-of-denoisers objective",
-        "visual understanding, visual generation, omni"
-      ],
-      [
-        "**AnyGPT** ",
+        "**LWM**",
         "ArXiv 2024",
-        "[Paper](https://arxiv.org/abs/2402.12226) [Code](https://github.com/OpenMOSS/AnyGPT) ",
-        "speech + image + music + text",
-        "Discrete token interface for many-to-many modality transfer",
-        "visual understanding, visual generation, omni"
+        "[Paper](https://arxiv.org/abs/2402.08268)",
+        "video + language",
+        "World model on million-length video and language with blockwise ring attention",
+        "visual understanding, visual generation"
       ],
       [
-        "**CoDi-2**",
-        "CVPR 2024",
-        "[Paper](https://arxiv.org/abs/2311.18775)",
-        "image + video + audio + text",
-        "In-context interleaved any-to-any generation",
-        "visual generation, omni"
+        "**Chameleon**",
+        "ArXiv 2024",
+        "[Paper](https://arxiv.org/abs/2405.09818) [Code](https://github.com/facebookresearch/chameleon)",
+        "image + text",
+        "Mixed-modal early-fusion foundation models; token-by-token generation",
+        "visual understanding, visual generation"
       ],
       [
-        "**M2-Omni** ",
+        "**ANOLE**",
+        "ArXiv 2024",
+        "[Paper](https://arxiv.org/abs/2407.06135) [Code](https://github.com/GAIR-NLP/anole)",
+        "image + text",
+        "Open autoregressive native LMM for interleaved image-text generation",
+        "visual understanding, visual generation"
+      ],
+      [
+        "**Emu3**",
+        "ArXiv 2024",
+        "[Paper](https://arxiv.org/abs/2409.18869) [Code](https://github.com/baaivision/Emu3)",
+        "image + text",
+        "Next-token prediction is all you need; single next-token model",
+        "visual understanding, visual generation"
+      ],
+      [
+        "**MMAR**",
+        "ArXiv 2024",
+        "[Paper](https://arxiv.org/abs/2410.10798)",
+        "image + text",
+        "Lossless multi-modal auto-regressive probabilistic modeling",
+        "visual understanding, visual generation"
+      ],
+      [
+        "**Orthus**",
+        "ArXiv 2024",
+        "[Paper](https://arxiv.org/abs/2412.00127) [Code](https://github.com/zhijie-group/Orthus)",
+        "image + text",
+        "Autoregressive interleaved image-text generation with modality-specific heads",
+        "visual understanding, visual generation"
+      ],
+      [
+        "**SynerGen-VL**",
+        "ArXiv 2024",
+        "[Paper](https://arxiv.org/abs/2412.09604)",
+        "image + text",
+        "Synergistic image understanding and generation with vision experts and token folding",
+        "visual understanding, visual generation"
+      ],
+      [
+        "**Liquid**",
+        "ArXiv 2024",
+        "[Paper](https://arxiv.org/abs/2412.04332) [Code](https://github.com/FoundationVision/Liquid)",
+        "image + text",
+        "Language models are scalable and unified multi-modal generators",
+        "visual understanding, visual generation"
+      ],
+      [
+        "**UGen**",
         "ArXiv 2025",
-        "[Paper](https://arxiv.org/abs/2502.18778)",
-        "audio + video + image + text",
-        "Efficient omni any-to-any model",
-        "visual understanding, visual generation, omni"
+        "[Paper](https://arxiv.org/abs/2503.21193)",
+        "image + text",
+        "Unified autoregressive multimodal model with progressive vocabulary learning",
+        "visual understanding, visual generation"
+      ],
+      [
+        "**Harmon**",
+        "ArXiv 2025",
+        "[Paper](https://arxiv.org/abs/2503.21979) [Code](https://github.com/wusize/Harmon)",
+        "image + text",
+        "Shared MAR encoder for semantic + fine-grained harmony; SOTA GenEval",
+        "visual understanding, visual generation"
+      ],
+      [
+        "**TokLIP**",
+        "ArXiv 2025",
+        "[Paper](https://arxiv.org/abs/2505.05422) [Code](https://github.com/TencentARC/TokLIP)",
+        "image + text",
+        "Marry visual tokens to CLIP for U+G",
+        "visual understanding, visual generation"
+      ],
+      [
+        "**Selftok**",
+        "ArXiv 2025",
+        "[Paper](https://arxiv.org/abs/2505.07538) [Code](https://github.com/selftok-team/SelftokTokenizer)",
+        "image + text",
+        "Discrete visual tokens for AR / Diffusion / Reasoning",
+        "visual understanding, visual generation"
+      ],
+      [
+        "**OneCat**",
+        "ArXiv 2025",
+        "[Paper](https://arxiv.org/abs/2509.03498) [Code](https://github.com/onecat-ai/OneCAT)",
+        "image + text",
+        "Pure decoder-only unified U+G",
+        "visual understanding, visual generation"
+      ],
+      [
+        "**Uni-X**",
+        "ArXiv 2025",
+        "[Paper](https://arxiv.org/abs/2509.24365) [Code](https://github.com/CURRENTF/Uni-X)",
+        "image + text",
+        "Two-end-separated architecture mitigating modality conflict",
+        "visual understanding, visual generation"
+      ],
+      [
+        "**Emu3.5**",
+        "ArXiv 2025",
+        "[Paper](https://arxiv.org/abs/2510.26583) [Code](https://github.com/baaivision/Emu3.5)",
+        "image + text",
+        "Native multimodal world learner; next-token only",
+        "visual understanding, visual generation"
       ]
     ]
   },
@@ -1217,7 +1273,7 @@
       [
         "**UniEval / UniBench**",
         "ArXiv 2025",
-        "[Paper](https://arxiv.org/abs/2505.10483) [Code](https://github.com/xmed-lab/UniEval) ",
+        "[Paper](https://arxiv.org/abs/2505.10483) [Code](https://github.com/xmed-lab/UniEval)",
         "Holistic evaluation for unified multimodal understanding and generation",
         "visual understanding, visual generation"
       ],
@@ -1231,9 +1287,23 @@
       [
         "**VTBench**",
         "ArXiv 2025",
-        "[Paper](https://arxiv.org/abs/2505.13439) [Code](https://github.com/huawei-lin/VTBench) ",
+        "[Paper](https://arxiv.org/abs/2505.13439) [Code](https://github.com/huawei-lin/VTBench)",
         "Evaluates visual tokenizers critical to unified AR generation systems",
         "visual generation"
+      ],
+      [
+        "**MME-Unify**",
+        "ICLR 2026",
+        "[Paper](https://arxiv.org/abs/2504.03641) [Code](https://github.com/MME-Benchmarks/MME-Unify)",
+        "Comprehensive U-MLLM evaluation (comprehension + generation + mixed)",
+        "visual understanding, visual generation"
+      ],
+      [
+        "**Uni-MMMU**",
+        "ArXiv 2025",
+        "[Paper](https://arxiv.org/abs/2510.13759)",
+        "Massive multi-discipline bidirectional Gen-Und benchmark; 8 reasoning-centric domains (science, math, puzzles)",
+        "visual understanding, visual generation"
       ]
     ]
   },
@@ -1256,15 +1326,29 @@
       [
         "**Show-o**: One Single Transformer to Unify Multimodal Understanding and Generation",
         "ArXiv 2024",
-        "[Paper](https://arxiv.org/abs/2408.12528) [Code](https://github.com/showlab/Show-o) ",
+        "[Paper](https://arxiv.org/abs/2408.12528) [Code](https://github.com/showlab/Show-o)",
         "Discrete+continuous tokens; AR+diffusion",
         "visual understanding, visual generation"
       ],
       [
         "**BLIP3-o**: A Family of Fully Open Unified Multimodal Models",
         "ArXiv 2025",
-        "[Paper](https://arxiv.org/abs/2505.09568) [Code](https://github.com/JiuhaiChen/BLIP3o) ",
-        "BLIP successor with U+G unification",
+        "[Paper](https://arxiv.org/abs/2505.09568) [Code](https://github.com/JiuhaiChen/BLIP3o)",
+        "BLIP successor with U+G unification (AR+Diffusion)",
+        "visual understanding, visual generation"
+      ],
+      [
+        "**BAGEL**",
+        "ArXiv 2025",
+        "[Paper](https://arxiv.org/abs/2505.14683) [Code](https://github.com/ByteDance-Seed/Bagel)",
+        "AR-Diffusion framework; interleaved training for unified U+G",
+        "visual understanding, visual generation"
+      ],
+      [
+        "**MammothModa2**",
+        "ArXiv 2025",
+        "[Paper](https://arxiv.org/abs/2511.18262) [Code](https://github.com/bytedance/mammothmoda)",
+        "AR-Diffusion framework for unified U+G",
         "visual understanding, visual generation"
       ]
     ]
@@ -1288,17 +1372,33 @@
         "visual understanding, visual generation"
       ],
       [
+        "**LWM**",
+        "[Paper](https://arxiv.org/abs/2402.08268)",
+        "—",
+        "AR (pixel-encoding)",
+        "World model on million-length video/language",
+        "visual understanding, visual generation"
+      ],
+      [
         "**Chameleon**",
         "[Paper](https://arxiv.org/abs/2405.09818)",
-        "[Code](https://github.com/facebookresearch/chameleon) ",
-        "AR (early fusion)",
+        "[Code](https://github.com/facebookresearch/chameleon)",
+        "AR (pixel-encoding, early fusion)",
         "Token-by-token mixed-modal generation",
+        "visual understanding, visual generation"
+      ],
+      [
+        "**ANOLE**",
+        "[Paper](https://arxiv.org/abs/2407.06135)",
+        "[Code](https://github.com/GAIR-NLP/anole)",
+        "AR (pixel-encoding)",
+        "Open autoregressive native LMM for interleaved generation",
         "visual understanding, visual generation"
       ],
       [
         "**Show-o**",
         "[Paper](https://arxiv.org/abs/2408.12528)",
-        "[Code](https://github.com/showlab/Show-o) ",
+        "[Code](https://github.com/showlab/Show-o)",
         "Hybrid AR+Diffusion",
         "Unified discrete+continuous",
         "visual understanding, visual generation"
@@ -1306,42 +1406,34 @@
       [
         "**Emu3**",
         "[Paper](https://arxiv.org/abs/2409.18869)",
-        "[Code](https://github.com/baaivision/Emu3) ",
-        "AR",
+        "[Code](https://github.com/baaivision/Emu3)",
+        "AR (pixel-encoding)",
         "Single next-token model",
         "visual understanding, visual generation"
       ],
       [
         "**SEED-X**",
         "[Paper](https://arxiv.org/abs/2404.14396)",
-        "[Code](https://github.com/AILab-CVC/SEED-X) ",
-        "Unified multi-granularity",
+        "[Code](https://github.com/AILab-CVC/SEED-X)",
+        "Unified multi-granularity AR",
         "Comprehension + generation with arbitrary image sizes",
         "visual understanding, visual generation"
       ],
       [
         "**Janus**",
         "[Paper](https://arxiv.org/abs/2410.13848)",
-        "[Code](https://github.com/deepseek-ai/Janus) ",
-        "AR (decoupled)",
-        "Separate U vs G encoders",
+        "[Code](https://github.com/deepseek-ai/Janus)",
+        "Decoupled AR",
+        "Separate understanding and generation encoders",
         "visual understanding, visual generation"
       ],
       [
         "**Vitron**",
         "[Paper](https://arxiv.org/abs/2412.19806)",
-        "[Code](https://github.com/SkyworkAI/Vitron) ",
+        "[Code](https://github.com/SkyworkAI/Vitron)",
         "Unified generalist",
-        "Understanding, generation, segmentation, editing",
+        "Understanding, generation, segmentation, and editing in one framework",
         "visual understanding, visual generation"
-      ],
-      [
-        "**VisionLLM v2**",
-        "[Paper](https://openreview.net/forum?id=nvYDPF4LJK)",
-        "[Code](https://github.com/OpenGVLab/VisionLLM) ",
-        "Unified multi-task",
-        "End-to-end generalist across many V+L tasks",
-        "visual understanding"
       ],
       [
         "**Transfusion**",
@@ -1366,50 +1458,82 @@
       [
         "**Janus-Pro**",
         "[Paper](https://arxiv.org/abs/2501.17811)",
-        "[Code](https://github.com/deepseek-ai/Janus) ",
-        "AR (decoupled)",
-        "Scaled Janus; better generation",
+        "[Code](https://github.com/deepseek-ai/Janus)",
+        "Decoupled AR",
+        "Scaled Janus with stronger generation quality",
         "visual understanding, visual generation"
       ],
       [
         "**BLIP3-o**",
         "[Paper](https://arxiv.org/abs/2505.09568)",
-        "[Code](https://github.com/JiuhaiChen/BLIP3o) ",
-        "AR+Diffusion",
-        "Fully open U+G",
+        "[Code](https://github.com/JiuhaiChen/BLIP3o)",
+        "Hybrid AR+Diffusion",
+        "Fully open family of unified multimodal models",
         "visual understanding, visual generation"
       ],
       [
         "**BAGEL**",
         "[Paper](https://arxiv.org/abs/2505.14683)",
-        "[Code](https://github.com/ByteDance-Seed/Bagel) ",
-        "AR",
-        "Interleaved training",
+        "[Code](https://github.com/ByteDance-Seed/Bagel)",
+        "Hybrid AR+Diffusion",
+        "Interleaved training for unified understanding + generation",
         "visual understanding, visual generation"
       ],
       [
         "**Show-o2**",
         "[Paper](https://arxiv.org/abs/2506.15564)",
-        "[Code](https://github.com/showlab/Show-o) ",
-        "AR+Flow",
-        "Improved native unified multimodal model",
+        "[Code](https://github.com/showlab/Show-o)",
+        "AR+Flow (hybrid)",
+        "Improved unified multimodal model with stronger generation",
         "visual understanding, visual generation"
       ],
       [
-        "**Qwen3-Omni** ",
-        "—",
-        "—",
-        "Omni",
-        "Any-to-any; audio+video+image+text",
-        "visual understanding, visual generation, omni"
+        "**Harmon**",
+        "[Paper](https://arxiv.org/abs/2503.21979)",
+        "[Code](https://github.com/wusize/Harmon)",
+        "AR (shared MAR, pixel-encoding)",
+        "Shared encoder balances semantics/fine-grained",
+        "visual understanding, visual generation"
+      ],
+      [
+        "**Emu3.5**",
+        "[Paper](https://arxiv.org/abs/2510.26583)",
+        "[Code](https://github.com/baaivision/Emu3.5)",
+        "AR (pixel-encoding)",
+        "Native multimodal world learner",
+        "visual understanding, visual generation"
+      ],
+      [
+        "**OneCat**",
+        "[Paper](https://arxiv.org/abs/2509.03498)",
+        "[Code](https://github.com/onecat-ai/OneCAT)",
+        "Decoder-only AR (pixel-encoding)",
+        "Pure decoder-only unified U+G",
+        "visual understanding, visual generation"
+      ],
+      [
+        "**Uni-X**",
+        "[Paper](https://arxiv.org/abs/2509.24365)",
+        "[Code](https://github.com/CURRENTF/Uni-X)",
+        "AR (pixel-encoding)",
+        "Two-end-separated architecture for unified U+G",
+        "visual understanding, visual generation"
+      ],
+      [
+        "**MammothModa2**",
+        "[Paper](https://arxiv.org/abs/2511.18262)",
+        "[Code](https://github.com/bytedance/mammothmoda)",
+        "Hybrid AR+Diffusion",
+        "AR-Diffusion framework for unified U+G",
+        "visual understanding, visual generation"
       ],
       [
         "**InternVL-U**",
-        "—",
-        "[Code](https://github.com/OpenGVLab/InternVL) ",
-        "AR",
-        "InternVL with generation capability",
-        "visual understanding, visual generation"
+        "[Paper](https://arxiv.org/abs/2603.09877)",
+        "[Code](https://github.com/OpenGVLab/InternVL-U)",
+        "Hybrid AR + MMDiT",
+        "4B lightweight democratized UMM; strong reasoning + editing; outperforms 14B BAGEL",
+        "visual understanding"
       ]
     ]
   },
@@ -1425,36 +1549,50 @@
       [
         "**NExT-GPT**",
         "[Paper](https://arxiv.org/abs/2309.05519)",
-        "[Code](https://github.com/NExT-GPT/NExT-GPT) ",
+        "[Code](https://github.com/NExT-GPT/NExT-GPT)",
         "Any-to-any; encoder+LLM+diffusion decoders",
         "visual understanding, visual generation, omni"
       ],
       [
         "**CoDi**: Any-to-Any Generation via Composable Diffusion",
-        "NeurIPS 2023",
-        "[Paper](https://arxiv.org/abs/2305.11846) [Code](https://github.com/microsoft/i-Code/tree/main/CoDi) ",
+        "[Paper](https://arxiv.org/abs/2305.11846)",
+        "[Code](https://github.com/microsoft/i-Code/tree/main/CoDi)",
         "Composable cross-modal diffusion",
         "visual generation, omni"
       ],
       [
-        "**M2-Omni** ",
+        "**M2-Omni**",
         "[Paper](https://arxiv.org/abs/2502.18778)",
         "—",
         "Efficient omni-modal",
         "visual understanding, visual generation, omni"
       ],
       [
-        "**AnyGPT** ",
+        "**AnyGPT**",
         "[Paper](https://arxiv.org/abs/2402.12226)",
-        "[Code](https://github.com/OpenMOSS/AnyGPT) ",
+        "[Code](https://github.com/OpenMOSS/AnyGPT)",
         "Discrete tokens; any-to-any",
         "visual understanding, visual generation, omni"
       ],
       [
-        "**UnifiedIO 2** ",
+        "**UnifiedIO 2**",
         "[Paper](https://arxiv.org/abs/2312.17172)",
-        "[Code](https://github.com/allenai/unified-io-2) ",
+        "[Code](https://github.com/allenai/unified-io-2)",
         "Multimodal mixture-of-denoisers",
+        "visual understanding, visual generation, omni"
+      ],
+      [
+        "**AR-Omni**",
+        "ArXiv 2026 [Paper](https://arxiv.org/abs/2601.17761)",
+        "[Project](https://modalitydance.github.io/AR-Omni/)",
+        "Single Transformer any-to-any via shared discrete embeddings",
+        "visual understanding, visual generation, omni"
+      ],
+      [
+        "**NExT-OMNI**",
+        "ICLR 2026 [Paper](https://arxiv.org/abs/2510.13721) [OpenReview](https://openreview.net/forum?id=odatOcBi61)",
+        "[Code](https://github.com/ritzz-ai/Next-OMNI)",
+        "Discrete flow omnimodal foundation",
         "visual understanding, visual generation, omni"
       ]
     ]
@@ -1492,16 +1630,30 @@
       [
         "**LlamaGen**: Autoregressive Model Beats Diffusion",
         "NeurIPS 2024",
-        "[Paper](https://arxiv.org/abs/2406.06525) [Code](https://github.com/FoundationVision/LlamaGen) ",
+        "[Paper](https://arxiv.org/abs/2406.06525) [Code](https://github.com/FoundationVision/LlamaGen)",
         "LLaMA architecture for image generation",
         "visual generation"
       ],
       [
         "**TiTok**: Transformer-based 1D Tokenizer for Image Generation",
         "NeurIPS 2024",
-        "[Paper](https://arxiv.org/abs/2406.07550) [Code](https://github.com/bytedance/1d-tokenizer) ",
+        "[Paper](https://arxiv.org/abs/2406.07550) [Code](https://github.com/bytedance/1d-tokenizer)",
         "Compact 1D image tokens",
         "visual generation"
+      ],
+      [
+        "**Selftok**",
+        "ArXiv 2025",
+        "[Paper](https://arxiv.org/abs/2505.07538) [Code](https://github.com/selftok-team/SelftokTokenizer)",
+        "Discrete visual tokens for AR / Diffusion / Reasoning",
+        "visual generation"
+      ],
+      [
+        "**TokLIP**",
+        "ArXiv 2025",
+        "[Paper](https://arxiv.org/abs/2505.05422) [Code](https://github.com/TencentARC/TokLIP)",
+        "Marry visual tokens to CLIP for U+G",
+        "visual understanding, visual generation"
       ]
     ]
   },
@@ -1518,21 +1670,21 @@
         "**Shared Encoder**",
         "Parameter efficient; simpler",
         "Understanding-generation conflict",
-        "Emu3, Chameleon",
+        "Emu3, Chameleon, Harmon (shared MAR)",
         "visual understanding, visual generation"
       ],
       [
         "**Decoupled Encoders**",
         "Optimal per task",
         "More parameters",
-        "Janus, Janus-Pro",
+        "Janus, Janus-Pro, InternVL-U (MLLM + MMDiT head)",
         "visual understanding, visual generation"
       ],
       [
         "**Hybrid (shared backbone + task heads)**",
         "Balance",
         "Engineering complexity",
-        "Show-o",
+        "Show-o, X-Omni, BLIP3-o",
         "visual understanding, visual generation"
       ]
     ]
