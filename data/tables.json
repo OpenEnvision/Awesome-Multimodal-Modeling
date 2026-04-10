@@ -1038,261 +1038,226 @@
     ],
     "rows": [
       [
-        "**Qwen-VL**: A Versatile Vision-Language Model",
-        "ArXiv 2023",
+        "Qwen-VL: A Versatile Vision-Language Model",
+        "arXiv 2023",
         "[Paper](https://arxiv.org/abs/2308.12966) [HF](https://huggingface.co/Qwen/Qwen-VL) ",
         "High-res, multi-lang, bounding box",
         "visual understanding"
       ],
       [
-        "**CogVLM**: Visual Expert for Pretrained Language Models",
-        "ArXiv 2023",
+        "CogVLM: Visual Expert for Pretrained Language Models",
+        "arXiv 2023",
         "[Paper](https://arxiv.org/abs/2311.03079) [Code](https://github.com/THUDM/CogVLM) ",
         "Deep fusion with visual expert modules inside a pretrained LLM",
         "visual understanding"
       ],
       [
-        "**Qwen2-VL**",
-        "ArXiv 2024",
+        "Qwen2-VL",
+        "arXiv 2024",
         "[Paper](https://arxiv.org/abs/2409.12191) [HF](https://huggingface.co/Qwen/Qwen2-VL-7B-Instruct) ",
         "Dynamic resolution; native video",
         "visual understanding"
       ],
       [
-        "**Qwen2.5-VL**: Technical Report",
-        "ArXiv 2025",
+        "Qwen2.5-VL: Technical Report",
+        "arXiv 2025",
         "[Paper](https://arxiv.org/abs/2502.13923) [HF](https://huggingface.co/Qwen/Qwen2.5-VL-7B-Instruct) ",
         "Stronger document, grounding, and video capabilities",
         "visual understanding"
       ],
       [
-        "**InternVL**: Scaling up Vision Foundation Models",
+        "InternVL: Scaling up Vision Foundation Models",
         "CVPR 2024",
         "[Paper](https://arxiv.org/abs/2312.14238) [Code](https://github.com/OpenGVLab/InternVL) ",
         "Progressively aligned ViT + LLM",
         "visual understanding"
       ],
       [
-        "**InternVL2**",
+        "InternVL2",
         "Model release 2024",
         "[HF](https://huggingface.co/OpenGVLab/InternVL2-8B) ",
         "Instruction-tuned InternVL family release with strong multilingual and OCR capabilities",
         "visual understanding"
       ],
       [
-        "**MiniCPM-V**: A GPT-4V Level MLLM on Your Phone",
-        "ArXiv 2024",
+        "MiniCPM-V: A GPT-4V Level MLLM on Your Phone",
+        "arXiv 2024",
         "[Paper](https://arxiv.org/abs/2408.01800) [Code](https://github.com/OpenBMB/MiniCPM-V)  ",
         "On-device efficient MLLM",
         "visual understanding"
       ],
       [
-        "**Cambrian-1**: A Fully Open, Vision-Centric Exploration",
+        "Cambrian-1: A Fully Open, Vision-Centric Exploration",
         "NeurIPS 2024",
         "[Paper](https://arxiv.org/abs/2406.16860) [Code](https://github.com/cambrian-mllm/cambrian) ",
         "Spatial Vision Aggregator",
         "visual understanding"
       ],
       [
-        "**PaliGemma**: A Versatile 3B VLM for Transfer",
-        "ArXiv 2024",
+        "PaliGemma: A Versatile 3B VLM for Transfer",
+        "arXiv 2024",
         "[Paper](https://arxiv.org/abs/2407.07726) [HF](https://huggingface.co/google/paligemma-3b-mix-224)  ",
         "SigLIP encoder + Gemma backbone; strong transfer model",
         "visual understanding"
       ],
       [
-        "**LLaVA-HR**: High Resolution MLLMs",
+        "LLaVA-HR: High Resolution MLLMs",
         "CVPR 2024",
         "[Paper](https://arxiv.org/abs/2403.03003)",
         "Mixture-of-Resolution Adaptation",
         "visual understanding"
       ],
       [
-        "**LLaVA-OneVision**: Easy Visual Task Transfer",
-        "ArXiv 2024",
+        "LLaVA-OneVision: Easy Visual Task Transfer",
+        "arXiv 2024",
         "[Paper](https://arxiv.org/abs/2408.03326) [Code](https://github.com/LLaVA-VL/LLaVA-NeXT) ",
         "Single model for image, multi-image, and video transfer",
         "visual understanding"
       ],
       [
-        "**InternLM-XComposer2**",
-        "ArXiv 2024",
+        "InternLM-XComposer2",
+        "arXiv 2024",
         "[Paper](https://arxiv.org/abs/2401.16420) [Code](https://github.com/InternLM/InternLM-XComposer) ",
         "Compositional visual grounding",
         "visual understanding"
       ],
       [
-        "**mPLUG-Owl3**",
-        "ArXiv 2024",
+        "mPLUG-Owl3",
+        "arXiv 2024",
         "[Paper](https://arxiv.org/abs/2408.04840) [Code](https://github.com/X-PLUG/mPLUG-Owl) ",
         "Long visual sequences",
         "visual understanding"
       ],
       [
-        "**Idefics2**",
-        "ArXiv 2024",
+        "Idefics2",
+        "arXiv 2024",
         "[Paper](https://arxiv.org/abs/2405.02246) [HF](https://huggingface.co/HuggingFaceM4/idefics2-8b) ",
         "Fully open; built on Mistral",
         "visual understanding"
       ],
       [
-        "**Idefics3**",
-        "ArXiv 2024",
+        "Idefics3",
+        "arXiv 2024",
         "[Paper](https://arxiv.org/abs/2408.12637) [HF](https://huggingface.co/HuggingFaceM4/Idefics3-8B-Llama3) ",
         "Open-data recipe with strong document understanding",
         "visual understanding"
       ],
       [
-        "**Phi-3-Vision**",
-        "ArXiv 2024",
+        "Phi-3-Vision",
+        "arXiv 2024",
         "[Paper](https://arxiv.org/abs/2404.14219) [HF](https://huggingface.co/microsoft/Phi-3-vision-128k-instruct)  ",
         "Small but capable",
         "visual understanding"
       ],
       [
-        "**Molmo** / **PixMo**",
+        "Molmo / PixMo",
         "CVPR 2025",
         "[Paper](https://openaccess.thecvf.com/content/CVPR2025/html/Deitke_Molmo_and_PixMo_Open_Weights_and_Open_Data_for_State-of-the-Art_CVPR_2025_paper.html) [Code](https://github.com/allenai/molmo) ",
         "Strong open-data/open-weight VLM pipeline",
         "visual understanding"
       ],
       [
-        "**MM1**: Methods, Analysis & Insights from Multimodal LLM Pre-training",
-        "ArXiv 2024",
+        "MM1: Methods, Analysis & Insights from Multimodal LLM Pre-training",
+        "arXiv 2024",
         "[Paper](https://arxiv.org/abs/2403.09611)",
         "Large-scale proprietary recipe study for multimodal LLM pretraining",
         "visual understanding"
       ],
       [
-        "**NVLM 1.0**: Open Frontier-Class Multimodal LLMs",
-        "ArXiv 2024",
+        "NVLM 1.0: Open Frontier-Class Multimodal LLMs",
+        "arXiv 2024",
         "[Paper](https://arxiv.org/abs/2409.11402) [HF](https://huggingface.co/collections/nvidia/nvlm-10-66f571f7f3b1e4fbad96294b) ",
         "Hybrid multimodal design with strong OCR and reasoning",
         "visual understanding"
       ],
       [
-        "**DeepSeek-VL2**: Mixture-of-Experts Vision-Language Models",
-        "ArXiv 2024",
+        "DeepSeek-VL2: Mixture-of-Experts Vision-Language Models",
+        "arXiv 2024",
         "[Paper](https://arxiv.org/abs/2412.10302) [Code](https://github.com/deepseek-ai/DeepSeek-VL2) ",
         "MoE VLM with dynamic tiling and efficient inference",
         "visual understanding"
       ],
       [
-        "**xGen-MM (BLIP-3)**",
-        "ArXiv 2024",
+        "xGen-MM (BLIP-3)",
+        "arXiv 2024",
         "[Paper](https://arxiv.org/abs/2408.08872) ",
         "Open training recipe, datasets, and safety-tuned variants",
         "visual understanding"
       ],
       [
-        "**Eagle 2**: Building Post-Training Data Strategies from Scratch for Frontier Vision-Language Models",
-        "ArXiv 2025",
+        "Eagle 2: Building Post-Training Data Strategies from Scratch for Frontier Vision-Language Models",
+        "arXiv 2025",
         "[Paper](https://arxiv.org/abs/2501.14818)",
         "Data-centric post-training strategy for competitive frontier open VLMs",
         "visual understanding"
       ],
       [
-        "**Gemini 1.5 Pro**: Multimodal Mixture-of-Experts Foundation Model",
-        "Google 2024",
-        "[Blog](https://blog.google/products/ai/google-gemini-next-generation-model-february-2024/)",
-        "Mid-size MoE model with a 128k–1M token context window that handles text + images + audio + video inputs and outputs text across reasoning tasks",
-        "visual understanding, omni"
-      ],
-      [
-        "**Gemini 2.5 Pro**: Advanced Reasoning Multimodal LLM",
-        "Google 2025",
-        "[Blog](https://developers.googleblog.com/en/gemini-2-5-thinking-model-updates/)",
-        "Reasoning-focused Gemini release that handles text, images, audio, and video with controllable thinking",
-        "visual understanding, omni"
-      ],
-      [
-        "**GPT-4o**: Omni Reasoning Across Text, Vision, and Speech",
-        "OpenAI 2024",
-        "[Blog](https://openai.com/index/hello-gpt-4o/) [Image Gen](https://openai.com/index/introducing-4o-image-generation/)",
-        "Native multimodal GPT model with text, image, and audio interaction, plus later native image generation",
-        "visual understanding, visual generation, omni"
-      ],
-      [
-        "**Qwen3-VL**",
-        "ArXiv 2025",
+        "Qwen3-VL",
+        "arXiv 2025",
         "[Paper](https://arxiv.org/abs/2511.21631) [HF](https://huggingface.co/Qwen) ",
         "Frontier-grade vision/OCR (32+ languages), video analysis, agentic capabilities, strong multimodal reasoning; includes large MoE variants (e.g., 235B)",
         "visual understanding, video, omni"
       ],
       [
-        "**InternVL3** / **InternVL 3.0**",
-        "ArXiv 2025 ",
-        "[Paper](https://arxiv.org/abs/2504.10479) [HF](https://huggingface.co/OpenGVLab) ",
-        "Expanded scaling with strong OCR, document parsing, scientific charts, video, and long multimodal context; variants up to 78B",
-        "visual understanding, document, video"
-      ],
-      [
-        "**GLM-4.5V / GLM-4.6V**",
+        "GLM-4.5V / GLM-4.6V",
         "-",
         "[HF](https://huggingface.co/zai-org) ",
         "MoE architecture (e.g., 106B total / 12B active); excels in 3D spatial reasoning, visual reasoning, long documents, and multimodal tool use; SOTA among open models on many benchmarks",
         "visual understanding, reasoning, spatial"
       ],
       [
-        "**Pixtral**",
-        "ArXiv 2024 ",
+        "Pixtral",
+        "arXiv 2024 ",
         "[Paper](https://arxiv.org/abs/2410.07073) [HF](https://huggingface.co/mistralai) ",
         "12B open-weight model with strong instruction following, image+text understanding; competitive with larger open VLMs",
         "visual understanding"
       ],
       [
-        "**Gemini 3** (Pro / Flash / Deep Think)",
-        "Google 2025",
-        "[Blog](https://blog.google/products-and-platforms/products/gemini/gemini-3/)",
-        "Enhanced reasoning and multimodal capabilities across text, images, audio, video; massive context (up to 2M tokens in some variants); Deep Think mode for complex problems",
-        "visual understanding, omni, reasoning"
-      ],
-      [
-        "**GPT-5 series** (e.g., GPT-5.2 / GPT-5.4)",
-        "OpenAI 2025",
-        "[API Docs](https://developers.openai.com/api/docs/models)",
-        "Expanded multimodal (text/vision/audio) with improved reasoning, agentic workflows, and context; builds on GPT-4o with better integration and reduced hallucinations",
-        "visual understanding, omni, reasoning"
-      ],
-      [
-        "**mPLUG-DocOwl 1.5 / 2**: Unified Structure Learning for OCR-free Document Understanding",
-        "ArXiv 2024",
+        "mPLUG-DocOwl 1.5 / 2: Unified Structure Learning for OCR-free Document Understanding",
+        "arXiv 2024",
         "[Paper](https://arxiv.org/abs/2403.12895) [Code](https://github.com/X-PLUG/mPLUG-DocOwl)",
         "OCR-free document understanding with unified structure learning; excels at long documents and complex layouts",
         "document understanding, OCR"
       ],
       [
-        "**GOT-OCR 2.0**: General OCR Theory for Large Vision-Language Models",
-        "ArXiv 2024",
-        "[Paper](https://arxiv.org/abs/2405.10720) [HF/Code](https://github.com/Ucas-HaoranWei/GOT-OCR2.0)",
+        "General OCR Theory: Towards OCR-2.0 via a Unified End-to-end Model",
+        "arXiv 2024",
+        "[Paper](https://arxiv.org/abs/2409.01704) [HF/Code](https://github.com/Ucas-HaoranWei/GOT-OCR2.0)",
         "Specialized end-to-end OCR model with grounding (boxes + points); strong on scientific papers, slides, and mixed visual-text docs",
         "OCR, grounding"
       ],
       [
-        "**DeepSeek-OCR**",
-        "ArXiv 2025",
+        "DeepSeek-OCR",
+        "arXiv 2025",
         "[Paper](https://arxiv.org/abs/2510.18234) [HF](https://huggingface.co/deepseek-ai)",
         "Lightweight ~3B MoE vision model optimized for high-volume OCR, document digitization, charts and formulas; efficient inference",
         "OCR, document"
       ],
       [
-        "**PaddleOCR-VL**",
-        "Arxiv 2025",
+        "DeepSeek-OCR-2",
+        "arXiv 2026",
+        "[Paper](https://arxiv.org/abs/2601.20552) [HF](https://huggingface.co/deepseek-ai)",
+        "Optimized for high-volume OCR, document digitization, charts and formulas; efficient inference",
+        "OCR, document"
+      ],
+      [
+        "PaddleOCR-VL",
+        "arXiv 2025",
         "[HF / Official](https://github.com/PaddlePaddle/PaddleOCR)",
         "Lightweight (0.9B+) multimodal OCR with 109 languages support; excellent chart-to-HTML/Markdown conversion and high-throughput",
         "OCR, multilingual document"
       ],
       [
-        "**Chandra-OCR**",
-        "-",
-        "[Project](https://www.datalab.to/)",
-        "9B model (fine-tuned on Qwen3-VL) achieving top scores on olmOCR-Bench; strong layout awareness and complex document parsing",
-        "OCR, document parsing"
+        "GLM-OCR",
+        "arXiv 2026",
+        "[Paper](https://arxiv.org/abs/2603.10910)",
+        "GLM-OCR is an efficient 0.9B-parameter compact multimodal model designed for real-world document understanding.",
+        "OCR, structured extraction"
       ],
       [
-        "**olmOCR / olmOCR-2**",
-        "-",
-        "[Code](https://github.com/reducto/olmOCR)",
+        "olmOCR / olmOCR-2",
+        "arXiv 2025",
+        "[Paper](https://arxiv.org/abs/2510.19817)",
         "Efficient low-VRAM OCR model based on Qwen2.5-VL fine-tune; excels at preserving semantic structure and markdown output",
         "OCR, structured extraction"
       ]
