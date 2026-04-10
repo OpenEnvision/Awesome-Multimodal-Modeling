@@ -4,6 +4,7 @@
 <div align="center">
 
 # Awesome Multimodal Models
+<img width="1024" alt="Awesome Multimodal Models cover" src="https://github.com/user-attachments/assets/b804f770-cff8-4ffa-85dc-495db2efd852" />
 
 <p><strong>A Comprehensive Survey & Curated List of Multimodal Models</strong><br/><sub>From Traditional Fusion to Native & Unified Architectures</sub></p>
 
@@ -43,87 +44,59 @@
 <details open>
 <summary><strong>Browse the list</strong></summary>
 
-- [Awesome Multimodal Models](#awesome-multimodal-models)
-  - [Table of Contents](#table-of-contents)
-  - [About This List](#about-this-list)
-    - [At a Glance](#at-a-glance)
-    - [Curation Principles](#curation-principles)
-    - [Related Awesome Lists](#related-awesome-lists)
-    - [Publishing Note](#publishing-note)
-  - [1. Introduction \& Definitions](#1-introduction--definitions)
-    - [1.1 Multimodal Model Evolution Stages](#11-multimodal-model-evolution-stages)
-      - [Traditional Multimodal Models](#traditional-multimodal-models)
-      - [Multimodal Large Language Models (MLLMs)](#multimodal-large-language-models-mllms)
-      - [Unified Multimodal Models (UMMs)](#unified-multimodal-models-umms)
-      - [Native Multimodal Models (NMMs)](#native-multimodal-models-nmms)
-        - [NMM — Early Fusion](#nmm--early-fusion)
-        - [NMM — Late Fusion](#nmm--late-fusion)
-      - [MoE Routing in NMMs](#moe-routing-in-nmms)
-    - [1.2 Scope \& Taxonomy](#12-scope--taxonomy)
-    - [1.3 Timeline \& Landmark Models (2017–2026)](#13-timeline--landmark-models-20172026)
-      - [Wave 1 — Tokenizer Renaissance (2017–2021)](#wave-1--tokenizer-renaissance-20172021)
-      - [Wave 2 — Foundation Pretraining (2022–2023)](#wave-2--foundation-pretraining-20222023)
-      - [Wave 3 — Early-Fusion AR (2023–2024)](#wave-3--early-fusion-ar-20232024)
-      - [Wave 4 — Decoupled Semantic AR (2024–2025)](#wave-4--decoupled-semantic-ar-20242025)
-      - [Wave 5 — Omni + RL Alignment (2025–2026)](#wave-5--omni--rl-alignment-20252026)
-    - [1.4 Architecture Diagrams](#14-architecture-diagrams)
-  - [2. Traditional Multimodal Models](#2-traditional-multimodal-models)
-    - [2.1 Core Concepts \& Early Works](#21-core-concepts--early-works)
-      - [Multimodal Representations \& Alignment](#multimodal-representations--alignment)
-      - [Contrastive Learning](#contrastive-learning)
-      - [Multimodal Fusion Strategies](#multimodal-fusion-strategies)
-    - [2.2 Multimodal Pretraining Foundations](#22-multimodal-pretraining-foundations)
-      - [Generative Pretraining](#generative-pretraining)
-      - [Unified Backbones \& Robustness](#unified-backbones--robustness)
-  - [3. Multimodal Large Language Models (MLLMs)](#3-multimodal-large-language-models-mllms)
-    - [3.1 Multimodal Instruction Tuning](#31-multimodal-instruction-tuning)
-    - [3.2 Foundation MLLMs](#32-foundation-mllms)
-    - [3.3 Multimodal In-Context Learning \& Chain-of-Thought](#33-multimodal-in-context-learning--chain-of-thought)
-  - [4. Unified Multimodal Models (UMMs)](#4-unified-multimodal-models-umms)
-    - [4.1 Text-and-Image Unified Models](#41-text-and-image-unified-models)
-    - [4.2 Any-to-Any Multimodal models](#42-any-to-any-multimodal-models)
-  - [5. Native Multimodal Models (NMMs)](#5-native-multimodal-models-nmms)
-    - [5.1 Foundational Components](#51-foundational-components)
-      - [Design Analyses \& Scaling Laws](#design-analyses--scaling-laws)
-      - [Image \& Video Tokenizers](#image--video-tokenizers)
-        - [Discrete Tokenizers (VQ-Family)](#discrete-tokenizers-vq-family)
-        - [Continuous Tokenizers (VAE-Family)](#continuous-tokenizers-vae-family)
-        - [Text-Aligned / Semantic Tokenizers](#text-aligned--semantic-tokenizers)
-    - [5.2 Early Fusion NMMs](#52-early-fusion-nmms)
-    - [5.3 Late Fusion NMMs](#53-late-fusion-nmms)
-    - [5.4 MoE-Based NMMs](#54-moe-based-nmms)
-      - [Modality-Agnostic Routing (Learned Router)](#modality-agnostic-routing-learned-router)
-      - [Modality-Aware Routing (Pre-defined Rules)](#modality-aware-routing-pre-defined-rules)
-    - [5.5 Advanced NMMs](#55-advanced-nmms)
-      - [Omni Models (audio + video + image + text) Omni](#omni-models-audio--video--image--text-omni)
-      - [Any-to-Any Generation](#any-to-any-generation)
-      - [Hybrid AR + Diffusion NMMs](#hybrid-ar--diffusion-nmms)
-      - [RL-Alignment for Multimodal Models](#rl-alignment-for-multimodal-models)
-  - [6. Post-Training, Alignment \& Analysis](#6-post-training-alignment--analysis)
-    - [Multimodal Instruction Tuning \& SFT](#multimodal-instruction-tuning--sft)
-    - [Multimodal RLHF \& Preference Alignment](#multimodal-rlhf--preference-alignment)
-    - [Hallucination Mitigation \& Safety](#hallucination-mitigation--safety)
-    - [Individual Analysis Papers Analysis](#individual-analysis-papers-analysis)
-  - [7. Dataset](#7-dataset)
-    - [Multimodal Understanding](#multimodal-understanding)
-    - [Text-to-Image](#text-to-image)
-    - [Image Editing](#image-editing)
-    - [Interleaved Image-Text](#interleaved-image-text)
-    - [Other Text+Image-to-Image](#other-textimage-to-image)
-  - [8. Applications, Extensions \& Future Directions](#8-applications-extensions--future-directions)
-    - [Robotics \& Embodied AI](#robotics--embodied-ai)
-    - [Autonomous Driving](#autonomous-driving)
-    - [Healthcare \& Medical Imaging](#healthcare--medical-imaging)
-    - [Open Challenges \& Future Directions](#open-challenges--future-directions)
-  - [9. Resources](#9-resources)
-    - [Related Awesome Lists](#related-awesome-lists-1)
-    - [Slides \& Survey Papers](#slides--survey-papers)
-    - [Code Repositories \& Tools](#code-repositories--tools)
-  - [How to Contribute](#how-to-contribute)
-    - [Validation Rules](#validation-rules)
-    - [Entry Format](#entry-format)
-  - [Citation](#citation)
-  - [License](#license)
+- [About This List](#about-this-list)
+  - [At a Glance](#at-a-glance)
+  - [Curation Principles](#curation-principles)
+  - [Related Awesome Lists](#related-awesome-lists)
+  - [Publishing Note](#publishing-note)
+- [1. Introduction & Definitions](#1-introduction-definitions)
+  - [1.1 Multimodal Model Evolution Stages](#11-multimodal-model-evolution-stages)
+  - [1.2 Scope & Taxonomy](#12-scope-taxonomy)
+  - [Tag Legend](#tag-legend)
+  - [1.3 Timeline & Landmark Models (2017–2026)](#13-timeline-landmark-models-2017-2026)
+  - [1.4 Architecture Diagrams](#14-architecture-diagrams)
+- [2. Traditional Multimodal Models](#2-traditional-multimodal-models)
+  - [2.1 Core Concepts & Early Works](#21-core-concepts-early-works)
+  - [2.2 Multimodal Pretraining Foundations](#22-multimodal-pretraining-foundations)
+- [3. Multimodal Large Language Models (MLLMs)](#3-multimodal-large-language-models-mllms)
+  - [Multimodal Instruction Tuning](#multimodal-instruction-tuning)
+  - [Foundation MLLMs](#foundation-mllms)
+  - [Multimodal In-Context Learning & Chain-of-Thought](#multimodal-in-context-learning-chain-of-thought)
+- [4. Unified Multimodal Models (UMMs)](#4-unified-multimodal-models-umms)
+  - [4.1 Text-and-Image Unified Models](#41-text-and-image-unified-models)
+  - [4.2 Any-to-Any Multimodal models](#42-any-to-any-multimodal-models)
+  - [4.3 Benchmark for Evaluation](#43-benchmark-for-evaluation)
+- [5. Native Multimodal Models (NMMs)](#5-native-multimodal-models-nmms)
+  - [5.1 Foundational Components](#51-foundational-components)
+  - [5.2 Early Fusion NMMs](#52-early-fusion-nmms)
+  - [5.3 Late Fusion NMMs](#53-late-fusion-nmms)
+  - [5.4 MoE-Based NMMs](#54-moe-based-nmms)
+  - [5.5 Advanced NMMs](#55-advanced-nmms)
+- [6. Post-Training, Alignment & Analysis](#6-post-training-alignment-analysis)
+  - [Multimodal Instruction Tuning & SFT](#multimodal-instruction-tuning-sft)
+  - [Multimodal RLHF & Preference Alignment](#multimodal-rlhf-preference-alignment)
+  - [Hallucination Mitigation & Safety](#hallucination-mitigation-safety)
+  - [Individual Analysis Papers <kbd>Analysis</kbd>](#individual-analysis-papers-analysis)
+- [7. Dataset](#7-dataset)
+  - [Multimodal Understanding](#multimodal-understanding)
+  - [Text-to-Image](#text-to-image)
+  - [Image Editing](#image-editing)
+  - [Interleaved Image-Text](#interleaved-image-text)
+  - [Other Text+Image-to-Image](#other-textimage-to-image)
+- [8. Applications, Extensions & Future Directions](#8-applications-extensions-future-directions)
+  - [Robotics & Embodied AI](#robotics-embodied-ai)
+  - [Autonomous Driving](#autonomous-driving)
+  - [Healthcare & Medical Imaging](#healthcare-medical-imaging)
+  - [Open Challenges & Future Directions](#open-challenges-future-directions)
+- [9. Resources](#9-resources)
+  - [Related Awesome Lists](#related-awesome-lists-1)
+  - [Slides & Survey Papers](#slides-survey-papers)
+  - [Code Repositories & Tools](#code-repositories-tools)
+- [How to Contribute](#how-to-contribute)
+  - [Validation Rules](#validation-rules)
+  - [Entry Format](#entry-format)
+- [Citation](#citation)
+- [License](#license)
 
 </details>
 
@@ -297,7 +270,7 @@ Multimodal Models
     └── Advanced: Omni <kbd>Omni</kbd> / Any-to-Any / Hybrid AR+Diffusion
 ```
 
-<!-- ### Tag Legend
+### Tag Legend
 
 | Badge | Meaning |
 |---|---|
@@ -308,7 +281,7 @@ Multimodal Models
 | <kbd>Efficient</kbd> | Efficient / Lightweight |
 | <kbd>Analysis</kbd> | Research / Analysis paper |
 | <kbd>Open</kbd> | Open weights available |
-| <kbd>Closed</kbd> | Industry / Closed-source | -->
+| <kbd>Closed</kbd> | Industry / Closed-source |
 
 ### 1.3 Timeline & Landmark Models (2017–2026)
 
@@ -527,7 +500,7 @@ We identify **5 Architectural Waves** in multimodal model development:
 
 > Models that connect a **pretrained visual encoder / abstractor** to a **pretrained LLM**. Primarily text-output understanding and reasoning systems, defined by inherited pretrained unimodal backbones rather than multimodal pretraining from scratch.
 
-### 3.1 Multimodal Instruction Tuning
+### Multimodal Instruction Tuning
 
 | Paper | Venue | Links | Notes | Task |
 |---|---|---|---|---|
@@ -537,22 +510,29 @@ We identify **5 Architectural Waves** in multimodal model development:
 | **MiniGPT-4**: Enhancing Vision-Language Understanding with Advanced Large Language Models | ArXiv 2023 | [Paper](https://arxiv.org/abs/2304.10592) [Code](https://github.com/Vision-CAIR/MiniGPT-4) <kbd>Open</kbd> | Efficient visual alignment to Vicuna with a lightweight projection layer | visual understanding |
 | **mPLUG-Owl**: Modularization Empowers LLMs with Multimodality | ArXiv 2023 | [Paper](https://arxiv.org/abs/2304.14178) [Code](https://github.com/X-PLUG/mPLUG-Owl) <kbd>Open</kbd> | Visual abstractor module | visual understanding |
 | **Otter**: A Multi-Modal Model with In-Context Instruction Tuning | ArXiv 2023 | [Paper](https://arxiv.org/abs/2305.03726) [Code](https://github.com/Luodian/Otter) | Built on OpenFlamingo | visual understanding |
+| **Shikra**: Unleashing Multimodal LLM's Referential Dialogue Magic | ArXiv 2023 | [Paper](https://arxiv.org/abs/2306.15195) [Code](https://github.com/shikras/shikra) | Instruction-tuned multimodal dialogue model with explicit region grounding in generated text | visual understanding |
 | **VILA1.5**: Simple Visual Language Model Baselines Improve Large Multimodal Models | ArXiv 2024 | [Paper](https://arxiv.org/abs/2405.04419) [Code](https://github.com/NVlabs/VILA) <kbd>Open</kbd> | Strong open instruction-tuned MLLM baseline family | visual understanding |
 | **MiniGPT-v2**: Large Language Model as a Unified Interface for Vision-Language Multi-task Learning | ArXiv 2023 | [Paper](https://arxiv.org/abs/2310.09478) | Task-specific identifiers plus multi-stage training keep MiniGPT-v2 responsive across captioning, VQA, and grounding instructions | visual understanding |
 | **InstructionGPT-4**: High-quality instruction tuning for MiniGPT-4 | ArXiv 2023 | [Paper](https://arxiv.org/abs/2308.12067) | Selects 200 high-quality vision-language instructions to overcome noise and strengthen general instruction-following | visual understanding |
 | **X-LLaVA**: Optimizing Bilingual Large Vision-Language Alignment | Findings of NAACL 2024 | [Paper](https://aclanthology.org/2024.findings-naacl.158/) | Bilingual instruction-tuned variant of LLaVA that aligns multilingual embeddings and keeps reasoning capabilities across Korean/English prompts | visual understanding |
+| **LLaVA-OneVision**: Easy Visual Task Transfer | ArXiv 2024 | [Paper](https://arxiv.org/abs/2408.03326) [Code](https://github.com/LLaVA-VL/LLaVA-NeXT) <kbd>Open</kbd> | Unified single/multi-image + video training; consolidates LLaVA-NeXT insights; strong open MLLM across scenarios | visual understanding |
+| **InternVL2 / InternVL2.5**: Expanding Performance Boundaries of Open-Source Multimodal Models | ArXiv 2024 | [Paper](https://arxiv.org/abs/2412.05271) [Code](https://github.com/OpenGVLab/InternVL) <kbd>Open</kbd> | Progressive scaling (model + data + test-time); high-res InternViT + strong LLM; SOTA open-source MLLM | visual understanding |
+| **Qwen2-VL**: Enhancing Vision-Language Model's Perception of the World at Any Resolution | ArXiv 2024 | [Paper](https://arxiv.org/abs/2409.12191) | Native dynamic resolution ViT; any-resolution images/videos; superior OCR, grounding, and document understanding | visual understanding |
+| **LLaVA-OneVision-1.5**: Fully Open Framework for Democratized Multimodal Training | ArXiv 2025 | [Paper](https://arxiv.org/abs/2509.23661) | 85M pretrain + 22M curated instruction data; fully open end-to-end framework; SOTA with dramatically lower training cost | visual understanding |
 
-### 3.2 Foundation MLLMs
+### Foundation MLLMs
 
 | Paper | Venue | Links | Notes | Task |
 |---|---|---|---|---|
 | **OpenFlamingo**: An Open-Source Framework for Training Large Autoregressive Vision-Language Models | ArXiv 2023 | [Paper](https://arxiv.org/abs/2308.01390) [Code](https://github.com/mlfoundations/open_flamingo) <kbd>Open</kbd> | Open reproduction of Flamingo-style cross-attention MLLMs | visual understanding |
+| **GPT-4V(ision)** | OpenAI 2023 | [System Card](https://openai.com/research/gpt-4v-system-card) <kbd>Closed</kbd> | Closed multimodal GPT-4 variant for image understanding and visual reasoning | visual understanding |
+| **Kosmos-2**: Grounding Multimodal Large Language Models to the World | ArXiv 2023 | [Paper](https://arxiv.org/abs/2306.14824) [Project](https://aka.ms/kosmos-2) | Adds grounding and referring-expression capabilities to a foundation MLLM | visual understanding |
 | **Qwen-VL**: A Versatile Vision-Language Model | ArXiv 2023 | [Paper](https://arxiv.org/abs/2308.12966) [HF](https://huggingface.co/Qwen/Qwen-VL) <kbd>Open</kbd> | High-res, multi-lang, bounding box | visual understanding |
 | **CogVLM**: Visual Expert for Pretrained Language Models | ArXiv 2023 | [Paper](https://arxiv.org/abs/2311.03079) [Code](https://github.com/THUDM/CogVLM) <kbd>Open</kbd> | Deep fusion with visual expert modules inside a pretrained LLM | visual understanding |
 | **Qwen2-VL** | ArXiv 2024 | [Paper](https://arxiv.org/abs/2409.12191) [HF](https://huggingface.co/Qwen/Qwen2-VL-7B-Instruct) <kbd>Open</kbd> | Dynamic resolution; native video | visual understanding |
 | **Qwen2.5-VL**: Technical Report | ArXiv 2025 | [Paper](https://arxiv.org/abs/2502.13923) [HF](https://huggingface.co/Qwen/Qwen2.5-VL-7B-Instruct) <kbd>Open</kbd> | Stronger document, grounding, and video capabilities | visual understanding |
 | **InternVL**: Scaling up Vision Foundation Models | CVPR 2024 | [Paper](https://arxiv.org/abs/2312.14238) [Code](https://github.com/OpenGVLab/InternVL) <kbd>Open</kbd> | Progressively aligned ViT + LLM | visual understanding |
-| **InternVL2** | 2024 | [HF](https://huggingface.co/OpenGVLab/InternVL2-8B) <kbd>Open</kbd> | State-of-the-art MLLM | visual understanding |
+| **InternVL2** | Model release 2024 | [HF](https://huggingface.co/OpenGVLab/InternVL2-8B) <kbd>Open</kbd> | Instruction-tuned InternVL family release with strong multilingual and OCR capabilities | visual understanding |
 | **MiniCPM-V**: A GPT-4V Level MLLM on Your Phone | ArXiv 2024 | [Paper](https://arxiv.org/abs/2408.01800) [Code](https://github.com/OpenBMB/MiniCPM-V) <kbd>Open</kbd> <kbd>Efficient</kbd> | On-device efficient MLLM | visual understanding |
 | **Cambrian-1**: A Fully Open, Vision-Centric Exploration | NeurIPS 2024 | [Paper](https://arxiv.org/abs/2406.16860) [Code](https://github.com/cambrian-mllm/cambrian) <kbd>Open</kbd> | Spatial Vision Aggregator | visual understanding |
 | **PaliGemma**: A Versatile 3B VLM for Transfer | ArXiv 2024 | [Paper](https://arxiv.org/abs/2407.07726) [HF](https://huggingface.co/google/paligemma-3b-mix-224) <kbd>Open</kbd> <kbd>Efficient</kbd> | SigLIP encoder + Gemma backbone; strong transfer model | visual understanding |
@@ -570,19 +550,26 @@ We identify **5 Architectural Waves** in multimodal model development:
 | **xGen-MM (BLIP-3)** | ArXiv 2024 | [Paper](https://arxiv.org/abs/2408.08872) <kbd>Open</kbd> | Open training recipe, datasets, and safety-tuned variants | visual understanding |
 | **Eagle 2**: Building Post-Training Data Strategies from Scratch for Frontier Vision-Language Models | ArXiv 2025 | [Paper](https://arxiv.org/abs/2501.14818) | Data-centric post-training strategy for competitive frontier open VLMs | visual understanding |
 | **Gemini 1.5 Pro**: Multimodal Mixture-of-Experts Foundation Model | Google 2024 | [Blog](https://blog.google/products/ai/google-gemini-next-generation-model-february-2024/) | Mid-size MoE model with a 128k–1M token context window that handles text + images + audio + video inputs and outputs text across reasoning tasks | visual understanding, omni |
-| **Gemini 2.5 Pro**: Advanced Reasoning Multimodal LLM | Google 2024 | [News](https://www.theverge.com/news/635502/google-gemini-2-5-reasoning-ai-model) | Improved reasoning while interpreting text, audio, images, and video; offers step-by-step traces and multimodal demos | visual understanding, omni |
-| **GPT-4o**: Omni Reasoning Across Text, Vision, and Speech | OpenAI 2024 | [Blog](https://openai.com/index/hello-gpt-4o/?goal=0_a1a65e0e73-1220f4034c-563783356) | End-to-end multimodal model trained to process and emit text, images, and audio with real-time conversational latency | visual understanding, omni |
+| **Gemini 2.5 Pro**: Advanced Reasoning Multimodal LLM | Google 2025 | [Blog](https://developers.googleblog.com/en/gemini-2-5-thinking-model-updates/) <kbd>Closed</kbd> | Reasoning-focused Gemini release that handles text, images, audio, and video with controllable thinking | visual understanding, omni |
+| **GPT-4o**: Omni Reasoning Across Text, Vision, and Speech | OpenAI 2024 | [Blog](https://openai.com/index/hello-gpt-4o/) [Image Gen](https://openai.com/index/introducing-4o-image-generation/) <kbd>Closed</kbd> | Native multimodal GPT model with text, image, and audio interaction, plus later native image generation | visual understanding, visual generation, omni |
+| **Qwen3-VL** | ArXiv 2025 | [Paper](https://arxiv.org/abs/2511.21631) [HF](https://huggingface.co/Qwen) <kbd>Open</kbd> | Frontier-grade vision/OCR (32+ languages), video analysis, agentic capabilities, strong multimodal reasoning; includes large MoE variants (e.g., 235B) | visual understanding, video, omni |
+| **InternVL3** / **InternVL 3.0** | ArXiv 2025 / Model release 2025 | [Paper](https://arxiv.org/abs/2504.10479) [HF](https://huggingface.co/OpenGVLab) <kbd>Open</kbd> | Expanded scaling with strong OCR, document parsing, scientific charts, video, and long multimodal context; variants up to 78B | visual understanding, document, video |
+| **GLM-4.5V / GLM-4.6V** | Model release 2025 | [HF](https://huggingface.co/zai-org) <kbd>Open</kbd> | MoE architecture (e.g., 106B total / 12B active); excels in 3D spatial reasoning, visual reasoning, long documents, and multimodal tool use; SOTA among open models on many benchmarks | visual understanding, reasoning, spatial |
+| **Pixtral** | ArXiv 2024 / Mistral 2024-2025 | [Paper](https://arxiv.org/abs/2410.07073) [HF](https://huggingface.co/mistralai) <kbd>Open</kbd> | 12B open-weight model with strong instruction following, image+text understanding; competitive with larger open VLMs | visual understanding |
+| **Llama 4** (Scout / Maverick variants) | Meta 2025 | [Blog](https://ai.meta.com/blog/llama-4-multimodal-intelligence/) <kbd>Open weights</kbd> | Native multimodal (text + vision) with hybrid dense/MoE; large context (up to 1M); strong in visual reasoning and long-context analysis | visual understanding, omni |
+| **Gemini 3** (Pro / Flash / Deep Think) | Google 2025 | [Blog](https://blog.google/products-and-platforms/products/gemini/gemini-3/) <kbd>Closed</kbd> | Enhanced reasoning and multimodal capabilities across text, images, audio, video; massive context (up to 2M tokens in some variants); Deep Think mode for complex problems | visual understanding, omni, reasoning |
+| **GPT-5 series** (e.g., GPT-5.2 / GPT-5.4) | OpenAI 2025 | [API Docs](https://developers.openai.com/api/docs/models) <kbd>Closed</kbd> | Expanded multimodal (text/vision/audio) with improved reasoning, agentic workflows, and context; builds on GPT-4o with better integration and reduced hallucinations | visual understanding, omni, reasoning |
 
-### 3.3 Multimodal In-Context Learning & Chain-of-Thought
+### Multimodal In-Context Learning & Chain-of-Thought
 
 | Paper | Venue | Links | Notes | Task |
 |---|---|---|---|---|
 | **Multimodal Chain-of-Thought** Reasoning in Language Models | TMLR 2023 | [Paper](https://arxiv.org/abs/2302.00923) [Code](https://github.com/amazon-science/mm-cot) | Two-stage rationale + answer | visual understanding |
-| **GPT-4V(ision)** Technical Report | OpenAI 2023 | [Paper](https://arxiv.org/abs/2303.08774) <kbd>Closed</kbd> | Proprietary; strong baseline | visual understanding |
 | **LLaVA-Plus**: Learning to Use Tools for Visual Understanding | ArXiv 2023 | [Paper](https://arxiv.org/abs/2311.05437) | Tool-use augmented MLLM | visual understanding |
 | **Visual Program Distillation**: Distilling Tools and Programmatic Reasoning into Vision-Language Models | CVPR 2024 | [Paper](https://arxiv.org/abs/2312.03052) | Transfers tool-augmented reasoning traces into a standalone VLM | visual understanding |
 | **MMICL**: Empowering Vision-language Model with Multi-Modal In-Context Learning | ArXiv 2023 | [Paper](https://arxiv.org/abs/2309.07915) | Multi-image in-context | visual understanding |
 | **LLaVA-CoT**: Let Vision-Language Models Reason Step-by-Step | ICCV 2025 | [Paper](https://openaccess.thecvf.com/content/ICCV2025/html/Xu_LLaVA-CoT_Let_Vision_Language_Models_Reason_Step-by-Step_ICCV_2025_paper.html) | Structured visual reasoning with stage-wise retracing search and dedicated visual CoT data, topping Gemini-1.5-pro and GPT-4o-mini on reasoning benchmarks | visual understanding |
+| **MAmmoTH-VL**: Eliciting Multimodal Reasoning with Instruction Tuning at Scale | ACL 2025 | [Paper](https://aclanthology.org/2025.acl-long.680/) [Code](https://github.com/TIGER-AI-Lab/MAmmoTH-VL) | Large-scale rationale-rich instruction tuning to improve multimodal chain-of-thought reasoning | visual understanding |
 
 <p align="right"><a href="#awesome-multimodal-models">Back to Top</a></p>
 
@@ -621,7 +608,7 @@ We identify **5 Architectural Waves** in multimodal model development:
 | **CoDi-2** | CVPR 2024 | [Paper](https://arxiv.org/abs/2311.18775) | image + video + audio + text | In-context interleaved any-to-any generation |
 | **M2-Omni** <kbd>Omni</kbd> | ArXiv 2025 | [Paper](https://arxiv.org/abs/2502.18778) | audio + video + image + text | Efficient omni any-to-any model |
 
-<!-- ### 4.3 Benchmark for Evaluation
+### 4.3 Benchmark for Evaluation
 
 | Benchmark | Venue | Links | Focus |
 |---|---|---|---|
@@ -630,7 +617,7 @@ We identify **5 Architectural Waves** in multimodal model development:
 | **OpenING** | CVPR 2025 | [Paper](https://arxiv.org/abs/2411.18499) | Open-ended interleaved image-text generation evaluation |
 | **UniEval / UniBench** | ArXiv 2025 | [Paper](https://arxiv.org/abs/2505.10483) [Code](https://github.com/xmed-lab/UniEval) <kbd>Open</kbd> | Holistic evaluation for unified multimodal understanding and generation |
 | **T2I-CompBench** | NeurIPS 2023 | [Paper](https://arxiv.org/abs/2307.06350) [Code](https://github.com/Karine-Huang/T2I-CompBench) | Text-to-image compositionality benchmark often used for unified generators |
-| **VTBench** | ArXiv 2025 | [Paper](https://arxiv.org/abs/2505.13439) [Code](https://github.com/huawei-lin/VTBench) <kbd>Open</kbd> | Evaluates visual tokenizers critical to unified AR generation systems | -->
+| **VTBench** | ArXiv 2025 | [Paper](https://arxiv.org/abs/2505.13439) [Code](https://github.com/huawei-lin/VTBench) <kbd>Open</kbd> | Evaluates visual tokenizers critical to unified AR generation systems |
 
 <p align="right"><a href="#awesome-multimodal-models">Back to Top</a></p>
 

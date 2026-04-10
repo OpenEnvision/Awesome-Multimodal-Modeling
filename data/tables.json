@@ -719,6 +719,34 @@
         "[Paper](https://aclanthology.org/2024.findings-naacl.158/)",
         "Bilingual instruction-tuned variant of LLaVA that aligns multilingual embeddings and keeps reasoning capabilities across Korean/English prompts",
         "visual understanding"
+      ],
+      [
+        "**LLaVA-OneVision**: Easy Visual Task Transfer",
+        "ArXiv 2024",
+        "[Paper](https://arxiv.org/abs/2408.03326) [Code](https://github.com/LLaVA-VL/LLaVA-NeXT) <kbd>Open</kbd>",
+        "Unified single/multi-image + video training; consolidates LLaVA-NeXT insights; strong open MLLM across scenarios",
+        "visual understanding"
+      ],
+      [
+        "**InternVL2 / InternVL2.5**: Expanding Performance Boundaries of Open-Source Multimodal Models",
+        "ArXiv 2024",
+        "[Paper](https://arxiv.org/abs/2412.05271) [Code](https://github.com/OpenGVLab/InternVL) <kbd>Open</kbd>",
+        "Progressive scaling (model + data + test-time); high-res InternViT + strong LLM; SOTA open-source MLLM",
+        "visual understanding"
+      ],
+      [
+        "**Qwen2-VL**: Enhancing Vision-Language Model's Perception of the World at Any Resolution",
+        "ArXiv 2024",
+        "[Paper](https://arxiv.org/abs/2409.12191)",
+        "Native dynamic resolution ViT; any-resolution images/videos; superior OCR, grounding, and document understanding",
+        "visual understanding"
+      ],
+      [
+        "**LLaVA-OneVision-1.5**: Fully Open Framework for Democratized Multimodal Training",
+        "ArXiv 2025",
+        "[Paper](https://arxiv.org/abs/2509.23661)",
+        "85M pretrain + 22M curated instruction data; fully open end-to-end framework; SOTA with dramatically lower training cost",
+        "visual understanding"
       ]
     ]
   },
@@ -926,6 +954,55 @@
         "[Blog](https://openai.com/index/hello-gpt-4o/) [Image Gen](https://openai.com/index/introducing-4o-image-generation/) <kbd>Closed</kbd>",
         "Native multimodal GPT model with text, image, and audio interaction, plus later native image generation",
         "visual understanding, visual generation, omni"
+      ],
+      [
+        "**Qwen3-VL**",
+        "ArXiv 2025",
+        "[Paper](https://arxiv.org/abs/2511.21631) [HF](https://huggingface.co/Qwen) <kbd>Open</kbd>",
+        "Frontier-grade vision/OCR (32+ languages), video analysis, agentic capabilities, strong multimodal reasoning; includes large MoE variants (e.g., 235B)",
+        "visual understanding, video, omni"
+      ],
+      [
+        "**InternVL3** / **InternVL 3.0**",
+        "ArXiv 2025 / Model release 2025",
+        "[Paper](https://arxiv.org/abs/2504.10479) [HF](https://huggingface.co/OpenGVLab) <kbd>Open</kbd>",
+        "Expanded scaling with strong OCR, document parsing, scientific charts, video, and long multimodal context; variants up to 78B",
+        "visual understanding, document, video"
+      ],
+      [
+        "**GLM-4.5V / GLM-4.6V**",
+        "Model release 2025",
+        "[HF](https://huggingface.co/zai-org) <kbd>Open</kbd>",
+        "MoE architecture (e.g., 106B total / 12B active); excels in 3D spatial reasoning, visual reasoning, long documents, and multimodal tool use; SOTA among open models on many benchmarks",
+        "visual understanding, reasoning, spatial"
+      ],
+      [
+        "**Pixtral**",
+        "ArXiv 2024 / Mistral 2024-2025",
+        "[Paper](https://arxiv.org/abs/2410.07073) [HF](https://huggingface.co/mistralai) <kbd>Open</kbd>",
+        "12B open-weight model with strong instruction following, image+text understanding; competitive with larger open VLMs",
+        "visual understanding"
+      ],
+      [
+        "**Llama 4** (Scout / Maverick variants)",
+        "Meta 2025",
+        "[Blog](https://ai.meta.com/blog/llama-4-multimodal-intelligence/) <kbd>Open weights</kbd>",
+        "Native multimodal (text + vision) with hybrid dense/MoE; large context (up to 1M); strong in visual reasoning and long-context analysis",
+        "visual understanding, omni"
+      ],
+      [
+        "**Gemini 3** (Pro / Flash / Deep Think)",
+        "Google 2025",
+        "[Blog](https://blog.google/products-and-platforms/products/gemini/gemini-3/) <kbd>Closed</kbd>",
+        "Enhanced reasoning and multimodal capabilities across text, images, audio, video; massive context (up to 2M tokens in some variants); Deep Think mode for complex problems",
+        "visual understanding, omni, reasoning"
+      ],
+      [
+        "**GPT-5 series** (e.g., GPT-5.2 / GPT-5.4)",
+        "OpenAI 2025",
+        "[API Docs](https://developers.openai.com/api/docs/models) <kbd>Closed</kbd>",
+        "Expanded multimodal (text/vision/audio) with improved reasoning, agentic workflows, and context; builds on GPT-4o with better integration and reduced hallucinations",
+        "visual understanding, omni, reasoning"
       ]
     ]
   },
