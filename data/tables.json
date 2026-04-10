@@ -1056,6 +1056,27 @@
         "[Paper](https://aclanthology.org/2025.acl-long.680/) [Code](https://github.com/TIGER-AI-Lab/MAmmoTH-VL)",
         "Large-scale rationale-rich instruction tuning to improve multimodal chain-of-thought reasoning",
         "visual understanding"
+      ],
+      [
+        "**VLM-R³**: Region Recognition, Reasoning, and Refinement for Enhanced Multimodal Chain-of-Thought",
+        "ArXiv 2025",
+        "[Paper](https://arxiv.org/abs/2505.16192)",
+        "Dynamic region recognition + refinement for interleaved CoT via Region-Conditioned Reinforcement Policy Optimization (R-GRPO) and Visuo-Lingual Interleaved Rationale corpus; excels in spatial/fine-grained visual reasoning",
+        "visual understanding"
+      ],
+      [
+        "**Corvid**: Improving Multimodal Large Language Models Towards Chain-of-Thought Reasoning",
+        "ICCV 2025",
+        "[Paper](https://arxiv.org/abs/2507.07424)",
+        "Hybrid vision encoder + GateMixer connector + MCoT-Instruct-287K dataset with two-stage CoT training and inference-time self-verification scaling; strong in math/science reasoning",
+        "visual understanding"
+      ],
+      [
+        "**Grounded Chain-of-Thought (GCoT)** for Multimodal Large Language Models",
+        "ArXiv 2025",
+        "[Paper](https://arxiv.org/abs/2503.12799)",
+        "Step-by-step visual cue grounding with coordinates + MM-GCoT dataset (24k examples) to reduce hallucination and improve answer-grounding consistency; generalizes to open-world QA/REC",
+        "visual understanding"
       ]
     ]
   },
