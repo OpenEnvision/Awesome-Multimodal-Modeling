@@ -2864,67 +2864,51 @@
     "rows": [
       [
         "**Chameleon**",
-        "Arxiv 2024",
+        "arXiv 2024",
         "[Paper](https://arxiv.org/abs/2405.09818) [Code](https://github.com/facebookresearch/chameleon)",
-        "7B, 34B",
-        "Mixed-modal early fusion; BPE-like image tokens",
-        "visual understanding, visual generation"
+        "7B / 34B",
+        "Mixed-modal early-fusion token-based; unified discrete tokenizer for text+image; autoregressive next-token prediction from scratch",
+        "visual understanding, image/text generation, interleaved"
       ],
       [
         "**Emu3**",
-        "Arxiv 2024",
+        "arXiv 2024",
         "[Paper](https://arxiv.org/abs/2409.18869) [Code](https://github.com/baaivision/Emu3)",
         "8B",
-        "Next-token prediction over VQ image tokens",
+        "Next-token prediction over VQ image tokens; native multimodal decoder-only; minimal modality-specific params",
         "visual understanding, visual generation"
+      ],
+      [
+        "**Emu3.5**",
+        "arXiv 2025",
+        "[Paper](https://arxiv.org/abs/2510.26583) [Code](https://github.com/baaivision/Emu3.5)",
+        "Large-scale (trillion+ tokens)",
+        "Native world model; next-state prediction on interleaved video/text; Discrete Diffusion Adaptation for efficiency",
+        "interleaved generation, world modeling, any-to-image"
+      ],
+      [
+        "**Show-o**",
+        "arXiv 2024",
+        "[Paper](https://arxiv.org/abs/2408.12528)",
+        "—",
+        "Early-fusion mixed-modal; autoregressive text + parallel image token generation; unified transformer",
+        "image/text generation, understanding"
       ],
       [
         "**Transfusion**",
-        "Arxiv 2024",
+        "arXiv 2024",
         "[Paper](https://arxiv.org/abs/2408.11039)",
-        "7B",
-        "AR for text + diffusion for images; single model",
-        "visual understanding, visual generation"
-      ],
-      [
-        "**LWM**: World Model on Million-Length Video",
-        "Arxiv 2024",
-        "[Paper](https://arxiv.org/abs/2402.08268) [Code](https://github.com/LargeWorldModel/LWM)",
         "—",
-        "Ring attention; long context multimodal",
-        "visual understanding, visual generation"
+        "Early-fusion with discrete image tokens; unified modeling of text (autoregressive) and image (diffusion-like)",
+        "mixed-modal generation"
       ],
       [
-        "**Unified-IO**",
-        "ICLR 2023",
-        "[Paper](https://arxiv.org/abs/2206.08916) [Code](https://github.com/allenai/unified-io-inference)",
+        "**Anole**",
+        "arXiv ~2025",
+        "[Paper](https://arxiv.org/abs/2412.06646) (related discussion)",
         "—",
-        "Multimodal seq2seq; VQ image tokens",
-        "visual understanding, visual generation"
-      ],
-      [
-        "**4M**: Massively Multimodal Masked Modeling",
-        "NeurIPS 2023",
-        "[Paper](https://arxiv.org/abs/2312.06647) [Code](https://github.com/apple/ml-4m)",
-        "—",
-        "7+ modalities; masked modeling",
-        "visual understanding, visual generation"
-      ],
-      [
-        "**LongCat-Next**",
-        "Arxiv 2026",
-        "[Paper](https://arxiv.org/abs/2603.27538) [Code](https://github.com/meituan-longcat/LongCat-Next)",
-        "—",
-        "Discrete native autoregressive model for text, vision, and audio",
-        "visual understanding, visual generation, omni"
-      ],
-      [
-        "**Llama 4**",
-        "Meta 2025",
-        "[Blog](https://ai.meta.com/blog/llama-4-multimodal-intelligence/)",
-        "Scout / Maverick (MoE variants)",
-        "Open-weight native multimodal MoE family for text-image understanding (with video-oriented training data)",
-        "visual understanding"
+        "Open autoregressive native multimodal; interleaved image-text generation; early token-level fusion",
+        "interleaved image-text generation"
       ]
     ]
   },
@@ -2933,72 +2917,66 @@
       "Model",
       "Paper",
       "Links",
+      "Training Scale",
       "Notes",
       "Task"
     ],
     "rows": [
       [
-        "**MetaLM**: Language Models are General-Purpose Interfaces",
-        "ICLR 2023",
-        "[Paper](https://arxiv.org/abs/2206.06336) [Code](https://github.com/microsoft/unilm/tree/master/metalm)",
-        "Semi-causal LM for multimodal",
-        "visual understanding"
+        "**LLaVA (系列，包括LLaVA-1.5 / Mini / NeXT)**",
+        "arXiv 2023-2025",
+        "[Paper](https://arxiv.org/abs/2304.08485) [Code](https://github.com/haotian-liu/LLaVA)",
+        "7B / 13B+",
+        "CLIP Vision Encoder (frozen/pretrained) + linear projection to LLM (Vicuna/LLaMA); vision tokens inserted into LLM input; common late-fusion baseline",
+        "visual instruction tuning, VQA, image captioning"
       ],
       [
-        "**PaLI**: A Jointly-Scaled Multilingual Language-Image Model",
-        "ICLR 2023",
-        "[Paper](https://arxiv.org/abs/2209.06794)",
-        "Jointly scaled ViT-G + LLM (from scratch at scale)",
-        "visual understanding"
+        "**Flamingo**",
+        "arXiv 2022",
+        "[Paper](https://arxiv.org/abs/2204.14198)",
+        "80B",
+        "Perceiver Resampler + frozen vision encoder (e.g., CLIP-like) + frozen LLM; cross-attention for late multimodal interaction",
+        "few-shot visual question answering, captioning"
       ],
       [
-        "**PaLI-X**: On Scaling up a Multilingual Vision and Language Model",
-        "ArXiv 2023",
-        "[Paper](https://arxiv.org/abs/2305.18565)",
-        "55B scale",
-        "visual understanding"
+        "**BLIP-2**",
+        "arXiv 2023",
+        "[Paper](https://arxiv.org/abs/2301.12597)",
+        "—",
+        "Q-Former bridges frozen vision encoder and LLM; late alignment of visual features to text",
+        "vision-language understanding, generation"
       ],
       [
-        "**PaLM-E**: An Embodied Multimodal Language Model",
-        "ICML 2023",
-        "[Paper](https://arxiv.org/abs/2303.03378)",
-        "Embodied with sensor data",
-        "visual understanding"
+        "**CLIP**",
+        "arXiv 2021",
+        "[Paper](https://arxiv.org/abs/2103.00020)",
+        "400M+",
+        "Dual-encoder (Vision Transformer + Text Transformer); contrastive alignment at embedding level; classic late-fusion foundation",
+        "zero-shot image classification, retrieval"
       ],
       [
-        "**Gemini 1.0**",
-        "Google 2023",
-        "[Paper](https://arxiv.org/abs/2312.11805)",
-        "Jointly trained across modalities; late fusion",
-        "visual understanding, omni"
+        "**CogVLM**",
+        "arXiv 2023",
+        "[Paper](https://arxiv.org/abs/2311.03079)",
+        "—",
+        "ViT Encoder + visual expert with cross-attention to LLM; deep but late-style fusion preserving LLM capabilities",
+        "cross-modal benchmarks, VQA, captioning"
       ],
       [
-        "**Gemini 1.5**",
-        "Google 2024",
-        "[Paper](https://arxiv.org/abs/2403.05530)",
-        "MoE; 1M context; omni",
-        "visual understanding, omni"
+        "**InstructBLIP**",
+        "arXiv 2023",
+        "[Paper](https://arxiv.org/abs/2305.06500)",
+        "—",
+        "Instruction-tuned on BLIP-2 style; frozen vision encoder + LLM with late projection",
+        "general-purpose vision-language with instructions"
       ],
       [
-        "**NaViL**",
-        "ArXiv 2025",
-        "[Paper](https://arxiv.org/abs/2510.08565) [Code](https://github.com/OpenGVLab/NaViL)",
-        "Data-constrained native MLLM recipe with jointly scaled visual encoder and LLM",
-        "visual understanding"
-      ],
-      [
-        "**Docopilot**",
-        "ArXiv 2025",
-        "[Paper](https://arxiv.org/abs/2507.14675) [Code](https://github.com/OpenGVLab/Docopilot)",
-        "Document-native multimodal model without retrieval augmentation",
-        "visual understanding"
-      ],
-      [
-        "**Qwen3.5**",
-        "Alibaba 2026",
-        "[Blog](https://qwen.ai/blog?id=qwen3.5)",
-        "Native Multimodal (early fusion); Hybrid (Gated DeltaNet + sparse MoE); 262K native context (ext. to ~1M); Vision Encoder built-in; up to 397B total / 17B active params",
-        "visual understanding, omni"
+        "**IDEFICS**",
+        "—",
+        "[Hugging Face](https://huggingface.co/HuggingFaceM4/idefics)",
+        "80B",
+        "Flamingo-inspired; late fusion with vision encoder and LLM",
+        "open-source multimodal understanding"
       ]
     ]
   },
