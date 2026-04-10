@@ -340,6 +340,10 @@
         {
           "type": "markdown",
           "text": "> **Boundary with NMMs:** if a unified model's central contribution is **native end-to-end multimodal pretraining from scratch**, we document its architectural details primarily in **§5 NMMs** and keep §4 focused on the unified U+G perspective."
+        },
+        {
+          "type": "markdown",
+          "text": "<p align=\"center\">\n  <img src=\"assets/unified_model.png\" width=\"800\" />\n  <br/>\n  <em>Figure: Unified multimodal model that jointly performs understanding and generation.</em>\n</p>"
         }
       ],
       "subsections": [
@@ -575,15 +579,6 @@
                   "ref": "5-native-multimodal-models-nmms.55-advanced-nmms.hybrid-ar-diffusion-nmms.table39"
                 }
               ]
-            },
-            {
-              "title": "RL-Alignment for Multimodal Models",
-              "blocks": [
-                {
-                  "type": "table",
-                  "ref": "5-native-multimodal-models-nmms.55-advanced-nmms.rl-alignment-for-multimodal-models.table40"
-                }
-              ]
             }
           ]
         }
@@ -776,7 +771,7 @@
         },
         {
           "type": "markdown",
-          "text": "```bibtex\n@misc{awesome-multimodal-models-2026,\n  title     = {Awesome Multimodal Models: From Traditional to Native \\& Unified},\n  author    = {Contributors},\n  year      = {2026},\n  url       = {https://github.com/your-org-or-name/awesome-multimodal-models},\n  note      = {GitHub repository}\n}\n```"
+          "text": "```bibtex\n@misc{awesome-multimodal-modeling-2026,\n  title     = {Awesome Multimodal Modeling: From Traditional to Native & Unified},\n  author    = OpenEnvision-Lab,\n  year      = {2026},\n  url       = {https://github.com/OpenEnvision-Lab/Awesome-Multimodal-Model-Traditional-Advanced},\n  note      = {GitHub repository}\n}\n```"
         }
       ]
     },

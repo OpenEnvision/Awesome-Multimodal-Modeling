@@ -1548,35 +1548,35 @@
     "rows": [
       [
         "**NExT-GPT**",
-        "[Paper](https://arxiv.org/abs/2309.05519)",
+        "ArXiv 2023 [Paper](https://arxiv.org/abs/2309.05519)",
         "[Code](https://github.com/NExT-GPT/NExT-GPT)",
         "Any-to-any; encoder+LLM+diffusion decoders",
         "visual understanding, visual generation, omni"
       ],
       [
         "**CoDi**: Any-to-Any Generation via Composable Diffusion",
-        "[Paper](https://arxiv.org/abs/2305.11846)",
+        "NeurIPS 2023 [Paper](https://arxiv.org/abs/2305.11846)",
         "[Code](https://github.com/microsoft/i-Code/tree/main/CoDi)",
         "Composable cross-modal diffusion",
         "visual generation, omni"
       ],
       [
         "**M2-Omni**",
-        "[Paper](https://arxiv.org/abs/2502.18778)",
+        "ArXiv 2025 [Paper](https://arxiv.org/abs/2502.18778)",
         "—",
         "Efficient omni-modal",
         "visual understanding, visual generation, omni"
       ],
       [
         "**AnyGPT**",
-        "[Paper](https://arxiv.org/abs/2402.12226)",
+        "ArXiv 2024 [Paper](https://arxiv.org/abs/2402.12226)",
         "[Code](https://github.com/OpenMOSS/AnyGPT)",
         "Discrete tokens; any-to-any",
         "visual understanding, visual generation, omni"
       ],
       [
         "**UnifiedIO 2**",
-        "[Paper](https://arxiv.org/abs/2312.17172)",
+        "ArXiv 2023 [Paper](https://arxiv.org/abs/2312.17172)",
         "[Code](https://github.com/allenai/unified-io-2)",
         "Multimodal mixture-of-denoisers",
         "visual understanding, visual generation, omni"
@@ -1701,7 +1701,7 @@
         "**Scaling Laws for Native Multimodal Models**",
         "ICCV 2025",
         "[Paper](https://arxiv.org/abs/2504.07951)",
-        "Early fusion is competitive or stronger at smaller scales; MoE improves native scaling"
+        "Early-fusion NMMs match or outperform late-fusion at low compute; early-fusion needs fewer params; MoE with modality-agnostic routing boosts sparse NMM scaling"
       ],
       [
         "**The Narrow Gate**: Localized Image-Text Communication in Native Multimodal Models",
@@ -1714,6 +1714,12 @@
         "ArXiv 2026",
         "[Paper](https://arxiv.org/abs/2603.03276)",
         "Highlights representation autoencoders, vision-language data synergy, and MoE for native pretraining"
+      ],
+      [
+        "**NaViL**: Rethinking Scaling Properties of Native Multimodal Large Language Models under Data Constraints",
+        "NeurIPS 2025",
+        "[Paper](https://arxiv.org/abs/2510.08565) [Code](https://github.com/OpenGVLab/NaViL)",
+        "End-to-end native MLLM scaling shows positive correlation between visual encoder and LLM size under data constraints; optimal meta-architecture balances cost and performance"
       ]
     ]
   },
@@ -1740,7 +1746,7 @@
       [
         "**VQ-GAN**",
         "CVPR 2021",
-        "[Paper](https://arxiv.org/abs/2012.09841) [Code](https://github.com/CompVis/taming-transformers) ",
+        "[Paper](https://arxiv.org/abs/2012.09841) [Code](https://github.com/CompVis/taming-transformers)",
         "Adversarial training for sharper codes"
       ],
       [
@@ -1770,7 +1776,7 @@
       [
         "**Open-MAGVIT2**",
         "ArXiv 2024",
-        "[Paper](https://arxiv.org/abs/2409.04410) [Code](https://github.com/TencentARC/Open-MAGVIT2) ",
+        "[Paper](https://arxiv.org/abs/2409.04410) [Code](https://github.com/TencentARC/Open-MAGVIT2)",
         "Open MAGVIT2 reproduction"
       ],
       [
@@ -1782,8 +1788,20 @@
       [
         "**ResTok**",
         "ArXiv 2026",
-        "[Paper](https://arxiv.org/abs/2601.03955) [Code](https://github.com/Kwai-Kolors/ResTok) ",
+        "[Paper](https://arxiv.org/abs/2601.03955) [Code](https://github.com/Kwai-Kolors/ResTok)",
         "Hierarchical residual 1D tokenizer for fast autoregressive generation"
+      ],
+      [
+        "**UniTok**",
+        "ArXiv 2025",
+        "[Paper](https://arxiv.org/abs/2502.20321) [Code](https://github.com/FoundationVision/UniTok)",
+        "Multi-codebook quantization; unified for generation and understanding; NeurIPS 2025 Spotlight"
+      ],
+      [
+        "**AToken**",
+        "ArXiv 2025",
+        "[Paper](https://arxiv.org/abs/2509.14476) [Code](https://github.com/apple/ml-atoken)",
+        "Unified 4D latent tokenizer for images, videos, and 3D; high-fidelity reconstruction + semantic understanding"
       ]
     ]
   },
@@ -1804,13 +1822,13 @@
       [
         "**DC-AE**: Deep Compression Autoencoder",
         "ArXiv 2024",
-        "[Paper](https://arxiv.org/abs/2410.10733) [Code](https://github.com/mit-han-lab/efficientvit) ",
+        "[Paper](https://arxiv.org/abs/2410.10733) [Code](https://github.com/mit-han-lab/efficientvit)",
         "High-compression spatial autoencoder"
       ],
       [
         "**COSMOS Tokenizer**",
         "ArXiv 2024",
-        "[Paper](https://arxiv.org/abs/2501.03575) [Code](https://github.com/NVIDIA/Cosmos-Tokenizer) ",
+        "[Paper](https://arxiv.org/abs/2501.03575) [Code](https://github.com/NVIDIA/Cosmos-Tokenizer)",
         "Continuous + discrete; video-capable"
       ]
     ]
@@ -1844,14 +1862,20 @@
       [
         "**TokLIP**",
         "ArXiv 2025",
-        "[Paper](https://arxiv.org/abs/2505.05422) [Code](https://github.com/TencentARC/TokLIP) ",
+        "[Paper](https://arxiv.org/abs/2505.05422) [Code](https://github.com/TencentARC/TokLIP)",
         "Injects CLIP-level semantics into VQ tokens for comprehension and generation"
       ],
       [
         "**Selftok**",
         "ArXiv 2025",
-        "[Paper](https://arxiv.org/abs/2505.07538)",
+        "[Paper](https://arxiv.org/abs/2505.07538) [Code](https://github.com/selftok-team/SelftokTokenizer)",
         "AR-prior visual tokens that support pure AR VLMs and RL-friendly generation"
+      ],
+      [
+        "**UniTok**",
+        "ArXiv 2025",
+        "[Paper](https://arxiv.org/abs/2502.20321) [Code](https://github.com/FoundationVision/UniTok)",
+        "Multi-codebook quantization enabling native generation inside MLLMs without understanding loss"
       ]
     ]
   },
@@ -1867,14 +1891,14 @@
       [
         "**Chameleon**",
         "[Paper](https://arxiv.org/abs/2405.09818)",
-        "[Code](https://github.com/facebookresearch/chameleon) ",
+        "[Code](https://github.com/facebookresearch/chameleon)",
         "7B, 34B",
         "Mixed-modal early fusion; BPE-like image tokens"
       ],
       [
         "**Emu3**",
         "[Paper](https://arxiv.org/abs/2409.18869)",
-        "[Code](https://github.com/baaivision/Emu3) ",
+        "[Code](https://github.com/baaivision/Emu3)",
         "8B",
         "Next-token prediction over VQ image tokens"
       ],
@@ -1888,30 +1912,37 @@
       [
         "**LWM**: World Model on Million-Length Video",
         "[Paper](https://arxiv.org/abs/2402.08268)",
-        "[Code](https://github.com/LargeWorldModel/LWM) ",
+        "[Code](https://github.com/LargeWorldModel/LWM)",
         "—",
         "Ring attention; long context multimodal"
       ],
       [
-        "**Unified-IO**: A Unified Model for Vision, Language, and Structured Data",
+        "**Unified-IO**",
         "ICLR 2023",
-        "[Paper](https://arxiv.org/abs/2206.08916) [Code](https://github.com/allenai/unified-io-inference) ",
+        "[Paper](https://arxiv.org/abs/2206.08916) [Code](https://github.com/allenai/unified-io-inference)",
         "—",
         "Multimodal seq2seq; VQ image tokens"
       ],
       [
         "**4M**: Massively Multimodal Masked Modeling",
         "NeurIPS 2023",
-        "[Paper](https://arxiv.org/abs/2312.06647) [Code](https://github.com/apple/ml-4m) ",
+        "[Paper](https://arxiv.org/abs/2312.06647) [Code](https://github.com/apple/ml-4m)",
         "—",
         "7+ modalities; masked modeling"
       ],
       [
         "**LongCat-Next**",
         "[Paper](https://arxiv.org/abs/2603.27538)",
-        "[Code](https://github.com/meituan-longcat/LongCat-Next) ",
+        "[Code](https://github.com/meituan-longcat/LongCat-Next)",
         "—",
         "Discrete native autoregressive model for text, vision, and audio"
+      ],
+      [
+        "**Llama 4**",
+        "Meta 2025",
+        "[Blog](https://ai.meta.com/blog/llama-4-multimodal-intelligence/)",
+        "Scout / Maverick (MoE variants)",
+        "Open-weight native early-fusion multimodal; unified text/vision/video tokens"
       ]
     ]
   },
@@ -1962,13 +1993,13 @@
       [
         "**NaViL**",
         "NeurIPS 2025",
-        "[Paper](https://arxiv.org/abs/2510.08565) [Code](https://github.com/OpenGVLab/NaViL) ",
+        "[Paper](https://arxiv.org/abs/2510.08565) [Code](https://github.com/OpenGVLab/NaViL)",
         "Data-constrained native MLLM recipe with jointly scaled visual encoder and LLM"
       ],
       [
         "**Docopilot**",
         "ArXiv 2025",
-        "[Paper](https://arxiv.org/abs/2507.14675) [Code](https://github.com/OpenGVLab/Docopilot) ",
+        "[Paper](https://arxiv.org/abs/2507.14675) [Code](https://github.com/OpenGVLab/Docopilot)",
         "Document-native multimodal model without retrieval augmentation"
       ]
     ]
@@ -1990,8 +2021,14 @@
       [
         "**Aria**: An Open Multimodal Native Mixture-of-Experts Model",
         "ArXiv 2024",
-        "[Paper](https://arxiv.org/abs/2410.05993) ",
+        "[Paper](https://arxiv.org/abs/2410.05993)",
         "Open native multimodal MoE trained from scratch in four stages"
+      ],
+      [
+        "**Llama 4 Maverick**",
+        "Meta 2025",
+        "[Blog](https://ai.meta.com/blog/llama-4-multimodal-intelligence/)",
+        "Open-weight native multimodal MoE with early fusion"
       ]
     ]
   },
@@ -2012,7 +2049,7 @@
       [
         "**DeepOmni / DeepTalk**",
         "ArXiv 2025",
-        "[Paper](https://arxiv.org/abs/2506.21864) [Code](https://github.com/talkking/DeepTalk) ",
+        "[Paper](https://arxiv.org/abs/2506.21864) [Code](https://github.com/talkking/DeepTalk)",
         "Adaptive modality-specific experts for native speech-text interaction"
       ]
     ]
@@ -2026,16 +2063,22 @@
     ],
     "rows": [
       [
-        "**Gemini 1.5 Pro** ",
+        "**Gemini 1.5 Pro**",
         "[Paper](https://arxiv.org/abs/2403.05530)",
         "—",
         "1M context; audio+video+image+text"
       ],
       [
-        "**Emu3.5** ",
+        "**Emu3.5**",
         "[Paper](https://arxiv.org/abs/2510.26583)",
-        "[Code](https://github.com/baaivision/Emu3.5) ",
+        "[Code](https://github.com/baaivision/Emu3.5)",
         "10T-token native world model with interleaved vision-language outputs"
+      ],
+      [
+        "**Llama 4**",
+        "Meta 2025",
+        "[Blog](https://ai.meta.com/blog/llama-4-multimodal-intelligence/)",
+        "Native multimodal with native audio/video/image/text support"
       ]
     ]
   },
@@ -2050,8 +2093,14 @@
       [
         "**HunyuanImage 3.0**",
         "ArXiv 2025",
-        "[Paper](https://arxiv.org/abs/2509.23951) [Code](https://github.com/Tencent-Hunyuan/HunyuanImage-3.0) ",
+        "[Paper](https://arxiv.org/abs/2509.23951) [Code](https://github.com/Tencent-Hunyuan/HunyuanImage-3.0)",
         "Native AR understanding + generation with 80B-total MoE"
+      ],
+      [
+        "**OmniGen2**",
+        "ArXiv 2025",
+        "[Paper](https://arxiv.org/abs/2506.18871) [Code](https://github.com/VectorSpaceLab/OmniGen2)",
+        "Advanced multimodal generation with native any-to-any capabilities"
       ]
     ]
   },
@@ -2072,13 +2121,13 @@
       [
         "**MAR**: Autoregressive Image Generation without Vector Quantization",
         "NeurIPS 2024",
-        "[Paper](https://arxiv.org/abs/2406.11838) [Code](https://github.com/LTH14/mar) ",
+        "[Paper](https://arxiv.org/abs/2406.11838) [Code](https://github.com/LTH14/mar)",
         "Diffusion head on AR backbone"
       ],
       [
         "**HART**: Hybrid Autoregressive Transformer",
         "ArXiv 2024",
-        "[Paper](https://arxiv.org/abs/2410.10812) [Code](https://github.com/mit-han-lab/hart) ",
+        "[Paper](https://arxiv.org/abs/2410.10812) [Code](https://github.com/mit-han-lab/hart)",
         "Discrete tokens + residual diffusion"
       ],
       [
@@ -2086,6 +2135,12 @@
         "NeurIPS 2024",
         "[Paper](https://arxiv.org/abs/2410.10798)",
         "Continuous image + AR modeling"
+      ],
+      [
+        "**MammothModa2**",
+        "ArXiv 2025",
+        "[Paper](https://arxiv.org/abs/2511.18262) [Code](https://github.com/bytedance/mammothmoda)",
+        "AR-Diffusion framework for unified U+G"
       ]
     ]
   },
@@ -2106,7 +2161,7 @@
       [
         "**RLAIF-V**",
         "ArXiv 2024",
-        "[Paper](https://arxiv.org/abs/2405.17220) [Code](https://github.com/RLHF-V/RLAIF-V) ",
+        "[Paper](https://arxiv.org/abs/2405.17220) [Code](https://github.com/RLHF-V/RLAIF-V)",
         "AI feedback for multimodal"
       ],
       [
@@ -2118,8 +2173,14 @@
       [
         "**Emu3.5**",
         "ArXiv 2025",
-        "[Paper](https://arxiv.org/abs/2510.26583) [Code](https://github.com/baaivision/Emu3.5) ",
+        "[Paper](https://arxiv.org/abs/2510.26583) [Code](https://github.com/baaivision/Emu3.5)",
         "Large-scale RL post-training for multimodal reasoning and generation"
+      ],
+      [
+        "**UniPic 2.0**",
+        "ArXiv 2025",
+        "[Paper](https://arxiv.org/abs/2509.04548) [Code](https://github.com/SkyworkAI/UniPic)",
+        "Online RL for unified multimodal model"
       ]
     ]
   },
@@ -2768,6 +2829,11 @@
         "[Awesome-Unified-Multimodal](https://github.com/Purshow/Awesome-Unified-Multimodal)",
         "Unified models",
         "Purshow"
+      ],
+      [
+        "[Awesome-Unified-Multimodal](https://github.com/AIDC-AI/Awesome-Unified-Multimodal-Models)",
+        "Unified models",
+        "AIDC-AI"
       ]
     ]
   },
