@@ -1276,7 +1276,7 @@
         "visual understanding, document"
       ],
       [
-        "Kimi-VL (incl. A3B-Thinking)",
+        "Kimi-VL",
         "arXiv 2025",
         "[Paper](https://arxiv.org/abs/2504.07491) [HF](https://huggingface.co/moonshotai/Kimi-VL-A3B-Thinking) ",
         "Projector + MoE backbone; long video/PDF/GUI, agentic capabilities, chain-of-thought vision reasoning",
