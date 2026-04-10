@@ -293,6 +293,18 @@
     ],
     "rows": [
       [
+        "**Show, Attend and Tell**: Neural Image Caption Generation with Visual Attention",
+        "ICML 2015",
+        "[Paper](https://arxiv.org/pdf/1502.03044)",
+        "Pioneering visual attention for image captioning"
+      ],
+      [
+        "**VSE++**: Improving Visual-Semantic Embeddings with Hard Negatives",
+        "BMVC 2018",
+        "[Paper](https://arxiv.org/abs/1707.05612)",
+        "Hard negatives for stronger visual-semantic embeddings"
+      ],
+      [
         "**ViLBERT**: Pretraining Task-Agnostic Visiolinguistic Representations",
         "NeurIPS 2019",
         "[Paper](https://arxiv.org/abs/1908.02265)",
@@ -327,6 +339,12 @@
         "CVPR 2021",
         "[Paper](https://arxiv.org/abs/2101.00529)",
         "Stronger visual features"
+      ],
+      [
+        "**Align before Fuse**: Vision and Language Representation Learning with Momentum Distillation",
+        "NeurIPS 2021",
+        "[Paper](https://arxiv.org/abs/2107.07651)",
+        "Momentum distillation for better vision-language alignment"
       ]
     ]
   },
@@ -373,6 +391,42 @@
         "ArXiv 2023",
         "[Paper](https://arxiv.org/abs/2303.15389)",
         "Reconstructive training + CLIP"
+      ],
+      [
+        "**FILIP**: Fine-grained Interactive Language-Image Pre-training",
+        "ICLR 2022",
+        "[Paper](https://arxiv.org/abs/2111.07783)",
+        "Fine-grained token-wise late interaction"
+      ],
+      [
+        "**GLIP**: Grounded Language-Image Pre-training",
+        "CVPR 2022",
+        "[Paper](https://arxiv.org/abs/2112.03857)",
+        "Grounded object-level vision-language pretraining"
+      ],
+      [
+        "**Multi-Grained Vision Language Pre-Training**: Aligning Texts with Visual Concepts",
+        "ICML 2022",
+        "[Paper](https://arxiv.org/pdf/2111.08276)",
+        "Multi-grained aligning vision-language pretraining"
+      ],
+      [
+        "**MoCo v3**: An Empirical Study of Training Self-Supervised Vision Transformers",
+        "ICCV 2021",
+        "[Paper](https://arxiv.org/abs/2104.02057)",
+        "Momentum contrastive learning for ViT"
+      ],
+      [
+        "**LiT**: Locked-image Tuning for Zero-Shot Transfer",
+        "CVPR 2022",
+        "[Paper](https://arxiv.org/abs/2111.07991)",
+        "Locked image with contrastive text tuning"
+      ],
+      [
+        "**BLIP**: Bootstrapping Language-Image Pre-training",
+        "ICML 2022",
+        "[Paper](https://arxiv.org/abs/2201.12086)",
+        "Unified understanding and generation via bootstrapping"
       ]
     ]
   },

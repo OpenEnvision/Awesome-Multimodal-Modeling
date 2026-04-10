@@ -4,6 +4,7 @@
 <div align="center">
 
 # Awesome Multimodal Models
+<img width="1024" alt="Awesome Multimodal Models cover" src="https://github.com/user-attachments/assets/b804f770-cff8-4ffa-85dc-495db2efd852" />
 
 <p><strong>A Comprehensive Survey & Curated List of Multimodal Models</strong><br/><sub>From Traditional Fusion to Native & Unified Architectures</sub></p>
 
@@ -19,6 +20,7 @@
   <img src="https://img.shields.io/badge/Image%20%2B%20Text-Primary-0f172a?style=flat-square&logo=googlephotos&logoColor=white" alt="Image and Text Focus">
   <img src="https://img.shields.io/badge/Early%20%2F%20Late%20Fusion-Taxonomy-334155?style=flat-square&logo=apachespark&logoColor=white" alt="Fusion Taxonomy">
   <img src="https://img.shields.io/badge/NMMs%20vs%20UMMs-Architecture%20First-7c3aed?style=flat-square&logo=semanticweb&logoColor=white" alt="Architecture-first Taxonomy">
+  <img src="https://img.shields.io/badge/2025%2B-Omni%20Trends-0891b2?style=flat-square&logo=googlegemini&logoColor=white" alt="Omni Trends">
 </p>
 
 <p>
@@ -127,6 +129,23 @@ This repository provides a **structured, community-maintained** survey of multim
 | Inclusion bar | We prioritize landmark papers, broadly adopted benchmarks, open implementations, or papers that clarify important taxonomy boundaries |
 
 > Classification note: for ambiguous models sitting between `MLLM`, `UMM`, and strict `NMM`, this list records the category that best matches the **training recipe and architectural coupling**, not just the paper title.
+
+### Related Awesome Lists
+
+- [isLinXu](https://github.com/isLinXu/awesome-native-multimodal-models)
+- [John-Ge](https://github.com/John-Ge/Awesome-Native-Multimodal-Models)
+- [pliang279](https://github.com/pliang279/awesome-multimodal-ml)
+- [BradyFU](https://github.com/BradyFU/Awesome-Multimodal-Large-Language-Models)
+- [Eurus-Holmes](https://github.com/Eurus-Holmes/Awesome-Multimodal-Research)
+- [showlab](https://github.com/showlab/Awesome-Unified-Multimodal-Models)
+- [yfzhang114](https://github.com/yfzhang114/Awesome-Multimodal-Large-Language-Models)
+- [SkalskiP](https://github.com/SkalskiP/awesome-foundation-and-multimodal-models)
+- [Yutong-Zhou-cv](https://github.com/Yutong-Zhou-cv/Awesome-Multimodality)
+- [Purshow](https://github.com/Purshow/Awesome-Unified-Multimodal)
+
+### Publishing Note
+
+> Replace `your-org-or-name/awesome-multimodal-models` with your actual GitHub repository slug before publishing.
 
 <p align="right"><a href="#awesome-multimodal-models">Back to Top</a></p>
 
@@ -401,12 +420,15 @@ We identify **5 Architectural Waves** in multimodal model development:
 
 | Paper | Venue | Links | Notes |
 |---|---|---|---|
+| **Show, Attend and Tell**: Neural Image Caption Generation with Visual Attention | ICML 2015 | [Paper](https://arxiv.org/pdf/1502.03044) | Pioneering visual attention for image captioning |
+| **VSE++**: Improving Visual-Semantic Embeddings with Hard Negatives | BMVC 2018 | [Paper](https://arxiv.org/abs/1707.05612) | Hard negatives for stronger visual-semantic embeddings |
 | **ViLBERT**: Pretraining Task-Agnostic Visiolinguistic Representations | NeurIPS 2019 | [Paper](https://arxiv.org/abs/1908.02265) | Dual-stream BERT for V+L |
 | **LXMERT**: Learning Cross-Modality Encoder Representations from Transformers | EMNLP 2019 | [Paper](https://arxiv.org/abs/1908.07490) | Tri-encoder design with object relationships and cross-modality layers |
 | **VisualBERT**: A Simple and Performant Baseline for Vision and Language | ArXiv 2019 | [Paper](https://arxiv.org/abs/1908.03557) | Single-stream V+L transformer |
 | **UNITER**: Universal Image-Text Representation Learning | ECCV 2020 | [Paper](https://arxiv.org/abs/1909.11740) | Conditional masking + alignment |
 | **Oscar**: Object Semantics Aligned Pre-training | ECCV 2020 | [Paper](https://arxiv.org/abs/2004.06871) | Object tags as anchor points |
 | **VinVL**: Revisiting Visual Representations in Vision-Language Models | CVPR 2021 | [Paper](https://arxiv.org/abs/2101.00529) | Stronger visual features |
+| **Align before Fuse**: Vision and Language Representation Learning with Momentum Distillation | NeurIPS 2021 | [Paper](https://arxiv.org/abs/2107.07651) | Momentum distillation for better vision-language alignment |
 
 #### Contrastive Learning
 
@@ -418,6 +440,12 @@ We identify **5 Architectural Waves** in multimodal model development:
 | **DeCLIP**: Supervision Exists Everywhere | ICLR 2022 | [Paper](https://arxiv.org/abs/2110.05208) | Data-efficient CLIP |
 | **SLIP**: Self-supervision meets Language-Image Pre-training | ECCV 2022 | [Paper](https://arxiv.org/abs/2112.12750) | CLIP + self-supervised learning |
 | **EVA-CLIP**: Improved Training Techniques for CLIP at Scale | ArXiv 2023 | [Paper](https://arxiv.org/abs/2303.15389) | Reconstructive training + CLIP |
+| **FILIP**: Fine-grained Interactive Language-Image Pre-training | ICLR 2022 | [Paper](https://arxiv.org/abs/2111.07783) | Fine-grained token-wise late interaction |
+| **GLIP**: Grounded Language-Image Pre-training | CVPR 2022 | [Paper](https://arxiv.org/abs/2112.03857) | Grounded object-level vision-language pretraining |
+| **Multi-Grained Vision Language Pre-Training**: Aligning Texts with Visual Concepts | ICML 2022 | [Paper](https://arxiv.org/pdf/2111.08276) | Multi-grained aligning vision-language pretraining |
+| **MoCo v3**: An Empirical Study of Training Self-Supervised Vision Transformers | ICCV 2021 | [Paper](https://arxiv.org/abs/2104.02057) | Momentum contrastive learning for ViT |
+| **LiT**: Locked-image Tuning for Zero-Shot Transfer | CVPR 2022 | [Paper](https://arxiv.org/abs/2111.07991) | Locked image with contrastive text tuning |
+| **BLIP**: Bootstrapping Language-Image Pre-training | ICML 2022 | [Paper](https://arxiv.org/abs/2201.12086) | Unified understanding and generation via bootstrapping |
 
 #### Multimodal Fusion Strategies
 
