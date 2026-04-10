@@ -1371,13 +1371,6 @@
         "multimodal perception & generation"
       ],
       [
-        "RoboOmni: Proactive Robot Manipulation in Omni-modal Context",
-        "arXiv 2025",
-        "[Paper](https://arxiv.org/abs/2510.23763) [Code](https://github.com/OpenMOSS/RoboOmni)",
-        "Proactive robot manipulation using omni-modal context with action generation",
-        "robotic manipulation"
-      ],
-      [
         "OmniVinci: Enhancing Architecture and Data for Omni-Modal Understanding LLM",
         "arXiv 2025",
         "[Paper](https://arxiv.org/abs/2510.15870) [Code](https://github.com/NVlabs/OmniVinci)",
@@ -1476,13 +1469,6 @@
         "unified discrete multimodal"
       ],
       [
-        "NExT-GPT: Any-to-Any Multimodal LLM",
-        "ICML 2023",
-        "[Paper](https://arxiv.org/abs/2309.05519) [Code](https://github.com/NExT-GPT/NExT-GPT)",
-        "Any-to-any multimodal LLM",
-        "any-to-any"
-      ],
-      [
         "Unified-IO 2: Scaling Autoregressive Multimodal Models with Vision, Language, Audio, and Actions",
         "CVPR 2023",
         "[Paper](https://arxiv.org/abs/2312.17172) [Code](https://github.com/allenai/unified-io-2)",
@@ -1509,13 +1495,6 @@
         "[Paper](https://arxiv.org/abs/2506.01853) [Code](https://github.com/JAMESYJL/ShapeLLM-Omni)",
         "Native multimodal LLM focused on 3D generation and understanding",
         "3D multimodal"
-      ],
-      [
-        "RoboEgo System Card: An Omnimodal Model with Native Full Duplexity",
-        "arXiv 2025",
-        "[Paper](https://arxiv.org/abs/2506.01934) [Code](https://github.com/JAMESYJL/ShapeLLM-Omni)",
-        "Omnimodal model with native full duplexity",
-        "full duplex omnimodal"
       ]
     ]
   },
