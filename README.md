@@ -60,7 +60,6 @@
         - [NMM — Late Fusion](#nmm--late-fusion)
       - [MoE Routing in NMMs](#moe-routing-in-nmms)
     - [1.2 Scope \& Taxonomy](#12-scope--taxonomy)
-    - [Tag Legend](#tag-legend)
     - [1.3 Timeline \& Landmark Models (2017–2026)](#13-timeline--landmark-models-20172026)
       - [Wave 1 — Tokenizer Renaissance (2017–2021)](#wave-1--tokenizer-renaissance-20172021)
       - [Wave 2 — Foundation Pretraining (2022–2023)](#wave-2--foundation-pretraining-20222023)
@@ -299,7 +298,7 @@ Multimodal Models
     └── Advanced: Omni <kbd>Omni</kbd> / Any-to-Any / Hybrid AR+Diffusion
 ```
 
-### Tag Legend
+<!-- ### Tag Legend
 
 | Badge | Meaning |
 |---|---|
@@ -310,7 +309,7 @@ Multimodal Models
 | <kbd>Efficient</kbd> | Efficient / Lightweight |
 | <kbd>Analysis</kbd> | Research / Analysis paper |
 | <kbd>Open</kbd> | Open weights available |
-| <kbd>Closed</kbd> | Industry / Closed-source |
+| <kbd>Closed</kbd> | Industry / Closed-source | -->
 
 ### 1.3 Timeline & Landmark Models (2017–2026)
 

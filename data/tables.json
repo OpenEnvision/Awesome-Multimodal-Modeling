@@ -686,6 +686,13 @@
         "visual understanding"
       ],
       [
+        "**Shikra**: Unleashing Multimodal LLM's Referential Dialogue Magic",
+        "ArXiv 2023",
+        "[Paper](https://arxiv.org/abs/2306.15195) [Code](https://github.com/shikras/shikra)",
+        "Instruction-tuned multimodal dialogue model with explicit region grounding in generated text",
+        "visual understanding"
+      ],
+      [
         "**VILA1.5**: Simple Visual Language Model Baselines Improve Large Multimodal Models",
         "ArXiv 2024",
         "[Paper](https://arxiv.org/abs/2405.04419) [Code](https://github.com/NVlabs/VILA) <kbd>Open</kbd>",
@@ -732,6 +739,20 @@
         "visual understanding"
       ],
       [
+        "**GPT-4V(ision)**",
+        "OpenAI 2023",
+        "[System Card](https://openai.com/research/gpt-4v-system-card) <kbd>Closed</kbd>",
+        "Closed multimodal GPT-4 variant for image understanding and visual reasoning",
+        "visual understanding"
+      ],
+      [
+        "**Kosmos-2**: Grounding Multimodal Large Language Models to the World",
+        "ArXiv 2023",
+        "[Paper](https://arxiv.org/abs/2306.14824) [Project](https://aka.ms/kosmos-2)",
+        "Adds grounding and referring-expression capabilities to a foundation MLLM",
+        "visual understanding"
+      ],
+      [
         "**Qwen-VL**: A Versatile Vision-Language Model",
         "ArXiv 2023",
         "[Paper](https://arxiv.org/abs/2308.12966) [HF](https://huggingface.co/Qwen/Qwen-VL) <kbd>Open</kbd>",
@@ -768,9 +789,9 @@
       ],
       [
         "**InternVL2**",
-        "2024",
+        "Model release 2024",
         "[HF](https://huggingface.co/OpenGVLab/InternVL2-8B) <kbd>Open</kbd>",
-        "State-of-the-art MLLM",
+        "Instruction-tuned InternVL family release with strong multilingual and OCR capabilities",
         "visual understanding"
       ],
       [
@@ -894,17 +915,17 @@
       ],
       [
         "**Gemini 2.5 Pro**: Advanced Reasoning Multimodal LLM",
-        "Google 2024",
-        "[News](https://www.theverge.com/news/635502/google-gemini-2-5-reasoning-ai-model)",
-        "Improved reasoning while interpreting text, audio, images, and video; offers step-by-step traces and multimodal demos",
+        "Google 2025",
+        "[Blog](https://developers.googleblog.com/en/gemini-2-5-thinking-model-updates/) <kbd>Closed</kbd>",
+        "Reasoning-focused Gemini release that handles text, images, audio, and video with controllable thinking",
         "visual understanding, omni"
       ],
       [
         "**GPT-4o**: Omni Reasoning Across Text, Vision, and Speech",
         "OpenAI 2024",
-        "[Blog](https://openai.com/index/hello-gpt-4o/?goal=0_a1a65e0e73-1220f4034c-563783356)",
-        "End-to-end multimodal model trained to process and emit text, images, and audio with real-time conversational latency",
-        "visual understanding, omni"
+        "[Blog](https://openai.com/index/hello-gpt-4o/) [Image Gen](https://openai.com/index/introducing-4o-image-generation/) <kbd>Closed</kbd>",
+        "Native multimodal GPT model with text, image, and audio interaction, plus later native image generation",
+        "visual understanding, visual generation, omni"
       ]
     ]
   },
@@ -922,13 +943,6 @@
         "TMLR 2023",
         "[Paper](https://arxiv.org/abs/2302.00923) [Code](https://github.com/amazon-science/mm-cot)",
         "Two-stage rationale + answer",
-        "visual understanding"
-      ],
-      [
-        "**GPT-4V(ision)** Technical Report",
-        "OpenAI 2023",
-        "[Paper](https://arxiv.org/abs/2303.08774) <kbd>Closed</kbd>",
-        "Proprietary; strong baseline",
         "visual understanding"
       ],
       [
@@ -957,6 +971,13 @@
         "ICCV 2025",
         "[Paper](https://openaccess.thecvf.com/content/ICCV2025/html/Xu_LLaVA-CoT_Let_Vision_Language_Models_Reason_Step-by-Step_ICCV_2025_paper.html)",
         "Structured visual reasoning with stage-wise retracing search and dedicated visual CoT data, topping Gemini-1.5-pro and GPT-4o-mini on reasoning benchmarks",
+        "visual understanding"
+      ],
+      [
+        "**MAmmoTH-VL**: Eliciting Multimodal Reasoning with Instruction Tuning at Scale",
+        "ACL 2025",
+        "[Paper](https://aclanthology.org/2025.acl-long.680/) [Code](https://github.com/TIGER-AI-Lab/MAmmoTH-VL)",
+        "Large-scale rationale-rich instruction tuning to improve multimodal chain-of-thought reasoning",
         "visual understanding"
       ]
     ]
