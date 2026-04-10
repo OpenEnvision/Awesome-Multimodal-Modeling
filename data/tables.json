@@ -1025,6 +1025,13 @@
         "[Paper](https://arxiv.org/abs/2509.23661)",
         "85M pretrain + 22M curated instruction data; fully open end-to-end framework; SOTA with dramatically lower training cost",
         "visual understanding"
+      ],
+      [
+        "STEP3-VL-10B Technical Report",
+        "ArXiv 2025",
+        "[Paper](https://arxiv.org/abs/2509.23661)",
+        "85M pretrain + 22M curated instruction data; fully open end-to-end framework; SOTA with dramatically lower training cost",
+        "visual understanding"
       ]
     ]
   },
@@ -1302,6 +1309,41 @@
         "[Paper](https://arxiv.org/abs/2503.01743) [HF](https://huggingface.co/microsoft/Phi-4-multimodal) ",
         "Small-parameter (LoRA + projectors) multimodal; vision + speech support, efficient on-device deployment",
         "visual understanding, on-device"
+      ],
+      [
+        "Penguin-VL: Exploring the Efficiency Limits of VLM with LLM-based Vision Encoders",
+        "arXiv 2026",
+        "[Paper](https://arxiv.org/pdf/2603.06569)",
+        "LLM-initialized vision encoder (non-CLIP); text-to-vision weight reuse, generative-aligned visual features, optimized for dense perception.",
+        "visual understanding"
+      ],
+      [
+        "STEP3-VL-10B Technical Report",
+        "arXiv 2026",
+        "[Paper](https://arxiv.org/pdf/2601.09668)",
+        "10B-scale foundation multimodal; unified unfrozen pre-training + PaCoRe test-time scaling, frontier-level reasoning with compact footprint.",
+        "visual understanding"
+      ],
+      [
+        "Youtu-VL: Unleashing Visual Potential via Unified Vision-Language Supervision",
+        "arXiv 2026",
+        "[Paper](https://arxiv.org/abs/2601.19798)",
+        "Tri-modal (V+A+L) unified framework; parameter-efficient tuning, seamless cross-modal reasoning for mobile/IoT deployment.",
+        "visual understanding"
+      ],
+      [
+        "Seed1.5-VL Technical Report",
+        "arXiv 2025",
+        "[Paper](https://arxiv.org/pdf/2505.07062)",
+        "20B MoE + 532M ViT; native-resolution vision-language foundation model; efficient asymmetric architecture.",
+        "visual understanding"
+      ],
+      [
+        "Kwai Keye-VL 1.5 Technical Report",
+        "arXiv 2025",
+        "[Paper](https://arxiv.org/pdf/2509.01563)",
+        "Adaptive Slow-Fast encoding; 8B parameter scale with 128K long-context; SOTA video reasoning & human-preference aligned.",
+        "visual understanding"
       ]
     ]
   },
@@ -1369,13 +1411,6 @@
         "[Paper](https://arxiv.org/abs/2511.00279) [Code](https://github.com/meituan-longcat/LongCat-Flash-Omni)",
         "Long-context omni-modal model supporting text and audio generation",
         "long-context omni-modal"
-      ],
-      [
-        "Ming-Flash-Omni: A Sparse, Unified Architecture for Multimodal Perception and Generation",
-        "arXiv 2025",
-        "[Paper](https://arxiv.org/abs/2510.24821) [Code](https://github.com/inclusionAI/Ming)",
-        "Sparse unified architecture for multimodal perception and generation",
-        "multimodal perception & generation"
       ],
       [
         "OmniVinci: Enhancing Architecture and Data for Omni-Modal Understanding LLM",
