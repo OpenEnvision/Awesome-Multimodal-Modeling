@@ -681,12 +681,12 @@ Recent scaling-law evidence suggests early-fusion NMMs are often stronger at low
 
 | Model | Paper | Links | Training Scale | Notes | Task |
 |---|---|---|---|---|---|
-| **Chameleon** | arXiv 2024 | [Paper](https://arxiv.org/abs/2405.09818) [Code](https://github.com/facebookresearch/chameleon) | 7B / 34B | Mixed-modal early-fusion token-based; unified discrete tokenizer for text+image; autoregressive next-token prediction from scratch | visual understanding, image/text generation, interleaved |
-| **Emu3** | arXiv 2024 | [Paper](https://arxiv.org/abs/2409.18869) [Code](https://github.com/baaivision/Emu3) | 8B | Next-token prediction over VQ image tokens; native multimodal decoder-only; minimal modality-specific params | visual understanding, visual generation |
-| **Emu3.5** | arXiv 2025 | [Paper](https://arxiv.org/abs/2510.26583) [Code](https://github.com/baaivision/Emu3.5) | Large-scale (trillion+ tokens) | Native world model; next-state prediction on interleaved video/text; Discrete Diffusion Adaptation for efficiency | interleaved generation, world modeling, any-to-image |
-| **Show-o** | arXiv 2024 | [Paper](https://arxiv.org/abs/2408.12528) | — | Early-fusion mixed-modal; autoregressive text + parallel image token generation; unified transformer | image/text generation, understanding |
-| **Transfusion** | arXiv 2024 | [Paper](https://arxiv.org/abs/2408.11039) | — | Early-fusion with discrete image tokens; unified modeling of text (autoregressive) and image (diffusion-like) | mixed-modal generation |
-| **Anole** | arXiv ~2025 | [Paper](https://arxiv.org/abs/2412.06646) (related discussion) | — | Open autoregressive native multimodal; interleaved image-text generation; early token-level fusion | interleaved image-text generation |
+| Chameleon | arXiv 2024 | [Paper](https://arxiv.org/abs/2405.09818) [Code](https://github.com/facebookresearch/chameleon) | 7B / 34B | Mixed-modal early-fusion token-based; unified discrete tokenizer for text+image; autoregressive next-token prediction from scratch | visual understanding, image/text generation, interleaved |
+| Emu3 | arXiv 2024 | [Paper](https://arxiv.org/abs/2409.18869) [Code](https://github.com/baaivision/Emu3) | 8B | Next-token prediction over VQ image tokens; native multimodal decoder-only; minimal modality-specific params | visual understanding, visual generation |
+| Emu3.5 | arXiv 2025 | [Paper](https://arxiv.org/abs/2510.26583) [Code](https://github.com/baaivision/Emu3.5) | Large-scale (trillion+ tokens) | Native world model; next-state prediction on interleaved video/text; Discrete Diffusion Adaptation for efficiency | interleaved generation, world modeling, any-to-image |
+| Show-o | arXiv 2024 | [Paper](https://arxiv.org/abs/2408.12528) | — | Early-fusion mixed-modal; autoregressive text + parallel image token generation; unified transformer | image/text generation, understanding |
+| Transfusion | arXiv 2024 | [Paper](https://arxiv.org/abs/2408.11039) | — | Early-fusion with discrete image tokens; unified modeling of text (autoregressive) and image (diffusion-like) | mixed-modal generation |
+| Anole | arXiv 2024 | [Paper](https://arxiv.org/abs/2412.06646) (related discussion) | — | Open autoregressive native multimodal; interleaved image-text generation; early token-level fusion | interleaved image-text generation |
 
 ### 5.3 Late Fusion NMMs
 
@@ -694,13 +694,13 @@ Recent scaling-law evidence suggests early-fusion NMMs are often stronger at low
 
 | Model | Paper | Links | Training Scale | Notes | Task |
 |---|---|---|---|---|---|
-| **LLaVA (系列，包括LLaVA-1.5 / Mini / NeXT)** | arXiv 2023-2025 | [Paper](https://arxiv.org/abs/2304.08485) [Code](https://github.com/haotian-liu/LLaVA) | 7B / 13B+ | CLIP Vision Encoder (frozen/pretrained) + linear projection to LLM (Vicuna/LLaMA); vision tokens inserted into LLM input; common late-fusion baseline | visual instruction tuning, VQA, image captioning |
-| **Flamingo** | arXiv 2022 | [Paper](https://arxiv.org/abs/2204.14198) | 80B | Perceiver Resampler + frozen vision encoder (e.g., CLIP-like) + frozen LLM; cross-attention for late multimodal interaction | few-shot visual question answering, captioning |
-| **BLIP-2** | arXiv 2023 | [Paper](https://arxiv.org/abs/2301.12597) | — | Q-Former bridges frozen vision encoder and LLM; late alignment of visual features to text | vision-language understanding, generation |
-| **CLIP** | arXiv 2021 | [Paper](https://arxiv.org/abs/2103.00020) | 400M+ | Dual-encoder (Vision Transformer + Text Transformer); contrastive alignment at embedding level; classic late-fusion foundation | zero-shot image classification, retrieval |
-| **CogVLM** | arXiv 2023 | [Paper](https://arxiv.org/abs/2311.03079) | — | ViT Encoder + visual expert with cross-attention to LLM; deep but late-style fusion preserving LLM capabilities | cross-modal benchmarks, VQA, captioning |
-| **InstructBLIP** | arXiv 2023 | [Paper](https://arxiv.org/abs/2305.06500) | — | Instruction-tuned on BLIP-2 style; frozen vision encoder + LLM with late projection | general-purpose vision-language with instructions |
-| **IDEFICS** | — | [Hugging Face](https://huggingface.co/HuggingFaceM4/idefics) | 80B | Flamingo-inspired; late fusion with vision encoder and LLM | open-source multimodal understanding |
+| LLaVA | arXiv 2023 | [Paper](https://arxiv.org/abs/2304.08485) [Code](https://github.com/haotian-liu/LLaVA) | 7B / 13B+ | CLIP Vision Encoder (frozen/pretrained) + linear projection to LLM (Vicuna/LLaMA); vision tokens inserted into LLM input; common late-fusion baseline | visual instruction tuning, VQA, image captioning |
+| Flamingo | arXiv 2022 | [Paper](https://arxiv.org/abs/2204.14198) | 80B | Perceiver Resampler + frozen vision encoder (e.g., CLIP-like) + frozen LLM; cross-attention for late multimodal interaction | few-shot visual question answering, captioning |
+| BLIP-2 | arXiv 2023 | [Paper](https://arxiv.org/abs/2301.12597) | — | Q-Former bridges frozen vision encoder and LLM; late alignment of visual features to text | vision-language understanding, generation |
+| CLIP | arXiv 2021 | [Paper](https://arxiv.org/abs/2103.00020) | 400M+ | Dual-encoder (Vision Transformer + Text Transformer); contrastive alignment at embedding level; classic late-fusion foundation | zero-shot image classification, retrieval |
+| CogVLM | arXiv 2023 | [Paper](https://arxiv.org/abs/2311.03079) | — | ViT Encoder + visual expert with cross-attention to LLM; deep but late-style fusion preserving LLM capabilities | cross-modal benchmarks, VQA, captioning |
+| InstructBLIP | arXiv 2023 | [Paper](https://arxiv.org/abs/2305.06500) | — | Instruction-tuned on BLIP-2 style; frozen vision encoder + LLM with late projection | general-purpose vision-language with instructions |
+| IDEFICS | — | [Hugging Face](https://huggingface.co/HuggingFaceM4/idefics) | 80B | Flamingo-inspired; late fusion with vision encoder and LLM | open-source multimodal understanding |
 
 ### 5.4 Any-to-Any / Omni NMMs
 

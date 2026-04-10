@@ -2863,7 +2863,7 @@
     ],
     "rows": [
       [
-        "**Chameleon**",
+        "Chameleon",
         "arXiv 2024",
         "[Paper](https://arxiv.org/abs/2405.09818) [Code](https://github.com/facebookresearch/chameleon)",
         "7B / 34B",
@@ -2871,7 +2871,7 @@
         "visual understanding, image/text generation, interleaved"
       ],
       [
-        "**Emu3**",
+        "Emu3",
         "arXiv 2024",
         "[Paper](https://arxiv.org/abs/2409.18869) [Code](https://github.com/baaivision/Emu3)",
         "8B",
@@ -2879,7 +2879,7 @@
         "visual understanding, visual generation"
       ],
       [
-        "**Emu3.5**",
+        "Emu3.5",
         "arXiv 2025",
         "[Paper](https://arxiv.org/abs/2510.26583) [Code](https://github.com/baaivision/Emu3.5)",
         "Large-scale (trillion+ tokens)",
@@ -2887,7 +2887,7 @@
         "interleaved generation, world modeling, any-to-image"
       ],
       [
-        "**Show-o**",
+        "Show-o",
         "arXiv 2024",
         "[Paper](https://arxiv.org/abs/2408.12528)",
         "—",
@@ -2895,7 +2895,7 @@
         "image/text generation, understanding"
       ],
       [
-        "**Transfusion**",
+        "Transfusion",
         "arXiv 2024",
         "[Paper](https://arxiv.org/abs/2408.11039)",
         "—",
@@ -2903,8 +2903,8 @@
         "mixed-modal generation"
       ],
       [
-        "**Anole**",
-        "arXiv ~2025",
+        "Anole",
+        "arXiv 2024",
         "[Paper](https://arxiv.org/abs/2412.06646) (related discussion)",
         "—",
         "Open autoregressive native multimodal; interleaved image-text generation; early token-level fusion",
@@ -2923,15 +2923,15 @@
     ],
     "rows": [
       [
-        "**LLaVA (系列，包括LLaVA-1.5 / Mini / NeXT)**",
-        "arXiv 2023-2025",
+        "LLaVA",
+        "arXiv 2023",
         "[Paper](https://arxiv.org/abs/2304.08485) [Code](https://github.com/haotian-liu/LLaVA)",
         "7B / 13B+",
         "CLIP Vision Encoder (frozen/pretrained) + linear projection to LLM (Vicuna/LLaMA); vision tokens inserted into LLM input; common late-fusion baseline",
         "visual instruction tuning, VQA, image captioning"
       ],
       [
-        "**Flamingo**",
+        "Flamingo",
         "arXiv 2022",
         "[Paper](https://arxiv.org/abs/2204.14198)",
         "80B",
@@ -2939,7 +2939,7 @@
         "few-shot visual question answering, captioning"
       ],
       [
-        "**BLIP-2**",
+        "BLIP-2",
         "arXiv 2023",
         "[Paper](https://arxiv.org/abs/2301.12597)",
         "—",
@@ -2947,7 +2947,7 @@
         "vision-language understanding, generation"
       ],
       [
-        "**CLIP**",
+        "CLIP",
         "arXiv 2021",
         "[Paper](https://arxiv.org/abs/2103.00020)",
         "400M+",
@@ -2955,7 +2955,7 @@
         "zero-shot image classification, retrieval"
       ],
       [
-        "**CogVLM**",
+        "CogVLM",
         "arXiv 2023",
         "[Paper](https://arxiv.org/abs/2311.03079)",
         "—",
@@ -2963,7 +2963,7 @@
         "cross-modal benchmarks, VQA, captioning"
       ],
       [
-        "**InstructBLIP**",
+        "InstructBLIP",
         "arXiv 2023",
         "[Paper](https://arxiv.org/abs/2305.06500)",
         "—",
@@ -2971,7 +2971,7 @@
         "general-purpose vision-language with instructions"
       ],
       [
-        "**IDEFICS**",
+        "IDEFICS",
         "—",
         "[Hugging Face](https://huggingface.co/HuggingFaceM4/idefics)",
         "80B",
