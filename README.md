@@ -37,8 +37,6 @@
 - [About This List](#about-this-list)
   - [At a Glance](#at-a-glance)
   - [Curation Principles](#curation-principles)
-  - [Related Awesome Lists](#related-awesome-lists)
-  - [Publishing Note](#publishing-note)
 - [1. Introduction & Definitions](#1-introduction-definitions)
   - [1.1 Multimodal Model Evolution Stages](#11-multimodal-model-evolution-stages)
   - [1.2 Scope & Taxonomy](#12-scope-taxonomy)
@@ -83,7 +81,7 @@
 
 ## About This List
 
-**In this section:** [At a Glance](#at-a-glance) · [Curation Principles](#curation-principles) · [Related Awesome Lists](#related-awesome-lists) · [Publishing Note](#publishing-note)
+**In this section:** [At a Glance](#at-a-glance) · [Curation Principles](#curation-principles)
 
 This repository provides a **structured, community-maintained** survey of multimodal models, covering the full evolutionary arc from early fusion methods to today's natively-trained omni-models. We emphasize **precise architectural definitions** and classification, especially for the often-conflated categories of Unified Multimodal Models (UMMs) and Native Multimodal Models (NMMs).
 
@@ -111,23 +109,6 @@ This repository provides a **structured, community-maintained** survey of multim
 
 > Classification note: for ambiguous models sitting between `MLLM`, `UMM`, and strict `NMM`, this list records the category that best matches the **training recipe and architectural coupling**, not just the paper title.
 
-### Related Awesome Lists
-
-- [isLinXu](https://github.com/isLinXu/awesome-native-multimodal-models)
-- [John-Ge](https://github.com/John-Ge/Awesome-Native-Multimodal-Models)
-- [pliang279](https://github.com/pliang279/awesome-multimodal-ml)
-- [BradyFU](https://github.com/BradyFU/Awesome-Multimodal-Large-Language-Models)
-- [Eurus-Holmes](https://github.com/Eurus-Holmes/Awesome-Multimodal-Research)
-- [showlab](https://github.com/showlab/Awesome-Unified-Multimodal-Models)
-- [yfzhang114](https://github.com/yfzhang114/Awesome-Multimodal-Large-Language-Models)
-- [SkalskiP](https://github.com/SkalskiP/awesome-foundation-and-multimodal-models)
-- [Yutong-Zhou-cv](https://github.com/Yutong-Zhou-cv/Awesome-Multimodality)
-- [Purshow](https://github.com/Purshow/Awesome-Unified-Multimodal)
-
-### Publishing Note
-
-> Replace `your-org-or-name/awesome-multimodal-models` with your actual GitHub repository slug before publishing.
-
 <p align="right"><a href="#awesome-multimodal-models">Back to Top</a></p>
 
 ---
@@ -138,7 +119,7 @@ This repository provides a **structured, community-maintained** survey of multim
 
 ### 1.1 Multimodal Model Evolution Stages
 
-**Subtopics:** [Traditional Multimodal Models](#traditional-multimodal-models) · [Multimodal Large Language Models (MLLMs)](#multimodal-large-language-models-mllms) · [Unified Multimodal Models (UMMs)](#unified-multimodal-models-umms) · [Native Multimodal Models (NMMs)](#native-multimodal-models-nmms) · [MoE Routing in NMMs](#moe-routing-in-nmms)
+**Subtopics:** [Traditional Multimodal Models](#traditional-multimodal-models) · [Multimodal Large Language Models (MLLMs)](#multimodal-large-language-models-mllms) · [Unified Multimodal Models (UMMs)](#unified-multimodal-models-umms) · [Native Multimodal Models (NMMs)](#native-multimodal-models-nmms)
 
 We use the following **precise, architecture-first definitions** throughout this list. Understanding these distinctions is critical for correctly classifying modern models.
 
@@ -213,15 +194,6 @@ Each modality is first processed by a **dedicated unimodal component** (e.g., a 
 - Cross-modal interaction at deeper layers
 - More modality-specific parameters
 - Examples: Models with jointly-trained vision encoders → decoder interaction
-
-#### MoE Routing in NMMs
-
-<img src="https://img.shields.io/badge/Routing-MoE-6b21a8?style=flat-square" alt="MoE routing"> <img src="https://img.shields.io/badge/Variants-Modality--Agnostic%20%7C%20Modality--Aware-7e22ce?style=flat-square" alt="MoE variants">
-
-| Routing Type | Description | Training |
-|---|---|---|
-| **Modality-Agnostic** | Learned router; decides expert assignment per token regardless of modality type | Jointly learned with model |
-| **Modality-Aware** | Pre-defined rules route vision tokens vs. text tokens to dedicated expert sets | Rule-based, modality type as input |
 
 ### 1.2 Scope & Taxonomy
 

@@ -32,26 +32,6 @@
             }
           ],
           "subsections": []
-        },
-        {
-          "title": "Related Awesome Lists",
-          "blocks": [
-            {
-              "type": "markdown",
-              "text": "- [isLinXu](https://github.com/isLinXu/awesome-native-multimodal-models)\n- [John-Ge](https://github.com/John-Ge/Awesome-Native-Multimodal-Models)\n- [pliang279](https://github.com/pliang279/awesome-multimodal-ml)\n- [BradyFU](https://github.com/BradyFU/Awesome-Multimodal-Large-Language-Models)\n- [Eurus-Holmes](https://github.com/Eurus-Holmes/Awesome-Multimodal-Research)\n- [showlab](https://github.com/showlab/Awesome-Unified-Multimodal-Models)\n- [yfzhang114](https://github.com/yfzhang114/Awesome-Multimodal-Large-Language-Models)\n- [SkalskiP](https://github.com/SkalskiP/awesome-foundation-and-multimodal-models)\n- [Yutong-Zhou-cv](https://github.com/Yutong-Zhou-cv/Awesome-Multimodality)\n- [Purshow](https://github.com/Purshow/Awesome-Unified-Multimodal)"
-            }
-          ],
-          "subsections": []
-        },
-        {
-          "title": "Publishing Note",
-          "blocks": [
-            {
-              "type": "markdown",
-              "text": "> Replace `your-org-or-name/awesome-multimodal-models` with your actual GitHub repository slug before publishing."
-            }
-          ],
-          "subsections": []
         }
       ]
     },
@@ -101,19 +81,6 @@
                 {
                   "type": "markdown",
                   "text": "<img src=\"https://img.shields.io/badge/Category-NMM-b91c1c?style=flat-square\" alt=\"NMM category\"> <img src=\"https://img.shields.io/badge/Constraint-Trained%20from%20Scratch-991b1b?style=flat-square\" alt=\"Trained from scratch\">\n> *Jointly trained from scratch — no pretrained backbone*\n\n**The strictest category.** NMMs are trained **jointly from scratch on all modalities** — they do **not** rely on any pretrained LLM or pretrained vision encoder as initialization. All parameters are learned end-to-end from raw multimodal data.\n\nKey characteristics:\n- ✅ No pretrained LLM backbone\n- ✅ No pretrained vision encoder\n- ✅ All components jointly trained from scratch\n- ✅ Input: text tokens + image patches/tokens\n- ✅ Output: text (understanding focus; generation optional)\n\nNMMs are further divided by **fusion architecture**:\n\n##### NMM — Early Fusion\nMultimodal interaction begins **from the first layer**. A **single Transformer decoder** processes tokenized text and continuous/discrete image patches together, with **minimal modality-specific parameters** (only a linear patchify layer for images). No separate image encoder is maintained.\n\n- Single unified Transformer (decoder-only)\n- Continuous image patches or minimal discrete tokenization\n- Modality interaction from layer 1\n- Near-zero modality-specific parameters (excluding linear patch embed)\n- Examples: **Chameleon**, **Emu3** (if trained from scratch), **Transfusion**\n\n##### NMM — Late Fusion\nEach modality is first processed by a **dedicated unimodal component** (e.g., a vision tower or image encoder), but these components are **jointly trained from scratch** (not pretrained). Cross-modal interaction occurs at **deeper layers**.\n\n- Separate unimodal processing stages (trained from scratch)\n- Cross-modal interaction at deeper layers\n- More modality-specific parameters\n- Examples: Models with jointly-trained vision encoders → decoder interaction"
-                }
-              ]
-            },
-            {
-              "title": "MoE Routing in NMMs",
-              "blocks": [
-                {
-                  "type": "markdown",
-                  "text": "<img src=\"https://img.shields.io/badge/Routing-MoE-6b21a8?style=flat-square\" alt=\"MoE routing\"> <img src=\"https://img.shields.io/badge/Variants-Modality--Agnostic%20%7C%20Modality--Aware-7e22ce?style=flat-square\" alt=\"MoE variants\">"
-                },
-                {
-                  "type": "table",
-                  "ref": "1-introduction-definitions.11-multimodal-model-evolution-stages.moe-routing-in-nmms.table3"
                 }
               ]
             }
