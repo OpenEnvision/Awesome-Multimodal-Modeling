@@ -34,83 +34,48 @@
 <details open>
 <summary><strong>Browse the list</strong></summary>
 
-- [Awesome Multimodal Modeling](#awesome-multimodal-modeling)
-  - [Table of Contents](#table-of-contents)
-  - [About This List](#about-this-list)
-    - [At a Glance](#at-a-glance)
-    - [Curation Principles](#curation-principles)
-  - [1. Introduction \& Definitions](#1-introduction--definitions)
-    - [1.1 Multimodal Model Evolution Stages](#11-multimodal-model-evolution-stages)
-      - [Traditional Multimodal Models](#traditional-multimodal-models)
-      - [Multimodal Large Language Models (MLLMs)](#multimodal-large-language-models-mllms)
-      - [Unified Multimodal Models (UMMs)](#unified-multimodal-models-umms)
-      - [Native Multimodal Models (NMMs)](#native-multimodal-models-nmms)
-        - [NMM — Early Fusion](#nmm--early-fusion)
-        - [NMM — Late Fusion](#nmm--late-fusion)
-    - [1.2 Scope \& Taxonomy](#12-scope--taxonomy)
-    - [1.3 Architecture Diagrams](#13-architecture-diagrams)
-  - [2. Traditional Multimodal Models](#2-traditional-multimodal-models)
-    - [2.1 Multimodel Representations \& Alignment](#21-multimodel-representations--alignment)
-      - [Multimodal Representations](#multimodal-representations)
-      - [Multimodal Fusion](#multimodal-fusion)
-      - [Multimodal Alignment](#multimodal-alignment)
-    - [2.2 Multimodal Pretraining](#22-multimodal-pretraining)
-  - [3. Multimodal Large Language Models (MLLMs)](#3-multimodal-large-language-models-mllms)
-    - [3.1 Multimodal Instruction Tuning](#31-multimodal-instruction-tuning)
-    - [3.2 Foundation MLLMs](#32-foundation-mllms)
-  - [4. Unified Multimodal Models (UMMs)](#4-unified-multimodal-models-umms)
-    - [4.1 Taxonomy by Generation Paradigm](#41-taxonomy-by-generation-paradigm)
-      - [Diffusion-Based UMMs](#diffusion-based-umms)
-      - [Autoregressive (AR) UMMs – Pixel Encoding](#autoregressive-ar-umms--pixel-encoding)
-      - [Autoregressive (AR) UMMs – Semantic Encoding](#autoregressive-ar-umms--semantic-encoding)
-      - [Hybrid AR + Diffusion UMMs](#hybrid-ar--diffusion-umms)
-    - [4.2 Any-to-Any / Omni Extensions](#42-any-to-any--omni-extensions)
-  - [5. Native Multimodal Models (NMMs)](#5-native-multimodal-models-nmms)
-    - [5.1 Foundational Components](#51-foundational-components)
-      - [Design Analyses \& Scaling Laws](#design-analyses--scaling-laws)
-      - [Image \& Video Tokenizers](#image--video-tokenizers)
-        - [Discrete Tokenizers (VQ-Family)](#discrete-tokenizers-vq-family)
-        - [Continuous Tokenizers (VAE-Family)](#continuous-tokenizers-vae-family)
-        - [Text-Aligned / Semantic Tokenizers](#text-aligned--semantic-tokenizers)
-    - [5.2 Early Fusion NMMs](#52-early-fusion-nmms)
-    - [5.3 Late Fusion NMMs](#53-late-fusion-nmms)
-    - [5.4 MoE-Based NMMs](#54-moe-based-nmms)
-      - [Modality-Agnostic Routing (Learned Router)](#modality-agnostic-routing-learned-router)
-      - [Modality-Aware Routing (Pre-defined Rules)](#modality-aware-routing-pre-defined-rules)
-    - [5.5 Advanced NMMs](#55-advanced-nmms)
-      - [Omni Models (audio + video + image + text)](#omni-models-audio--video--image--text)
-      - [Any-to-Any Generation](#any-to-any-generation)
-      - [Hybrid AR + Diffusion NMMs](#hybrid-ar--diffusion-nmms)
-  - [6. Post-Training, Alignment \& Analysis](#6-post-training-alignment--analysis)
-    - [6.1 Multimodal Instruction Tuning \& SFT](#61-multimodal-instruction-tuning--sft)
-    - [6.2 Multimodal RLHF \& Preference Alignment](#62-multimodal-rlhf--preference-alignment)
-    - [6.3 Hallucination Mitigation \& Safety](#63-hallucination-mitigation--safety)
-    - [6.4 Individual Analysis Papers](#64-individual-analysis-papers)
-  - [7. Benchmark \& Dataset](#7-benchmark--dataset)
-    - [7.1 Multimodal Understanding](#71-multimodal-understanding)
-      - [Benchmarks](#benchmarks)
-      - [Datasets](#datasets)
-    - [7.2 Text-to-Image](#72-text-to-image)
-      - [Benchmarks](#benchmarks-1)
-      - [Datasets](#datasets-1)
-    - [7.3 Image Editing](#73-image-editing)
-      - [Benchmarks](#benchmarks-2)
-      - [Datasets](#datasets-2)
-    - [7.4 Interleaved Image-Text](#74-interleaved-image-text)
-      - [Benchmarks](#benchmarks-3)
-      - [Datasets](#datasets-3)
-    - [7.5 Other Text+Image-to-Image](#75-other-textimage-to-image)
-      - [Benchmarks](#benchmarks-4)
-      - [Datasets](#datasets-4)
-  - [8. Resources](#8-resources)
-    - [8.1 Related Awesome Lists](#81-related-awesome-lists)
-    - [8.2 Slides \& Survey Papers](#82-slides--survey-papers)
-    - [8.3 Code Repositories \& Tools](#83-code-repositories--tools)
-  - [How to Contribute](#how-to-contribute)
-    - [Validation Rules](#validation-rules)
-    - [Entry Format](#entry-format)
-  - [Citation](#citation)
-  - [License](#license)
+- [About This List](#about-this-list)
+  - [At a Glance](#at-a-glance)
+  - [Curation Principles](#curation-principles)
+- [1. Introduction & Definitions](#1-introduction-definitions)
+  - [1.1 Multimodal Model Evolution Stages](#11-multimodal-model-evolution-stages)
+  - [1.2 Scope & Taxonomy](#12-scope-taxonomy)
+  - [1.3 Architecture Diagrams](#13-architecture-diagrams)
+- [2. Traditional Multimodal Models](#2-traditional-multimodal-models)
+  - [2.1 Multimodel Representations & Alignment](#21-multimodel-representations-alignment)
+  - [2.2 Multimodal Pretraining](#22-multimodal-pretraining)
+- [3. Multimodal Large Language Models (MLLMs)](#3-multimodal-large-language-models-mllms)
+  - [3.1 Multimodal Instruction Tuning](#31-multimodal-instruction-tuning)
+  - [3.2 Foundation MLLMs](#32-foundation-mllms)
+- [4. Unified Multimodal Models (UMMs)](#4-unified-multimodal-models-umms)
+  - [4.1 Taxonomy by Generation Paradigm](#41-taxonomy-by-generation-paradigm)
+  - [4.2 Any-to-Any / Omni Extensions ](#42-any-to-any-omni-extensions)
+- [5. Native Multimodal Models (NMMs)](#5-native-multimodal-models-nmms)
+  - [5.1 Foundational Components](#51-foundational-components)
+  - [5.2 Early Fusion NMMs](#52-early-fusion-nmms)
+  - [5.3 Late Fusion NMMs](#53-late-fusion-nmms)
+  - [5.4 MoE-Based NMMs](#54-moe-based-nmms)
+  - [5.5 Advanced NMMs](#55-advanced-nmms)
+- [6. Post-Training, Alignment & Analysis](#6-post-training-alignment-analysis)
+  - [6.1 Multimodal Instruction Tuning & SFT](#61-multimodal-instruction-tuning-sft)
+  - [6.2 Multimodal RLHF & Preference Alignment](#62-multimodal-rlhf-preference-alignment)
+  - [6.3 Hallucination Mitigation & Safety](#63-hallucination-mitigation-safety)
+  - [6.4 Individual Analysis Papers](#64-individual-analysis-papers)
+- [7. Benchmark & Dataset](#7-benchmark-dataset)
+  - [7.1 Multimodal Understanding](#71-multimodal-understanding)
+  - [7.2 Text-to-Image](#72-text-to-image)
+  - [7.3 Image Editing](#73-image-editing)
+  - [7.4 Interleaved Image-Text](#74-interleaved-image-text)
+  - [7.5 Other Text+Image-to-Image](#75-other-textimage-to-image)
+- [8. Resources](#8-resources)
+  - [8.1 Related Awesome Lists](#81-related-awesome-lists)
+  - [8.2 Slides & Survey Papers](#82-slides-survey-papers)
+  - [8.3 Code Repositories & Tools](#83-code-repositories-tools)
+- [How to Contribute](#how-to-contribute)
+  - [Validation Rules](#validation-rules)
+  - [Entry Format](#entry-format)
+- [Citation](#citation)
+- [License](#license)
 
 </details>
 
@@ -329,98 +294,98 @@ Multimodal Models
 
 | Paper | Venue | Links | Notes | Task |
 |---|---|---|---|---|
-| **Identifiability Results for Multimodal Contrastive Learning** | ICLR 2023 | [Paper](https://arxiv.org/abs/) | Theoretical identifiability analysis of contrastive multimodal learning | representation learning |
-| **Unpaired Vision-Language Pre-training via Cross-Modal CutMix** | ICML 2022 | [Paper](https://arxiv.org/abs/) | Introduces CutMix-style augmentation for unpaired VLP | vision-language pretraining |
-| **Balanced Multimodal Learning via On-the-fly Gradient Modulation** | CVPR 2022 | [Paper](https://arxiv.org/abs/) | Balances modality learning via dynamic gradient reweighting | multimodal optimization |
-| **Unsupervised Voice-Face Representation Learning by Cross-Modal Prototype Contrast** | IJCAI 2021 | [Paper](https://arxiv.org/abs/) | Cross-modal prototype contrast for voice-face alignment | audio-visual representation learning |
-| **Towards a Unified Foundation Model: Jointly Pre-Training Transformers on Unpaired Images and Text** | arXiv 2021 | [Paper](https://arxiv.org/abs/) | Early unified transformer for unpaired multimodal pretraining | unified multimodal pretraining |
-| **FLAVA: A Foundational Language And Vision Alignment Model** | arXiv 2021 | [Paper](https://arxiv.org/abs/) | Unified architecture for vision-language understanding and generation | foundation multimodal model |
-| **Transformer is All You Need: Multimodal Multitask Learning with a Unified Transformer** | arXiv 2021 | [Paper](https://arxiv.org/abs/) | Single transformer for multiple multimodal tasks | multimodal multitask learning |
-| **MultiBench: Multiscale Benchmarks for Multimodal Representation Learning** | NeurIPS 2021 | [Paper](https://arxiv.org/abs/) | Benchmark suite for multimodal learning evaluation | benchmarking |
-| **Perceiver: General Perception with Iterative Attention** | ICML 2021 | [Paper](https://arxiv.org/abs/) | General-purpose architecture for high-dimensional multimodal inputs | general multimodal architecture |
-| **Learning Transferable Visual Models From Natural Language Supervision** | arXiv 2021 | [Paper](https://arxiv.org/abs/) | Contrastive vision-language pretraining at scale | vision-language contrastive learning |
-| **VinVL: Revisiting Visual Representations in Vision-Language Models** | arXiv 2021 | [Paper](https://arxiv.org/abs/) | Improved visual features for VL tasks | vision-language representation improvement |
-| **Learning Transferable Visual Models From Natural Language Supervision** | arXiv 2020 | [Paper](https://arxiv.org/abs/) | Early large-scale vision-language contrastive learning | vision-language pretraining |
-| **12-in-1: Multi-Task Vision and Language Representation Learning** | CVPR 2020 | [Paper](https://arxiv.org/abs/) | Unified multi-task learning across 12 VL tasks | multi-task learning |
-| **Watching the World Go By: Representation Learning from Unlabeled Videos** | arXiv 2020 | [Paper](https://arxiv.org/abs/) | Self-supervised video representation learning | video representation learning |
-| **Learning Video Representations using Contrastive Bidirectional Transformer** | arXiv 2019 | [Paper](https://arxiv.org/abs/) | Contrastive transformer for video representation learning | video contrastive learning |
-| **Visual Concept-Metaconcept Learning** | NeurIPS 2019 | [Paper](https://arxiv.org/abs/) | Hierarchical concept learning from visual data | concept learning |
-| **OmniNet: A Unified Architecture for Multi-modal Multi-task Learning** | arXiv 2019 | [Paper](https://arxiv.org/abs/) | Unified encoder-decoder for multimodal tasks | unified multimodal architecture |
-| **Learning Representations by Maximizing Mutual Information Across Views** | arXiv 2019 | [Paper](https://arxiv.org/abs/) | InfoMax principle for cross-view representation learning | self-supervised learning |
-| **ViCo: Word Embeddings from Visual Co-occurrences** | ICCV 2019 | [Paper](https://arxiv.org/abs/) | Learning word embeddings from visual context | vision-language embeddings |
-| **Unified Visual-Semantic Embeddings: Bridging Vision and Language With Structured Meaning Representations** | CVPR 2019 | [Paper](https://arxiv.org/abs/) | Structured embedding space for vision-language alignment | embedding learning |
-| **Multi-Task Learning of Hierarchical Vision-Language Representation** | CVPR 2019 | [Paper](https://arxiv.org/abs/) | Hierarchical representation learning across VL tasks | multi-task learning |
-| **Learning Factorized Multimodal Representations** | ICLR 2019 | [Paper](https://arxiv.org/abs/) | Factorized latent space for multimodal data | representation disentanglement |
-| **A Probabilistic Framework for Multi-view Feature Learning with Many-to-many Associations via Neural Networks** | ICML 2018 | [Paper](https://arxiv.org/abs/) | Probabilistic modeling of multi-view correspondence | multi-view learning |
-| **Do Neural Network Cross-Modal Mappings Really Bridge Modalities?** | ACL 2018 | [Paper](https://arxiv.org/abs/) | Analyzes limitations of cross-modal mapping | theoretical analysis |
-| **Learning Robust Visual-Semantic Embeddings** | ICCV 2017 | [Paper](https://arxiv.org/abs/) | Improved robustness in vision-language embeddings | embedding learning |
-| **Deep Multimodal Representation Learning from Temporal Data** | CVPR 2017 | [Paper](https://arxiv.org/abs/) | Temporal multimodal representation learning | multimodal temporal learning |
-| **Is an Image Worth More than a Thousand Words? On the Fine-Grain Semantic Differences between Visual and Linguistic Representations** | COLING 2016 | [Paper](https://arxiv.org/abs/) | Analyzes semantic gap between vision and language | representation analysis |
-| **Combining Language and Vision with a Multimodal Skip-gram Model** | NAACL 2015 | [Paper](https://arxiv.org/abs/) | Extends skip-gram with visual context | multimodal embeddings |
-| **Deep Fragment Embeddings for Bidirectional Image Sentence Mapping** | NeurIPS 2014 | [Paper](https://arxiv.org/abs/) | Fragment-level image-sentence alignment | vision-language alignment |
-| **Multimodal Learning with Deep Boltzmann Machines** | JMLR 2014 | [Paper](https://arxiv.org/abs/) | Probabilistic generative multimodal model | generative multimodal learning |
-| **Learning Grounded Meaning Representations with Autoencoders** | ACL 2014 | [Paper](https://arxiv.org/abs/) | Autoencoder-based grounded semantics | representation learning |
-| **DeViSE: A Deep Visual-Semantic Embedding Model** | NeurIPS 2013 | [Paper](https://arxiv.org/abs/) | Early deep vision-to-language embedding model | vision-language embedding |
-| **Multimodal Deep Learning** | ICML 2011 | [Paper](https://arxiv.org/abs/) | Foundational multimodal deep learning framework | multimodal deep learning |
+| Identifiability Results for Multimodal Contrastive Learning | ICLR 2023 | [Paper](https://arxiv.org/abs/) | Theoretical identifiability analysis of contrastive multimodal learning | representation learning |
+| Unpaired Vision-Language Pre-training via Cross-Modal CutMix | ICML 2022 | [Paper](https://arxiv.org/abs/) | Introduces CutMix-style augmentation for unpaired VLP | vision-language pretraining |
+| Balanced Multimodal Learning via On-the-fly Gradient Modulation | CVPR 2022 | [Paper](https://arxiv.org/abs/) | Balances modality learning via dynamic gradient reweighting | multimodal optimization |
+| Unsupervised Voice-Face Representation Learning by Cross-Modal Prototype Contrast | IJCAI 2021 | [Paper](https://arxiv.org/abs/) | Cross-modal prototype contrast for voice-face alignment | audio-visual representation learning |
+| Towards a Unified Foundation Model: Jointly Pre-Training Transformers on Unpaired Images and Text | arXiv 2021 | [Paper](https://arxiv.org/abs/) | Early unified transformer for unpaired multimodal pretraining | unified multimodal pretraining |
+| FLAVA: A Foundational Language And Vision Alignment Model | arXiv 2021 | [Paper](https://arxiv.org/abs/) | Unified architecture for vision-language understanding and generation | foundation multimodal model |
+| Transformer is All You Need: Multimodal Multitask Learning with a Unified Transformer | arXiv 2021 | [Paper](https://arxiv.org/abs/) | Single transformer for multiple multimodal tasks | multimodal multitask learning |
+| MultiBench: Multiscale Benchmarks for Multimodal Representation Learning | NeurIPS 2021 | [Paper](https://arxiv.org/abs/) | Benchmark suite for multimodal learning evaluation | benchmarking |
+| Perceiver: General Perception with Iterative Attention | ICML 2021 | [Paper](https://arxiv.org/abs/) | General-purpose architecture for high-dimensional multimodal inputs | general multimodal architecture |
+| Learning Transferable Visual Models From Natural Language Supervision | arXiv 2021 | [Paper](https://arxiv.org/abs/) | Contrastive vision-language pretraining at scale | vision-language contrastive learning |
+| VinVL: Revisiting Visual Representations in Vision-Language Models | arXiv 2021 | [Paper](https://arxiv.org/abs/) | Improved visual features for VL tasks | vision-language representation improvement |
+| Learning Transferable Visual Models From Natural Language Supervision | arXiv 2020 | [Paper](https://arxiv.org/abs/) | Early large-scale vision-language contrastive learning | vision-language pretraining |
+| 12-in-1: Multi-Task Vision and Language Representation Learning | CVPR 2020 | [Paper](https://arxiv.org/abs/) | Unified multi-task learning across 12 VL tasks | multi-task learning |
+| Watching the World Go By: Representation Learning from Unlabeled Videos | arXiv 2020 | [Paper](https://arxiv.org/abs/) | Self-supervised video representation learning | video representation learning |
+| Learning Video Representations using Contrastive Bidirectional Transformer | arXiv 2019 | [Paper](https://arxiv.org/abs/) | Contrastive transformer for video representation learning | video contrastive learning |
+| Visual Concept-Metaconcept Learning | NeurIPS 2019 | [Paper](https://arxiv.org/abs/) | Hierarchical concept learning from visual data | concept learning |
+| OmniNet: A Unified Architecture for Multi-modal Multi-task Learning | arXiv 2019 | [Paper](https://arxiv.org/abs/) | Unified encoder-decoder for multimodal tasks | unified multimodal architecture |
+| Learning Representations by Maximizing Mutual Information Across Views | arXiv 2019 | [Paper](https://arxiv.org/abs/) | InfoMax principle for cross-view representation learning | self-supervised learning |
+| ViCo: Word Embeddings from Visual Co-occurrences | ICCV 2019 | [Paper](https://arxiv.org/abs/) | Learning word embeddings from visual context | vision-language embeddings |
+| Unified Visual-Semantic Embeddings: Bridging Vision and Language With Structured Meaning Representations | CVPR 2019 | [Paper](https://arxiv.org/abs/) | Structured embedding space for vision-language alignment | embedding learning |
+| Multi-Task Learning of Hierarchical Vision-Language Representation | CVPR 2019 | [Paper](https://arxiv.org/abs/) | Hierarchical representation learning across VL tasks | multi-task learning |
+| Learning Factorized Multimodal Representations | ICLR 2019 | [Paper](https://arxiv.org/abs/) | Factorized latent space for multimodal data | representation disentanglement |
+| A Probabilistic Framework for Multi-view Feature Learning with Many-to-many Associations via Neural Networks | ICML 2018 | [Paper](https://arxiv.org/abs/) | Probabilistic modeling of multi-view correspondence | multi-view learning |
+| Do Neural Network Cross-Modal Mappings Really Bridge Modalities? | ACL 2018 | [Paper](https://arxiv.org/abs/) | Analyzes limitations of cross-modal mapping | theoretical analysis |
+| Learning Robust Visual-Semantic Embeddings | ICCV 2017 | [Paper](https://arxiv.org/abs/) | Improved robustness in vision-language embeddings | embedding learning |
+| Deep Multimodal Representation Learning from Temporal Data | CVPR 2017 | [Paper](https://arxiv.org/abs/) | Temporal multimodal representation learning | multimodal temporal learning |
+| Is an Image Worth More than a Thousand Words? On the Fine-Grain Semantic Differences between Visual and Linguistic Representations | COLING 2016 | [Paper](https://arxiv.org/abs/) | Analyzes semantic gap between vision and language | representation analysis |
+| Combining Language and Vision with a Multimodal Skip-gram Model | NAACL 2015 | [Paper](https://arxiv.org/abs/) | Extends skip-gram with visual context | multimodal embeddings |
+| Deep Fragment Embeddings for Bidirectional Image Sentence Mapping | NeurIPS 2014 | [Paper](https://arxiv.org/abs/) | Fragment-level image-sentence alignment | vision-language alignment |
+| Multimodal Learning with Deep Boltzmann Machines | JMLR 2014 | [Paper](https://arxiv.org/abs/) | Probabilistic generative multimodal model | generative multimodal learning |
+| Learning Grounded Meaning Representations with Autoencoders | ACL 2014 | [Paper](https://arxiv.org/abs/) | Autoencoder-based grounded semantics | representation learning |
+| DeViSE: A Deep Visual-Semantic Embedding Model | NeurIPS 2013 | [Paper](https://arxiv.org/abs/) | Early deep vision-to-language embedding model | vision-language embedding |
+| Multimodal Deep Learning | ICML 2011 | [Paper](https://arxiv.org/abs/) | Foundational multimodal deep learning framework | multimodal deep learning |
 
 #### Multimodal Fusion
 
 | Paper | Venue | Links | Notes | Task |
 |---|---|---|---|---|
-| **Robust Contrastive Learning against Noisy Views** | arXiv 2022 | [Paper](https://arxiv.org/abs/) | Robust contrastive learning under noisy multi-view inputs | contrastive learning |
-| **Cooperative Learning for Multi-view Analysis** | arXiv 2022 | [Paper](https://arxiv.org/abs/) | Cooperative optimization across multiple views for representation learning | multi-view learning |
-| **What Makes Multi-modal Learning Better than Single (Provably)** | NeurIPS 2021 | [Paper](https://arxiv.org/abs/) | Theoretical guarantees showing when multimodal learning improves over unimodal | theoretical analysis |
-| **Efficient Multi-Modal Fusion with Diversity Analysis** | ACMMM 2021 | [Paper](https://arxiv.org/abs/) | Fusion method emphasizing diversity-aware multimodal integration | multimodal fusion |
-| **Attention Bottlenecks for Multimodal Fusion** | NeurIPS 2021 | [Paper](https://arxiv.org/abs/) | Introduces bottleneck attention mechanism for efficient multimodal fusion | multimodal fusion |
-| **VMLoc: Variational Fusion For Learning-Based Multimodal Camera Localization** | AAAI 2021 | [Paper](https://arxiv.org/abs/) | Variational multimodal fusion for camera localization tasks | multimodal localization |
-| **Trusted Multi-View Classification** | ICLR 2021 | [Paper](https://arxiv.org/abs/) | Confidence-aware weighting for multi-view classification | multi-view classification |
-| **Deep-HOSeq: Deep Higher-Order Sequence Fusion for Multimodal Sentiment Analysis** | ICDM 2020 | [Paper](https://arxiv.org/abs/) | Higher-order sequence fusion for multimodal sentiment analysis | multimodal sentiment analysis |
-| **Removing Bias in Multi-modal Classifiers: Regularization by Maximizing Functional Entropies** | NeurIPS 2020 | [Paper](https://arxiv.org/abs/) | Entropy-based regularization to reduce modality bias | multimodal fairness/robustness |
-| **Deep Multimodal Fusion by Channel Exchanging** | NeurIPS 2020 | [Paper](https://arxiv.org/abs/) | Channel exchange mechanism for cross-modal feature interaction | multimodal fusion |
-| **What Makes Training Multi-Modal Classification Networks Hard?** | CVPR 2020 | [Paper](https://arxiv.org/abs/) | Analyzes optimization challenges in multimodal classification | theoretical/empirical analysis |
-| **Dynamic Fusion for Multimodal Data** | arXiv 2019 | [Paper](https://arxiv.org/abs/) | Adaptive fusion strategy depending on input modality quality | multimodal fusion |
-| **DeepCU: Integrating Both Common and Unique Latent Information for Multimodal Sentiment Analysis** | IJCAI 2019 | [Paper](https://arxiv.org/abs/) | Separates shared and private latent representations for fusion | multimodal sentiment analysis |
-| **Deep Multimodal Multilinear Fusion with High-order Polynomial Pooling** | NeurIPS 2019 | [Paper](https://arxiv.org/abs/) | High-order tensor/polynomial fusion for multimodal features | multimodal fusion |
-| **XFlow: Cross-modal Deep Neural Networks for Audiovisual Classification** | IEEE TNNLS 2019 | [Paper](https://arxiv.org/abs/) | Cross-modal feature exchange network for audio-visual tasks | audio-visual classification |
-| **MFAS: Multimodal Fusion Architecture Search** | CVPR 2019 | [Paper](https://arxiv.org/abs/) | Neural architecture search for optimal multimodal fusion design | architecture search |
-| **The Neuro-Symbolic Concept Learner: Interpreting Scenes, Words, and Sentences From Natural Supervision** | ICLR 2019 | [Paper](https://arxiv.org/abs/) | Neuro-symbolic model combining perception and reasoning | neuro-symbolic learning |
-| **Unifying and merging well-trained deep neural networks for inference stage** | IJCAI 2018 | [Paper](https://arxiv.org/abs/) | Model merging strategy for inference-time multimodal integration | model fusion |
-| **Efficient Low-rank Multimodal Fusion with Modality-Specific Factors** | ACL 2018 | [Paper](https://arxiv.org/abs/) | Low-rank factorization for efficient multimodal fusion | efficient fusion |
-| **Memory Fusion Network for Multi-view Sequential Learning** | AAAI 2018 | [Paper](https://arxiv.org/abs/) | Memory-based fusion across temporal multimodal sequences | sequential multimodal learning |
-| **Tensor Fusion Network for Multimodal Sentiment Analysis** | EMNLP 2017 | [Paper](https://arxiv.org/abs/) | Tensor-based full interaction modeling across modalities | multimodal sentiment analysis |
-| **Jointly Modeling Deep Video and Compositional Text to Bridge Vision and Language in a Unified Framework** | AAAI 2015 | [Paper](https://arxiv.org/abs/) | Joint modeling of video and compositional language | vision-language modeling |
-| **A co-regularized approach to semi-supervised learning with multiple views** | ICML 2005 | [Paper](https://arxiv.org/abs/) | Early multi-view co-regularization framework | multi-view semi-supervised learning |
+| Robust Contrastive Learning against Noisy Views | arXiv 2022 | [Paper](https://arxiv.org/abs/) | Robust contrastive learning under noisy multi-view inputs | contrastive learning |
+| Cooperative Learning for Multi-view Analysis | arXiv 2022 | Paper](https://arxiv.org/abs/) | Cooperative optimization across multiple views for representation learning | multi-view learning |
+| What Makes Multi-modal Learning Better than Single (Provably) | NeurIPS 2021 | Paper](https://arxiv.org/abs/) | Theoretical guarantees showing when multimodal learning improves over unimodal | theoretical analysis |
+| Efficient Multi-Modal Fusion with Diversity Analysis | ACMMM 2021 | [Paper](https://arxiv.org/abs/) | Fusion method emphasizing diversity-aware multimodal integration | multimodal fusion |
+| Attention Bottlenecks for Multimodal Fusion | NeurIPS 2021 | [Paper](https://arxiv.org/abs/) | Introduces bottleneck attention mechanism for efficient multimodal fusion | multimodal fusion |
+| VMLoc: Variational Fusion For Learning-Based Multimodal Camera Localization | AAAI 2021 | [Paper](https://arxiv.org/abs/) | Variational multimodal fusion for camera localization tasks | multimodal localization |
+| Trusted Multi-View Classification | ICLR 2021 | [Paper](https://arxiv.org/abs/) | Confidence-aware weighting for multi-view classification | multi-view classification |
+| Deep-HOSeq: Deep Higher-Order Sequence Fusion for Multimodal Sentiment Analysis | ICDM 2020 | [Paper](https://arxiv.org/abs/) | Higher-order sequence fusion for multimodal sentiment analysis | multimodal sentiment analysis |
+| Removing Bias in Multi-modal Classifiers: Regularization by Maximizing Functional Entropies | NeurIPS 2020 | [Paper](https://arxiv.org/abs/) | Entropy-based regularization to reduce modality bias | multimodal fairness/robustness |
+| Deep Multimodal Fusion by Channel Exchanging | NeurIPS 2020 | [Paper](https://arxiv.org/abs/) | Channel exchange mechanism for cross-modal feature interaction | multimodal fusion |
+| What Makes Training Multi-Modal Classification Networks Hard? | CVPR 2020 | [Paper](https://arxiv.org/abs/) | Analyzes optimization challenges in multimodal classification | theoretical/empirical analysis |
+| Dynamic Fusion for Multimodal Data | arXiv 2019 | Paper](https://arxiv.org/abs/) | Adaptive fusion strategy depending on input modality quality | multimodal fusion |
+| DeepCU: Integrating Both Common and Unique Latent Information for Multimodal Sentiment Analysis | IJCAI 2019 | [Paper](https://arxiv.org/abs/) | Separates shared and private latent representations for fusion | multimodal sentiment analysis |
+| Deep Multimodal Multilinear Fusion with High-order Polynomial Pooling | NeurIPS 2019 | [Paper](https://arxiv.org/abs/) | High-order tensor/polynomial fusion for multimodal features | multimodal fusion |
+| XFlow: Cross-modal Deep Neural Networks for Audiovisual Classification | IEEE TNNLS 2019 | [Paper](https://arxiv.org/abs/) | Cross-modal feature exchange network for audio-visual tasks | audio-visual classification |
+| MFAS: Multimodal Fusion Architecture Search | CVPR 2019 | [Paper](https://arxiv.org/abs/) | Neural architecture search for optimal multimodal fusion design | architecture search |
+| The Neuro-Symbolic Concept Learner: Interpreting Scenes, Words, and Sentences From Natural Supervision | ICLR 2019 | [Paper](https://arxiv.org/abs/) | Neuro-symbolic model combining perception and reasoning | neuro-symbolic learning |
+| Unifying and merging well-trained deep neural networks for inference stage | IJCAI 2018 | [Paper](https://arxiv.org/abs/) | Model merging strategy for inference-time multimodal integration | model fusion |
+| Efficient Low-rank Multimodal Fusion with Modality-Specific Factors | ACL 2018 | [Paper](https://arxiv.org/abs/) | Low-rank factorization for efficient multimodal fusion | efficient fusion |
+| Memory Fusion Network for Multi-view Sequential Learning | AAAI 2018 | [Paper](https://arxiv.org/abs/) | Memory-based fusion across temporal multimodal sequences | sequential multimodal learning |
+| Tensor Fusion Network for Multimodal Sentiment Analysis | EMNLP 2017 | [Paper](https://arxiv.org/abs/) | Tensor-based full interaction modeling across modalities | multimodal sentiment analysis |
+| Jointly Modeling Deep Video and Compositional Text to Bridge Vision and Language in a Unified Framework | AAAI 2015 | [Paper](https://arxiv.org/abs/) | Joint modeling of video and compositional language | vision-language modeling |
+| A co-regularized approach to semi-supervised learning with multiple views | ICML 2005 | [Paper](https://arxiv.org/abs/) | Early multi-view co-regularization framework | multi-view semi-supervised learning |
 
 #### Multimodal Alignment
 
 | Strategy | Description | Representative Work |
 |---|---|---|
-| **Reconsidering Representation Alignment for Multi-view Clustering** | Revisits representation alignment objectives for multi-view clustering and consistency across views | CVPR 2021 |
-| **CoMIR: Contrastive Multimodal Image Representation for Registration** | Contrastive learning framework for aligning multimodal images in registration tasks | NeurIPS 2020 |
-| **Multimodal Transformer for Unaligned Multimodal Language Sequences** | Transformer-based alignment for unaligned multimodal sequential data | ACL 2019 |
-| **Temporal Cycle-Consistency Learning** | Learns cross-modal temporal alignment via cycle-consistency constraints | CVPR 2019 |
-| **See, Hear, and Read: Deep Aligned Representations** | Learns aligned representations across vision, audio, and language modalities | arXiv 2017 |
-| **On Deep Multi-View Representation Learning** | Theoretical and empirical study of deep multi-view representation learning | ICML 2015 |
-| **Unsupervised Alignment of Natural Language Instructions with Video Segments** | Aligns language instructions with corresponding video segments without supervision | AAAI 2014 |
-| **Multimodal Alignment of Videos** | Early framework for aligning multiple modalities in video understanding | ACM MM 2014 |
-| **Deep Canonical Correlation Analysis** | Deep extension of CCA for learning correlated representations across views | ICML 2013 |
+| Reconsidering Representation Alignment for Multi-view Clustering | Revisits representation alignment objectives for multi-view clustering and consistency across views | CVPR 2021 |
+| CoMIR: Contrastive Multimodal Image Representation for Registration | Contrastive learning framework for aligning multimodal images in registration tasks | NeurIPS 2020 |
+| Multimodal Transformer for Unaligned Multimodal Language Sequences | Transformer-based alignment for unaligned multimodal sequential data | ACL 2019 |
+| Temporal Cycle-Consistency Learning | Learns cross-modal temporal alignment via cycle-consistency constraints | CVPR 2019 |
+| See, Hear, and Read: Deep Aligned Representations | Learns aligned representations across vision, audio, and language modalities | arXiv 2017 |
+| On Deep Multi-View Representation Learning | Theoretical and empirical study of deep multi-view representation learning | ICML 2015 |
+| Unsupervised Alignment of Natural Language Instructions with Video Segments | Aligns language instructions with corresponding video segments without supervision | AAAI 2014 |
+| Multimodal Alignment of Videos | Early framework for aligning multiple modalities in video understanding | ACM MM 2014 |
+| Deep Canonical Correlation Analysis | Deep extension of CCA for learning correlated representations across views | ICML 2013 |
 
 ### 2.2 Multimodal Pretraining
 
 | Paper | Venue | Links | Notes | Task |
 |---|---|---|---|---|
-| **Align before Fuse: Vision and Language Representation Learning with Momentum Distillation** | NeurIPS 2021 Spotlight | [Paper](https://arxiv.org/abs/) | Momentum distillation for aligning vision-language representations before fusion | vision-language pretraining |
-| **Less is More: ClipBERT for Video-and-Language Learning via Sparse Sampling** | CVPR 2021 | [Paper](https://arxiv.org/abs/) | Sparse frame sampling for efficient video-language pretraining | video-language pretraining |
-| **Transformer is All You Need: Multimodal Multitask Learning with a Unified Transformer** | arXiv 2021 | [Paper](https://arxiv.org/abs/) | Unified transformer for multitask multimodal learning | unified multimodal pretraining |
-| **Large-Scale Adversarial Training for Vision-and-Language Representation Learning** | NeurIPS 2020 | [Paper](https://arxiv.org/abs/) | Adversarial training improves robustness of vision-language representations | robust multimodal pretraining |
-| **Vokenization: Improving Language Understanding with Contextualized, Visual-Grounded Supervision** | EMNLP 2020 | [Paper](https://arxiv.org/abs/) | Grounds language tokens in visual context via voken supervision | vision-grounded language modeling |
-| **Integrating Multimodal Information in Large Pretrained Transformers** | ACL 2020 | [Paper](https://arxiv.org/abs/) | Injects multimodal signals into large pretrained transformer architectures | multimodal transformer pretraining |
-| **VL-BERT: Pre-training of Generic Visual-Linguistic Representations** | arXiv 2019 | [Paper](https://arxiv.org/abs/) | Joint vision-language BERT-style pretraining | vision-language pretraining |
-| **VisualBERT: A Simple and Performant Baseline for Vision and Language** | arXiv 2019 | [Paper](https://arxiv.org/abs/) | Early unified transformer for vision-language understanding | vision-language pretraining |
-| **ViLBERT: Pretraining Task-Agnostic Visiolinguistic Representations for Vision-and-Language Tasks** | NeurIPS 2019 | [Paper](https://arxiv.org/abs/) | Two-stream transformer for cross-modal vision-language learning | vision-language pretraining |
-| **Unicoder-VL: A Universal Encoder for Vision and Language by Cross-modal Pre-training** | arXiv 2019 | [Paper](https://arxiv.org/abs/) | Cross-modal encoder for universal vision-language representations | vision-language pretraining |
-| **LXMERT: Learning Cross-Modality Encoder Representations from Transformers** | EMNLP 2019 | [Paper](https://arxiv.org/abs/) | Cross-modality transformer encoder for vision-language reasoning | vision-language pretraining |
-| **VideoBERT: A Joint Model for Video and Language Representation Learning** | ICCV 2019 | [Paper](https://arxiv.org/abs/) | Joint discrete token modeling for video and language | video-language pretraining |
+| Align before Fuse: Vision and Language Representation Learning with Momentum Distillation | NeurIPS 2021 Spotlight | [Paper](https://arxiv.org/abs/) | Momentum distillation for aligning vision-language representations before fusion | vision-language pretraining |
+| Less is More: ClipBERT for Video-and-Language Learning via Sparse Sampling | CVPR 2021 | [Paper](https://arxiv.org/abs/) | Sparse frame sampling for efficient video-language pretraining | video-language pretraining |
+| Transformer is All You Need: Multimodal Multitask Learning with a Unified Transformer | arXiv 2021 | [Paper](https://arxiv.org/abs/) | Unified transformer for multitask multimodal learning | unified multimodal pretraining |
+| Large-Scale Adversarial Training for Vision-and-Language Representation Learning | NeurIPS 2020 | [Paper](https://arxiv.org/abs/) | Adversarial training improves robustness of vision-language representations | robust multimodal pretraining |
+| Vokenization: Improving Language Understanding with Contextualized, Visual-Grounded Supervision | EMNLP 2020 | [Paper](https://arxiv.org/abs/) | Grounds language tokens in visual context via voken supervision | vision-grounded language modeling |
+| Integrating Multimodal Information in Large Pretrained Transformers | ACL 2020 | [Paper](https://arxiv.org/abs/) | Injects multimodal signals into large pretrained transformer architectures | multimodal transformer pretraining |
+| VL-BERT: Pre-training of Generic Visual-Linguistic Representations | arXiv 2019 | [Paper](https://arxiv.org/abs/) | Joint vision-language BERT-style pretraining | vision-language pretraining |
+| VisualBERT: A Simple and Performant Baseline for Vision and Language | arXiv 2019 | [Paper](https://arxiv.org/abs/) | Early unified transformer for vision-language understanding | vision-language pretraining |
+| ViLBERT: Pretraining Task-Agnostic Visiolinguistic Representations for Vision-and-Language Tasks | NeurIPS 2019 | [Paper](https://arxiv.org/abs/) | Two-stream transformer for cross-modal vision-language learning | vision-language pretraining |
+| Unicoder-VL: A Universal Encoder for Vision and Language by Cross-modal Pre-training | arXiv 2019 | [Paper](https://arxiv.org/abs/) | Cross-modal encoder for universal vision-language representations | vision-language pretraining |
+| LXMERT: Learning Cross-Modality Encoder Representations from Transformers | EMNLP 2019 | [Paper](https://arxiv.org/abs/) | Cross-modality transformer encoder for vision-language reasoning | vision-language pretraining |
+| VideoBERT: A Joint Model for Video and Language Representation Learning | ICCV 2019 | [Paper](https://arxiv.org/abs/) | Joint discrete token modeling for video and language | video-language pretraining |
 
 <p align="right"><a href="#awesome-multimodal-models">Back to Top</a></p>
 
