@@ -648,7 +648,7 @@
               "blocks": [
                 {
                   "type": "table",
-                  "ref": "7-dataset.multimodal-understanding.table45"
+                  "ref": "7-dataset.multimodal-understanding.table45bench"
                 }
               ]
             },
@@ -672,7 +672,7 @@
               "blocks": [
                 {
                   "type": "table",
-                  "ref": "7-dataset.text-to-image.table46"
+                  "ref": "7-dataset.text-to-image.table46bench"
                 }
               ]
             },
@@ -696,7 +696,7 @@
               "blocks": [
                 {
                   "type": "table",
-                  "ref": "7-dataset.image-editing.table47"
+                  "ref": "7-dataset.image-editing.table47bench"
                 }
               ]
             },
@@ -720,7 +720,7 @@
               "blocks": [
                 {
                   "type": "table",
-                  "ref": "7-dataset.interleaved-image-text.table48"
+                  "ref": "7-dataset.interleaved-image-text.table48bench"
                 }
               ]
             },
@@ -744,7 +744,7 @@
               "blocks": [
                 {
                   "type": "table",
-                  "ref": "7-dataset.other-textimage-to-image.table54"
+                  "ref": "7-dataset.other-textimage-to-image.table54bench"
                 }
               ]
             },
