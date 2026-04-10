@@ -495,7 +495,7 @@ Multimodal Models
 
 ### 4.1 Taxonomy by Generation Paradigm
 
-**Subtopics:** [Diffusion-Based UMMs](#diffusion-based-umms) · [Autoregressive (AR) UMMs – Pixel Encoding](#autoregressive-ar-umms-pixel-encoding) · [Autoregressive (AR) UMMs – Semantic Encoding](#autoregressive-ar-umms-semantic-encoding) · [Hybrid AR + Diffusion UMMs](#hybrid-ar-diffusion-umms)
+**Subtopics:** [Diffusion-Based UMMs](#diffusion-based-umms) · [Autoregressive (AR) UMMs](#autoregressive-ar-umms) · [Hybrid (AR + Diffusion) UMMs](#hybrid-ar-diffusion-umms)
 
 Unified models are categorized according to their core generation mechanism for visual output (while supporting strong multimodal understanding). This taxonomy highlights trade-offs in fidelity, reasoning, efficiency, and training stability.
 
@@ -511,7 +511,9 @@ Unified models are categorized according to their core generation mechanism for 
 | Lavida-O | arXiv 2025 | [Paper](https://arxiv.org/abs/2509.19244) [Code](https://github.com/adobe-research/LaVida-O) | Elastic Large Masked Diffusion | Elastic masked diffusion for U+G | visual understanding, visual generation |
 | UniModel | arXiv 2025 | [Paper](https://arxiv.org/abs/2511.16917) | Visual-Only MMDiT Framework | Visual-only unified multimodal U+G | visual understanding, visual generation |
 
-#### Autoregressive (AR) UMMs – Pixel Encoding
+#### Autoregressive (AR) UMMs
+
+##### Pixel Encoding
 
 | Model | Venue | Links | Modalities | Notes | Task |
 |---|---|---|---|---|---|
@@ -531,11 +533,10 @@ Unified models are categorized according to their core generation mechanism for 
 | Uni-X | ArXiv 2025 | [Paper](https://arxiv.org/abs/2509.24365) [Code](https://github.com/CURRENTF/Uni-X) | image + text | Two-end-separated architecture mitigating modality conflict | visual understanding, visual generation |
 | Emu3.5 | Nature 2026 | [Paper](https://arxiv.org/abs/2510.26583) [Code](https://github.com/baaivision/Emu3.5) | image + text | Native multimodal world learner; next-token only | visual understanding, visual generation |
 
-#### Autoregressive (AR) UMMs – Semantic Encoding
+##### Semantic Encoding
 
 | Title | Venue | Links | Focus | Task |
 |---|---|---|---|---|
-| MammothModa2: A Unified AR-Diffusion Framework for Multimodal Understanding and Generation | arXiv 2025 | [Paper](https://arxiv.org/abs/2511.xxxxx) [Code](https://github.com/xxx/MammothModa2) | Unified AR-Diffusion framework | visual understanding, visual generation |
 | Ming-UniVision: Joint Image Understanding and Generation with a Unified Continuous Tokenizer | arXiv 2025 | [Paper](https://arxiv.org/abs/2510.06590) [Code](https://github.com/inclusionAI/Ming-UniVision) | Unified continuous tokenizer for joint understanding and generation | visual understanding, visual generation |
 | Bifrost-1: Bridging Multimodal LLMs and Diffusion Models with Patch-level CLIP Latents | arXiv 2025 | [Paper](https://arxiv.org/abs/2508.05954) [Code](https://github.com/xxx/Bifrost-1) | Bridging MLLMs and diffusion models via patch-level CLIP latents | visual understanding, visual generation |
 | Qwen-Image Technical Report | arXiv 2025 | [Paper](https://arxiv.org/abs/2508.xxxxx) [Code](https://github.com/Qwen/Qwen-Image) | High-quality image generation with strong text rendering | visual generation |
@@ -543,34 +544,91 @@ Unified models are categorized according to their core generation mechanism for 
 | Ovis-U1 Technical Report | arXiv 2025 | [Paper](https://arxiv.org/abs/2506.23044) [Code](https://github.com/xxx/Ovis-U1) | 3B unified model for understanding, text-to-image and editing | visual understanding, visual generation |
 | UniCode²: Cascaded Large-scale Codebooks for Unified Multimodal Understanding and Generation | arXiv 2025 | [Paper](https://arxiv.org/abs/2506.20214) | Cascaded large-scale codebooks for unified modeling | visual understanding, visual generation |
 | OmniGen2: Exploration to Advanced Multimodal Generation | arXiv 2025 | [Paper](https://arxiv.org/abs/2506.18871) [Code](https://github.com/VectorSpaceLab/OmniGen2) | Versatile open-source unified generation model | visual generation |
-| Vision as a Dialect: Unifying Visual Understanding and Generation via Text-Aligned Representations | arXiv 2025 | [Paper](https://arxiv.org/abs/2506.18898) [Code](https://github.com/csuhan/Tar) [Demo] | Text-aligned discrete semantic representations | visual understanding, visual generation |
+| Vision as a Dialect: Unifying Visual Understanding and Generation via Text-Aligned Representations | arXiv 2025 | [Paper](https://arxiv.org/abs/2506.18898) [Code](https://github.com/csuhan/Tar) | Text-aligned discrete semantic representations | visual understanding, visual generation |
 | UniFork: Exploring Modality Alignment for Unified Multimodal Understanding and Generation | arXiv 2025 | [Paper](https://arxiv.org/abs/2506.17202) [Code](https://github.com/tliby/UniFork) | Y-shaped architecture for modality alignment | visual understanding, visual generation |
 | UniWorld: High-Resolution Semantic Encoders for Unified Visual Understanding and Generation | arXiv 2025 | [Paper](https://arxiv.org/abs/2506.xxxxx) [Code](https://github.com/xxx/UniWorld) | High-resolution semantic encoders | visual understanding, visual generation |
 | Pisces: An Auto-regressive Foundation Model for Image Understanding and Generation | arXiv 2025 | [Paper](https://arxiv.org/abs/2506.xxxxx) [Code](https://github.com/xxx/Pisces) | Auto-regressive foundation model | visual understanding, visual generation |
 | DualToken: Towards Unifying Visual Understanding and Generation with Dual Visual Vocabularies | arXiv 2025 | [Paper](https://arxiv.org/abs/2503.xxxxx) [Code](https://github.com/xxx/DualToken) | Dual visual vocabularies | visual understanding, visual generation |
-| UniTok: A Unified Tokenizer for Visual Generation and Understanding | arXiv 2025 | [Paper](https://arxiv.org/abs/2502.20321) [Code](https://github.com/xxx/UniTok) [Demo] | Unified tokenizer | visual understanding, visual generation |
-| QLIP: Text-Aligned Visual Tokenization Unifies Auto-Regressive Multimodal Understanding and Generation | arXiv 2025 | [Paper](https://arxiv.org/abs/2502.xxxxx) [Code](https://github.com/xxx/QLIP) [Demo] | Text-aligned visual tokenization | visual understanding, visual generation |
+| UniTok: A Unified Tokenizer for Visual Generation and Understanding | arXiv 2025 | [Paper](https://arxiv.org/abs/2502.20321) [Code](https://github.com/xxx/UniTok) | Unified tokenizer | visual understanding, visual generation |
+| QLIP: Text-Aligned Visual Tokenization Unifies Auto-Regressive Multimodal Understanding and Generation | arXiv 2025 | [Paper](https://arxiv.org/abs/2502.xxxxx) [Code](https://github.com/xxx/QLIP) | Text-aligned visual tokenization | visual understanding, visual generation |
 | MetaMorph: Multimodal Understanding and Generation via Instruction Tuning | arXiv 2024 | [Paper](https://arxiv.org/abs/2412.xxxxx) [Code](https://github.com/xxx/MetaMorph) | Instruction tuning for unified multimodal | visual understanding, visual generation |
 | ILLUME: Illuminating Your LLMs to See, Draw, and Self-Enhance | arXiv 2024 | [Paper](https://arxiv.org/abs/2412.xxxxx) | Self-enhancing unified see-and-draw | visual understanding, visual generation |
 | PUMA: Empowering Unified MLLM with Multi-granular Visual Generation | arXiv 2024 | [Paper](https://arxiv.org/abs/2410.xxxxx) [Code](https://github.com/xxx/PUMA) | Multi-granular visual generation | visual understanding, visual generation |
-| VILA-U: a Unified Foundation Model Integrating Visual Understanding and Generation | ICLR 2024 | [Paper](https://arxiv.org/abs/2409.xxxxx) [Code](https://github.com/xxx/VILA-U) [Demo] | Unified foundation model | visual understanding, visual generation |
-| Mini-Gemini: Mining the Potential of Multi-modality Vision Language Models | arXiv 2024 | [Paper](https://arxiv.org/abs/2403.xxxxx) [Code](https://github.com/xxx/Mini-Gemini) [Demo] | Multi-modality potential mining | visual understanding, visual generation |
+| VILA-U: a Unified Foundation Model Integrating Visual Understanding and Generation | ICLR 2024 | [Paper](https://arxiv.org/abs/2409.xxxxx) [Code](https://github.com/xxx/VILA-U) | Unified foundation model | visual understanding, visual generation |
+| Mini-Gemini: Mining the Potential of Multi-modality Vision Language Models | arXiv 2024 | [Paper](https://arxiv.org/abs/2403.xxxxx) [Code](https://github.com/xxx/Mini-Gemini) | Multi-modality potential mining | visual understanding, visual generation |
 | MM-Interleaved: Interleaved Image-Text Generative Modeling via Multi-modal Feature Synchronizer | arXiv 2024 | [Paper](https://arxiv.org/abs/2401.xxxxx) [Code](https://github.com/xxx/MM-Interleaved) | Interleaved image-text generative modeling | visual understanding, visual generation |
 | VL-GPT: A Generative Pre-trained Transformer for Vision and Language Understanding and Generation | arXiv 2023 | [Paper](https://arxiv.org/abs/2312.xxxxx) [Code](https://github.com/xxx/VL-GPT) | Generative pre-trained transformer | visual understanding, visual generation |
-| Generative Multimodal Models are In-Context Learners | CVPR 2023 | [Paper](https://arxiv.org/abs/2312.xxxxx) [Code](https://github.com/xxx/Emu2) [Demo] | In-context learning generative multimodal | visual understanding, visual generation |
+| Generative Multimodal Models are In-Context Learners | CVPR 2023 | [Paper](https://arxiv.org/abs/2312.xxxxx) [Code](https://github.com/xxx/Emu2) | In-context learning generative multimodal | visual understanding, visual generation |
 | DreamLLM: Synergistic Multimodal Comprehension and Creation | ICLR 2023 | [Paper](https://arxiv.org/abs/2309.xxxxx) [Code](https://github.com/xxx/DreamLLM) | Synergistic multimodal comprehension and creation | visual understanding, visual generation |
 | LaVIT: Unified Language-Vision Pretraining in LLM with Dynamic Discrete Visual Tokenization | ICLR 2023 | [Paper](https://arxiv.org/abs/2309.xxxxx) [Code](https://github.com/xxx/LaVIT) | Dynamic discrete visual tokenization | visual understanding, visual generation |
-| Emu: Generative Pretraining in Multimodality | ICLR 2023 | [Paper](https://arxiv.org/abs/2307.xxxxx) [Code](https://github.com/xxx/Emu) [Demo] | Generative pretraining in multimodality | visual understanding, visual generation |
+| Emu: Generative Pretraining in Multimodality | ICLR 2023 | [Paper](https://arxiv.org/abs/2307.xxxxx) [Code](https://github.com/xxx/Emu) | Generative pretraining in multimodality | visual understanding, visual generation |
 
-#### Hybrid AR + Diffusion UMMs
+##### Learnable Query Encoding
+
+| Title | Venue | Links | Focus | Task |
+|---|---|---|---|---|
+| Skywork UniPic 2.0: Building Kontext Model with Online RL for Unified Multimodal Model | arXiv 2025 | [Paper](https://arxiv.org/abs/2509.04548) | Kontext model with online RL and MetaQuery connector for unified multimodal framework | visual understanding, visual generation, editing |
+| TBAC-UniImage: Unified Understanding and Generation by Ladder-Side Diffusion Tuning | arXiv 2025 | [Paper](https://arxiv.org/abs/2508.08098) | Ladder-side diffusion tuning integrating MLLM and DiT via layer-wise alignment | visual understanding, visual generation |
+| UniLiP: Adapting CLIP for Unified Multimodal Understanding, Generation and Editing | arXiv 2025 | [Paper](https://arxiv.org/abs/2507.23278) | Adapting CLIP with unified continuous tokenizer for reconstruction, generation and editing | visual understanding, visual generation, editing |
+| OpenUni: A Simple Baseline for Unified Multimodal Understanding and Generation | arXiv 2025 | [Paper](https://arxiv.org/abs/2505.23661) [Code](https://github.com/wusize/OpenUni) | Simple baseline with learnable queries and lightweight connector bridging MLLM and diffusion | visual understanding, visual generation |
+| BLIP3-o: A Family of Fully Open Unified Multimodal Models-Architecture, Training and Dataset | arXiv 2025 | [Paper](https://arxiv.org/abs/2505.09568) | Fully open unified multimodal models with complete architecture, training recipe and datasets | visual understanding, visual generation |
+| Ming-Lite-Uni: Advancements in Unified Architecture for Natural Multimodal Interaction | arXiv 2025 | [Paper](https://arxiv.org/abs/2505.02471) | Unified visual generator and native multimodal autoregressive model for natural interaction | visual understanding, visual generation |
+| Nexus-Gen: A Unified Model for Image Understanding, Generation, and Editing | arXiv 2025 | [Paper](https://arxiv.org/abs/2504.21356) [Code](https://github.com/modelscope/Nexus-Gen) | Prefilled autoregression in shared embedding space unifying understanding, generation and editing | visual understanding, visual generation, editing |
+| Transfer between Modalities with MetaQueries | arXiv 2025 | [Paper](https://arxiv.org/abs/2504.06256) [Code](https://github.com/facebookresearch/metaquery) | Learnable MetaQueries as efficient interface between autoregressive MLLMs and diffusion models | visual understanding, visual generation |
+| SEED-X: Multimodal Models with Unified Multi-granularity Comprehension and Generation | arXiv 2024 | [Paper](https://arxiv.org/abs/2404.14396) [Code](https://github.com/AILab-CVC/SEED-X) | Unified multi-granularity visual semantics for arbitrary-size comprehension and generation | visual understanding, visual generation |
+| Making LLaMA SEE and Draw with SEED Tokenizer | ICLR 2023 | [Paper](https://arxiv.org/abs/2310.01218) [Code](https://github.com/AILab-CVC/SEED) | SEED tokenizer enabling LLaMA for scalable multimodal autoregression (see and draw) | visual understanding, visual generation |
+| Planting a SEED of Vision in Large Language Model | arXiv 2023 | [Paper](https://arxiv.org/abs/2307.08041) [Code](https://github.com/AILab-CVC/SEED) | SEED image tokenizer with 1D causal dependency and high-level semantics for LLM vision | visual understanding, visual generation |
+
+##### Hybrid Encoding (Pseduo)
+
+| Title | Venue | Links | Focus | Task |
+|---|---|---|---|---|
+| Skywork UniPic: Unified Autoregressive Modeling for Visual Understanding and Generation | arXiv 2025 | [Paper](https://arxiv.org/abs/2508.03320) [Code](https://github.com/SkyworkAI/Skywork-UniPic) | Unified autoregressive modeling with decoupled encoding for image understanding, generation and editing | visual understanding, visual generation |
+| MindOmni: Unleashing Reasoning Generation in Vision Language Models with RGPO | arXiv 2025 | [Paper](https://arxiv.org/abs/2505.13031) [Code](https://github.com/TencentARC/MindOmni) | Unified VLM with reasoning generation via Reinforcement Learning (RGPO) | multimodal understanding, reasoning generation |
+| UniFluid: Unified Autoregressive Visual Generation and Understanding with Continuous Tokens | arXiv 2025 | [Paper](https://arxiv.org/abs/2503.13436) | Unified autoregressive framework using continuous visual tokens | visual understanding, visual generation |
+| OmniMamba: Efficient and Unified Multimodal Understanding and Generation via State Space Models | arXiv 2025 | [Paper](https://arxiv.org/abs/2503.08686) [Code](https://github.com/hustvl/OmniMamba) | Efficient linear-time unified multimodal model based on Mamba (state space models) | multimodal understanding, visual generation |
+| Janus-Pro: Unified Multimodal Understanding and Generation with Data and Model Scaling | arXiv 2025 | [Paper](https://arxiv.org/abs/2501.17811) [Code](https://github.com/deepseek-ai/Janus) | Scaled-up version of Janus with improved training strategy, more data and larger model size | multimodal understanding, visual generation |
+| Janus: Decoupling Visual Encoding for Unified Multimodal Understanding and Generation | arXiv 2024 | [Paper](https://arxiv.org/abs/2410.13848) [Code](https://github.com/deepseek-ai/Janus) | Decoupling visual encoding to enable unified understanding and generation in an autoregressive framework | multimodal understanding, visual generation |
+
+##### Hybrid Encoding (Joint)
+
+| Title | Venue | Links | Focus | Task |
+|---|---|---|---|---|
+| AToken: A Unified Tokenizer for Vision | arXiv 2025 | [Paper](https://arxiv.org/abs/2509.14476) [Code](https://github.com/apple/ml-atoken) | AToken unified visual tokenizer achieving high-fidelity reconstruction and semantic understanding for images, videos and 3D | visual understanding, visual generation |
+| UniWeTok: An Unified Binary Tokenizer with Codebook Size 2128 for Unified Multimodal Large Language Model | arXiv 2026 | [Paper](https://arxiv.org/abs/2602.14178) | UniWeTok unified binary tokenizer with 2^{128} codebook, pre-post distillation and generative-aware prior for MLLMs | visual understanding, visual generation |
+| Towards Scalable Pre-training of Visual Tokenizers for Generation | arXiv 2025 | [Paper](https://arxiv.org/abs/2512.13687) [Code](https://github.com/MiniMax-AI/VTP) | VTP unified visual tokenizer pre-training framework with joint image-text contrastive, self-supervised and reconstruction losses | visual understanding, visual generation |
+| The Prism Hypothesis: Harmonizing Semantic and Pixel Representations via Unified Autoencoding | arXiv 2025 | [Paper](https://arxiv.org/abs/2512.19693) [Code](https://github.com/WeichenFan/UAE) | Prism Hypothesis and unified autoencoding (UAE) harmonizing semantic and pixel representations across modalities | visual understanding, visual generation |
+| Show-o2: Improved Native Unified Multimodal Models | arXiv 2025 | [Paper](https://arxiv.org/abs/2506.15564) [Code](https://github.com/showlab/Show-o) | Improved native unified multimodal models with autoregressive modeling and flow matching for understanding and generation | multimodal understanding and generation |
+| UniToken: Harmonizing Multimodal Understanding and Generation through Unified Visual Encoding | CVPRW 2025 | [Paper](https://arxiv.org/abs/2504.04423) [Code](https://github.com/SxJyJay/UniToken) | Unified visual encoding combining discrete and continuous representations for autoregressive multimodal models | multimodal understanding and generation |
+| VARGPT-v1.1: Improve Visual Autoregressive Large Unified Model via Iterative Instruction Tuning and Reinforcement Learning | arXiv 2025 | [Paper](https://arxiv.org/abs/2504.02949) [Code](https://github.com/VARGPT-family/VARGPT-v1.1) | Enhanced visual autoregressive unified model with iterative instruction tuning and DPO reinforcement learning | visual understanding, generation and editing |
+| ILLUME+: Illuminating Unified MLLM with Dual Visual Tokenization and Diffusion Refinement | arXiv 2025 | [Paper](https://arxiv.org/abs/2504.01934) [Code](https://github.com/illume-unified-mllm/ILLUME_plus) | Dual visual tokenization and diffusion refinement for unified multimodal large language model | multimodal understanding and generation |
+| SemHiTok: A Unified Image Tokenizer via Semantic-Guided Hierarchical Codebook for Multimodal Understanding and Generation | arXiv 2025 | [Paper](https://arxiv.org/abs/2503.06764) | Semantic-guided hierarchical codebook for unified image tokenization supporting understanding and generation | multimodal understanding and generation |
+| VARGPT: Unified Understanding and Generation in a Visual Autoregressive Multimodal Large Language Model | arXiv 2025 | [Paper](https://arxiv.org/abs/2501.12327) [Code](https://github.com/VARGPT-family/VARGPT) | Visual autoregressive framework unifying understanding and generation in a single MLLM | visual understanding and generation |
+| TokenFlow: Unified Image Tokenizer for Multimodal Understanding and Generation | CVPR 2025 | [Paper](https://arxiv.org/abs/2412.03069) [Code](https://github.com/ByteFlow-AI/TokenFlow) | Unified image tokenizer with dual-codebook architecture bridging understanding and generation | multimodal understanding and generation |
+| MUSE-VL: Modeling Unified VLM through Semantic Discrete Encoding | arXiv 2024 | [Paper](https://arxiv.org/abs/2411.17762) | Semantic discrete encoding for unified vision-language model enabling efficient multimodal understanding and generation | multimodal understanding and generation |
+
+#### Hybrid (AR + Diffusion) UMMs
+
+##### Pixel Encoding
 
 | Paper | Venue | Links | Notes | Task |
 |---|---|---|---|---|
-| **Transfusion**: Predict the Next Token and Diffuse the Next Image | ArXiv 2024 | [Paper](https://arxiv.org/abs/2408.11039) | U+G via joint AR+diffusion training | visual understanding, visual generation |
-| **Show-o**: One Single Transformer to Unify Multimodal Understanding and Generation | ArXiv 2024 | [Paper](https://arxiv.org/abs/2408.12528) [Code](https://github.com/showlab/Show-o) | Discrete+continuous tokens; AR+diffusion | visual understanding, visual generation |
-| **BLIP3-o**: A Family of Fully Open Unified Multimodal Models | ArXiv 2025 | [Paper](https://arxiv.org/abs/2505.09568) [Code](https://github.com/JiuhaiChen/BLIP3o) | BLIP successor with U+G unification (AR+Diffusion) | visual understanding, visual generation |
-| **BAGEL** | ArXiv 2025 | [Paper](https://arxiv.org/abs/2505.14683) [Code](https://github.com/ByteDance-Seed/Bagel) | AR-Diffusion framework; interleaved training for unified U+G | visual understanding, visual generation |
-| **MammothModa2** | ArXiv 2025 | [Paper](https://arxiv.org/abs/2511.18262) [Code](https://github.com/bytedance/mammothmoda) | AR-Diffusion framework for unified U+G | visual understanding, visual generation |
+| Tuna: Taming Unified Visual Representations for Native Unified Multimodal Models | arXiv 2025 | [Paper](https://arxiv.org/abs/2512.02014) [Code](https://github.com/Tuna-AI/Tuna) | Native unified multimodal model with cascaded VAE + representation encoder for unified continuous visual representations | multimodal understanding and generation |
+| LMFusion: Adapting Pretrained Language Models for Multimodal Generation | arXiv 2024 | [Paper](https://arxiv.org/abs/2412.15188) | Adapting pretrained LLMs (Llama) for multimodal generation by adding parallel diffusion modules while keeping autoregressive text modeling | multimodal understanding and generation |
+| MonoFormer: One Transformer for Both Diffusion and Autoregression | arXiv 2024 | [Paper](https://arxiv.org/abs/2409.16280) [Code](https://monoformer.github.io/) | Single shared transformer backbone that handles both autoregressive modeling and diffusion for unified multimodal tasks | visual understanding and generation |
+| Show-o: One Single Transformer to Unify Multimodal Understanding and Generation | ICLR 2025 | [Paper](https://arxiv.org/abs/2408.12528) [Code](https://github.com/showlab/Show-o) | Unified transformer combining autoregressive and discrete diffusion modeling to flexibly handle mixed-modality inputs/outputs | multimodal understanding and generation |
+| Transfusion: Predict the Next Token and Diffuse Images with One Multi-Modal Model | ICLR 2025 | [Paper](https://arxiv.org/abs/2408.11039) | Joint training of next-token prediction (AR) and diffusion in one transformer over mixed discrete/continuous multimodal sequences | visual understanding, visual generation |
+
+##### Hybrid Encoding
+
+| Paper | Venue | Links | Notes | Task |
+|---|---|---|---|---|
+| EMMA: Efficient Multimodal Understanding, Generation, and Editing with a Unified Architecture | arXiv 2025 | [Paper](https://arxiv.org/abs/2512.04810) [Code](https://github.com/umm-emma/emma) | Efficient unified architecture with autoencoders, channel-wise concatenation, shared-decoupled networks and MoE for understanding, generation and editing | multimodal understanding, generation and editing |
+| HBridge: H-Shape Bridging of Heterogeneous Experts for Unified Multimodal Understanding and Generation | arXiv 2025 | [Paper](https://arxiv.org/abs/2511.20520) | Asymmetric H-shaped architecture bridging heterogeneous experts with symmetric dense mid-layer connections for unified multimodal modeling | multimodal understanding and generation |
+| LightFusion: A Light-weighted, Double Fusion Framework for Unified Multimodal Understanding and Generation | arXiv 2025 | [Paper](https://arxiv.org/abs/2510.22946) [Code](https://github.com/LightFusion-Team/LightFusion) | Light-weighted double fusion framework that efficiently integrates pretrained vision-language and diffusion models | multimodal understanding and generation |
+| BAGEL: Emerging Properties in Unified Multimodal Pretraining | arXiv 2025 | [Paper](https://arxiv.org/abs/2505.14683) [Code](https://github.com/BAGEL-Team/BAGEL) | Open-source foundational decoder-only model pretrained on trillions of interleaved multimodal tokens supporting native understanding and generation | multimodal understanding and generation |
+| Mogao: An Omni Foundation Model for Interleaved Multi-Modal Generation | arXiv 2025 | [Paper](https://arxiv.org/abs/2505.05472) | Causal interleaved multi-modal generation framework with deep-fusion, dual vision encoders and multi-modal classifier-free guidance | interleaved multimodal generation |
+| JanusFlow: Harmonizing Autoregression and Rectified Flow for Unified Multimodal Understanding and Generation | arXiv 2024 | [Paper](https://arxiv.org/abs/2411.07975) [Code](https://github.com/DeepSeek-AI/JanusFlow) | Minimalist framework harmonizing autoregressive LLMs with rectified flow for efficient unified understanding and generation | multimodal understanding and generation |
 
 ### 4.2 Any-to-Any / Omni Extensions 
 
@@ -578,19 +636,19 @@ Models that extend unified understanding + generation beyond text and image to s
 
 | Model | Paper | Links | Notes | Task |
 |---|---|---|---|---|
-| **LongCat-Flash-Omni** | arXiv 2025 [Paper](https://arxiv.org/abs/2511.XXXX) | [Code](https://github.com/) | Efficient omni model with flash-style acceleration | any-to-any multimodal generation and understanding |
-| **Ming-Flash-Omni** | arXiv 2025 [Paper](https://arxiv.org/abs/2510.XXXX) | [Code](https://github.com/) | Sparse unified architecture for efficient multimodal modeling | any-to-any multimodal perception and generation |
-| **Qwen3-Omni** | arXiv 2025 [Paper](https://arxiv.org/abs/2509.XXXX) | [Code](https://github.com/) | Next-gen Qwen omni model with unified modality space | any-to-any multimodal understanding and generation |
-| **Ming-Omni** | arXiv 2025 [Paper](https://arxiv.org/abs/2506.XXXX) | [Code](https://github.com/) | Unified multimodal architecture for perception + generation | any-to-any multimodal tasks |
-| **M2-Omni** | arXiv 2025 [Paper](https://arxiv.org/abs/2502.XXXX) | - | Extends Omni-MLLM with broader modality support | any-to-any multimodal modeling |
-| **OmniFlow** | CVPR 2024 [Paper](https://arxiv.org/abs/2403.XXXX) | [Code](https://github.com/) | Uses rectified flows for unified multimodal generation | any-to-any generation across modalities |
-| **Spider** | arXiv 2024 [Paper](https://arxiv.org/abs/2411.XXXX) | [Code](https://github.com/) | Any-to-many multimodal LLM with flexible output heads | multimodal understanding and generation |
-| **MIO** | arXiv 2024 [Paper](https://arxiv.org/abs/2409.XXXX) | [Code](https://github.com/) | Token-level unified multimodal foundation model | any-to-any multimodal token modeling |
-| **X-VILA** | arXiv 2024 [Paper](https://arxiv.org/abs/2405.XXXX) | - | Cross-modality alignment for LLM-based multimodal systems | multimodal understanding |
-| **AnyGPT** | arXiv 2024 [Paper](https://arxiv.org/abs/2402.XXXX) | [Code](https://github.com/) | Discrete token modeling for unified multimodal generation | any-to-any multimodal generation |
-| **Video-LaVIT** | ICML 2024 [Paper](https://arxiv.org/abs/2402.XXXX) | [Code](https://github.com/) | Decoupled visual-motion tokenization for video-language modeling | video understanding and generation |
-| **Unified-IO 2** | CVPR 2023 [Paper](https://arxiv.org/abs/2312.XXXX) | [Code](https://github.com/) | Scales autoregressive multimodal models across modalities | any-to-any multimodal tasks (vision, language, audio, action) |
-| **NExT-GPT** | arXiv 2023 [Paper](https://arxiv.org/abs/2309.05519) | [Code](https://github.com/NExT-GPT/NExT-GPT) | Any-to-any; encoder+LLM+diffusion decoders | visual understanding, visual generation, omni |
+| LongCat-Flash-Omni | arXiv 2025 | [Paper](https://arxiv.org/abs/2511.00279) [Code](https://github.com/meituan-longcat/LongCat-Flash-Omni) | Efficient omni model with flash-style acceleration and real-time audio-visual interaction (560B parameters) | any-to-any multimodal generation and understanding |
+| Ming-Flash-Omni | arXiv 2025 | [Paper](https://arxiv.org/abs/2510.24821) [Code](https://github.com/inclusionAI/Ming) | Sparse unified MoE architecture (100B total, 6.1B active) for efficient multimodal perception and generation | any-to-any multimodal perception and generation |
+| Qwen3-Omni | arXiv 2025 | [Paper](https://arxiv.org/abs/2509.17765) [Code](https://github.com/QwenLM/Qwen3-Omni) | Next-gen Qwen omni model with unified modality space, maintaining SOTA across text/image/audio/video | any-to-any multimodal understanding and generation |
+| Ming-Omni | arXiv 2025 | [Paper](https://arxiv.org/abs/2506.09344) [Code](https://github.com/inclusionAI/Ming) | Unified multimodal architecture for perception + generation (images, text, audio, video) | any-to-any multimodal tasks |
+| M2-Omni | arXiv 2025 | [Paper](https://arxiv.org/abs/2502.18778) | Extends Omni-MLLM with broader modality support and competitive performance to GPT-4o | any-to-any multimodal modeling |
+| Spider | arXiv 2024 | [Paper](https://arxiv.org/abs/2411.09439) [Code](https://github.com/Layjins/Spider) | Any-to-many multimodal LLM with flexible output heads for arbitrary modality combinations | multimodal understanding and generation |
+| MIO | arXiv 2024 | [Paper](https://arxiv.org/abs/2409.17692) | Token-level unified multimodal foundation model on discrete multimodal tokens | any-to-any multimodal token modeling |
+| X-VILA | arXiv 2024 | [Paper](https://arxiv.org/abs/2405.19335) | Cross-modality alignment for LLM-based multimodal systems (image/video/audio) | multimodal understanding |
+| AnyGPT | arXiv 2024 | [Paper](https://arxiv.org/abs/2402.12226) [Code](https://github.com/AnyGPT-team/AnyGPT) | Discrete token modeling for unified multimodal generation | any-to-any multimodal generation |
+| OmniFlow | CVPR 2025 | [Paper](https://arxiv.org/abs/2412.01169) | Uses multi-modal rectified flows for any-to-any generation across modalities | any-to-any generation across modalities |
+| Video-LaVIT | ICML 2024 | [Paper](https://arxiv.org/abs/2402.03161) [Code](https://github.com/jy0205/Video-LaVIT) | Decoupled visual-motion tokenization for video-language modeling | video understanding and generation |
+| Unified-IO 2 | CVPR 2024 | [Paper](https://arxiv.org/abs/2312.17172) [Code](https://github.com/allenai/unified-io-2) | Scales autoregressive multimodal models across modalities | any-to-any multimodal tasks (vision, language, audio, action) |
+| NExT-GPT | arXiv 2023 | [Paper](https://arxiv.org/abs/2309.05519) [Code](https://github.com/NExT-GPT/NExT-GPT) | Any-to-any; encoder+LLM+diffusion decoders | visual understanding, visual generation, omni |
 
 <p align="right"><a href="#awesome-multimodal-models">Back to Top</a></p>
 

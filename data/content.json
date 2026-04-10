@@ -231,34 +231,88 @@
               "subsections": []
             },
             {
-              "title": "Autoregressive (AR) UMMs – Pixel Encoding",
+              "title": "Autoregressive (AR) UMMs",
               "blocks": [
-                {
-                  "type": "table",
-                  "ref": "4-unified-multimodal-models-umms.41-taxonomy-by-generation-paradigm.autoregressive-ar-umms-pixel-encoding.table22"
-                }
               ],
-              "subsections": []
+              "subsections": [
+                {
+                  "title": "Pixel Encoding",
+                  "blocks": [
+                    {
+                      "type": "table",
+                      "ref": "4-unified-multimodal-models-umms.41-taxonomy-by-generation-paradigm.autoregressive-ar-umms-pixel-encoding.table22"
+                    }
+                  ],
+                  "subsections": []
+                },
+                {
+                  "title": "Semantic Encoding",
+                  "blocks": [
+                    {
+                      "type": "table",
+                      "ref": "4-unified-multimodal-models-umms.41-taxonomy-by-generation-paradigm.autoregressive-ar-umms-semantic-encoding.table23"
+                    }
+                  ],
+                  "subsections": []
+                },
+                {
+                  "title": "Learnable Query Encoding",
+                  "blocks": [
+                    {
+                      "type": "table",
+                      "ref": "4-unified-multimodal-models-umms.41-taxonomy-by-generation-paradigm.autoregressive-ar-umms-learnable-query-encoding.table23a"
+                    }
+                  ],
+                  "subsections": []
+                },
+                {
+                  "title": "Hybrid Encoding (Pseduo)",
+                  "blocks": [
+                    {
+                      "type": "table",
+                      "ref": "4-unified-multimodal-models-umms.41-taxonomy-by-generation-paradigm.autoregressive-ar-umms-hybrid-encoding.table23b"
+                    }
+                  ],
+                  "subsections": []
+                },
+                {
+                  "title": "Hybrid Encoding (Joint)",
+                  "blocks": [
+                    {
+                      "type": "table",
+                      "ref": "4-unified-multimodal-models-umms.41-taxonomy-by-generation-paradigm.autoregressive-ar-umms-hybrid-encoding-joint.table23c"
+                    }
+                  ],
+                  "subsections": []
+                }
+              ]
             },
             {
-              "title": "Autoregressive (AR) UMMs – Semantic Encoding",
+              "title": "Hybrid (AR + Diffusion) UMMs",
               "blocks": [
-                {
-                  "type": "table",
-                  "ref": "4-unified-multimodal-models-umms.41-taxonomy-by-generation-paradigm.autoregressive-ar-umms-semantic-encoding.table23"
-                }
               ],
-              "subsections": []
-            },
-            {
-              "title": "Hybrid AR + Diffusion UMMs",
-              "blocks": [
+              "subsections": [
                 {
-                  "type": "table",
-                  "ref": "4-unified-multimodal-models-umms.41-taxonomy-by-generation-paradigm.hybrid-ar-diffusion.table24"
+                  "title": "Pixel Encoding",
+                  "blocks": [
+                    {
+                      "type": "table",
+                      "ref": "4-unified-multimodal-models-umms.41-taxonomy-by-generation-paradigm.hybrid-ar-diffusion-pixel-encoding.table24"
+                    }
+                  ],
+                  "subsections": []
+                },
+                {
+                  "title": "Hybrid Encoding",
+                  "blocks": [
+                    {
+                      "type": "table",
+                      "ref": "4-unified-multimodal-models-umms.41-taxonomy-by-generation-paradigm.hybrid-ar-diffusion-hybrid-encoding.table24b"
+                    }
+                  ],
+                  "subsections": []
                 }
-              ],
-              "subsections": []
+              ]
             }
           ]
         },
