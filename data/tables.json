@@ -1285,7 +1285,7 @@
       [
         "SmolVLM",
         "arXiv 2025",
-        "[HF](https://huggingface.co/HuggingFaceTB/SmolVLM-256M / 2.2B) ",
+        "[HF](https://huggingface.co/HuggingFaceTB/SmolVLM-256M) ",
         "Ultra-lightweight (256M–2.2B) projector-based series; efficient on-device video and image understanding",
         "visual understanding, efficiency"
       ],
