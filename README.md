@@ -44,59 +44,89 @@
 <details open>
 <summary><strong>Browse the list</strong></summary>
 
-- [About This List](#about-this-list)
-  - [At a Glance](#at-a-glance)
-  - [Curation Principles](#curation-principles)
-  - [Related Awesome Lists](#related-awesome-lists)
-  - [Publishing Note](#publishing-note)
-- [1. Introduction & Definitions](#1-introduction-definitions)
-  - [1.1 Multimodal Model Evolution Stages](#11-multimodal-model-evolution-stages)
-  - [1.2 Scope & Taxonomy](#12-scope-taxonomy)
-  - [Tag Legend](#tag-legend)
-  - [1.3 Timeline & Landmark Models (2017–2026)](#13-timeline-landmark-models-2017-2026)
-  - [1.4 Architecture Diagrams](#14-architecture-diagrams)
-- [2. Traditional Multimodal Models](#2-traditional-multimodal-models)
-  - [2.1 Core Concepts & Early Works](#21-core-concepts-early-works)
-  - [2.2 Multimodal Pretraining Foundations](#22-multimodal-pretraining-foundations)
-- [3. Multimodal Large Language Models (MLLMs)](#3-multimodal-large-language-models-mllms)
-  - [Multimodal Instruction Tuning](#multimodal-instruction-tuning)
-  - [Foundation MLLMs](#foundation-mllms)
-  - [Multimodal In-Context Learning & Chain-of-Thought](#multimodal-in-context-learning-chain-of-thought)
-- [4. Unified Multimodal Models (UMMs)](#4-unified-multimodal-models-umms)
-  - [4.1 Text-and-Image Unified Models](#41-text-and-image-unified-models)
-  - [4.2 Any-to-Any Multimodal models](#42-any-to-any-multimodal-models)
-  - [4.3 Benchmark for Evaluation](#43-benchmark-for-evaluation)
-- [5. Native Multimodal Models (NMMs)](#5-native-multimodal-models-nmms)
-  - [5.1 Foundational Components](#51-foundational-components)
-  - [5.2 Early Fusion NMMs](#52-early-fusion-nmms)
-  - [5.3 Late Fusion NMMs](#53-late-fusion-nmms)
-  - [5.4 MoE-Based NMMs](#54-moe-based-nmms)
-  - [5.5 Advanced NMMs](#55-advanced-nmms)
-- [6. Post-Training, Alignment & Analysis](#6-post-training-alignment-analysis)
-  - [Multimodal Instruction Tuning & SFT](#multimodal-instruction-tuning-sft)
-  - [Multimodal RLHF & Preference Alignment](#multimodal-rlhf-preference-alignment)
-  - [Hallucination Mitigation & Safety](#hallucination-mitigation-safety)
-  - [Individual Analysis Papers <kbd>Analysis</kbd>](#individual-analysis-papers-analysis)
-- [7. Dataset](#7-dataset)
-  - [Multimodal Understanding](#multimodal-understanding)
-  - [Text-to-Image](#text-to-image)
-  - [Image Editing](#image-editing)
-  - [Interleaved Image-Text](#interleaved-image-text)
-  - [Other Text+Image-to-Image](#other-textimage-to-image)
-- [8. Applications, Extensions & Future Directions](#8-applications-extensions-future-directions)
-  - [Robotics & Embodied AI](#robotics-embodied-ai)
-  - [Autonomous Driving](#autonomous-driving)
-  - [Healthcare & Medical Imaging](#healthcare-medical-imaging)
-  - [Open Challenges & Future Directions](#open-challenges-future-directions)
-- [9. Resources](#9-resources)
-  - [Related Awesome Lists](#related-awesome-lists-1)
-  - [Slides & Survey Papers](#slides-survey-papers)
-  - [Code Repositories & Tools](#code-repositories-tools)
-- [How to Contribute](#how-to-contribute)
-  - [Validation Rules](#validation-rules)
-  - [Entry Format](#entry-format)
-- [Citation](#citation)
-- [License](#license)
+- [Awesome Multimodal Models](#awesome-multimodal-models)
+  - [Table of Contents](#table-of-contents)
+  - [About This List](#about-this-list)
+    - [At a Glance](#at-a-glance)
+    - [Curation Principles](#curation-principles)
+    - [Related Awesome Lists](#related-awesome-lists)
+    - [Publishing Note](#publishing-note)
+  - [1. Introduction \& Definitions](#1-introduction--definitions)
+    - [1.1 Multimodal Model Evolution Stages](#11-multimodal-model-evolution-stages)
+      - [Traditional Multimodal Models](#traditional-multimodal-models)
+      - [Multimodal Large Language Models (MLLMs)](#multimodal-large-language-models-mllms)
+      - [Unified Multimodal Models (UMMs)](#unified-multimodal-models-umms)
+      - [Native Multimodal Models (NMMs)](#native-multimodal-models-nmms)
+        - [NMM — Early Fusion](#nmm--early-fusion)
+        - [NMM — Late Fusion](#nmm--late-fusion)
+      - [MoE Routing in NMMs](#moe-routing-in-nmms)
+    - [1.2 Scope \& Taxonomy](#12-scope--taxonomy)
+    - [Tag Legend](#tag-legend)
+    - [1.3 Timeline \& Landmark Models (2017–2026)](#13-timeline--landmark-models-20172026)
+      - [Wave 1 — Tokenizer Renaissance (2017–2021)](#wave-1--tokenizer-renaissance-20172021)
+      - [Wave 2 — Foundation Pretraining (2022–2023)](#wave-2--foundation-pretraining-20222023)
+      - [Wave 3 — Early-Fusion AR (2023–2024)](#wave-3--early-fusion-ar-20232024)
+      - [Wave 4 — Decoupled Semantic AR (2024–2025)](#wave-4--decoupled-semantic-ar-20242025)
+      - [Wave 5 — Omni + RL Alignment (2025–2026)](#wave-5--omni--rl-alignment-20252026)
+    - [1.4 Architecture Diagrams](#14-architecture-diagrams)
+  - [2. Traditional Multimodal Models](#2-traditional-multimodal-models)
+    - [2.1 Core Concepts \& Early Works](#21-core-concepts--early-works)
+      - [Multimodal Representations \& Alignment](#multimodal-representations--alignment)
+      - [Contrastive Learning](#contrastive-learning)
+      - [Multimodal Fusion Strategies](#multimodal-fusion-strategies)
+    - [2.2 Multimodal Pretraining Foundations](#22-multimodal-pretraining-foundations)
+      - [Generative Pretraining](#generative-pretraining)
+      - [Unified Backbones \& Robustness](#unified-backbones--robustness)
+  - [3. Multimodal Large Language Models (MLLMs)](#3-multimodal-large-language-models-mllms)
+    - [3.1 Multimodal Instruction Tuning](#31-multimodal-instruction-tuning)
+    - [3.2 Foundation MLLMs](#32-foundation-mllms)
+    - [3.3 Multimodal In-Context Learning \& Chain-of-Thought](#33-multimodal-in-context-learning--chain-of-thought)
+  - [4. Unified Multimodal Models (UMMs)](#4-unified-multimodal-models-umms)
+    - [4.1 Text-and-Image Unified Models](#41-text-and-image-unified-models)
+    - [4.2 Any-to-Any Multimodal models](#42-any-to-any-multimodal-models)
+    - [4.3 Benchmark for Evaluation](#43-benchmark-for-evaluation)
+  - [5. Native Multimodal Models (NMMs)](#5-native-multimodal-models-nmms)
+    - [5.1 Foundational Components](#51-foundational-components)
+      - [Design Analyses \& Scaling Laws](#design-analyses--scaling-laws)
+      - [Image \& Video Tokenizers](#image--video-tokenizers)
+        - [Discrete Tokenizers (VQ-Family)](#discrete-tokenizers-vq-family)
+        - [Continuous Tokenizers (VAE-Family)](#continuous-tokenizers-vae-family)
+        - [Text-Aligned / Semantic Tokenizers](#text-aligned--semantic-tokenizers)
+    - [5.2 Early Fusion NMMs](#52-early-fusion-nmms)
+    - [5.3 Late Fusion NMMs](#53-late-fusion-nmms)
+    - [5.4 MoE-Based NMMs](#54-moe-based-nmms)
+      - [Modality-Agnostic Routing (Learned Router)](#modality-agnostic-routing-learned-router)
+      - [Modality-Aware Routing (Pre-defined Rules)](#modality-aware-routing-pre-defined-rules)
+    - [5.5 Advanced NMMs](#55-advanced-nmms)
+      - [Omni Models (audio + video + image + text) Omni](#omni-models-audio--video--image--text-omni)
+      - [Any-to-Any Generation](#any-to-any-generation)
+      - [Hybrid AR + Diffusion NMMs](#hybrid-ar--diffusion-nmms)
+      - [RL-Alignment for Multimodal Models](#rl-alignment-for-multimodal-models)
+  - [6. Post-Training, Alignment \& Analysis](#6-post-training-alignment--analysis)
+    - [Multimodal Instruction Tuning \& SFT](#multimodal-instruction-tuning--sft)
+    - [Multimodal RLHF \& Preference Alignment](#multimodal-rlhf--preference-alignment)
+    - [Hallucination Mitigation \& Safety](#hallucination-mitigation--safety)
+    - [Individual Analysis Papers Analysis](#individual-analysis-papers-analysis)
+  - [7. Dataset](#7-dataset)
+    - [Multimodal Understanding](#multimodal-understanding)
+    - [Text-to-Image](#text-to-image)
+    - [Image Editing](#image-editing)
+    - [Interleaved Image-Text](#interleaved-image-text)
+    - [Other Text+Image-to-Image](#other-textimage-to-image)
+  - [8. Applications, Extensions \& Future Directions](#8-applications-extensions--future-directions)
+    - [Robotics \& Embodied AI](#robotics--embodied-ai)
+    - [Autonomous Driving](#autonomous-driving)
+    - [Healthcare \& Medical Imaging](#healthcare--medical-imaging)
+    - [Open Challenges \& Future Directions](#open-challenges--future-directions)
+  - [9. Resources](#9-resources)
+    - [Related Awesome Lists](#related-awesome-lists-1)
+    - [Slides \& Survey Papers](#slides--survey-papers)
+    - [Code Repositories \& Tools](#code-repositories--tools)
+  - [How to Contribute](#how-to-contribute)
+    - [Validation Rules](#validation-rules)
+    - [Entry Format](#entry-format)
+  - [Citation](#citation)
+  - [License](#license)
 
 </details>
 
@@ -500,7 +530,7 @@ We identify **5 Architectural Waves** in multimodal model development:
 
 > Models that connect a **pretrained visual encoder / abstractor** to a **pretrained LLM**. Primarily text-output understanding and reasoning systems, defined by inherited pretrained unimodal backbones rather than multimodal pretraining from scratch.
 
-### Multimodal Instruction Tuning
+### 3.1 Multimodal Instruction Tuning
 
 | Paper | Venue | Links | Notes | Task |
 |---|---|---|---|---|
@@ -515,7 +545,7 @@ We identify **5 Architectural Waves** in multimodal model development:
 | **InstructionGPT-4**: High-quality instruction tuning for MiniGPT-4 | ArXiv 2023 | [Paper](https://arxiv.org/abs/2308.12067) | Selects 200 high-quality vision-language instructions to overcome noise and strengthen general instruction-following | visual understanding |
 | **X-LLaVA**: Optimizing Bilingual Large Vision-Language Alignment | Findings of NAACL 2024 | [Paper](https://aclanthology.org/2024.findings-naacl.158/) | Bilingual instruction-tuned variant of LLaVA that aligns multilingual embeddings and keeps reasoning capabilities across Korean/English prompts | visual understanding |
 
-### Foundation MLLMs
+### 3.2 Foundation MLLMs
 
 | Paper | Venue | Links | Notes | Task |
 |---|---|---|---|---|
@@ -546,7 +576,7 @@ We identify **5 Architectural Waves** in multimodal model development:
 | **Gemini 2.5 Pro**: Advanced Reasoning Multimodal LLM | Google 2024 | [News](https://www.theverge.com/news/635502/google-gemini-2-5-reasoning-ai-model) | Improved reasoning while interpreting text, audio, images, and video; offers step-by-step traces and multimodal demos | visual understanding, omni |
 | **GPT-4o**: Omni Reasoning Across Text, Vision, and Speech | OpenAI 2024 | [Blog](https://openai.com/index/hello-gpt-4o/?goal=0_a1a65e0e73-1220f4034c-563783356) | End-to-end multimodal model trained to process and emit text, images, and audio with real-time conversational latency | visual understanding, omni |
 
-### Multimodal In-Context Learning & Chain-of-Thought
+### 3.3 Multimodal In-Context Learning & Chain-of-Thought
 
 | Paper | Venue | Links | Notes | Task |
 |---|---|---|---|---|
