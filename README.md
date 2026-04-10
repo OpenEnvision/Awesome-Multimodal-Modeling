@@ -4,7 +4,6 @@
 <div align="center">
 
 # Awesome Multimodal Models
-<img width="1024" alt="Awesome Multimodal Models cover" src="https://github.com/user-attachments/assets/b804f770-cff8-4ffa-85dc-495db2efd852" />
 
 <p><strong>A Comprehensive Survey & Curated List of Multimodal Models</strong><br/><sub>From Traditional Fusion to Native & Unified Architectures</sub></p>
 
