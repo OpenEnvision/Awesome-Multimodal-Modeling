@@ -151,7 +151,7 @@ def render_header(meta):
         "",
         render_badge_row(meta["badges"]),
         "",
-        render_badge_row(meta["focus_badges"]),
+        # render_badge_row(meta["focus_badges"]),
         "",
         render_badge_row(meta["nav_buttons"]),
         "",

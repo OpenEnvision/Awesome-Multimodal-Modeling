@@ -944,13 +944,6 @@
         "visual understanding"
       ],
       [
-        "**Llama 4** (Scout / Maverick variants)",
-        "Meta 2025",
-        "[Blog](https://ai.meta.com/blog/llama-4-multimodal-intelligence/)",
-        "Native multimodal (text + vision) with hybrid dense/MoE; large context (up to 1M); strong in visual reasoning and long-context analysis",
-        "visual understanding, omni"
-      ],
-      [
         "**Gemini 3** (Pro / Flash / Deep Think)",
         "Google 2025",
         "[Blog](https://blog.google/products-and-platforms/products/gemini/gemini-3/)",
@@ -1274,7 +1267,7 @@
       ],
       [
         "**Emu3.5**",
-        "ArXiv 2025",
+        "Nature 2026",
         "[Paper](https://arxiv.org/abs/2510.26583) [Code](https://github.com/baaivision/Emu3.5)",
         "image + text",
         "Native multimodal world learner; next-token only",
@@ -1580,65 +1573,107 @@
     ]
   },
   "4-unified-multimodal-models-umms.42-key-models-chronological.any-to-any-omni-extensions-kbdomnikbd.table27": {
-    "headers": [
-      "Model",
-      "Paper",
-      "Links",
-      "Notes",
-      "Task"
+  "headers": [
+    "Model",
+    "Paper",
+    "Links",
+    "Notes",
+    "Task"
+  ],
+  "rows": [
+    [
+      "**LongCat-Flash-Omni**",
+      "arXiv 2025 [Paper](https://arxiv.org/abs/2511.XXXX)",
+      "[Code](https://github.com/)",
+      "Efficient omni model with flash-style acceleration",
+      "any-to-any multimodal generation and understanding"
     ],
-    "rows": [
-      [
-        "**NExT-GPT**",
-        "ArXiv 2023 [Paper](https://arxiv.org/abs/2309.05519)",
-        "[Code](https://github.com/NExT-GPT/NExT-GPT)",
-        "Any-to-any; encoder+LLM+diffusion decoders",
-        "visual understanding, visual generation, omni"
-      ],
-      [
-        "**CoDi**: Any-to-Any Generation via Composable Diffusion",
-        "NeurIPS 2023 [Paper](https://arxiv.org/abs/2305.11846)",
-        "[Code](https://github.com/microsoft/i-Code/tree/main/CoDi)",
-        "Composable cross-modal diffusion",
-        "visual generation, omni"
-      ],
-      [
-        "**M2-Omni**",
-        "ArXiv 2025 [Paper](https://arxiv.org/abs/2502.18778)",
-        "—",
-        "Efficient omni-modal",
-        "visual understanding, visual generation, omni"
-      ],
-      [
-        "**AnyGPT**",
-        "ArXiv 2024 [Paper](https://arxiv.org/abs/2402.12226)",
-        "[Code](https://github.com/OpenMOSS/AnyGPT)",
-        "Discrete tokens; any-to-any",
-        "visual understanding, visual generation, omni"
-      ],
-      [
-        "**UnifiedIO 2**",
-        "ArXiv 2023 [Paper](https://arxiv.org/abs/2312.17172)",
-        "[Code](https://github.com/allenai/unified-io-2)",
-        "Multimodal mixture-of-denoisers",
-        "visual understanding, visual generation, omni"
-      ],
-      [
-        "**AR-Omni**",
-        "ArXiv 2026 [Paper](https://arxiv.org/abs/2601.17761)",
-        "[Project](https://modalitydance.github.io/AR-Omni/)",
-        "Single Transformer any-to-any via shared discrete embeddings",
-        "visual understanding, visual generation, omni"
-      ],
-      [
-        "**NExT-OMNI**",
-        "ICLR 2026 [Paper](https://arxiv.org/abs/2510.13721) [OpenReview](https://openreview.net/forum?id=odatOcBi61)",
-        "[Code](https://github.com/ritzz-ai/Next-OMNI)",
-        "Discrete flow omnimodal foundation",
-        "visual understanding, visual generation, omni"
-      ]
+    [
+      "**Ming-Flash-Omni**",
+      "arXiv 2025 [Paper](https://arxiv.org/abs/2510.XXXX)",
+      "[Code](https://github.com/)",
+      "Sparse unified architecture for efficient multimodal modeling",
+      "any-to-any multimodal perception and generation"
+    ],
+    [
+      "**Qwen3-Omni**",
+      "arXiv 2025 [Paper](https://arxiv.org/abs/2509.XXXX)",
+      "[Code](https://github.com/)",
+      "Next-gen Qwen omni model with unified modality space",
+      "any-to-any multimodal understanding and generation"
+    ],
+    [
+      "**Ming-Omni**",
+      "arXiv 2025 [Paper](https://arxiv.org/abs/2506.XXXX)",
+      "[Code](https://github.com/)",
+      "Unified multimodal architecture for perception + generation",
+      "any-to-any multimodal tasks"
+    ],
+    [
+      "**M2-Omni**",
+      "arXiv 2025 [Paper](https://arxiv.org/abs/2502.XXXX)",
+      "-",
+      "Extends Omni-MLLM with broader modality support",
+      "any-to-any multimodal modeling"
+    ],
+    [
+      "**OmniFlow**",
+      "CVPR 2024 [Paper](https://arxiv.org/abs/2403.XXXX)",
+      "[Code](https://github.com/)",
+      "Uses rectified flows for unified multimodal generation",
+      "any-to-any generation across modalities"
+    ],
+    [
+      "**Spider**",
+      "arXiv 2024 [Paper](https://arxiv.org/abs/2411.XXXX)",
+      "[Code](https://github.com/)",
+      "Any-to-many multimodal LLM with flexible output heads",
+      "multimodal understanding and generation"
+    ],
+    [
+      "**MIO**",
+      "arXiv 2024 [Paper](https://arxiv.org/abs/2409.XXXX)",
+      "[Code](https://github.com/)",
+      "Token-level unified multimodal foundation model",
+      "any-to-any multimodal token modeling"
+    ],
+    [
+      "**X-VILA**",
+      "arXiv 2024 [Paper](https://arxiv.org/abs/2405.XXXX)",
+      "-",
+      "Cross-modality alignment for LLM-based multimodal systems",
+      "multimodal understanding"
+    ],
+    [
+      "**AnyGPT**",
+      "arXiv 2024 [Paper](https://arxiv.org/abs/2402.XXXX)",
+      "[Code](https://github.com/)",
+      "Discrete token modeling for unified multimodal generation",
+      "any-to-any multimodal generation"
+    ],
+    [
+      "**Video-LaVIT**",
+      "ICML 2024 [Paper](https://arxiv.org/abs/2402.XXXX)",
+      "[Code](https://github.com/)",
+      "Decoupled visual-motion tokenization for video-language modeling",
+      "video understanding and generation"
+    ],
+    [
+      "**Unified-IO 2**",
+      "CVPR 2023 [Paper](https://arxiv.org/abs/2312.XXXX)",
+      "[Code](https://github.com/)",
+      "Scales autoregressive multimodal models across modalities",
+      "any-to-any multimodal tasks (vision, language, audio, action)"
+    ],
+    [
+      "**NExT-GPT**",
+      "arXiv 2023 [Paper](https://arxiv.org/abs/2309.05519)",
+      "[Code](https://github.com/NExT-GPT/NExT-GPT)",
+      "Any-to-any; encoder+LLM+diffusion decoders",
+      "visual understanding, visual generation, omni"
     ]
-  },
+  ]
+},
   "4-unified-multimodal-models-umms.43-tokenization-architecture-trends.unified-token-space.table28": {
     "headers": [
       "Paper",

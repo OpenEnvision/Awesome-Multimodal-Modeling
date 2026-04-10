@@ -130,87 +130,11 @@
           "subsections": []
         },
         {
-          "title": "1.3 Timeline & Landmark Models (2017–2026)",
+          "title": "1.3 Architecture Diagrams",
           "blocks": [
             {
               "type": "markdown",
-              "text": "We identify **5 Architectural Waves** in multimodal model development:"
-            }
-          ],
-          "subsections": [
-            {
-              "title": "Wave 1 — Tokenizer Renaissance (2017–2021)",
-              "blocks": [
-                {
-                  "type": "markdown",
-                  "text": "*Foundation of discrete visual representation*"
-                },
-                {
-                  "type": "table",
-                  "ref": "1-introduction-definitions.13-timeline-landmark-models-20172026.wave-1-tokenizer-renaissance-20172021.table5"
-                }
-              ]
-            },
-            {
-              "title": "Wave 2 — Foundation Pretraining (2022–2023)",
-              "blocks": [
-                {
-                  "type": "markdown",
-                  "text": "*Scaling vision-language alignment*"
-                },
-                {
-                  "type": "table",
-                  "ref": "1-introduction-definitions.13-timeline-landmark-models-20172026.wave-2-foundation-pretraining-20222023.table6"
-                }
-              ]
-            },
-            {
-              "title": "Wave 3 — Early-Fusion AR (2023–2024)",
-              "blocks": [
-                {
-                  "type": "markdown",
-                  "text": "*Towards native joint training*"
-                },
-                {
-                  "type": "table",
-                  "ref": "1-introduction-definitions.13-timeline-landmark-models-20172026.wave-3-early-fusion-ar-20232024.table7"
-                }
-              ]
-            },
-            {
-              "title": "Wave 4 — Decoupled Semantic AR (2024–2025)",
-              "blocks": [
-                {
-                  "type": "markdown",
-                  "text": "*Separation of semantic and pixel-level generation*"
-                },
-                {
-                  "type": "table",
-                  "ref": "1-introduction-definitions.13-timeline-landmark-models-20172026.wave-4-decoupled-semantic-ar-20242025.table8"
-                }
-              ]
-            },
-            {
-              "title": "Wave 5 — Omni + RL Alignment (2025–2026)",
-              "blocks": [
-                {
-                  "type": "markdown",
-                  "text": "*Any-to-any models + reinforcement-based alignment*"
-                },
-                {
-                  "type": "table",
-                  "ref": "1-introduction-definitions.13-timeline-landmark-models-20172026.wave-5-omni-rl-alignment-20252026.table9"
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "title": "1.4 Architecture Diagrams",
-          "blocks": [
-            {
-              "type": "markdown",
-              "text": "```\n┌─────────────────────────────────────────────────────────────────┐\n│           TRADITIONAL MULTIMODAL MODEL                          │\n│                                                                 │\n│  [Image] ──► [CNN/ViT Encoder] ──┐                              │\n│                                  ├──► [Fusion] ──► [Output]     │\n│  [Text]  ──► [LSTM/BERT]     ──┘                               │\n└─────────────────────────────────────────────────────────────────┘\n\n┌─────────────────────────────────────────────────────────────────┐\n│           MLLM — MODULAR LATE FUSION                            │\n│                                                                 │\n│  [Image] ──► [Pretrained ViT/CLIP] ──► [Projector/Q-Former]    │\n│                                                │                │\n│                                                ▼                │\n│  [Text]  ──────────────────────────► [Pretrained LLM] ──► [Text] │\n└─────────────────────────────────────────────────────────────────┘\n\n┌─────────────────────────────────────────────────────────────────┐\n│           UMM — UNIFIED UNDERSTANDING + GENERATION              │\n│                                                                 │\n│  [Image/Text Input] ──► [Shared/Modular Tokenizer]             │\n│                                │                                │\n│                                ▼                                │\n│                   [Unified Transformer]                         │\n│                       │           │                             │\n│                       ▼           ▼                             │\n│             [Text Output]      [Image Output]               │\n└─────────────────────────────────────────────────────────────────┘\n\n┌─────────────────────────────────────────────────────────────────┐\n│           NMM — EARLY FUSION (Trained from Scratch)             │\n│                                                                 │\n│  [Text tokens] ──┐                                              │\n│                  ├──► [Single Decoder Transformer] ──► [Text]   │\n│  [Image patches ──► Linear Patchify] ──┘                        │\n│   (raw pixels, minimal preprocessing)                           │\n│   Multimodal interaction from Layer 1                           │\n└─────────────────────────────────────────────────────────────────┘\n\n┌─────────────────────────────────────────────────────────────────┐\n│           NMM — LATE FUSION (Trained from Scratch)              │\n│                                                                 │\n│  [Image] ──► [Jointly-Trained Vision Component]                 │\n│                         │                                       │\n│                         ▼  (deep layers)                        │\n│  [Text]  ──────────► [Cross-Modal Interaction] ──► [Text]       │\n│           (All components trained jointly from scratch)         │\n└─────────────────────────────────────────────────────────────────┘\n```"
+              "text": "```\n┌─────────────────────────────────────────────────────────────────┐\n│           TRADITIONAL MULTIMODAL MODEL                          │\n│                                                                 │\n│  [Image] ──► [CNN/ViT Encoder] ──┐                              │\n│                                  ├──► [Fusion] ──► [Output]     │\n│  [Text]  ──► [LSTM/BERT]     ──┘                                │\n└─────────────────────────────────────────────────────────────────┘\n\n┌─────────────────────────────────────────────────────────────────┐\n│           MLLM — MODULAR LATE FUSION                            │\n│                                                                 │\n│  [Image] ──► [Pretrained ViT/CLIP] ──► [Projector/Q-Former]     │\n│                                                │                │\n│                                                ▼                │\n│  [Text]  ──────────────────────────► [Pretrained LLM] ──► [Text]│\n└─────────────────────────────────────────────────────────────────┘\n\n┌─────────────────────────────────────────────────────────────────┐\n│           UMM — UNIFIED UNDERSTANDING + GENERATION              │\n│                                                                 │\n│  [Image/Text Input] ──► [Shared/Modular Tokenizer]              │\n│                                │                                │\n│                                ▼                                │\n│                   [Unified Transformer]                         │\n│                       │           │                             │\n│                       ▼           ▼                             │\n│             [Text Output]      [Image Output]                   │\n└─────────────────────────────────────────────────────────────────┘\n\n┌─────────────────────────────────────────────────────────────────┐\n│           NMM — EARLY FUSION (Trained from Scratch)             │\n│                                                                 │\n│  [Text tokens] ──┐                                              │\n│                  ├──► [Single Decoder Transformer] ──► [Text]   │\n│  [Image patches ──► Linear Patchify] ──┘                        │\n│   (raw pixels, minimal preprocessing)                           │\n│   Multimodal interaction from Layer 1                           │\n└─────────────────────────────────────────────────────────────────┘\n\n┌─────────────────────────────────────────────────────────────────┐\n│           NMM — LATE FUSION (Trained from Scratch)              │\n│                                                                 │\n│  [Image] ──► [Jointly-Trained Vision Component]                 │\n│                         │                                       │\n│                         ▼  (deep layers)                        │\n│  [Text]  ──────────► [Cross-Modal Interaction] ──► [Text]       │\n│           (All components trained jointly from scratch)         │\n└─────────────────────────────────────────────────────────────────┘\n```"
             }
           ],
           "subsections": []
@@ -314,16 +238,6 @@
             {
               "type": "table",
               "ref": "3-multimodal-large-language-models-mllms.foundation-mllms.table17"
-            }
-          ],
-          "subsections": []
-        },
-        {
-          "title": "3.3 Multimodal In-Context Learning & Chain-of-Thought",
-          "blocks": [
-            {
-              "type": "table",
-              "ref": "3-multimodal-large-language-models-mllms.multimodal-in-context-learning-chain-of-thought.table18"
             }
           ],
           "subsections": []
