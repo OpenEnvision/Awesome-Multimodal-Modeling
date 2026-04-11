@@ -2963,6 +2963,14 @@
         "vision-language understanding"
       ],
       [
+        "Gemma4",
+        "-",
+        "[Blog](https://ai.google.dev/gemma/docs/core/model_card_4)",
+        "—",
+        "A pre-trained ViT encoder with a visual expert that uses cross-attention for deep but late-style fusion to the LLM, preserving its capabilities.",
+        "vision-language understanding"
+      ],
+      [
         "InternVL3.5",
         "arXiv 2025",
         "[Paper](https://arxiv.org/pdf/2508.18265)",

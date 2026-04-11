@@ -227,30 +227,35 @@ Each modality is first processed by a **dedicated unimodal component** (e.g., a 
 
 ### 1.2 Scope & Taxonomy
 
-```
+```text
 Multimodal Models
-├── Traditional Multimodal Models                    [§2]
-│   ├── Multimodal Representations / Multimodal Fusion / Multimodal Alignment
-│   └── Multimodal Pretraining
-│   └── Early / Late / Hybrid Fusion
-│
-├── Multimodal LLMs (MLLMs) — Pretrained Backbones   [§3]
-│   ├── Vision Encoder / Abstractor + LLM
-│   ├── Instruction Tuning / Reasoning / Tool Use
-│   └── Text Output Only
-│
-├── Unified Multimodal Models (UMMs) — U+G           [§4]
-│   ├── Text-and-Image Unified Models
-│   ├── Any-to-Any / Omni Extensions 
-│   └── Benchmarks for Unified Evaluation
-│
-└── Native Multimodal Models (NMMs) — Scratch        [§5]
-    ├── Early Fusion (single Transformer, minimal modality params)
-    ├── Late Fusion (separate components, all from scratch)
-    ├── MoE-Based
-    │   ├── Modality-Agnostic Routing
-    │   └── Modality-Aware Routing
-    └── Advanced: Omni / Any-to-Any / Hybrid AR+Diffusion
+├── 2. Traditional Multimodal Models
+│   ├── 2.1 Multimodel Representations & Alignment
+│   │   ├── Multimodal Representations
+│   │   ├── Multimodal Fusion
+│   │   └── Multimodal Alignment
+│   └── 2.2 Multimodal Pretraining
+├── 3. Multimodal Large Language Models (MLLMs)
+│   ├── 3.1 Foundation MLLMs
+│   └── 3.2 Omni MLLMs
+├── 4. Unified Multimodal Models (UMMs)
+│   ├── 4.1 Taxonomy by Generation Paradigm
+│   │   ├── Diffusion-Based UMMs
+│   │   ├── Autoregressive (AR) UMMs
+│   │   │   ├── Pixel Encoding
+│   │   │   ├── Semantic Encoding
+│   │   │   ├── Learnable Query Encoding
+│   │   │   ├── Hybrid Encoding (Pseduo)
+│   │   │   └── Hybrid Encoding (Joint)
+│   │   └── Hybrid (AR + Diffusion) UMMs
+│   │       ├── Pixel Encoding
+│   │       └── Hybrid Encoding
+│   └── 4.2 Any-to-Any / Omni UMMs
+└── 5. Native Multimodal Models (NMMs)
+    ├── 5.1 Design Analyses & Scaling Laws
+    ├── 5.2 Early Fusion NMMs
+    ├── 5.3 Late Fusion NMMs
+    └── 5.4 Any-to-Any / Omni NMMs
 ```
 
 ### 1.3 Architecture Diagrams
@@ -730,6 +735,7 @@ Recent scaling-law evidence suggests early-fusion NMMs are often stronger at low
 | Model | Paper | Links | Training Scale | Notes | Task |
 |---|---|---|---|---|---|
 | NEO-Unify | - | [Blog](https://huggingface.co/blog/sensenova/neo-unify) | — | NEO as a cornerstone for scalable and powerful native VLM development, paired with a rich set of reusable components that foster a cost-effective and extensible ecosystem | vision-language understanding |
+| Gemma4 | - | [Blog](https://ai.google.dev/gemma/docs/core/model_card_4) | — | A pre-trained ViT encoder with a visual expert that uses cross-attention for deep but late-style fusion to the LLM, preserving its capabilities. | vision-language understanding |
 | InternVL3.5 | arXiv 2025 | [Paper](https://arxiv.org/pdf/2508.18265) | — | A pre-trained ViT encoder with a visual expert that uses cross-attention for deep but late-style fusion to the LLM, preserving its capabilities. | vision-language understanding |
 | InternVL3 | arXiv 2025 | [Paper](https://arxiv.org/pdf/2504.10479) | — | A pre-trained InternViT encoder coupled with a cross-attention visual expert, employing a deep but late-fusion strategy to ensure seamless multimodal alignment while strictly preserving native LLM reasoning and linguistic proficiency. | vision-language understanding |
 | CogVLM | arXiv 2023 | [Paper](https://arxiv.org/abs/2311.03079) | — | ViT Encoder + visual expert with cross-attention to LLM; deep but late-style fusion preserving LLM capabilities | vision-language understanding |
