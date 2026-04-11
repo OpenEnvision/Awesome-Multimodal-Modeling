@@ -3,7 +3,7 @@
 
 <div align="center">
 
-# Awesome Multimodal Modeling
+# Awesome Multimodal Modeling (draft)
 <p><strong>A Comprehensive Survey & Curated List of Multimodal Modeling</strong><br/><sub>From Traditional Fusion to Native & Unified Architectures</sub></p>
 
 <p>
@@ -34,7 +34,7 @@
 <details open>
 <summary><strong>Browse the list</strong></summary>
 
-- [Awesome Multimodal Modeling](#awesome-multimodal-modeling)
+- [Awesome Multimodal Modeling (draft)](#awesome-multimodal-modeling-draft)
   - [Table of Contents](#table-of-contents)
   - [About This List](#about-this-list)
     - [At a Glance](#at-a-glance)
