@@ -376,6 +376,7 @@ Multimodal Models
 
 | Paper | Venue | Links | Notes | Task |
 |---|---|---|---|---|
+| CLIP | arXiv 2021 | [Paper](https://arxiv.org/abs/2103.00020) | 400M+ | Dual-encoder (Vision Transformer + Text Transformer); contrastive alignment at embedding level; classic late-fusion foundation | zero-shot image classification, retrieval |
 | Reconsidering Representation Alignment for Multi-view Clustering | CVPR 2021 | [Paper](https://arxiv.org/abs/2103.04291) | Revisits representation alignment objectives for multi-view clustering | multimodal alignment |
 | CoMIR: Contrastive Multimodal Image Representation for Registration | NeurIPS 2020 | [Paper](https://arxiv.org/abs/2006.06325) | Contrastive learning for multimodal image registration alignment | multimodal alignment |
 | Multimodal Transformer for Unaligned Multimodal Language Sequences | ACL 2019 | [Paper](https://arxiv.org/abs/1906.00295) | Transformer-based alignment for unaligned multimodal sequences | sequence alignment |
@@ -465,7 +466,6 @@ Multimodal Models
 | LLaVA | arXiv 2023 | [Paper](https://arxiv.org/abs/2304.08485) [Code](https://github.com/haotian-liu/LLaVA) | 7B / 13B+ | CLIP Vision Encoder (frozen/pretrained) + linear projection to LLM (Vicuna/LLaMA); vision tokens inserted into LLM input; common late-fusion baseline | visual instruction tuning, VQA, image captioning |
 | BLIP-2 | arXiv 2023 | [Paper](https://arxiv.org/abs/2301.12597) | — | Q-Former bridges frozen vision encoder and LLM; late alignment of visual features to text | vision-language understanding, generation |
 | Flamingo | arXiv 2022 | [Paper](https://arxiv.org/abs/2204.14198) | 80B | Perceiver Resampler + frozen vision encoder (e.g., CLIP-like) + frozen LLM; cross-attention for late multimodal interaction | few-shot visual question answering, captioning |
-| CLIP | arXiv 2021 | [Paper](https://arxiv.org/abs/2103.00020) | 400M+ | Dual-encoder (Vision Transformer + Text Transformer); contrastive alignment at embedding level; classic late-fusion foundation | zero-shot image classification, retrieval |
 | IDEFICS | — | [Hugging Face](https://huggingface.co/HuggingFaceM4/idefics) | 80B | Flamingo-inspired; late fusion with vision encoder and LLM | open-source multimodal understanding |
 
 ### 3.2 Omni MLLMs
