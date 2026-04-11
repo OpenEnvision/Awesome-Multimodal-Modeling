@@ -196,7 +196,7 @@ Multimodal interaction begins **from the first layer**. A **single Transformer d
 - Continuous image patches or minimal discrete tokenization
 - Modality interaction from layer 1
 - Near-zero modality-specific parameters (excluding linear patch embed)
-- Examples: **Chameleon**, **Emu3** (if trained from scratch), **Transfusion**
+- Examples: **Emu3** (if trained from scratch)
 
 ##### NMM — Late Fusion
 Each modality is first processed by a **dedicated unimodal component** (e.g., a vision tower or image encoder), but these components are **jointly trained from scratch** (not pretrained). Cross-modal interaction occurs at **deeper layers**.
@@ -705,16 +705,10 @@ Recent scaling-law evidence suggests early-fusion NMMs are often stronger at low
 
 | Model | Paper | Links | Training Scale | Notes | Task |
 |---|---|---|---|---|---|
-| Emu3.5 | Nature 2026 | [Paper](https://arxiv.org/abs/2510.26583) [Code](https://github.com/baaivision/Emu3.5) | Large-scale (trillion+ tokens) | Native world model; next-state prediction on interleaved video/text; Discrete Diffusion Adaptation for efficiency | interleaved generation, world modeling, any-to-image |
-| LongCat-Next | arXiv 2026 | [Paper](https://arxiv.org/abs/2603.27538) | — | Discrete Native Any-resolution Visual Transformer | vision-language understanding |
-| Qwen3.5 | - | [Blog](https://qwen.ai/blog?id=qwen3.5) | — | Discrete Native Any-resolution Visual Transformer | vision-language understanding |
+| Llama 4 | arXiv 2026 | [Paper](https://arxiv.org/abs/2601.11659) [Blog](https://ai.meta.com/blog/llama-4-multimodal-intelligence/) | Scout/Maverick: 17B active / ~109B–400B total; Behemoth: ~2T total | Native multimodal, MoE architecture with early fusion and vision encoder | vision-language understanding |
 | NEO | arXiv 2025 | [Paper](https://arxiv.org/pdf/2510.14979) | — | NEO as a cornerstone for scalable and powerful native VLM development, paired with a rich set of reusable components that foster a cost-effective and extensible ecosystem | vision-language understanding |
-| Chameleon | arXiv 2024 | [Paper](https://arxiv.org/abs/2405.09818) [Code](https://github.com/facebookresearch/chameleon) | 7B / 34B | Mixed-modal early-fusion token-based; unified discrete tokenizer for text+image; autoregressive next-token prediction from scratch | visual understanding, image/text generation, interleaved |
-| Emu3 | arXiv 2024 | [Paper](https://arxiv.org/abs/2409.18869) [Code](https://github.com/baaivision/Emu3) | 8B | Next-token prediction over VQ image tokens; native multimodal decoder-only; minimal modality-specific params | visual understanding, visual generation |
-| Pixtral | arXiv 2024  | [Paper](https://arxiv.org/abs/2410.07073) [HF](https://huggingface.co/mistralai)  | 12B open-weight model with strong instruction following, image+text understanding; competitive with larger open VLMs | visual understanding |
-| Show-o | arXiv 2024 | [Paper](https://arxiv.org/abs/2408.12528) | — | Early-fusion mixed-modal; autoregressive text + parallel image token generation; unified transformer | image/text generation, understanding |
-| Transfusion | arXiv 2024 | [Paper](https://arxiv.org/abs/2408.11039) | — | Early-fusion with discrete image tokens; unified modeling of text (autoregressive) and image (diffusion-like) | mixed-modal generation |
-| Anole | arXiv 2024 | [Paper](https://arxiv.org/abs/2412.06646) (related discussion) | — | Open autoregressive native multimodal; interleaved image-text generation; early token-level fusion | interleaved image-text generation |
+| NEO-Unify | - | [Blog](https://huggingface.co/blog/sensenova/neo-unify) | — | NEO as a cornerstone for scalable and powerful native VLM development, paired with a rich set of reusable components that foster a cost-effective and extensible ecosystem | vision-language understanding |
+
 
 ### 5.3 Late Fusion NMMs
 
@@ -722,10 +716,13 @@ Recent scaling-law evidence suggests early-fusion NMMs are often stronger at low
 
 | Model | Paper | Links | Training Scale | Notes | Task |
 |---|---|---|---|---|---|
-| NEO-Unify | - | [Blog](https://huggingface.co/blog/sensenova/neo-unify) | — | NEO as a cornerstone for scalable and powerful native VLM development, paired with a rich set of reusable components that foster a cost-effective and extensible ecosystem | vision-language understanding |
-| Gemma4 | - | [Blog](https://ai.google.dev/gemma/docs/core/model_card_4) | — | A pre-trained ViT encoder with a visual expert that uses cross-attention for deep but late-style fusion to the LLM, preserving its capabilities. | vision-language understanding |
-| InternVL3.5 | arXiv 2025 | [Paper](https://arxiv.org/pdf/2508.18265) | — | A pre-trained ViT encoder with a visual expert that uses cross-attention for deep but late-style fusion to the LLM, preserving its capabilities. | vision-language understanding |
+| Emu3 | arXiv 2024 | [Paper](https://arxiv.org/abs/2409.18869) [Code](https://github.com/baaivision/Emu3) | 8B | Next-token prediction over VQ image tokens; native multimodal decoder-only; minimal modality-specific params | visual understanding, visual generation |
 | InternVL3 | arXiv 2025 | [Paper](https://arxiv.org/pdf/2504.10479) | — | A pre-trained InternViT encoder coupled with a cross-attention visual expert, employing a deep but late-fusion strategy to ensure seamless multimodal alignment while strictly preserving native LLM reasoning and linguistic proficiency. | vision-language understanding |
+| InternVL3.5 | arXiv 2025 | [Paper](https://arxiv.org/pdf/2508.18265) | — | A pre-trained ViT encoder with a visual expert that uses cross-attention for deep but late-style fusion to the LLM, preserving its capabilities. | vision-language understanding |
+| Qwen3.5 | - | [Blog](https://qwen.ai/blog?id=qwen3.5) | — | Discrete Native Any-resolution Visual Transformer | vision-language understanding |
+| Emu3.5 | Nature 2026 | [Paper](https://arxiv.org/abs/2510.26583) [Code](https://github.com/baaivision/Emu3.5) | Large-scale (trillion+ tokens) | Native world model; next-state prediction on interleaved video/text; Discrete Diffusion Adaptation for efficiency | interleaved generation, world modeling, any-to-image |
+| LongCat-Next | arXiv 2026 | [Paper](https://arxiv.org/abs/2603.27538) | — | Discrete Native Any-resolution Visual Transformer | vision-language understanding |
+| Gemma4 | - | [Blog](https://ai.google.dev/gemma/docs/core/model_card_4) | — | A pre-trained ViT encoder with a visual expert that uses cross-attention for deep but late-style fusion to the LLM, preserving its capabilities. | vision-language understanding |
 
 ### 5.4 Any-to-Any / Omni NMMs
 
