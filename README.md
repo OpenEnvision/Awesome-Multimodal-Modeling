@@ -3,6 +3,11 @@
 
 <div align="center">
 
+<p>
+  <img src="assets/e96cc2431fa5549749dc898f3ffe19e5.svg" width="180"/>
+</p>
+
+
 # Awesome Multimodal Modeling 
 <p><strong>A Comprehensive Survey & Curated List of Multimodal Modeling</strong><br/><sub>From Traditional Fusion to Native & Unified Architectures</sub></p>
 
