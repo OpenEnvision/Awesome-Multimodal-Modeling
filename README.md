@@ -460,6 +460,13 @@ Multimodal Models
 | MM1: Methods, Analysis & Insights from Multimodal LLM Pre-training | arXiv 2024 | [Paper](https://arxiv.org/abs/2403.09611) | Large-scale proprietary recipe study for multimodal LLM pretraining | visual understanding |
 | CogVLM: Visual Expert for Pretrained Language Models | arXiv 2023 | [Paper](https://arxiv.org/abs/2311.03079) [Code](https://github.com/THUDM/CogVLM)  | Deep fusion with visual expert modules inside a pretrained LLM | visual understanding |
 | Qwen-VL: A Versatile Vision-Language Model | arXiv 2023 | [Paper](https://arxiv.org/abs/2308.12966) [HF](https://huggingface.co/Qwen/Qwen-VL)  | High-res, multi-lang, bounding box | visual understanding |
+| CogVLM | arXiv 2023 | [Paper](https://arxiv.org/abs/2311.03079) | — | ViT Encoder + visual expert with cross-attention to LLM; deep but late-style fusion preserving LLM capabilities | vision-language understanding |
+| InstructBLIP | arXiv 2023 | [Paper](https://arxiv.org/abs/2305.06500) | — | Instruction-tuned on BLIP-2 style; frozen vision encoder + LLM with late projection | vision-language understanding |
+| LLaVA | arXiv 2023 | [Paper](https://arxiv.org/abs/2304.08485) [Code](https://github.com/haotian-liu/LLaVA) | 7B / 13B+ | CLIP Vision Encoder (frozen/pretrained) + linear projection to LLM (Vicuna/LLaMA); vision tokens inserted into LLM input; common late-fusion baseline | visual instruction tuning, VQA, image captioning |
+| BLIP-2 | arXiv 2023 | [Paper](https://arxiv.org/abs/2301.12597) | — | Q-Former bridges frozen vision encoder and LLM; late alignment of visual features to text | vision-language understanding, generation |
+| Flamingo | arXiv 2022 | [Paper](https://arxiv.org/abs/2204.14198) | 80B | Perceiver Resampler + frozen vision encoder (e.g., CLIP-like) + frozen LLM; cross-attention for late multimodal interaction | few-shot visual question answering, captioning |
+| CLIP | arXiv 2021 | [Paper](https://arxiv.org/abs/2103.00020) | 400M+ | Dual-encoder (Vision Transformer + Text Transformer); contrastive alignment at embedding level; classic late-fusion foundation | zero-shot image classification, retrieval |
+| IDEFICS | — | [Hugging Face](https://huggingface.co/HuggingFaceM4/idefics) | 80B | Flamingo-inspired; late fusion with vision encoder and LLM | open-source multimodal understanding |
 
 ### 3.2 Omni MLLMs
 
@@ -719,13 +726,6 @@ Recent scaling-law evidence suggests early-fusion NMMs are often stronger at low
 | Gemma4 | - | [Blog](https://ai.google.dev/gemma/docs/core/model_card_4) | — | A pre-trained ViT encoder with a visual expert that uses cross-attention for deep but late-style fusion to the LLM, preserving its capabilities. | vision-language understanding |
 | InternVL3.5 | arXiv 2025 | [Paper](https://arxiv.org/pdf/2508.18265) | — | A pre-trained ViT encoder with a visual expert that uses cross-attention for deep but late-style fusion to the LLM, preserving its capabilities. | vision-language understanding |
 | InternVL3 | arXiv 2025 | [Paper](https://arxiv.org/pdf/2504.10479) | — | A pre-trained InternViT encoder coupled with a cross-attention visual expert, employing a deep but late-fusion strategy to ensure seamless multimodal alignment while strictly preserving native LLM reasoning and linguistic proficiency. | vision-language understanding |
-| CogVLM | arXiv 2023 | [Paper](https://arxiv.org/abs/2311.03079) | — | ViT Encoder + visual expert with cross-attention to LLM; deep but late-style fusion preserving LLM capabilities | vision-language understanding |
-| InstructBLIP | arXiv 2023 | [Paper](https://arxiv.org/abs/2305.06500) | — | Instruction-tuned on BLIP-2 style; frozen vision encoder + LLM with late projection | vision-language understanding |
-| LLaVA | arXiv 2023 | [Paper](https://arxiv.org/abs/2304.08485) [Code](https://github.com/haotian-liu/LLaVA) | 7B / 13B+ | CLIP Vision Encoder (frozen/pretrained) + linear projection to LLM (Vicuna/LLaMA); vision tokens inserted into LLM input; common late-fusion baseline | visual instruction tuning, VQA, image captioning |
-| BLIP-2 | arXiv 2023 | [Paper](https://arxiv.org/abs/2301.12597) | — | Q-Former bridges frozen vision encoder and LLM; late alignment of visual features to text | vision-language understanding, generation |
-| Flamingo | arXiv 2022 | [Paper](https://arxiv.org/abs/2204.14198) | 80B | Perceiver Resampler + frozen vision encoder (e.g., CLIP-like) + frozen LLM; cross-attention for late multimodal interaction | few-shot visual question answering, captioning |
-| CLIP | arXiv 2021 | [Paper](https://arxiv.org/abs/2103.00020) | 400M+ | Dual-encoder (Vision Transformer + Text Transformer); contrastive alignment at embedding level; classic late-fusion foundation | zero-shot image classification, retrieval |
-| IDEFICS | — | [Hugging Face](https://huggingface.co/HuggingFaceM4/idefics) | 80B | Flamingo-inspired; late fusion with vision encoder and LLM | open-source multimodal understanding |
 
 ### 5.4 Any-to-Any / Omni NMMs
 
