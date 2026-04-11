@@ -814,8 +814,6 @@ We welcome contributions! Please follow these guidelines:
 | **Model Name** | [Paper](arxiv_link) [Code](github_link) [HF](huggingface_link) BADGES | Scale | Key contribution / notes |
 ```
 
-**Recommended tags:** `<kbd>Open</kbd>` open weights · `<kbd>Closed</kbd>` closed/industry · `<kbd>Efficient</kbd>` lightweight or deployment-focused · `<kbd>Omni</kbd>` any-to-any or omni-modal · `<kbd>Generation</kbd>` generation-capable · `<kbd>Video</kbd>` video-centric · `<kbd>Analysis</kbd>` survey or analysis paper
-
 Submit a PR with:
 1. The paper/model entry in the correct section
 2. A one-line justification for the chosen category
