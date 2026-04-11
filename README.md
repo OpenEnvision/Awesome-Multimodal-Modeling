@@ -4,7 +4,7 @@
 <div align="center">
   
 <p>
-  <img src="assets/e96cc2431fa5549749dc898f3ffe19e5.svg" width="180"/>
+  <img src="assets/mm_logo.svg" width="180"/>
 </p>
 
 # Awesome Multimodal Modeling 
