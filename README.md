@@ -734,12 +734,12 @@ The latest arXiv-native multimodal papers increasingly blur the boundaries betwe
 | Model | Paper | Links | Notes | Task |
 |---|---|---|---|---|
 | Qwen3.5 | - | [Blog](https://qwen.ai/blog?id=qwen3.5) | — | Discrete Native Any-resolution Visual Transformer | vision-language understanding |
-| ERNIE 5.0 Technical Report | arXiv | [paper](https://arxiv.org/pdf/2602.04705) | — | a natively autoregressive foundation model desinged for unified multimodal understanding and generation across text, image, video, and audio | vision-language understanding, omni |
-| GPT-5 | arXiv | [paper](https://arxiv.org/pdf/2601.03267) | — | GPT5 desinged for unified multimodal understanding and generation across text, image, video, and audio | vision-language understanding, omni |
+| ERNIE 5.0 Technical Report | arXiv 2026| [paper](https://arxiv.org/pdf/2602.04705) | — | a natively autoregressive foundation model desinged for unified multimodal understanding and generation across text, image, video, and audio | vision-language understanding, omni |
+| GPT-5 | arXiv 2026| [paper](https://arxiv.org/pdf/2601.03267) | — | GPT5 desinged for unified multimodal understanding and generation across text, image, video, and audio | vision-language understanding, omni |
 | Gemini 3/3.1 | - | [Blog](https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-3-1-pro/) | audio+video+image+text | visual understanding, omni |
 | Gemini 2.5 | arXiv 2025 | [Paper](https://arxiv.org/pdf/2507.06261) | audio+video+image+text | visual understanding, omni |
-| ShapeLLM-Omni | arXiv | [paper](https://arxiv.org/abs/2506.01853) | — |  a novel framework for unified 3D object generation and understanding based on a fully autoregressive next-token prediction paradigm | vision-language understanding, omni, 3D grounding |
-| Gemini 1.5  | Arxiv 2024 | [Paper](https://arxiv.org/abs/2403.05530) | 1M context; audio+video+image+text | visual understanding, omni |
+| ShapeLLM-Omni | arXiv 2025| [paper](https://arxiv.org/abs/2506.01853) | — |  a novel framework for unified 3D object generation and understanding based on a fully autoregressive next-token prediction paradigm | vision-language understanding, omni, 3D grounding |
+| Gemini 1.5  | arxiv 2024 | [Paper](https://arxiv.org/abs/2403.05530) | 1M context; audio+video+image+text | visual understanding, omni |
 
 <p align="right"><a href="#awesome-multimodal-models">Back to Top</a></p>
 
