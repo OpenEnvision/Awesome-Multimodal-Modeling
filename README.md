@@ -730,7 +730,7 @@ The latest arXiv-native multimodal papers increasingly blur the boundaries betwe
 
 | Model | Paper | Links | Notes | Task |
 |---|---|---|---|---|
-| Qwen3.5 | (Late Fusion) | [Blog](https://qwen.ai/blog?id=qwen3.5) | — | Discrete Native Any-resolution Visual Transformer | vision-language understanding |
+| Qwen3.5-Omni | (Late Fusion) | [Blog](https://qwen.ai/blog?id=qwen3.5) | — | Discrete Native Any-resolution Visual Transformer | vision-language understanding, omni |
 | ERNIE 5.0 Technical Report | arXiv 2026 (Late fusion)| [paper](https://arxiv.org/pdf/2602.04705) | — | a natively autoregressive foundation model desinged for unified multimodal understanding and generation across text, image, video, and audio | vision-language understanding, omni |
 
 <p align="right"><a href="#awesome-multimodal-models">Back to Top</a></p>
