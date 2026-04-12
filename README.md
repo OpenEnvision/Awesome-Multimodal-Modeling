@@ -59,6 +59,7 @@
     - [2.2 Multimodal Pretraining](#22-multimodal-pretraining)
   - [3. Multimodal Large Language Models (MLLMs)](#3-multimodal-large-language-models-mllms)
     - [3.1 Foundation MLLMs](#31-foundation-mllms)
+      - [](#)
     - [3.2 Omni MLLMs](#32-omni-mllms)
   - [4. Unified Multimodal Models (UMMs)](#4-unified-multimodal-models-umms)
     - [4.1 Taxonomy by Generation Paradigm](#41-taxonomy-by-generation-paradigm)
@@ -120,7 +121,7 @@ This repository provides a **structured, community-maintained** survey of multim
 
 > Classification note: for ambiguous models sitting between `MLLM`, `UMM`, and strict `NMM`, this list records the category that best matches the **training recipe and architectural coupling**, not just the paper title.
 
-<p align="right"><a href="#awesome-multimodal-models">Back to Top</a></p>
+<p align="right"><a href="#awesome-multimodal-modeling">Back to Top</a></p>
 
 ---
 
@@ -292,7 +293,7 @@ Multimodal Models
 └─────────────────────────────────────────────────────────────────┘
 ```
 
-<p align="right"><a href="#awesome-multimodal-models">Back to Top</a></p>
+<p align="right"><a href="#awesome-multimodal-modeling">Back to Top</a></p>
 
 ---
 
@@ -404,7 +405,7 @@ Multimodal Models
 | LXMERT: Learning Cross-Modality Encoder Representations from Transformers | EMNLP 2019 | [Paper](https://arxiv.org/abs/1908.07490) | Cross-modality transformer encoder for vision-language reasoning | vision-language pretraining |
 | VideoBERT: A Joint Model for Video and Language Representation Learning | ICCV 2019 | [Paper](https://arxiv.org/abs/1904.01766) | Joint discrete token modeling for video and language | video-language pretraining |
 
-<p align="right"><a href="#awesome-multimodal-models">Back to Top</a></p>
+<p align="right"><a href="#awesome-multimodal-modeling">Back to Top</a></p>
 
 ---
 
@@ -415,6 +416,8 @@ Multimodal Models
 > Models that connect a **pretrained visual encoder / abstractor** to a **pretrained LLM**. Primarily text-output understanding and reasoning systems, defined by inherited pretrained unimodal backbones rather than multimodal pretraining from scratch.
 
 ### 3.1 Foundation MLLMs
+
+#### 
 
 | Paper | Venue | Links | Notes | Task |
 |---|---|---|---|---|
@@ -499,7 +502,7 @@ Multimodal Models
 | Stream-Omni: Simultaneous Multimodal Interactions with Large Language-Vision-Speech Model | arXiv 2025 | [Paper](https://arxiv.org/abs/2506.13642) [Code](https://github.com/ictnlp/Stream-Omni) | Simultaneous multimodal interactions with language-vision-speech model | simultaneous multimodal |
 | ShapeLLM-Omni: A Native Multimodal LLM for 3D Generation and Understanding | arXiv 2025 | [Paper](https://arxiv.org/abs/2506.01853) [Code](https://github.com/JAMESYJL/ShapeLLM-Omni) | Native multimodal LLM focused on 3D generation and understanding | 3D multimodal |
 
-<p align="right"><a href="#awesome-multimodal-models">Back to Top</a></p>
+<p align="right"><a href="#awesome-multimodal-modeling">Back to Top</a></p>
 
 ---
 
@@ -674,7 +677,7 @@ Models that extend unified understanding + generation beyond text and image to s
 | Unified-IO 2 | CVPR 2024 | [Paper](https://arxiv.org/abs/2312.17172) [Code](https://github.com/allenai/unified-io-2) | Scales autoregressive multimodal models across modalities | any-to-any multimodal tasks (vision, language, audio, action) |
 | NExT-GPT | arXiv 2023 | [Paper](https://arxiv.org/abs/2309.05519) [Code](https://github.com/NExT-GPT/NExT-GPT) | Any-to-any; encoder+LLM+diffusion decoders | visual understanding, visual generation, omni |
 
-<p align="right"><a href="#awesome-multimodal-models">Back to Top</a></p>
+<p align="right"><a href="#awesome-multimodal-modeling">Back to Top</a></p>
 
 ---
 
@@ -734,7 +737,7 @@ The latest arXiv-native multimodal papers increasingly blur the boundaries betwe
 | Qwen3.5-Omni | (Late Fusion) | [Blog](https://qwen.ai/blog?id=qwen3.5) | — | Discrete Native Any-resolution Visual Transformer | vision-language understanding, omni |
 | ERNIE 5.0 Technical Report | arXiv 2026 (Late fusion)| [paper](https://arxiv.org/pdf/2602.04705) | — | a natively autoregressive foundation model desinged for unified multimodal understanding and generation across text, image, video, and audio | vision-language understanding, omni |
 
-<p align="right"><a href="#awesome-multimodal-models">Back to Top</a></p>
+<p align="right"><a href="#awesome-multimodal-modeling">Back to Top</a></p>
 
 ---
 
@@ -777,7 +780,7 @@ The latest arXiv-native multimodal papers increasingly blur the boundaries betwe
 | **MMEngine** | Foundation for perception research (OpenMMLab) | [Code](https://github.com/open-mmlab/mmengine) |
 | **DeepSpeed-VisualChat** | Scalable multimodal chat training | [Code](https://github.com/microsoft/DeepSpeedExamples/tree/master/applications/DeepSpeed-VisualChat) |
 
-<p align="right"><a href="#awesome-multimodal-models">Back to Top</a></p>
+<p align="right"><a href="#awesome-multimodal-modeling">Back to Top</a></p>
 
 ---
 
@@ -814,7 +817,7 @@ Submit a PR with:
 2. A one-line justification for the chosen category
 3. Links to paper, code, and/or weights
 
-<p align="right"><a href="#awesome-multimodal-models">Back to Top</a></p>
+<p align="right"><a href="#awesome-multimodal-modeling">Back to Top</a></p>
 
 ---
 
@@ -848,6 +851,6 @@ This list is released under the [CC0 1.0 Universal](https://creativecommons.org/
 
 <p><strong>Maintained by the community for the multimodal research community.</strong></p>
 
-[Back to Top](#awesome-multimodal-models)
+[Back to Top](#awesome-multimodal-modeling)
 
 </div>
