@@ -24,7 +24,7 @@
   <a href="#3-multimodal-large-language-models-mllms"><img src="https://img.shields.io/badge/MLLMs-2563eb?style=for-the-badge&logo=openai&logoColor=white" alt="MLLMs"></a>
   <a href="#4-unified-multimodal-models-umms"><img src="https://img.shields.io/badge/UMMs-7c3aed?style=for-the-badge&logo=buffer&logoColor=white" alt="UMMs"></a>
   <a href="#5-native-multimodal-models-nmms"><img src="https://img.shields.io/badge/NMMs-b91c1c?style=for-the-badge&logo=reactivex&logoColor=white" alt="NMMs"></a>
-  <a href="#6-closed-source-multimodal-models"><img src="https://img.shields.io/badge/Closed Source Models-b91c1c?style=for-the-badge&logo=reactivex&logoColor=white" alt="Closed Source Models"></a>
+  <a href="#6-closed-source-multimodal-models"><img src="https://img.shields.io/badge/Closed Source Models-37415?style=for-the-badge&logo=reactivex&logoColor=white" alt="Closed Source Models"></a>
   <a href="#7-resources"><img src="https://img.shields.io/badge/Resources-475569?style=for-the-badge&logo=github&logoColor=white" alt="Resources"></a>
 </p>
 
