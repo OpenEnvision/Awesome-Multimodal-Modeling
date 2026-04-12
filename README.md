@@ -19,15 +19,16 @@
 </p>
 
 <p>
-  <a href="#1-introduction-definitions"><img src="https://img.shields.io/badge/Overview-111827?style=for-the-badge&logo=bookstack&logoColor=white" alt="Overview"></a>
+  <a href="#1-introduction--definitions"><img src="https://img.shields.io/badge/Overview-111827?style=for-the-badge&logo=bookstack&logoColor=white" alt="Overview"></a>
   <a href="#2-traditional-multimodal-models"><img src="https://img.shields.io/badge/Traditional-1d4ed8?style=for-the-badge&logo=databricks&logoColor=white" alt="Traditional"></a>
   <a href="#3-multimodal-large-language-models-mllms"><img src="https://img.shields.io/badge/MLLMs-2563eb?style=for-the-badge&logo=openai&logoColor=white" alt="MLLMs"></a>
   <a href="#4-unified-multimodal-models-umms"><img src="https://img.shields.io/badge/UMMs-7c3aed?style=for-the-badge&logo=buffer&logoColor=white" alt="UMMs"></a>
   <a href="#5-native-multimodal-models-nmms"><img src="https://img.shields.io/badge/NMMs-b91c1c?style=for-the-badge&logo=reactivex&logoColor=white" alt="NMMs"></a>
-  <a href="#8-resources"><img src="https://img.shields.io/badge/Resources-475569?style=for-the-badge&logo=github&logoColor=white" alt="Resources"></a>
+  <a href="#6-closed-source-multimodal-models"><img src="https://img.shields.io/badge/Closed Source Models-b91c1c?style=for-the-badge&logo=reactivex&logoColor=white" alt="Closed Source Models"></a>
+  <a href="#7-resources"><img src="https://img.shields.io/badge/Resources-475569?style=for-the-badge&logo=github&logoColor=white" alt="Resources"></a>
 </p>
 
-<p><sub><a href="#1-introduction-definitions">Overview</a> · <a href="#2-traditional-multimodal-models">Traditional</a> · <a href="#3-multimodal-large-language-models-mllms">MLLMs</a> · <a href="#4-unified-multimodal-models-umms">UMMs</a> · <a href="#5-native-multimodal-models-nmms">NMMs</a> · <a href="#8-resources">Resources</a></sub></p>
+<p><sub><a href="#1-introduction-definitions">Overview</a> · <a href="#2-traditional-multimodal-models">Traditional</a> · <a href="#3-multimodal-large-language-models-mllms">MLLMs</a> · <a href="#4-unified-multimodal-models-umms">UMMs</a> · <a href="#5-native-multimodal-models-nmms">NMMs</a> ·<a href="#6-closed-source-multimodal-models">Closed Source Models</a> · <a href="#7-resources">Resources</a></sub></p>
 
 </div>
 
@@ -64,7 +65,6 @@
       - [Cross-Attention](#cross-attention)
       - [Hybrid Adaptor](#hybrid-adaptor)
     - [3.2 Omni MLLMs](#32-omni-mllms)
-    - [3.3 Close-Source Multimodal Models](#33-close-source-multimodal-models)
   - [4. Unified Multimodal Models (UMMs)](#4-unified-multimodal-models-umms)
     - [4.1 Taxonomy by Generation Paradigm](#41-taxonomy-by-generation-paradigm)
       - [Diffusion-Based UMMs](#diffusion-based-umms)
@@ -83,10 +83,15 @@
     - [5.2 Early Fusion NMMs](#52-early-fusion-nmms)
     - [5.3 Late Fusion NMMs](#53-late-fusion-nmms)
     - [5.4 Any-to-Any / Omni NMMs](#54-any-to-any--omni-nmms)
-  - [6. Resources](#6-resources)
-    - [6.1 Related Awesome Lists](#61-related-awesome-lists)
-    - [6.2 Slides \& Survey Papers](#62-slides--survey-papers)
-    - [6.3 Code Repositories \& Tools](#63-code-repositories--tools)
+  - [6. Closed-Source Multimodal Models](#6-closed-source-multimodal-models)
+    - [Year 2026](#year-2026)
+    - [Year 2025](#year-2025)
+    - [Year 2024](#year-2024)
+    - [Year 2023](#year-2023)
+  - [7. Resources](#7-resources)
+    - [7.1 Related Awesome Lists](#71-related-awesome-lists)
+    - [7.2 Slides \& Survey Papers](#72-slides--survey-papers)
+    - [7.3 Code Repositories \& Tools](#73-code-repositories--tools)
   - [How to Contribute](#how-to-contribute)
     - [Validation Rules](#validation-rules)
     - [Entry Format](#entry-format)
@@ -525,11 +530,6 @@ Multimodal Models
 | ShapeLLM-Omni: A Native Multimodal LLM for 3D Generation and Understanding | arXiv 2025 | [Paper](https://arxiv.org/abs/2506.01853) [Code](https://github.com/JAMESYJL/ShapeLLM-Omni) | Native multimodal LLM focused on 3D generation and understanding | 3D multimodal | Native |
 
 
-### 3.3 Close-Source Multimodal Models
-
-| Paper | Venue | Links | Notes | Task |
-|---|---|---|---|---|
-
 <p align="right"><a href="#awesome-multimodal-modeling">Back to Top</a></p>
 
 ---
@@ -769,11 +769,49 @@ The latest arXiv-native multimodal papers increasingly blur the boundaries betwe
 
 ---
 
-## 6. Resources
 
-**In this section:** [6.1 Related Awesome Lists](#61-related-awesome-lists) · [6.2 Slides & Survey Papers](#62-slides--survey-papers) · [6.3 Code Repositories & Tools](#63-code-repositories--tools)
+## 6. Closed-Source Multimodal Models
 
-### 6.1 Related Awesome Lists
+### Year 2026
+
+| Model | Venue | Links | Notes | Task |
+|-------|-------|-------|-------|------|
+| Claude 4.6 Family (Opus 4.6 / Sonnet 4.6) | Anthropic Blog | [Anthropic Claude Updates](https://www.anthropic.com/claude) | Released ~February 2026. Further multimodal refinements (vision + tool/computer use). Proprietary. | Multimodal + Agentic/Coding/Computer-Use |
+| Gemini 3.x (Pro / Flash / 3.1 Pro) | Google DeepMind Blog | [Gemini 3 Announcements](https://blog.google/technology/ai/) | Released late 2025–early 2026 (Flash Dec 2025, Pro variants Feb 2026). State-of-the-art multimodal with massive context and Deep Think modes. Proprietary. | Frontier Multimodal (text/image/audio/video + reasoning) |
+| GPT-5.4 (and Pro/Codex variants) | OpenAI Blog | [OpenAI GPT-5 Updates](https://openai.com/index/) | Released ~March 2026. Enhanced efficiency, multimodal, and professional/agentic features. Proprietary. | Omni-Modal + Professional/Agentic Workflows |
+| Grok 4.x updates (e.g., Grok 4.1) | xAI Announcement | [xAI Blog](https://x.ai/blog) | Continued 2025–2026 iterations with improved vision and real-time capabilities. Proprietary via X platform. | Multimodal + Real-Time/Data-Integrated Reasoning |
+
+### Year 2025
+
+| Model | Venue | Links | Notes | Task |
+|-------|-------|-------|-------|------|
+| Gemini 2.0 / 2.5 (Pro / Flash) | Google DeepMind Blog | [Gemini 2.x Announcements](https://blog.google/technology/ai/) | Released early–mid 2025 (Flash ~Jan/Feb, Pro variants through March–June). Native multimodal with improved agentic and long-context capabilities. Proprietary. | Advanced Native Multimodal + Agentic (text/image/audio/video) |
+| Claude 4 Family (Opus 4 / Sonnet 4 / Haiku 4) | Anthropic Blog | [Claude 4 Announcement](https://www.anthropic.com/news/claude-4) | Released ~May 2025. Enhanced vision, reasoning, and early agentic features. Proprietary. | Vision + Advanced Reasoning/Agentic Workflows |
+| Grok 3 / Grok 4 (including vision/speech) | xAI Announcement | [xAI Blog](https://x.ai/blog) | Major updates throughout 2025 (Grok 3 ~early 2025, Grok 4 ~mid-late 2025). Multimodal input (text/image/speech). Proprietary. | Multimodal Reasoning + Real-Time Integration |
+| GPT-4.5 / GPT-5 (and variants like GPT-5 Codex) | OpenAI Blog | [OpenAI Announcements](https://openai.com/index/) | GPT-4.5 ~early 2025; full GPT-5 ~August 2025. Unified multimodal with strong reasoning and tool use. Proprietary. | Omni-Modal + Advanced Reasoning/Agentic |
+| Mistral Large / Medium Multimodal variants | Mistral AI | Mistral Platform | Proprietary multimodal offerings (e.g., Medium 3.1 ~2025). Text + vision capabilities via API. | General Multimodal Tasks |
+
+### Year 2024
+
+| Model | Venue | Links | Notes | Task |
+|-------|-------|-------|-------|------|
+| Gemini 1.5 (Pro / Flash) | Google DeepMind Blog | [Gemini 1.5 Announcement](https://blog.google/technology/ai/google-gemini-1-5/) | Released February 2024. Massive context (>1M tokens), strong long-context multimodal (video, audio, images). Proprietary. | Long-Context Multimodal (video/audio/image/text) |
+| Claude 3 Family (Opus / Sonnet / Haiku) | Anthropic Blog | [Claude 3 Family](https://www.anthropic.com/news/claude-3-family) | Released March 2024. Strong native vision for images, charts, diagrams, and documents. Proprietary API + Claude.ai. | Vision-Language + Reasoning |
+| Grok-1.5V / Grok-2 Vision | xAI Announcement | [Grok Vision Updates](https://x.ai/blog) | Vision capabilities added ~April 2024 (Grok-1.5V), expanded in Grok-2 (August 2024). Image understanding with real-world and diagram reasoning. Proprietary via X/Grok API. | Vision-Language (real-world visuals, diagrams) |
+| GPT-4o (Omni) | OpenAI Blog | [GPT-4o Announcement](https://openai.com/index/gpt-4o/) | Released May 2024. Full real-time omni-modal: text + image + audio (voice) input/output. Proprietary. | Real-Time Omni-Modal (text/vision/audio) |
+| Amazon Nova (Pro / Lite) | Amazon Announcement | AWS Bedrock docs | Released late 2024. Multimodal (text + image + video). Proprietary via Amazon Bedrock API. | Multimodal Understanding (text/image/video) |
+
+### Year 2023
+| Model | Venue | Links | Notes | Task |
+|-------|-------|-------|-------|------|
+| GPT-4V (Vision) | OpenAI Announcement | [GPT-4V System Card](https://openai.com/index/gpt-4v-system-card/) | Released September 2023. First widely available multimodal GPT-4 variant. Image + text input, text output. API/ChatGPT access only. | Vision-Language (image understanding, VQA, OCR, document analysis, captioning) |
+| Gemini 1.0 (Ultra / Pro / Nano) | Google DeepMind Blog | [Gemini Announcement](https://blog.google/technology/ai/google-gemini-ai/) | Released December 2023. Native multimodal from training (text + image + audio + video). Proprietary API + Gemini chatbot. | Native Multimodal Understanding (text/image/audio/video) |
+
+## 7. Resources
+
+**In this section:** [7.1 Related Awesome Lists](#71-related-awesome-lists) · [7.2 Slides & Survey Papers](#72-slides--survey-papers) · [7.3 Code Repositories & Tools](#63-code-repositories--tools)
+
+### 7.1 Related Awesome Lists
 
 | Repository | Focus | Author |
 |---|---|---|
@@ -787,7 +825,7 @@ The latest arXiv-native multimodal papers increasingly blur the boundaries betwe
 | [Awesome-Unified-Multimodal](https://github.com/Purshow/Awesome-Unified-Multimodal) | Unified models | Purshow |
 | [Awesome-Unified-Multimodal](https://github.com/AIDC-AI/Awesome-Unified-Multimodal-Models) | Unified models | AIDC-AI |
 
-### 6.2 Slides & Survey Papers
+### 7.2 Slides & Survey Papers
 
 | Type | Resource | Notes |
 |---|---|---|
@@ -796,7 +834,7 @@ The latest arXiv-native multimodal papers increasingly blur the boundaries betwe
 | Report | [The Dawn of LMMs: Preliminary Explorations with GPT-4V](https://arxiv.org/abs/2309.17421) | Early capability analysis around GPT-4V |
 | Survey | [Multimodal Foundation Models: From Specialists to General-Purpose Assistants](https://arxiv.org/abs/2309.10020) | Broader foundation-model view across multimodal systems |
 
-### 6.3 Code Repositories & Tools
+### 7.3 Code Repositories & Tools
 
 | Tool | Description | Link |
 |---|---|---|
