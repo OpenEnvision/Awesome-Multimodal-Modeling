@@ -748,13 +748,13 @@ Recent scaling-law evidence suggests early-fusion NMMs are often stronger at low
 | Model | Paper | Links | Training Scale | Notes | Task |
 |---|---|---|---|---|---|
 | Llama4 | arXiv 2026 | [Paper](https://arxiv.org/abs/2601.11659) [Blog](https://ai.meta.com/blog/llama-4-multimodal-intelligence/) | Scout/Maverick: 17B active / ~109B–400B total; Behemoth: ~2T total | Native multimodal, MoE architecture with early fusion and vision encoder | vision-language understanding |
-| Emu3 | arXiv 2024 | [Paper](https://arxiv.org/abs/2409.18869) [Code](https://github.com/baaivision/Emu3) | 8B | Next-token prediction over VQ image tokens; native multimodal decoder-only; minimal modality-specific params | visual understanding, visual generation |
+| LongCat-Next | arXiv 2026 | [Paper](https://arxiv.org/abs/2603.27538) | — | Discrete Native Any-resolution Visual Transformer | vision-language understanding |
+| VL-JEPA | arXiv 2025 | [Paper](https://arxiv.org/pdf/2512.10942) |  1.6B | Vision-Language Joint Native Model | vision-language understanding |
 | InternVL3 | arXiv 2025 | [Paper](https://arxiv.org/pdf/2504.10479) | — | A pre-trained InternViT encoder coupled with a cross-attention visual expert, employing a deep but late-fusion strategy to ensure seamless multimodal alignment while strictly preserving native LLM reasoning and linguistic proficiency. | vision-language understanding |
 | InternVL3.5 | arXiv 2025 | [Paper](https://arxiv.org/pdf/2508.18265) | — | A pre-trained ViT encoder with a visual expert that uses cross-attention for deep but late-style fusion to the LLM, preserving its capabilities. | vision-language understanding |
 | Qwen3.5 | - | [Blog](https://qwen.ai/blog?id=qwen3.5) | — | Discrete Native Any-resolution Visual Transformer | vision-language understanding |
-| ERNIE 5.0 Technical Report | arXiv 2026 (Late fusion)| [paper](https://arxiv.org/pdf/2602.04705) | — | a natively autoregressive foundation model desinged for unified multimodal understanding and generation across text, image, video, and audio | vision-language understanding, omni |
-| LongCat-Next | arXiv 2026 | [Paper](https://arxiv.org/abs/2603.27538) | — | Discrete Native Any-resolution Visual Transformer | vision-language understanding |
 | Gemma4 | - | [Blog](https://ai.google.dev/gemma/docs/core/model_card_4) | — | A pre-trained ViT encoder with a visual expert that uses cross-attention for deep but late-style fusion to the LLM, preserving its capabilities. | vision-language understanding |
+| Emu3 | arXiv 2024 | [Paper](https://arxiv.org/abs/2409.18869) [Code](https://github.com/baaivision/Emu3) | 8B | Next-token prediction over VQ image tokens; native multimodal decoder-only; minimal modality-specific params | visual understanding, visual generation |
 
 ### 5.4 Any-to-Any / Omni NMMs
 
