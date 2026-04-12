@@ -58,9 +58,13 @@
       - [Multimodal Alignment](#multimodal-alignment)
     - [2.2 Multimodal Pretraining](#22-multimodal-pretraining)
   - [3. Multimodal Large Language Models (MLLMs)](#3-multimodal-large-language-models-mllms)
-    - [3.1 Foundation MLLMs](#31-foundation-mllms)
-      - [](#)
+    - [3.1 Taxonomy Based on Vision Adapter](#31-taxonomy-based-on-vision-adapter)
+      - [MLP/Others Projector](#mlpothers-projector)
+      - [Q-Former](#q-former)
+      - [Cross-Attention](#cross-attention)
+      - [Hybrid Adaptor](#hybrid-adaptor)
     - [3.2 Omni MLLMs](#32-omni-mllms)
+    - [3.3 Close-Source Multimodal Models](#33-close-source-multimodal-models)
   - [4. Unified Multimodal Models (UMMs)](#4-unified-multimodal-models-umms)
     - [4.1 Taxonomy by Generation Paradigm](#41-taxonomy-by-generation-paradigm)
       - [Diffusion-Based UMMs](#diffusion-based-umms)
@@ -415,92 +419,116 @@ Multimodal Models
 
 > Models that connect a **pretrained visual encoder / abstractor** to a **pretrained LLM**. Primarily text-output understanding and reasoning systems, defined by inherited pretrained unimodal backbones rather than multimodal pretraining from scratch.
 
-### 3.1 Foundation MLLMs
+### 3.1 Taxonomy Based on Vision Adapter
 
-#### 
+#### MLP/Others Projector
 
 | Paper | Venue | Links | Notes | Task |
 |---|---|---|---|---|
 | Penguin-VL: Exploring the Efficiency Limits of VLM with LLM-based Vision Encoders | arXiv 2026 | [Paper](https://arxiv.org/pdf/2603.06569) | LLM-initialized vision encoder (non-CLIP); text-to-vision weight reuse, generative-aligned visual features, optimized for dense perception. | visual understanding |
 | Youtu-VL: Unleashing Visual Potential via Unified Vision-Language Supervision | arXiv 2026 | [Paper](https://arxiv.org/abs/2601.19798) | Tri-modal (V+A+L) unified framework; parameter-efficient tuning, seamless cross-modal reasoning for mobile/IoT deployment. | visual understanding |
 | STEP3-VL-10B Technical Report | arXiv 2026 | [Paper](https://arxiv.org/pdf/2601.09668) | 10B-scale foundation multimodal; unified unfrozen pre-training + PaCoRe test-time scaling, frontier-level reasoning with compact footprint. | visual understanding |
-| DeepSeek-OCR-2 | arXiv 2026 | [Paper](https://arxiv.org/abs/2601.20552) [HF](https://huggingface.co/deepseek-ai) | Optimized for high-volume OCR, document digitization, charts and formulas; efficient inference | OCR, document |
 | GLM-OCR | arXiv 2026 | [Paper](https://arxiv.org/abs/2603.10910) | GLM-OCR is an efficient 0.9B-parameter compact multimodal model designed for real-world document understanding. | OCR, structured extraction |
 | Kimi K2.5 | arXiv 2026 | [Paper](https://arxiv.org/abs/2602.02276) | joint text-vision pretraining, Agent Swarm framework; coding, vision, reasoning, agentic tasks; reduces latency by up to 4.5x | visual agentic intelligence, agentic, reasoning |
 | Kwai Keye-VL 1.5 Technical Report | arXiv 2025 | [Paper](https://arxiv.org/pdf/2509.01563) | Adaptive Slow-Fast encoding; 8B parameter scale with 128K long-context; SOTA video reasoning & human-preference aligned. | visual understanding |
 | olmOCR / olmOCR-2 | arXiv 2025 | [Paper](https://arxiv.org/abs/2510.19817) | Efficient low-VRAM OCR model based on Qwen2.5-VL fine-tune; excels at preserving semantic structure and markdown output | OCR, structured extraction |
 | PaddleOCR-VL | arXiv 2025 | [HF / Official](https://github.com/PaddlePaddle/PaddleOCR) | Lightweight (0.9B+) multimodal OCR with 109 languages support; excellent chart-to-HTML/Markdown conversion and high-throughput | OCR, multilingual document |
 | DeepSeek-OCR | arXiv 2025 | [Paper](https://arxiv.org/abs/2510.18234) [HF](https://huggingface.co/deepseek-ai) | Lightweight ~3B MoE vision model optimized for high-volume OCR, document digitization, charts and formulas; efficient inference | OCR, document |
-| Ovis2 | arXiv 2025 | [HF](https://huggingface.co/AIDC-AI/Ovis2-34B)  | Embedding table / projector architecture; excellent document understanding and fine-grained quantization | visual understanding, document |
 | Kimi-VL | arXiv 2025 | [Paper](https://arxiv.org/abs/2504.07491) [HF](https://huggingface.co/moonshotai/Kimi-VL-A3B-Thinking)  | Projector + MoE backbone; long video/PDF/GUI, agentic capabilities, chain-of-thought vision reasoning | visual understanding, agentic, video |
 | Seed1.5-VL Technical Report | arXiv 2025 | [Paper](https://arxiv.org/pdf/2505.07062) | 20B MoE + 532M ViT; native-resolution vision-language foundation model; efficient asymmetric architecture. | visual understanding |
 | Qwen3-VL | arXiv 2025 | [Paper](https://arxiv.org/abs/2511.21631) [HF](https://huggingface.co/Qwen)  | Frontier-grade vision/OCR (32+ languages), video analysis, agentic capabilities, strong multimodal reasoning; includes large MoE variants (e.g., 235B) | visual understanding, video, omni |
-| Eagle 2: Building Post-Training Data Strategies from Scratch for Frontier Vision-Language Models | arXiv 2025 | [Paper](https://arxiv.org/abs/2501.14818) | Data-centric post-training strategy for competitive frontier open VLMs | visual understanding |
 | SmolVLM | arXiv 2025 | [HF](https://huggingface.co/HuggingFaceTB/SmolVLM-256M)  | Ultra-lightweight (256M–2.2B) projector-based series; efficient on-device video and image understanding | visual understanding, efficiency |
 | jina-vlm | arXiv 2025 | [Paper](https://arxiv.org/abs/2512.04032) [HF](https://huggingface.co/jinaai/jina-vlm)  | SigLIP2 + Qwen backbone with custom projector; optimized for semantic VQA, diagrams, scans and document semantics | visual understanding, VQA, document |
 | Phi-4-Multimodal | arXiv 2025 | [Paper](https://arxiv.org/abs/2503.01743) [HF](https://huggingface.co/microsoft/Phi-4-multimodal)  | Small-parameter (LoRA + projectors) multimodal; vision + speech support, efficient on-device deployment | visual understanding, on-device |
 | Molmo / PixMo | CVPR 2025 | [Paper](https://openaccess.thecvf.com/content/CVPR2025/html/Deitke_Molmo_and_PixMo_Open_Weights_and_Open_Data_for_State-of-the-Art_CVPR_2025_paper.html) [Code](https://github.com/allenai/molmo)  | Strong open-data/open-weight VLM pipeline | visual understanding |
 | Qwen2.5-VL: Technical Report | arXiv 2025 | [Paper](https://arxiv.org/abs/2502.13923) [HF](https://huggingface.co/Qwen/Qwen2.5-VL-7B-Instruct)  | Stronger document, grounding, and video capabilities | visual understanding |
-| MiniMax-01: Scaling Foundation Models with Lightning Attention | arXiv 2025 | [Paper](https://arxiv.org/pdf/2501.08313) | Hybrid Lightning-Softmax Attention; MoE-based (45.9B active) multimodal; 4M long-context with near-zero prefill latency. | visual understanding |
+| General OCR Theory: Towards OCR-2.0 via a Unified End-to-end Model | arXiv 2024 | [Paper](https://arxiv.org/abs/2409.01704) [HF/Code](https://github.com/Ucas-HaoranWei/GOT-OCR2.0) | Specialized end-to-end OCR model with grounding (boxes + points); strong on scientific papers, slides, and mixed visual-text docs | OCR, grounding |
 | LLaVA-OneVision: Easy Visual Task Transfer | arXiv 2024 | [Paper](https://arxiv.org/abs/2408.03326) [Code](https://github.com/LLaVA-VL/LLaVA-NeXT)  | Single model for image, multi-image, and video transfer | visual understanding |
-| mPLUG-Owl3 | arXiv 2024 | [Paper](https://arxiv.org/abs/2408.04840) [Code](https://github.com/X-PLUG/mPLUG-Owl)  | Long visual sequences | visual understanding |
-| Idefics3 | arXiv 2024 | [Paper](https://arxiv.org/abs/2408.12637) [HF](https://huggingface.co/HuggingFaceM4/Idefics3-8B-Llama3)  | Open-data recipe with strong document understanding | visual understanding |
 | MiniCPM-V: A GPT-4V Level MLLM on Your Phone | arXiv 2024 | [Paper](https://arxiv.org/abs/2408.01800) [Code](https://github.com/OpenBMB/MiniCPM-V)   | On-device efficient MLLM | visual understanding |
 | xGen-MM (BLIP-3) | arXiv 2024 | [Paper](https://arxiv.org/abs/2408.08872)  | Open training recipe, datasets, and safety-tuned variants | visual understanding |
 | DeepSeek-VL2: Mixture-of-Experts Vision-Language Models | arXiv 2024 | [Paper](https://arxiv.org/abs/2412.10302) [Code](https://github.com/deepseek-ai/DeepSeek-VL2)  | MoE VLM with dynamic tiling and efficient inference | visual understanding |
 | Pixtral | arXiv 2024  | [Paper](https://arxiv.org/abs/2410.07073) [HF](https://huggingface.co/mistralai)  | 12B open-weight model with strong instruction following, image+text understanding; competitive with larger open VLMs | visual understanding |
-| NVLM 1.0: Open Frontier-Class Multimodal LLMs | arXiv 2024 | [Paper](https://arxiv.org/abs/2409.11402) [HF](https://huggingface.co/collections/nvidia/nvlm-10-66f571f7f3b1e4fbad96294b)  | Hybrid multimodal design with strong OCR and reasoning | visual understanding |
 | Qwen2-VL | arXiv 2024 | [Paper](https://arxiv.org/abs/2409.12191) [HF](https://huggingface.co/Qwen/Qwen2-VL-7B-Instruct)  | Dynamic resolution; native video | visual understanding |
 | Cambrian-1: A Fully Open, Vision-Centric Exploration | NeurIPS 2024 | [Paper](https://arxiv.org/abs/2406.16860) [Code](https://github.com/cambrian-mllm/cambrian)  | Spatial Vision Aggregator | visual understanding |
 | PaliGemma: A Versatile 3B VLM for Transfer | arXiv 2024 | [Paper](https://arxiv.org/abs/2407.07726) [HF](https://huggingface.co/google/paligemma-3b-mix-224)   | SigLIP encoder + Gemma backbone; strong transfer model | visual understanding |
-| LLaMA 3.2 Vision | arXiv 2024 | [Paper](https://arxiv.org/abs/2407.21783) [HF](https://huggingface.co/meta-llama/Llama-3.2-11B-Vision-Instruct)  | Adapter-based vision addition to Llama 3.2; strong OCR, document VQA, 128K context | visual understanding, document |
-| Idefics2 | arXiv 2024 | [Paper](https://arxiv.org/abs/2405.02246) [HF](https://huggingface.co/HuggingFaceM4/idefics2-8b)  | Fully open; built on Mistral | visual understanding |
 | InternLM-XComposer2 | arXiv 2024 | [Paper](https://arxiv.org/abs/2401.16420) [Code](https://github.com/InternLM/InternLM-XComposer)  | Compositional visual grounding | visual understanding |
 | Phi-3-Vision | arXiv 2024 | [Paper](https://arxiv.org/abs/2404.14219) [HF](https://huggingface.co/microsoft/Phi-3-vision-128k-instruct)   | Small but capable | visual understanding |
 | LLaVA-HR: High Resolution MLLMs | CVPR 2024 | [Paper](https://arxiv.org/abs/2403.03003) | Mixture-of-Resolution Adaptation | visual understanding |
-| InternVL: Scaling up Vision Foundation Models | CVPR 2024 | [Paper](https://arxiv.org/abs/2312.14238) [Code](https://github.com/OpenGVLab/InternVL)  | Progressively aligned ViT + LLM | visual understanding |
 | InternVL2 | Model release 2024 | [HF](https://huggingface.co/OpenGVLab/InternVL2-8B)  | Instruction-tuned InternVL family release with strong multilingual and OCR capabilities | visual understanding |
-| mPLUG-DocOwl 1.5 / 2: Unified Structure Learning for OCR-free Document Understanding | arXiv 2024 | [Paper](https://arxiv.org/abs/2403.12895) [Code](https://github.com/X-PLUG/mPLUG-DocOwl) | OCR-free document understanding with unified structure learning; excels at long documents and complex layouts | document understanding, OCR |
-| General OCR Theory: Towards OCR-2.0 via a Unified End-to-end Model | arXiv 2024 | [Paper](https://arxiv.org/abs/2409.01704) [HF/Code](https://github.com/Ucas-HaoranWei/GOT-OCR2.0) | Specialized end-to-end OCR model with grounding (boxes + points); strong on scientific papers, slides, and mixed visual-text docs | OCR, grounding |
+| InternVL: Scaling up Vision Foundation Models | CVPR 2024 | [Paper](https://arxiv.org/abs/2312.14238) [Code](https://github.com/OpenGVLab/InternVL)  | Progressively aligned ViT + LLM | visual understanding |
 | MM1: Methods, Analysis & Insights from Multimodal LLM Pre-training | arXiv 2024 | [Paper](https://arxiv.org/abs/2403.09611) | Large-scale proprietary recipe study for multimodal LLM pretraining | visual understanding |
-| CogVLM: Visual Expert for Pretrained Language Models | arXiv 2023 | [Paper](https://arxiv.org/abs/2311.03079) [Code](https://github.com/THUDM/CogVLM)  | Deep fusion with visual expert modules inside a pretrained LLM | visual understanding |
-| Qwen-VL: A Versatile Vision-Language Model | arXiv 2023 | [Paper](https://arxiv.org/abs/2308.12966) [HF](https://huggingface.co/Qwen/Qwen-VL)  | High-res, multi-lang, bounding box | visual understanding |
-| CogVLM | arXiv 2023 | [Paper](https://arxiv.org/abs/2311.03079) | — | ViT Encoder + visual expert with cross-attention to LLM; deep but late-style fusion preserving LLM capabilities | vision-language understanding |
-| InstructBLIP | arXiv 2023 | [Paper](https://arxiv.org/abs/2305.06500) | — | Instruction-tuned on BLIP-2 style; frozen vision encoder + LLM with late projection | vision-language understanding |
 | LLaVA | arXiv 2023 | [Paper](https://arxiv.org/abs/2304.08485) [Code](https://github.com/haotian-liu/LLaVA) | 7B / 13B+ | CLIP Vision Encoder (frozen/pretrained) + linear projection to LLM (Vicuna/LLaMA); vision tokens inserted into LLM input; common late-fusion baseline | visual instruction tuning, VQA, image captioning |
-| BLIP-2 | arXiv 2023 | [Paper](https://arxiv.org/abs/2301.12597) | — | Q-Former bridges frozen vision encoder and LLM; late alignment of visual features to text | vision-language understanding, generation |
-| Flamingo | arXiv 2022 | [Paper](https://arxiv.org/abs/2204.14198) | 80B | Perceiver Resampler + frozen vision encoder (e.g., CLIP-like) + frozen LLM; cross-attention for late multimodal interaction | few-shot visual question answering, captioning |
-| IDEFICS | — | [Hugging Face](https://huggingface.co/HuggingFaceM4/idefics) | 80B | Flamingo-inspired; late fusion with vision encoder and LLM | open-source multimodal understanding |
 
-### 3.2 Omni MLLMs
+#### Q-Former
 
 | Paper | Venue | Links | Notes | Task |
 |---|---|---|---|---|
-| OmniGAIA: Towards Native Omni-Modal AI Agents | arXiv 2026 | [Paper](https://arxiv.org/abs/2602.22897) [Code](https://github.com/RUC-NLPIR/OmniGAIA) | Comprehensive benchmark for omni-modal agents with complex multi-hop queries across video, audio, and image; includes OmniAtlas agent with tool-integrated reasoning | omni-modal understanding & reasoning |
-| ThinkOmni: Lifting Textual Reasoning to Omni-modal Scenarios via Guidance Decoding | arXiv 2026 | [Paper](https://arxiv.org/abs/2602.23306) | Training-free framework that lifts textual reasoning to omni-modal scenarios using LRM guidance and stepwise contrastive scaling | omni-modal reasoning |
-| OmniVideo-R1: Reinforcing Audio-visual Reasoning with Query Intention and Modality Attention | arXiv 2026 | [Paper](https://arxiv.org/abs/2602.05847) | Reinforced audio-visual reasoning framework with query intention grounding and modality attention fusion | audio-visual reasoning |
-| Omni-Safety under Cross-Modality Conflict: Vulnerabilities, Dynamics Mechanisms and Efficient Alignment | arXiv 2026 | [Paper](https://arxiv.org/abs/2602.10161) [Code](https://github.com/zhrli324/omni-safety-research) | Analysis of cross-modality conflict vulnerabilities and efficient alignment methods in omni-modal models | omni-modal safety & alignment |
-| ChronusOmni: Improving Time Awareness of Omni Large Language Models | arXiv 2025 | [Paper](https://arxiv.org/abs/2512.09841) [Code](https://github.com/YJCX330/Chronus) | Enhances temporal awareness in omni-modal LLMs | time-aware omni-modal understanding |
-| Uni-MoE-2.0-Omni: Scaling Language-Centric Omnimodal Large Model with Advanced MoE, Training and Data | arXiv 2025 | [Paper](https://arxiv.org/abs/2511.12609) [Code](https://github.com/HITsz-TMG/Uni-MoE) | MoE-based scaling for omnimodal understanding and generation | omni-modal understanding & generation |
-| Omni-AVSR: Towards Unified Multimodal Speech Recognition with Large Language Models | arXiv 2025 | [Paper](https://arxiv.org/abs/2511.07253) [Code](https://github.com/umbertocappellazzo/Omni-AVSR) | Unified audio-visual speech recognition using LLMs | audio-visual speech recognition |
-| LongCat-Flash-Omni Technical Report | arXiv 2025 | [Paper](https://arxiv.org/abs/2511.00279) [Code](https://github.com/meituan-longcat/LongCat-Flash-Omni) | Long-context omni-modal model supporting text and audio generation | long-context omni-modal |
-| OmniVinci: Enhancing Architecture and Data for Omni-Modal Understanding LLM | arXiv 2025 | [Paper](https://arxiv.org/abs/2510.15870) [Code](https://github.com/NVlabs/OmniVinci) | Architecture and data enhancements for omni-modal understanding | omni-modal understanding |
-| InteractiveOmni: A Unified Omni-modal Model for Audio-Visual Multi-turn Dialogue | arXiv 2025 | [Paper](https://arxiv.org/abs/2510.13747) [Code](https://github.com/SenseTime-FVG/InteractiveOmni) | Unified model for audio-visual multi-turn dialogue | audio-visual dialogue |
-| OneLLM: One Framework to Align All Modalities with Languag | CVPR 2024 | [Paper](https://arxiv.org/pdf/2312.03700) | Mixture of Matryoshka experts for efficient audio-visual speech recognition | all-in-one LLM |
-| MoME: Mixture of Matryoshka Experts for Audio-Visual Speech Recognition | NeurIPS 2025 | [Paper](https://arxiv.org/abs/2510.04136) | Mixture of Matryoshka experts for efficient audio-visual speech recognition | audio-visual speech recognition |
-| Qwen3-Omni Technical Report | arXiv 2025 | [Paper](https://arxiv.org/abs/2509.17765) [Code](https://github.com/QwenLM/Qwen3-Omni/) | Omni-modal model with text and audio capabilities (Alibaba/Qwen series) | omni-modal |
-| Qwen2.5-Omni Technical Report | arXiv 2025 | [Paper](https://arxiv.org/abs/2503.20215) [Code](https://github.com/QwenLM/Qwen2.5-Omni/) | Omni-modal technical report with text and audio support (Alibaba/Qwen series) | omni-modal |
-| MiniCPM-o 2.6: A GPT-4o Level MLLM for Vision, Speech, and Multimodal Live Streaming on Your Phone | 2025 | [Paper](https://openbmb.notion.site/MiniCPM-o-2-6-A-GPT-4o-Level-MLLM-for-Vision-Speech-and-Multimodal-Live-Streaming-on-Your-Phone-185ede1b7a558042b5d5e45e6b237da9) [Code](https://github.com/OpenBMB/MiniCPM-o) | On-device GPT-4o level MLLM for vision, speech and multimodal live streaming (OpenBMB) | on-device multimodal live streaming |
-| Baichuan-Omni Technical Report | arXiv 2024 | [Paper](https://arxiv.org/abs/2410.08565) [Code](https://github.com/westlake-baichuan-mllm/bc-omni) | Technical report for Baichuan-Omni (Baichuan Inc.) | omni-modal |
-| Baichuan-Omni-1.5 Technical Report | arXiv 2025 | [Paper](https://arxiv.org/abs/2501.15368) [Code](https://github.com/baichuan-inc/Baichuan-Omni-1.5) | Technical report for Baichuan-Omni 1.5 (Baichuan Inc.) | omni-modal |
+| M-MiniGPT4: Multilingual VLLM Alignment via Translated Data | arXiv 2026 | [Paper](https://arxiv.org/abs/2603.29467) | Q-Former based (inherits from MiniGPT-4 / BLIP-2) | vision-language understanding |
+| Video Q-Former: Multimodal Large Language Model with Spatio-Temporal Querying Transformer | Openreview  | [Paper](https://openreview.net/pdf/6a4b2bd8b1e48662f75e7fca3b2b64f4848d6d91.pdf) | Spatio-temporal Q-Former (learnable queries for video spatial-temporal feature extraction) | video understanding |
+| HierarQ: Task-Aware Hierarchical Q-Former for Enhanced Video Understanding | arXiv 2025 | [Paper](https://arxiv.org/abs/2503.08585) | Hierarchical Q-Former (multi-level learnable queries with memory bank for long video) | long video understanding |
+| Towards Efficient Visual-Language Alignment of the Q-Former | arXiv 2024 | [Paper](https://arxiv.org/abs/2410.09489) | PEFT-tuned Q-Former (parameter-efficient fine-tuning on InstructBLIP-style Q-Former) | visual reasoning |
+| Matryoshka Query Transformer (MQT) for Large Vision-Language Models | NeurIPS 2024 | [Paper](https://arxiv.org/abs/2405.19315) | Matryoshka Query Transformer (elastic learnable queries, variable token count) | vision-language understanding |
+| Semantically Grounded QFormer for Efficient Vision Language Understanding | arXiv 2023 | [Paper](https://arxiv.org/abs/2311.07449) | Improved Grounded QFormer (direct latent conditioning, bypass input projection) | vision-language understanding |
+
+#### Cross-Attention
+
+| Paper | Venue | Links | Notes | Task |
+|---|---|---|---|---|
+| CASA: Cross-Attention over Self-Attention | arXiv 2025 | [Paper](https://arxiv.org/abs/2512.19535) | Efficient cross-attention via self-attention reformulation; competitive with token insertion on image benchmarks, strong for long video | efficient vision-language fusion, video captioning |
+| LLaMA 3.2 Vision | arXiv 2024 | [Paper](https://arxiv.org/abs/2407.21783) [HF](https://huggingface.co/meta-llama/Llama-3.2-11B-Vision-Instruct)  | Adapter-based vision addition to Llama 3.2; strong OCR, document VQA, 128K context | visual understanding, document |
+| Idefics2 | arXiv 2024 | [Paper](https://arxiv.org/abs/2405.02246) [HF](https://huggingface.co/HuggingFaceM4/idefics2-8b) | Flamingo-style with Perceiver Resampler + gated cross-attention; improved efficiency on Mistral backbone | open multimodal understanding |
+| CogVLM: Visual Expert for Pretrained Language Models | arXiv 2023 | [Paper](https://arxiv.org/abs/2311.03079) [Code](https://github.com/THUDM/CogVLM)  | Deep fusion with visual expert modules inside a pretrained LLM | visual understanding |
+| Qwen-VL: A Versatile Vision-Language Model | arXiv 2023 | [Paper](https://arxiv.org/abs/2308.12966) [HF](https://huggingface.co/Qwen/Qwen-VL)  | High-res, multi-lang, bounding box | visual understanding |
+| IDEFICS | — | [Hugging Face](https://huggingface.co/HuggingFaceM4/idefics) | 80B | Flamingo-inspired; late fusion with vision encoder and LLM | open-source multimodal understanding |
+
+#### Hybrid Adaptor
+
+| Paper | Venue | Links | Notes | Task |
+|---|---|---|---|---|
+| DeepSeek-OCR-2 | arXiv 2026 | [Paper](https://arxiv.org/abs/2601.20552) [HF](https://huggingface.co/deepseek-ai) | Optimized for high-volume OCR, document digitization, charts and formulas; efficient inference | OCR, document |
+| Ovis2.5 | arXiv 2025 | [Paper](https://arxiv.org/pdf/2508.11737)  | Following VET architecture; excellent document understanding and fine-grained quantization | visual understanding, document |
+| Ovis2 | arXiv 2025 | [HF](https://huggingface.co/AIDC-AI/Ovis2-34B)  | Embedding table / projector architecture; excellent document understanding and fine-grained quantization | visual understanding, document |
+| MiniMax-01: Scaling Foundation Models with Lightning Attention | arXiv 2025 | [Paper](https://arxiv.org/pdf/2501.08313) | Hybrid Lightning-Softmax Attention; MoE-based (45.9B active) multimodal; 4M long-context with near-zero prefill latency. | visual understanding |
+| mPLUG-Owl3 | arXiv 2024 | [Paper](https://arxiv.org/abs/2408.04840) [Code](https://github.com/X-PLUG/mPLUG-Owl)  | Long visual sequences | visual understanding |
+| Idefics3 | arXiv 2024 | [Paper](https://arxiv.org/abs/2408.12637) [HF](https://huggingface.co/HuggingFaceM4/Idefics3-8B-Llama3)  | Open-data recipe with strong document understanding | visual understanding |
+| NVLM 1.0: Open Frontier-Class Multimodal LLMs | arXiv 2024 | [Paper](https://arxiv.org/abs/2409.11402) [HF](https://huggingface.co/collections/nvidia/nvlm-10-66f571f7f3b1e4fbad96294b)  | Hybrid multimodal design with strong OCR and reasoning | visual understanding |
+| Idefics2 | arXiv 2024 | [Paper](https://arxiv.org/abs/2405.02246) [HF](https://huggingface.co/HuggingFaceM4/idefics2-8b)  | Fully open; built on Mistral | visual understanding |
+| mPLUG-DocOwl 1.5 / 2: Unified Structure Learning for OCR-free Document Understanding | arXiv 2024 | [Paper](https://arxiv.org/abs/2403.12895) [Code](https://github.com/X-PLUG/mPLUG-DocOwl) | OCR-free document understanding with unified structure learning; excels at long documents and complex layouts | document understanding, OCR |
+
+### 3.2 Omni MLLMs
+
+| Paper | Venue | Links | Notes | Task | Adaptor |
+|---|---|---|---|---|---|
+| OmniGAIA: Towards Native Omni-Modal AI Agents | arXiv 2026 | [Paper](https://arxiv.org/abs/2602.22897) [Code](https://github.com/RUC-NLPIR/OmniGAIA) | Comprehensive benchmark for omni-modal agents with complex multi-hop queries across video, audio, and image; includes OmniAtlas agent with tool-integrated reasoning | omni-modal understanding & reasoning | Native |
+| ThinkOmni: Lifting Textual Reasoning to Omni-modal Scenarios via Guidance Decoding | arXiv 2026 | [Paper](https://arxiv.org/abs/2602.23306) | Training-free framework that lifts textual reasoning to omni-modal scenarios using LRM guidance and stepwise contrastive scaling | omni-modal reasoning | Hybrid |
+| OmniVideo-R1: Reinforcing Audio-visual Reasoning with Query Intention and Modality Attention | arXiv 2026 | [Paper](https://arxiv.org/abs/2602.05847) | Reinforced audio-visual reasoning framework with query intention grounding and modality attention fusion | audio-visual reasoning | Hybrid |
+| ChronusOmni: Improving Time Awareness of Omni Large Language Models | arXiv 2025 | [Paper](https://arxiv.org/abs/2512.09841) [Code](https://github.com/YJCX330/Chronus) | Enhances temporal awareness in omni-modal LLMs | time-aware omni-modal understanding | Hybrid |
+| Uni-MoE-2.0-Omni: Scaling Language-Centric Omnimodal Large Model with Advanced MoE, Training and Data | arXiv 2025 | [Paper](https://arxiv.org/abs/2511.12609) [Code](https://github.com/HITsz-TMG/Uni-MoE) | MoE-based scaling for omnimodal understanding and generation | omni-modal understanding & generation | MLP Projector |
+| Omni-AVSR: Towards Unified Multimodal Speech Recognition with Large Language Models | arXiv 2025 | [Paper](https://arxiv.org/abs/2511.07253) [Code](https://github.com/umbertocappellazzo/Omni-AVSR) | Unified audio-visual speech recognition using LLMs | audio-visual speech recognition | Hybrid |
+| LongCat-Flash-Omni Technical Report | arXiv 2025 | [Paper](https://arxiv.org/abs/2511.00279) [Code](https://github.com/meituan-longcat/LongCat-Flash-Omni) | Long-context omni-modal model supporting text and audio generation | long-context omni-modal | Hybrid |
+| OmniVinci: Enhancing Architecture and Data for Omni-Modal Understanding LLM | arXiv 2025 | [Paper](https://arxiv.org/abs/2510.15870) [Code](https://github.com/NVlabs/OmniVinci) | Architecture and data enhancements for omni-modal understanding | omni-modal understanding | Hybrid |
+| InteractiveOmni: A Unified Omni-modal Model for Audio-Visual Multi-turn Dialogue | arXiv 2025 | [Paper](https://arxiv.org/abs/2510.13747) [Code](https://github.com/SenseTime-FVG/InteractiveOmni) | Unified model for audio-visual multi-turn dialogue | audio-visual dialogue | Hybrid |
+| OneLLM: One Framework to Align All Modalities with Languag | CVPR 2024 | [Paper](https://arxiv.org/pdf/2312.03700) | Mixture of Matryoshka experts for efficient audio-visual speech recognition | all-in-one LLM | Hybrid |
+| MoME: Mixture of Matryoshka Experts for Audio-Visual Speech Recognition | NeurIPS 2025 | [Paper](https://arxiv.org/abs/2510.04136) | Mixture of Matryoshka experts for efficient audio-visual speech recognition | audio-visual speech recognition | Hybrid |
+| Qwen3-Omni Technical Report | arXiv 2025 | [Paper](https://arxiv.org/abs/2509.17765) [Code](https://github.com/QwenLM/Qwen3-Omni/) | Omni-modal model with text and audio capabilities (Alibaba/Qwen series) | omni-modal | Native |
+| Qwen2.5-Omni Technical Report | arXiv 2025 | [Paper](https://arxiv.org/abs/2503.20215) [Code](https://github.com/QwenLM/Qwen2.5-Omni/) | Omni-modal technical report with text and audio support (Alibaba/Qwen series) | omni-modal | Hybrid |
+| MiniCPM-o 2.6: A GPT-4o Level MLLM for Vision, Speech, and Multimodal Live Streaming on Your Phone | 2025 | [Paper](https://openbmb.notion.site/MiniCPM-o-2-6-A-GPT-4o-Level-MLLM-for-Vision-Speech-and-Multimodal-Live-Streaming-on-Your-Phone-185ede1b7a558042b5d5e45e6b237da9) [Code](https://github.com/OpenBMB/MiniCPM-o) | On-device GPT-4o level MLLM for vision, speech and multimodal live streaming (OpenBMB) | on-device multimodal live streaming | Hybrid |
+| Baichuan-Omni Technical Report | arXiv 2024 | [Paper](https://arxiv.org/abs/2410.08565) [Code](https://github.com/westlake-baichuan-mllm/bc-omni) | Technical report for Baichuan-Omni (Baichuan Inc.) | omni-modal | Hybrid |
+| Baichuan-Omni-1.5 Technical Report | arXiv 2025 | [Paper](https://arxiv.org/abs/2501.15368) [Code](https://github.com/baichuan-inc/Baichuan-Omni-1.5) | Technical report for Baichuan-Omni 1.5 (Baichuan Inc.) | omni-modal | Hybrid |
 | VITA: Towards Open-Source Interactive Omni Multimodal LLM | arXiv 2024 | [Paper](https://arxiv.org/abs/2408.05211) [Code](https://github.com/VITA-MLLM/VITA) | Open-source interactive omni multimodal LLM | interactive omni multimodal |
-| VITA-1.5: Towards GPT-4o Level Real-Time Vision and Speech Interaction | arXiv 2024 | [Paper](https://arxiv.org/abs/2501.01957) [Code](https://github.com/VITA-MLLM/VITA) | Real-time vision and speech interaction model | real-time multimodal interaction |
-| Mini-Omni2: Towards Open-source GPT-4o with Vision, Speech and Duplex Capabilities | NeurIPS 2024 | [Paper](https://arxiv.org/abs/2410.11190) [Code](https://github.com/gpt-omni/mini-omni2) | Open-source GPT-4o style model with vision, speech and duplex capabilities | vision-speech duplex |
-| Ola: Pushing the Frontiers of Omni-Modal Language Model with Progressive Modality Alignment | arXiv 2025 | [Paper](https://arxiv.org/abs/2502.04328) [Code](https://github.com/Ola-Omni/Ola) | Progressive modality alignment for omni-modal language model | omni-modal alignment |
-| MIO: A Foundation Model on Multimodal Tokens | arXiv 2024 | [Paper](https://arxiv.org/abs/2409.17692) [Code](https://github.com/MIO-Team/MIO) | Foundation model based on multimodal tokens | multimodal tokens |
-| EMOVA: Empowering Language Models to See, Hear and Speak with Vivid Emotions | CVPR 2024 | [Paper](https://arxiv.org/abs/2409.18042) [Code](https://github.com/emova-ollm/EMOVA) | Multimodal model supporting seeing, hearing and emotional speech | emotional multimodal |
-| Stream-Omni: Simultaneous Multimodal Interactions with Large Language-Vision-Speech Model | arXiv 2025 | [Paper](https://arxiv.org/abs/2506.13642) [Code](https://github.com/ictnlp/Stream-Omni) | Simultaneous multimodal interactions with language-vision-speech model | simultaneous multimodal |
-| ShapeLLM-Omni: A Native Multimodal LLM for 3D Generation and Understanding | arXiv 2025 | [Paper](https://arxiv.org/abs/2506.01853) [Code](https://github.com/JAMESYJL/ShapeLLM-Omni) | Native multimodal LLM focused on 3D generation and understanding | 3D multimodal |
+| VITA-1.5: Towards GPT-4o Level Real-Time Vision and Speech Interaction | arXiv 2024 | [Paper](https://arxiv.org/abs/2501.01957) [Code](https://github.com/VITA-MLLM/VITA) | Real-time vision and speech interaction model | real-time multimodal interaction | Hybrid |
+| Mini-Omni2: Towards Open-source GPT-4o with Vision, Speech and Duplex Capabilities | NeurIPS 2024 | [Paper](https://arxiv.org/abs/2410.11190) [Code](https://github.com/gpt-omni/mini-omni2) | Open-source GPT-4o style model with vision, speech and duplex capabilities | vision-speech duplex | Hybrid |
+| Ola: Pushing the Frontiers of Omni-Modal Language Model with Progressive Modality Alignment | arXiv 2025 | [Paper](https://arxiv.org/abs/2502.04328) [Code](https://github.com/Ola-Omni/Ola) | Progressive modality alignment for omni-modal language model | omni-modal alignment | MLP Projector |
+| MIO: A Foundation Model on Multimodal Tokens | arXiv 2024 | [Paper](https://arxiv.org/abs/2409.17692) [Code](https://github.com/MIO-Team/MIO) | Foundation model based on multimodal tokens | multimodal tokens | Native |
+| EMOVA: Empowering Language Models to See, Hear and Speak with Vivid Emotions | CVPR 2024 | [Paper](https://arxiv.org/abs/2409.18042) [Code](https://github.com/emova-ollm/EMOVA) | Multimodal model supporting seeing, hearing and emotional speech | emotional multimodal | Hybrid |
+| Stream-Omni: Simultaneous Multimodal Interactions with Large Language-Vision-Speech Model | arXiv 2025 | [Paper](https://arxiv.org/abs/2506.13642) [Code](https://github.com/ictnlp/Stream-Omni) | Simultaneous multimodal interactions with language-vision-speech model | simultaneous multimodal | Hybrid |
+| ShapeLLM-Omni: A Native Multimodal LLM for 3D Generation and Understanding | arXiv 2025 | [Paper](https://arxiv.org/abs/2506.01853) [Code](https://github.com/JAMESYJL/ShapeLLM-Omni) | Native multimodal LLM focused on 3D generation and understanding | 3D multimodal | Native |
+
+
+### 3.3 Close-Source Multimodal Models
+
+| Paper | Venue | Links | Notes | Task |
+|---|---|---|---|---|
 
 <p align="right"><a href="#awesome-multimodal-modeling">Back to Top</a></p>
 
