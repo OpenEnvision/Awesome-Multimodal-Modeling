@@ -723,10 +723,6 @@ Models that extend unified understanding + generation beyond text and image to s
 
 > **What recent arXiv work emphasizes:** native multimodality is increasingly defined by end-to-end multimodal pretraining, tokenizer/representation co-design, and scaling strategies that explicitly address the asymmetry between vision and language.
 
-<p align="center">
-  <img src="assets/nmm_timeline.png" alt="Native Multimodal Models (NMMs) timeline" width="100%">
-</p>
-
 ### 5.1 Design Analyses & Scaling Laws
 
 Recent arXiv papers sharpen the definition of NMMs and identify the main bottlenecks in native multimodal pretraining.
