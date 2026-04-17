@@ -683,6 +683,7 @@ Unified models are categorized according to their core generation mechanism for 
 
 | Paper | Venue | Links | Notes | Task |
 |---|---|---|---|---|
+| InternVL-U: Democratizing Unified Multimodal Models for Understanding, Reasoning, Generation and Editing | arXiv 2026 | [Paper](https://arxiv.org/abs/2603.09877) [Code](https://github.com/OpenGVLab/InternVL-U) | 4B unified multimodal model integrating a strong MLLM with an MMDiT-based visual generation head for understanding, reasoning, generation and editing | multimodal understanding, reasoning, generation and editing |
 | EMMA: Efficient Multimodal Understanding, Generation, and Editing with a Unified Architecture | arXiv 2025 | [Paper](https://arxiv.org/abs/2512.04810) [Code](https://github.com/umm-emma/emma) | Efficient unified architecture with autoencoders, channel-wise concatenation, shared-decoupled networks and MoE for understanding, generation and editing | multimodal understanding, generation and editing |
 | HBridge: H-Shape Bridging of Heterogeneous Experts for Unified Multimodal Understanding and Generation | arXiv 2025 | [Paper](https://arxiv.org/abs/2511.20520) | Asymmetric H-shaped architecture bridging heterogeneous experts with symmetric dense mid-layer connections for unified multimodal modeling | multimodal understanding and generation |
 | LightFusion: A Light-weighted, Double Fusion Framework for Unified Multimodal Understanding and Generation | arXiv 2025 | [Paper](https://arxiv.org/abs/2510.22946) [Code](https://github.com/LightFusion-Team/LightFusion) | Light-weighted double fusion framework that efficiently integrates pretrained vision-language and diffusion models | multimodal understanding and generation |
@@ -721,6 +722,10 @@ Models that extend unified understanding + generation beyond text and image to s
 > **The most restrictive category.** NMMs are trained **completely from scratch** on multimodal data — no pretrained LLM or vision encoder is used as initialization. All weights are jointly learned end-to-end.
 
 > **What recent arXiv work emphasizes:** native multimodality is increasingly defined by end-to-end multimodal pretraining, tokenizer/representation co-design, and scaling strategies that explicitly address the asymmetry between vision and language.
+
+<p align="center">
+  <img src="assets/nmm_timeline.png" alt="Native Multimodal Models (NMMs) timeline" width="100%">
+</p>
 
 ### 5.1 Design Analyses & Scaling Laws
 
@@ -765,8 +770,9 @@ Recent scaling-law evidence suggests early-fusion NMMs are often stronger at low
 
 The latest arXiv-native multimodal papers increasingly blur the boundaries between omni understanding, any-to-any generation, world modeling, and RL-enhanced post-training.
 
-| Model | Paper | Links | Notes | Task |
-|---|---|---|---|---|
+| Model | Paper | Links | Training Scale | Notes | Task |
+|---|---|---|---|---|---|
+| Tri-Modal Masked Diffusion Models | arXiv 2026 (Omni / Any-to-Any) | [Paper](https://arxiv.org/pdf/2602.21472) | 3B; 6.4T tokens | Studies a from-scratch tri-modal masked diffusion model spanning text, image-text, and audio-text data, with scaling, modality mixing, noise-schedule, batch-size, and inference analyses | text generation, text-to-image, text-to-speech |
 | Qwen3.5-Omni | (Late Fusion) | [Blog](https://qwen.ai/blog?id=qwen3.5) | — | Discrete Native Any-resolution Visual Transformer | vision-language understanding, omni |
 | ERNIE 5.0 Technical Report | arXiv 2026 (Late fusion)| [paper](https://arxiv.org/pdf/2602.04705) | — | a natively autoregressive foundation model desinged for unified multimodal understanding and generation across text, image, video, and audio | vision-language understanding, omni |
 
