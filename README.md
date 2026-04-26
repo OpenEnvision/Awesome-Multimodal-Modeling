@@ -543,7 +543,7 @@ Multimodal Models
 
 ## 4. Unified Multimodal Models (UMMs)
 
-**In this section:** [4.1 Taxonomy by Generation Paradigm](#41-taxonomy-by-generation-paradigm) · [4.2 Any-to-Any / Omni UMMs ](#42-any-to-any-omni-umms)
+**In this section:** [4.1 Taxonomy by Generation Paradigm](#41-taxonomy-by-generation-paradigm) · [4.2 Any-to-Any / Omni UMMs ](#42-any-to-any--omni-umms)
 
 > Models that unify **multimodal understanding and visual generation** within one framework. The defining property is **U+G unification**, not necessarily training from scratch.
 
@@ -757,6 +757,7 @@ Recent scaling-law evidence suggests early-fusion NMMs are often stronger at low
 
 | Model | Paper | Links | Training Scale | Notes | Task |
 |---|---|---|---|---|---|
+| Kimi K2.6 | Moonshot AI 2026 | [Blog](https://www.kimi.com/blog/kimi-k2-6) | MoE Architecture: 32B active / 1T total parameters; supports 256K context | Native multimodal MoE with MLA (Multi-head Latent Attention) and MoonViT encoder | Unified multimodal understanding, long-horizon coding, and agent swarms |
 | Llama4 | arXiv 2026 | [Paper](https://arxiv.org/abs/2601.11659) [Blog](https://ai.meta.com/blog/llama-4-multimodal-intelligence/) | Scout/Maverick: 17B active / ~109B–400B total; Behemoth: ~2T total | Native multimodal, MoE architecture with early fusion and vision encoder | vision-language understanding |
 | LongCat-Next | arXiv 2026 | [Paper](https://arxiv.org/abs/2603.27538) | — | Discrete Native Any-resolution Visual Transformer | vision-language understanding |
 | VL-JEPA | arXiv 2025 | [Paper](https://arxiv.org/pdf/2512.10942) |  1.6B | Vision-Language Joint Native Model | vision-language understanding |
