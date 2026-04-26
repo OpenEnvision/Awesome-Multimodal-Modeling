@@ -41,6 +41,7 @@
 <summary><strong>Browse the list</strong></summary>
 
 - [Awesome Multimodal Modeling](#awesome-multimodal-modeling)
+  - [📢 News](#-news)
   - [Table of Contents](#table-of-contents)
   - [About This List](#about-this-list)
     - [At a Glance](#at-a-glance)
@@ -564,6 +565,7 @@ Unified models are categorized according to their core generation mechanism for 
 
 | Model | Venue | Links | Paradigm | Notes | Task |
 |---|---|---|---|---|---|
+| LLaDA2.0-Uni | arXiv 2026 | [Paper](https://arxiv.org/abs/2604.20796) [Code](https://github.com/inclusionAI/LLaDA2.0-Uni) | Unified Discrete Diffusion | Unified image generation + understanding base on LLaDA2.0 | visual understanding, visual generation |
 | Dual Diffusion | arXiv 2025 | [Paper](https://arxiv.org/abs/2501.00289) [Code](https://github.com/zijieli-Jlee/Dual-Diffusion) | Dual Diffusion | Unified image generation + understanding via bidirectional diffusion | visual understanding, visual generation |
 | UniDisc | arXiv 2025 | [Paper](https://arxiv.org/abs/2503.20853) [Code](https://github.com/alexanderswerdlow/unidisc) | Unified Discrete Diffusion | Discrete diffusion for multimodal U+G | visual understanding, visual generation |
 | MMaDA | arXiv 2025 | [Paper](https://arxiv.org/abs/2505.15809) [Code](https://github.com/Gen-Verse/MMaDA) | Multimodal Large Diffusion LM | Diffusion LM for unified understanding/generation | visual understanding, visual generation |
