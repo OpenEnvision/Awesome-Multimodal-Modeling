@@ -700,6 +700,7 @@ Models that extend unified understanding + generation beyond text and image to s
 
 | Model | Paper | Links | Notes | Task |
 |---|---|---|---|---|
+| Kling-Omni Technical Report | arXiv 2025 | [Paper](https://arxiv.org/pdf/2512.16776) | Unified Diffusion Transformer (DiT) framework with Prompt Enhancer for high-fidelity video generation and reasoning-based editing | Multi-modal visual language (MVL) for unified generation and understanding |
 | LongCat-Flash-Omni | arXiv 2025 | [Paper](https://arxiv.org/abs/2511.00279) [Code](https://github.com/meituan-longcat/LongCat-Flash-Omni) | Efficient omni model with flash-style acceleration and real-time audio-visual interaction (560B parameters) | any-to-any multimodal generation and understanding |
 | Ming-Flash-Omni | arXiv 2025 | [Paper](https://arxiv.org/abs/2510.24821) [Code](https://github.com/inclusionAI/Ming) | Sparse unified MoE architecture (100B total, 6.1B active) for efficient multimodal perception and generation | any-to-any multimodal perception and generation |
 | Qwen3-Omni | arXiv 2025 | [Paper](https://arxiv.org/abs/2509.17765) [Code](https://github.com/QwenLM/Qwen3-Omni) | Next-gen Qwen omni model with unified modality space, maintaining SOTA across text/image/audio/video | any-to-any multimodal understanding and generation |
