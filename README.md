@@ -511,6 +511,7 @@ Multimodal Models
 
 | Paper | Venue | Links | Notes | Task | Adaptor |
 |---|---|---|---|---|---|
+| Nemotron 3 Nano Omni: Efficient and Open Multimodal Intelligence | arXiv 2026 | [Paper](https://arxiv.org/abs/2604.24954) [Code](https://github.com/NVIDIA-NeMo/RL/blob/nano-v3-omni/docs/guides/nemotron-3-nano-omni.md) | Efficiency-optimized omni-modal backbone using Hybrid Mamba2-Transformer MoE; supports massive multi-modal contexts (10k+ tokens) for long-video reasoning and agentic GUI navigation on edge devices | omni-modal understanding & reasoning | Hybrid |
 | OmniGAIA: Towards Native Omni-Modal AI Agents | arXiv 2026 | [Paper](https://arxiv.org/abs/2602.22897) [Code](https://github.com/RUC-NLPIR/OmniGAIA) | Comprehensive benchmark for omni-modal agents with complex multi-hop queries across video, audio, and image; includes OmniAtlas agent with tool-integrated reasoning | omni-modal understanding & reasoning | Native |
 | ThinkOmni: Lifting Textual Reasoning to Omni-modal Scenarios via Guidance Decoding | arXiv 2026 | [Paper](https://arxiv.org/abs/2602.23306) | Training-free framework that lifts textual reasoning to omni-modal scenarios using LRM guidance and stepwise contrastive scaling | omni-modal reasoning | Hybrid |
 | OmniVideo-R1: Reinforcing Audio-visual Reasoning with Query Intention and Modality Attention | arXiv 2026 | [Paper](https://arxiv.org/abs/2602.05847) | Reinforced audio-visual reasoning framework with query intention grounding and modality attention fusion | audio-visual reasoning | Hybrid |
@@ -747,6 +748,7 @@ Recent scaling-law evidence suggests early-fusion NMMs are often stronger at low
 
 | Model | Paper | Links | Training Scale | Notes | Task |
 |---|---|---|---|---|---|
+| SenseNova-U1 | - | [Code](https://github.com/OpenSenseNova/SenseNova-U1) | — | A native unified multimodal model base on NEO-Unify, which handels understanding, generation and reasoning in one model | Unified Understanding & Generation |
 | Tuna-2 | arXiv 2026 | [Paper](https://arxiv.org/pdf/2604.24763) | — | A native unified multimodal model that discards traditional vision encoders in favor of direct pixel embeddings, enabling end-to-end optimization for both fine-grained perception and high-quality generation.Unified Understanding & Generation | Unified Understanding & Generation |
 | NEO | arXiv 2025 | [Paper](https://arxiv.org/pdf/2510.14979) | — | NEO as a cornerstone for scalable and powerful native VLM development, paired with a rich set of reusable components that foster a cost-effective and extensible ecosystem | vision-language understanding |
 | NEO-Unify | - | [Blog](https://huggingface.co/blog/sensenova/neo-unify) | — | NEO as a cornerstone for scalable and powerful native VLM development, paired with a rich set of reusable components that foster a cost-effective and extensible ecosystem | vision-language understanding |
