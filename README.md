@@ -761,7 +761,7 @@ Recent scaling-law evidence suggests early-fusion NMMs are often stronger at low
 
 | Model | Paper | Links | Training Scale | Notes | Task |
 |---|---|---|---|---|---|
-| Lance | arXiv 2026 | [Paper](https://lance-project.github.io/assets/lance.pdf) [Code](https://github.com/bytedance/Lance) | ~200B (MoE) | Native multimodal MoE  | Unified multimodal understanding and multimodal generation |
+| Lance | arXiv 2026 | [Paper](https://lance-project.github.io/assets/lance.pdf) [Code](https://github.com/bytedance/Lance) | 3B (MoE) | Native multimodal MoE  | Unified multimodal understanding and multimodal generation |
 | Kimi K2.6 | Moonshot AI 2026 | [Blog](https://www.kimi.com/blog/kimi-k2-6) | MoE Architecture: 32B active / 1T total parameters; supports 256K context | Native multimodal MoE with MLA (Multi-head Latent Attention) and MoonViT encoder | Unified multimodal understanding, long-horizon coding, and agent swarms |
 | Llama4 | arXiv 2026 | [Paper](https://arxiv.org/abs/2601.11659) [Blog](https://ai.meta.com/blog/llama-4-multimodal-intelligence/) | Scout/Maverick: 17B active / ~109B–400B total; Behemoth: ~2T total | Native multimodal, MoE architecture with early fusion and vision encoder | vision-language understanding |
 | GLM-5V-Turbo: Toward a Native Foundation Model for Multimodal Agents | arXiv 2026 | [Paper](https://arxiv.org/abs/2604.26752) | |Native multimodal foundation model featuring the CogViT vision encoder; employs Multimodal Multi-Token Prediction (MMTP) and joint reinforcement learning across 30+ agentic task categories. Optimized for GUI automation and Design2Code tasks. | multimodal agentic reasoning | 
