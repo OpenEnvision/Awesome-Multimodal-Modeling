@@ -795,7 +795,7 @@ The latest arXiv-native multimodal papers increasingly blur the boundaries betwe
 | Model | Venue | Links | Notes | Task |
 |-------|-------|-------|-------|------|
 | Claude 4.6 Family (Opus 4.6 / Sonnet 4.6) | Anthropic Blog | [Anthropic Claude Updates](https://www.anthropic.com/claude) | Released ~February 2026. Further multimodal refinements (vision + tool/computer use). Proprietary. | Multimodal + Agentic/Coding/Computer-Use |
-| Gemini 3.x (Pro / Flash / 3.1 Pro) | Google DeepMind Blog | [Gemini 3 Announcements](https://blog.google/technology/ai/) | Released late 2025–early 2026 (Flash Dec 2025, Pro variants Feb 2026). State-of-the-art multimodal with massive context and Deep Think modes. Proprietary. | Frontier Multimodal (text/image/audio/video + reasoning) |
+| Gemini 3.x (Pro / Flash / 3.1 Pro / 3.5 series) | Google DeepMind Blog | [Gemini 3 Announcements](https://blog.google/technology/ai/) | Released late 2025–early 2026 (Flash Dec 2025, Pro variants Feb 2026). State-of-the-art multimodal with massive context and Deep Think modes. Proprietary. | Frontier Multimodal (text/image/audio/video + reasoning) |
 | GPT-5.4 (and Pro/Codex variants) | OpenAI Blog | [OpenAI GPT-5 Updates](https://openai.com/index/) | Released ~March 2026. Enhanced efficiency, multimodal, and professional/agentic features. Proprietary. | Omni-Modal + Professional/Agentic Workflows |
 | Grok 4.x updates (e.g., Grok 4.1) | xAI Announcement | [xAI Blog](https://x.ai/blog) | Continued 2025–2026 iterations with improved vision and real-time capabilities. Proprietary via X platform. | Multimodal + Real-Time/Data-Integrated Reasoning |
 
