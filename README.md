@@ -30,7 +30,7 @@
 </div>
 
 ## 📢 News
-- **[2026-06-06]** 🚀 We released two new curated collections: **Unified Multimodal Model Zoo (UMM Zoo)** and **Native Multimodal Model Zoo (NMM Zoo)**, covering the latest advances in unified and native multimodal architectures for understanding, generation, reasoning, and editing. Check them out: [UMM Zoo](https://huggingface.co/collections/OpenEnvisionLab/unified-multimodal-model-zoo) | [NMM Zoo](https://huggingface.co/collections/OpenEnvisionLab/native-multimodal-model-zoo). :contentReference[oaicite:0]{index=0}
+- **[2026-06-06]** 🚀 We released two new curated collections: **Unified Multimodal Model Zoo (UMM Zoo)** and **Native Multimodal Model Zoo (NMM Zoo)**, covering the latest advances in unified and native multimodal architectures for understanding, generation, reasoning, and editing. Check them out: [UMM Zoo](https://huggingface.co/collections/OpenEnvisionLab/unified-multimodal-model-zoo) | [NMM Zoo](https://huggingface.co/collections/OpenEnvisionLab/native-multimodal-model-zoo).
 - **[2026-04-13]** ⭐ The repository has already gained **over 100 stars** in just one day! Thank you all for the incredible support. We will keep updating this list with more cutting-edge models and resources. **Your continued stars and PRs are warmly welcomed!**
 - **[2026-04-12]** 🎉 We are excited to launch **Awesome Multimodal Modeling** — a curated reading list organized by architectural paradigms. A comprehensive survey paper is coming soon! Stay tuned.
 
