@@ -867,6 +867,7 @@ The latest arXiv-native multimodal papers increasingly blur the boundaries betwe
 | **LLaMA-Factory** | Multimodal instruction tuning framework | [Code](https://github.com/hiyouga/LLaMA-Factory) |
 | **MMEngine** | Foundation for perception research (OpenMMLab) | [Code](https://github.com/open-mmlab/mmengine) |
 | **DeepSpeed-VisualChat** | Scalable multimodal chat training | [Code](https://github.com/microsoft/DeepSpeedExamples/tree/master/applications/DeepSpeed-VisualChat) |
+| **TWZRD Agent Intel** | Trust scoring for AI agents on Solana — verify agent wallet identity before x402 micropayments. Remote MCP server. | [API](https://intel.twzrd.xyz) |
 
 <p align="right"><a href="#awesome-multimodal-modeling">Back to Top</a></p>
 
