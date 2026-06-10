@@ -435,6 +435,7 @@ Multimodal Models
 
 | Paper | Venue | Links | Notes | Task |
 |---|---|---|---|---|
+| Kwai Keye-VL 2.0 Technical Report | arXiv 2026 | [Paper](https://arxiv.org/pdf/2606.10651) | achieves state-of-the-art performance among models of similar scale, particularly excelling in fine-grained temporal localization | video understanding |
 | Penguin-VL: Exploring the Efficiency Limits of VLM with LLM-based Vision Encoders | arXiv 2026 | [Paper](https://arxiv.org/pdf/2603.06569) | LLM-initialized vision encoder (non-CLIP); text-to-vision weight reuse, generative-aligned visual features, optimized for dense perception. | visual understanding |
 | Youtu-VL: Unleashing Visual Potential via Unified Vision-Language Supervision | arXiv 2026 | [Paper](https://arxiv.org/abs/2601.19798) | Tri-modal (V+A+L) unified framework; parameter-efficient tuning, seamless cross-modal reasoning for mobile/IoT deployment. | visual understanding |
 | STEP3-VL-10B Technical Report | arXiv 2026 | [Paper](https://arxiv.org/pdf/2601.09668) | 10B-scale foundation multimodal; unified unfrozen pre-training + PaCoRe test-time scaling, frontier-level reasoning with compact footprint. | visual understanding |
