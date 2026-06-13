@@ -784,6 +784,7 @@ The latest arXiv-native multimodal papers increasingly blur the boundaries betwe
 
 | Model | Paper | Links | Training Scale | Notes | Task |
 |---|---|---|---|---|---|
+| MiniMax-M3 | MiniMax 2026 | [Blog](https://www.minimax.io/blog/minimax-m3) [Code](https://github.com/MiniMax-AI/MiniMax-M3) | ~428B total / ~23B active; 1M context | Native multimodal model with MiniMax Sparse Attention (MSA), trained for text, image, and video understanding, long-context coding, agentic workflows, and computer-use tasks | native multimodal understanding, video, coding, agentic computer use |
 | Tri-Modal Masked Diffusion Models | arXiv 2026 (Omni / Any-to-Any) | [Paper](https://arxiv.org/pdf/2602.21472) | 3B; 6.4T tokens | Studies a from-scratch tri-modal masked diffusion model spanning text, image-text, and audio-text data, with scaling, modality mixing, noise-schedule, batch-size, and inference analyses | text generation, text-to-image, text-to-speech |
 | Qwen3.5-Omni | (Late Fusion) | [Blog](https://qwen.ai/blog?id=qwen3.5) | — | Discrete Native Any-resolution Visual Transformer | vision-language understanding, omni |
 | ERNIE 5.0 Technical Report | arXiv 2026 (Late fusion)| [paper](https://arxiv.org/pdf/2602.04705) | — | a natively autoregressive foundation model desinged for unified multimodal understanding and generation across text, image, video, and audio | vision-language understanding, omni |
@@ -799,7 +800,6 @@ The latest arXiv-native multimodal papers increasingly blur the boundaries betwe
 
 | Model | Venue | Links | Notes | Task |
 |-------|-------|-------|-------|------|
-| Minimax M3 | Minimax Blog | [Minimax Announcements](https://www.minimax.io/models/text/m3) | Released ~June 2026.  |Agentic/Coding/Computer-Use |
 | Claude 4.6 Family (Opus 4.6 / Sonnet 4.6) | Anthropic Blog | [Anthropic Claude Updates](https://www.anthropic.com/claude) | Released ~February 2026. Further multimodal refinements (vision + tool/computer use). Proprietary. | Multimodal + Agentic/Coding/Computer-Use |
 | Gemini 3.x (Pro / Flash / 3.1 Pro / 3.5 series) | Google DeepMind Blog | [Gemini 3 Announcements](https://blog.google/technology/ai/) | Released late 2025–early 2026 (Flash Dec 2025, Pro variants Feb 2026). State-of-the-art multimodal with massive context and Deep Think modes. Proprietary. | Frontier Multimodal (text/image/audio/video + reasoning) |
 | GPT-5.4 (and Pro/Codex variants) | OpenAI Blog | [OpenAI GPT-5 Updates](https://openai.com/index/) | Released ~March 2026. Enhanced efficiency, multimodal, and professional/agentic features. Proprietary. | Omni-Modal + Professional/Agentic Workflows |
