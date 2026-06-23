@@ -661,6 +661,7 @@ Unified models are categorized according to their core generation mechanism for 
 
 | Title | Venue | Links | Focus | Task |
 |---|---|---|---|---|
+| CG-MLLM: Captioning and Generating 3D content via Multi-modal Large Language Models | ICML 2026 | [Paper](https://arxiv.org/abs/2601.21798) [Code](https://github.com/dreaming-huang/CG-MLLM/tree/main) | Unified 3D captioning and high-resolution 3D generation via TokenAR + BlockAR | visual understanding, visual generation |
 | AToken: A Unified Tokenizer for Vision | arXiv 2025 | [Paper](https://arxiv.org/abs/2509.14476) [Code](https://github.com/apple/ml-atoken) | AToken unified visual tokenizer achieving high-fidelity reconstruction and semantic understanding for images, videos and 3D | visual understanding, visual generation |
 | UniWeTok: An Unified Binary Tokenizer with Codebook Size 2128 for Unified Multimodal Large Language Model | arXiv 2026 | [Paper](https://arxiv.org/abs/2602.14178) | UniWeTok unified binary tokenizer with 2^{128} codebook, pre-post distillation and generative-aware prior for MLLMs | visual understanding, visual generation |
 | Towards Scalable Pre-training of Visual Tokenizers for Generation | arXiv 2025 | [Paper](https://arxiv.org/abs/2512.13687) [Code](https://github.com/MiniMax-AI/VTP) | VTP unified visual tokenizer pre-training framework with joint image-text contrastive, self-supervised and reconstruction losses | visual understanding, visual generation |
