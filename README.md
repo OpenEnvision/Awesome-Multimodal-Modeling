@@ -10,7 +10,7 @@
 <p>
   <a href="https://awesome.re"><img src="https://awesome.re/badge-flat2.svg" alt="Awesome"></a>
   <a href="https://github.com/OpenEnvision/Awesome-Multimodal-Modeling/pulls"><img src="https://img.shields.io/badge/PRs-Welcome-16a34a?style=flat-square" alt="PRs Welcome"></a>
-  <img src="https://img.shields.io/github/stars/OpenEnvision-Lab/Awesome-Multimodal-Modeling?style=flat-square" alt="GitHub Stars">
+  <img src="https://img.shields.io/github/stars/OpenEnvision/Awesome-Multimodal-Modeling?style=flat-square" alt="GitHub Stars">
   <img src="https://img.shields.io/badge/Last_Update-2026_Q3-2563eb?style=flat-square" alt="Last Updated">
   <img src="https://img.shields.io/badge/License-CC0_1.0-f59e0b?style=flat-square" alt="License CC0 1.0">
 </p>
