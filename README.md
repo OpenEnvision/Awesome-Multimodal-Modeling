@@ -406,6 +406,7 @@ Multimodal Models
 
 | Paper | Venue | Links | Notes | Task |
 |---|---|---|---|---|
+| StepX-Edge: An On-Device UI Vision-Language Model via Architecture-Training-Deployment Co-Design | arXiv 2026 | [Paper](https://arxiv.org/abs/2607.22708) | 0.9B on-device UI VLM with UI-aware layered visual encoding and a progressive dimensionality projection connector; quantized deployment is validated on Snapdragon 8 Gen5 | UI understanding, OCR, grounding, on-device deployment |
 | MiniCPM-V 4.5: Cooking Efficient MLLMs via Architecture, Data, and Training Recipe | arXiv 2025 | [Paper](https://arxiv.org/abs/2509.18154) [Code](https://github.com/OpenBMB/MiniCPM-o) [Model](https://huggingface.co/openbmb/MiniCPM-V-4_5) | Efficient 8B MLLM built with Qwen3-8B, SigLIP2-400M and a unified 3D-Resampler for compact image-video encoding | visual understanding, document/OCR, video understanding, edge deployment |
 | Moondream 3.1 | Model Release 2026 | [Project](https://moondream.ai/) [Model](https://huggingface.co/moondream/moondream3.1-9B-A2B) | Efficient sparse MoE VLM with 9B total and 2B active parameters; supports visual reasoning, query, caption, detection, pointing and segmentation | visual understanding, grounding, segmentation, edge deployment |
 | SAIL-VL2 Technical Report | arXiv 2025 | [Paper](https://arxiv.org/abs/2509.14033) | Open-suite 2B/8B vision-language foundation model with SAIL-ViT, progressive multimodal training, SFT-RL thinking fusion, and strong image/video reasoning across 106 datasets | visual understanding, video, reasoning |
