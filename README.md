@@ -883,6 +883,7 @@ The latest arXiv-native multimodal papers increasingly blur the boundaries betwe
 
 | Tool | Description | Link |
 |---|---|---|
+| **TorchUMM** | Unified evaluation, analysis and post-training toolkit for heterogeneous unified multimodal model architectures, tasks and datasets | [Paper](https://arxiv.org/abs/2604.10784) [Code](https://github.com/AIFrontierLab/TorchUMM) |
 | **LMMs-Eval** | Unified evaluation harness for multimodal models | [Code](https://github.com/EvolvingLMMs-Lab/lmms-eval) |
 | **LAVIS** | Library for Language-Vision Intelligence (Salesforce) | [Code](https://github.com/salesforce/LAVIS) |
 | **OpenFlamingo** | Open reproduction of DeepMind Flamingo | [Code](https://github.com/mlfoundations/open_flamingo) |
