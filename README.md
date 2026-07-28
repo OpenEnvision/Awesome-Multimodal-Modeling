@@ -749,6 +749,7 @@ Recent arXiv papers sharpen the definition of NMMs and identify the main bottlen
 
 | Paper | Venue | Links | Insights |
 |---|---|---|---|
+| Scaling Native Multimodal Pre-Training From Scratch | arXiv 2026 | [Paper](https://arxiv.org/abs/2607.22043) | Derives compute and allocation laws for transformer-based VLMs trained from scratch, showing distinct language and multimodal scaling behavior, data-mixture-sensitive multimodal allocation, and positive cross-modal transfer |
 | Toward Native Multimodal Modeling: A Roadmap | arXiv 2026 | [Paper](https://arxiv.org/abs/2605.25343) | The end-to-end pipeline from industrial perspectives from architectural coordination, massive data curation, to full-stack training recipes, inference & deployment, and the comprehensive evaluation for truly native modeling |
 | Beyond Language Modeling: An Exploration of Multimodal Pretraining | arXiv 2026 | [Paper](https://arxiv.org/abs/2603.03276) | Highlights representation autoencoders, vision-language data synergy, and MoE for native pretraining |
 | NaViL: Rethinking Scaling Properties of Native Multimodal Large Language Models under Data Constraints | arXiv 2025 | [Paper](https://arxiv.org/abs/2510.08565) [Code](https://github.com/OpenGVLab/NaViL) | End-to-end native MLLM scaling shows positive correlation between visual encoder and LLM size under data constraints; optimal meta-architecture balances cost and performance |
