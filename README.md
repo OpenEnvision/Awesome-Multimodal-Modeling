@@ -886,6 +886,7 @@ The latest arXiv-native multimodal papers increasingly blur the boundaries betwe
 |---|---|---|
 | **TorchUMM** | Unified evaluation, analysis and post-training toolkit for heterogeneous unified multimodal model architectures, tasks and datasets | [Paper](https://arxiv.org/abs/2604.10784) [Code](https://github.com/AIFrontierLab/TorchUMM) |
 | **LMMs-Eval** | Unified evaluation harness for multimodal models | [Code](https://github.com/EvolvingLMMs-Lab/lmms-eval) |
+| **ImageBench** | Live text-to-image benchmark ranking 40+ models on 192 prompts across 6 categories using VLM judges; every generated image is published for inspection | [Site](https://imagebench.ai) [Methodology](https://imagebench.ai/methodology-v1) |
 | **LAVIS** | Library for Language-Vision Intelligence (Salesforce) | [Code](https://github.com/salesforce/LAVIS) |
 | **OpenFlamingo** | Open reproduction of DeepMind Flamingo | [Code](https://github.com/mlfoundations/open_flamingo) |
 | **xtuner** | Efficient fine-tuning for multimodal LLMs | [Code](https://github.com/InternLM/xtuner) |
