@@ -953,8 +953,8 @@ If this list is useful in your research, please consider citing:
 
 ---
 <p align="center">
-  <a href="https://www.star-history.com/#OpenEnvision/Awesome-Multimodal-Modeling&Date">
-    <img src="https://api.star-history.com/svg?repos=OpenEnvision/Awesome-Multimodal-Modeling&type=Date" alt="Star Growth of Awesome-Multimodal-Modeling">
+  <a href="https://star-history.dera.page/#OpenEnvision/Awesome-Multimodal-Modeling&Date">
+    <img src="https://star-history.dera.page/svg?repos=OpenEnvision/Awesome-Multimodal-Modeling&type=Date" alt="Star Growth of Awesome-Multimodal-Modeling">
   </a>
 </p>
 <h2 align="center">⭐ Star Growth of Awesome-Multimodal-Modeling</h2>
