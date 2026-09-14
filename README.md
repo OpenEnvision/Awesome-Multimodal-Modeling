@@ -88,6 +88,7 @@
     - [5.2 Early Fusion NMMs](#52-early-fusion-nmms)
     - [5.3 Late Fusion NMMs](#53-late-fusion-nmms)
     - [5.4 Any-to-Any / Omni NMMs](#54-any-to-any--omni-nmms)
+    - [5.5 Training-Native Models](#55-training-native-models)
   - [6. Closed-Source Multimodal Models](#6-closed-source-multimodal-models)
     - [Year 2026](#year-2026)
     - [Year 2025](#year-2025)
@@ -118,8 +119,8 @@ This repository provides a **structured, community-maintained** survey of multim
 | Dimension | Coverage |
 |---|---|
 | Primary scope | Image + text multimodal models, with explicit annotations for video, audio, and omni extensions |
-| Core taxonomy | Traditional multimodal models, MLLMs, UMMs, and strict NMMs |
-| Key distinction | `U+G unification` for UMMs vs. `joint training from scratch` for NMMs |
+| Core taxonomy | Traditional multimodal models, MLLMs, UMMs, and NMMs with explicit architecture/training qualifications |
+| Key distinction | `U+G unification` for UMMs; architectural and optimization coupling for NMMs, with overlapping membership allowed |
 | What makes this repo different | Architecture-first categorization, fusion-aware definitions, and curated links to adjacent awesome lists |
 | Intended audience | Researchers, students, and engineers building or surveying multimodal systems |
 
@@ -133,7 +134,7 @@ This repository provides a **structured, community-maintained** survey of multim
 | Scope discipline | Models, benchmarks, datasets, and analysis papers are tracked separately to avoid mixing artifacts |
 | Inclusion bar | We prioritize landmark papers, broadly adopted benchmarks, open implementations, or papers that clarify important taxonomy boundaries |
 
-> Classification note: for ambiguous models sitting between `MLLM`, `UMM`, and strict `NMM`, this list records the category that best matches the **training recipe and architectural coupling**, not just the paper title.
+> Classification note: for ambiguous models sitting between `MLLM`, `UMM`, and `NMM`, this list records the category that best matches the **training recipe and architectural coupling**, not just the paper title. Architecture-native and training-native qualifications distinguish fusion structure from training history.
 
 <p align="right"><a href="#awesome-multimodal-modeling">Back to Top</a></p>
 
@@ -190,28 +191,28 @@ Examples: **Show-o**, **Janus**, **OpenUni**, **BAGEL**, **BLIP3-o**
 
 #### Native Multimodal Models (NMMs)
 
-<img src="https://img.shields.io/badge/Category-NMM-b91c1c?style=flat-square" alt="NMM category"> <img src="https://img.shields.io/badge/Constraint-Trained%20from%20Scratch-991b1b?style=flat-square" alt="Trained from scratch">
-> *Jointly trained from scratch — no pretrained backbone*
+<img src="https://img.shields.io/badge/Category-NMM-b91c1c?style=flat-square" alt="NMM category"> <img src="https://img.shields.io/badge/Focus-Architecture%20%26%20Training-991b1b?style=flat-square" alt="Architecture and training">
+> *Architectural integration and multimodal optimization*
 
-**The strictest category.** NMMs are trained **jointly from scratch on all modalities** — they do **not** rely on any pretrained LLM or pretrained vision encoder as initialization. All parameters are learned end-to-end from raw multimodal data.
+NMMs are described along two dimensions: **architectural nativity** captures how early and persistently modalities share core computation; **optimization nativity** captures when multimodal objectives enter training and which core parameters they optimize. Entries that establish only one dimension are qualified as **architecture-native** or **training-native**. Training from scratch provides strong optimization evidence, but is not assumed for every entry. UMM and NMM membership can overlap.
 
 Key characteristics:
-- ✅ No pretrained LLM backbone
-- ✅ No pretrained vision encoder
-- ✅ All components jointly trained from scratch
+- ✅ Fusion structure and training history are recorded separately
+- ✅ Pretrained components and initialization are annotated per model
+- ✅ Architecture-native entries may inherit pretrained backbones
 - ✅ Input: text tokens + image patches/tokens
 - ✅ Output: text (understanding focus; generation optional)
 
-NMMs are further divided by **fusion architecture**:
+NMMs are further described by **fusion architecture**; training-native entries without a confirmed fusion classification are listed separately in [§5.5](#55-training-native-models):
 
 ##### NMM — Early Fusion
-Multimodal interaction begins **from the first layer**. A **single Transformer decoder** processes tokenized text and continuous/discrete image patches together, with **minimal modality-specific parameters** (only a linear patchify layer for images). No separate image encoder is maintained.
+Modality tokens or embeddings enter shared core computation **before the first shared backbone block**. Separate tokenizers, input encoders, modality-specific experts, or output decoders can remain; their presence does not by itself imply late fusion.
 
-- Single unified Transformer (decoder-only)
-- Continuous image patches or minimal discrete tokenization
-- Modality interaction from layer 1
-- Near-zero modality-specific parameters (excluding linear patch embed)
-- Examples: **Emu3** (if trained from scratch)
+- Shared backbone computation over multimodal states
+- Discrete tokens, continuous latents, or pixel patches
+- Modality interaction from the first shared block
+- Initialization and trainable components annotated separately
+- Examples: **Chameleon**, **Emu3**, **Transfusion**; **Show-o**, **Show-o2**, **OneCat**, and **Llama 4** carry architecture-native qualifications
 
 ##### NMM — Late Fusion
 Each modality is first processed by a **dedicated unimodal component** (e.g., a vision tower or image encoder), but these components are **jointly trained from scratch** (not pretrained). Cross-modal interaction occurs at **deeper layers**.
@@ -251,10 +252,13 @@ Multimodal Models
     ├── 5.1 Design Analyses & Scaling Laws
     ├── 5.2 Early Fusion NMMs
     ├── 5.3 Late Fusion NMMs
-    └── 5.4 Any-to-Any / Omni NMMs
+    ├── 5.4 Any-to-Any / Omni NMMs
+    └── 5.5 Training-Native Models
 ```
 
 ### 1.3 Architecture Diagrams
+
+The NMM diagrams below illustrate from-scratch variants; initialization and input interfaces are specified per model in §5.
 
 ```
 ┌─────────────────────────────────────────────────────────────────┐
@@ -367,6 +371,7 @@ Multimodal Models
 
 | Paper | Venue | Links | Notes | Task |
 |---|---|---|---|---|
+| LanguageBind: Extending Video-Language Pretraining to N-modality by Language-based Semantic Alignment | arXiv 2023 | [Paper](https://arxiv.org/abs/2310.01852) [Code](https://github.com/PKU-YuanGroup/LanguageBind) | Language-centered alignment across image, video, audio, depth, thermal, and IMU modalities | multimodal alignment |
 | CLIP | arXiv 2021 | [Paper](https://arxiv.org/abs/2103.00020) | 400M+ image-text pairs; dual-encoder (Vision Transformer + Text Transformer); contrastive alignment at embedding level; classic late-fusion foundation | zero-shot image classification, retrieval |
 | CoMIR: Contrastive Multimodal Image Representation for Registration | NeurIPS 2020 | [Paper](https://arxiv.org/abs/2006.06325) | Contrastive learning for multimodal image registration alignment | multimodal alignment |
 | Multimodal Transformer for Unaligned Multimodal Language Sequences | ACL 2019 | [Paper](https://arxiv.org/abs/1906.00295) | Transformer-based alignment for unaligned multimodal sequences | sequence alignment |
@@ -406,10 +411,16 @@ Multimodal Models
 
 | Paper | Venue | Links | Notes | Task |
 |---|---|---|---|---|
+| Ling-3.0-flash-VL | Model release 2026 | [HF](https://huggingface.co/inclusionAI/Ling-3.0-flash-VL) | Open-weight VLM (MIT) extending Ling-3.0-flash with a ViT and a two-layer MLP projector; supports image and video inputs with text outputs. BF16 and quantized checkpoints belong to the same model entry | image/video understanding, document understanding, visual reasoning, GUI agents |
+| LLaDA-UI | Model release 2026 | [Code](https://github.com/inclusionAI/LLaDA-UI) [HF](https://huggingface.co/inclusionAI/LLaDA-UI) | SigLIP-initialized native-resolution ViT connects to LLaDA2.0-mini-base through spatial 4-to-1 feature grouping and a two-layer MLP; block-wise diffusion generates text reasoning and GUI actions. Code and weights are available; checkpoint license is unspecified in the model card as of 2026-09-15 | screenshot understanding, GUI grounding, mobile/desktop/web agents |
+| Muse Glimmer-30B | Model release 2026 | [HF](https://huggingface.co/meta-models/Muse-Glimmer-30B) [Implementation](https://github.com/huggingface/transformers/blob/main/src/transformers/models/muse_glimmer/modeling_muse_glimmer.py) | Open-weight 30B model (Apache 2.0), distilled from Muse Spark; a dedicated Perception Encoder connects to the language backbone through an MLP adapter and linear projection; text and image inputs, text outputs | visual understanding, visual reasoning, coding, agentic tool use |
+| DiffusionGemma | Google DeepMind, 2026 | [Model Card](https://ai.google.dev/gemma/docs/diffusiongemma/model_card) [HF](https://huggingface.co/google/diffusiongemma-26B-A4B-it) [Implementation](https://github.com/huggingface/transformers/blob/main/src/transformers/models/diffusion_gemma/modeling_diffusion_gemma.py) | Open-weight Gemma 4-based model (Apache 2.0); normalized visual features enter the language model through a linear projection, while an encoder-decoder architecture uses block-wise discrete diffusion for text generation. Image/video understanding with text output; no native image generation | visual understanding, video understanding, reasoning, efficient text generation |
+| Mistral Medium 3.5 | Mistral AI, 2026 | [Announcement](https://mistral.ai/news/vibe-remote-agents-mistral-medium-3-5/) [HF](https://huggingface.co/mistralai/Mistral-Medium-3.5-128B) [Implementation](https://github.com/huggingface/transformers/blob/main/src/transformers/models/mistral3/modeling_mistral3.py) | Open-weight 128B dense VLM under a Modified MIT license; a from-scratch vision encoder connects through a patch merger and MLP projector to the language backbone. Supports text/image inputs and text outputs; whole-model from-scratch multimodal training is not established | visual understanding, reasoning, coding, long-horizon agents |
 | Mage-VL: An Efficient Codec-Native Streaming Multimodal Foundation Model | arXiv 2026 | [Paper](https://arxiv.org/abs/2607.24904) [Project](https://microsoft.github.io/Mage/) [Model](https://huggingface.co/microsoft/Mage-VL) | 4B codec-native streaming VLM combining a from-scratch Mage-ViT visual encoder, two-layer MLP projector, and pretrained Qwen3-4B-Instruct-2507 decoder; codec-guided token selection reduces visual tokens by over 75% | image/video understanding, long video, proactive streaming |
 | StepX-Edge: An On-Device UI Vision-Language Model via Architecture-Training-Deployment Co-Design | arXiv 2026 | [Paper](https://arxiv.org/abs/2607.22708) | 0.9B on-device UI VLM with UI-aware layered visual encoding and a progressive dimensionality projection connector; quantized deployment is validated on Snapdragon 8 Gen5 | UI understanding, OCR, grounding, on-device deployment |
 | MiniCPM-V 4.5: Cooking Efficient MLLMs via Architecture, Data, and Training Recipe | arXiv 2025 | [Paper](https://arxiv.org/abs/2509.18154) [Code](https://github.com/OpenBMB/MiniCPM-o) [Model](https://huggingface.co/openbmb/MiniCPM-V-4_5) | Efficient 8B MLLM built with Qwen3-8B, SigLIP2-400M and a unified 3D-Resampler for compact image-video encoding | visual understanding, document/OCR, video understanding, edge deployment |
 | Moondream 3.1 | Model Release 2026 | [Project](https://moondream.ai/) [Model](https://huggingface.co/moondream/moondream3.1-9B-A2B) | Efficient sparse MoE VLM with 9B total and 2B active parameters; supports visual reasoning, query, caption, detection, pointing and segmentation | visual understanding, grounding, segmentation, edge deployment |
+| LLaVA-OneVision-1.5: Fully Open Framework for Democratized Multimodal Training | arXiv 2025 | [Paper](https://arxiv.org/abs/2509.23661) [Code](https://github.com/EvolvingLMMs-Lab/LLaVA-OneVision-1.5) [HF](https://huggingface.co/collections/lmms-lab/llava-onevision-15-68d385fe73b50bd22de23713) | 4B / 8B; 85M mid-training data + 22M instruction data; ViT–MLP–LLM architecture with pretrained RICE-ViT, a two-layer MLP projector, and Qwen3 backbone; supports image, multi-image, and video | visual understanding, video |
 | SAIL-VL2 Technical Report | arXiv 2025 | [Paper](https://arxiv.org/abs/2509.14033) | Open-suite 2B/8B vision-language foundation model with SAIL-ViT, progressive multimodal training, SFT-RL thinking fusion, and strong image/video reasoning across 106 datasets | visual understanding, video, reasoning |
 | Kwai Keye-VL 2.0 Technical Report | arXiv 2026 | [Paper](https://arxiv.org/pdf/2606.10651) | achieves state-of-the-art performance among models of similar scale, particularly excelling in fine-grained temporal localization | video understanding |
 | Penguin-VL: Exploring the Efficiency Limits of VLM with LLM-based Vision Encoders | arXiv 2026 | [Paper](https://arxiv.org/pdf/2603.06569) | LLM-initialized vision encoder (non-CLIP); text-to-vision weight reuse, generative-aligned visual features, optimized for dense perception. | visual understanding |
@@ -458,7 +469,6 @@ Multimodal Models
 | GLaMM: Pixel Grounding Large Multimodal Model | arXiv 2023 | [Paper](https://arxiv.org/abs/2311.03356) [Code](https://github.com/mbzuai-oryx/groundingLMM) | Pixel-level grounding and phrase-region reasoning | grounded visual understanding |
 | Ferret: Refer and Ground Anything Anywhere at Any Granularity | arXiv 2023 | [Paper](https://arxiv.org/abs/2310.07704) [Code](https://github.com/apple/ml-ferret) | Referring and grounding across points, boxes, and free-form regions | grounded visual dialogue |
 | LLaVA-1.5: Improved Baselines with Visual Instruction Tuning | arXiv 2023 | [Paper](https://arxiv.org/abs/2310.03744) [Code](https://github.com/haotian-liu/LLaVA) | Strong simple baseline with CLIP visual encoder, MLP projector, and instruction tuning | visual instruction tuning |
-| LanguageBind: Extending Video-Language Pretraining to N-modality by Language-based Semantic Alignment | arXiv 2023 | [Paper](https://arxiv.org/abs/2310.01852) [Code](https://github.com/PKU-YuanGroup/LanguageBind) | Language-centered alignment across image, video, audio, depth, thermal, and IMU modalities | multimodal alignment |
 | ImageBind-LLM: Multi-modality Instruction Tuning | arXiv 2023 | [Paper](https://arxiv.org/abs/2309.03905) [Code](https://github.com/OpenGVLab/LLaMA-Adapter) | Connects ImageBind-aligned modalities to an LLM for multi-modality instruction following | multi-modal instruction tuning |
 | PointLLM: Empowering Large Language Models to Understand Point Clouds | arXiv 2023 | [Paper](https://arxiv.org/abs/2308.16911) [Code](https://github.com/OpenRobotLab/PointLLM) | Extends LLM-based multimodal understanding to 3D point clouds | 3D understanding |
 | LISA: Reasoning Segmentation via Large Language Model | arXiv 2023 | [Paper](https://arxiv.org/abs/2308.00692) [Code](https://github.com/dvlab-research/LISA) | Couples MLLM reasoning with segmentation mask output | reasoning segmentation |
@@ -508,6 +518,7 @@ Multimodal Models
 
 | Paper | Venue | Links | Notes | Task |
 |---|---|---|---|---|
+| MiniCPM-V 4.6 | Model release 2026 | [HF](https://huggingface.co/openbmb/MiniCPM-V-4.6) [Architecture](https://huggingface.co/docs/transformers/model_doc/minicpmv4_6) | Open-weight VLM (Apache 2.0) combining a SigLIP vision encoder, window-attention merger, MLP merger, and Qwen3.5 language backbone; supports 4x and 16x visual downsampling for efficient image/video understanding | visual understanding, document/OCR, video understanding, on-device deployment |
 | EXAONE 4.5 Technical Report | arXiv 2026 | [Paper](https://arxiv.org/abs/2604.08644) [Code](https://github.com/LG-AI-EXAONE/EXAONE-4.5) | Integrates a dedicated visual encoder with the EXAONE 4.0 framework for multimodal pretraining, with strong document understanding and Korean contextual reasoning | visual understanding, document |
 | Phoenix-VL 1.5 Medium Technical Report | arXiv 2026 | [Paper](https://arxiv.org/abs/2605.10391) | 123B multilingual multimodal model continued-pretrained from Mistral Medium 3.1 on localized multimodal and long-context corpora | visual understanding, multilingual |
 | DeepSeek-OCR-2 | arXiv 2026 | [Paper](https://arxiv.org/abs/2601.20552) [HF](https://huggingface.co/deepseek-ai) | Optimized for high-volume OCR, document digitization, charts and formulas; efficient inference | OCR, document |
@@ -524,6 +535,7 @@ Multimodal Models
 
 | Paper | Venue | Links | Notes | Task | Adaptor |
 |---|---|---|---|---|---|
+| MiMo-V2.5 | Model release 2026 | [HF](https://huggingface.co/XiaomiMiMo/MiMo-V2.5) | Open-weight MoE model (MIT) with a dedicated MiMo ViT and a MiMo-Audio-initialized audio encoder; text pretraining is followed by visual/audio MLP projector warmup and multimodal pretraining. Supports image, video, and audio understanding with text outputs | image/video/audio understanding, multimodal reasoning, long-context agents | MLP Projector |
 | MiniCPM-o 4.5: Towards Real-Time Full-Duplex Omni-Modal Interaction | arXiv 2026 | [Paper](https://arxiv.org/abs/2604.27393) [Code](https://github.com/OpenBMB/MiniCPM-o) [Model](https://huggingface.co/openbmb/MiniCPM-o-4_5) | 9B edge-oriented omni model using Omni-Flow for simultaneous visual/audio perception and speech response; supports proactive full-duplex interaction with less than 12GB memory | vision-language understanding, audio understanding, speech generation, full-duplex live interaction | Hybrid |
 | Nemotron 3 Nano Omni: Efficient and Open Multimodal Intelligence | arXiv 2026 | [Paper](https://arxiv.org/abs/2604.24954) [Code](https://github.com/NVIDIA-NeMo/RL/blob/nano-v3-omni/docs/guides/nemotron-3-nano-omni.md) | Efficiency-optimized omni-modal backbone using Hybrid Mamba2-Transformer MoE; supports massive multi-modal contexts (10k+ tokens) for long-video reasoning and agentic GUI navigation on edge devices | omni-modal understanding & reasoning | Hybrid |
 | OmniGAIA: Towards Native Omni-Modal AI Agents | arXiv 2026 | [Paper](https://arxiv.org/abs/2602.22897) [Code](https://github.com/RUC-NLPIR/OmniGAIA) | Comprehensive benchmark for omni-modal agents with complex multi-hop queries across video, audio, and image; includes OmniAtlas agent with tool-integrated reasoning | omni-modal understanding & reasoning | Native |
@@ -608,6 +620,7 @@ Unified models are categorized according to their core generation mechanism for 
 | Selftok | arXiv 2025 | [Paper](https://arxiv.org/abs/2505.07538) [Code](https://github.com/selftok-team/SelftokTokenizer) | image + text | Discrete visual tokens for AR / Diffusion / Reasoning | visual understanding, visual generation |
 | OneCat | arXiv 2025 | [Paper](https://arxiv.org/abs/2509.03498) [Code](https://github.com/onecat-ai/OneCAT) | image + text | Pure decoder-only unified U+G | visual understanding, visual generation |
 | Uni-X | arXiv 2025 | [Paper](https://arxiv.org/abs/2509.24365) [Code](https://github.com/CURRENTF/Uni-X) | image + text | Two-end-separated architecture mitigating modality conflict | visual understanding, visual generation |
+| Emu3 | arXiv 2024 | [Paper](https://arxiv.org/abs/2409.18869) [Code](https://github.com/baaivision/Emu3) | image + video + text | Early-fusion native autoregressive model; see [NMM / Early Fusion](#52-early-fusion-nmms) for architectural classification | visual understanding, visual generation |
 
 ##### Semantic Encoding
 
@@ -700,6 +713,7 @@ Unified models are categorized according to their core generation mechanism for 
 
 | Paper | Venue | Links | Notes | Task |
 |---|---|---|---|---|
+| Mamoda2.5: Enhancing Unified Multimodal Model with DiT-MoE | arXiv 2026 | [Paper](https://arxiv.org/abs/2605.02641) [Code](https://github.com/bytedance/mammothmoda) | Unified AR-Diffusion framework coupling multimodal understanding with a DiT-MoE generation backbone; supports image/video generation and editing, including few-step video editing. Paper and inference code are public; official repository lists model weights as under internal review as of 2026-09-15 | multimodal understanding, image/video generation, image/video editing |
 | Vision as Unified Multimodal Generation (SenseNova-Vision) | arXiv 2026 | [Paper](https://arxiv.org/abs/2607.06560) [Model](https://huggingface.co/sensenova/SenseNova-Vision-7B-MoT) [Collection](https://huggingface.co/collections/sensenova/sensenova-vision) | Fine-tunes a pretrained BAGEL-7B-MoT unified model to express computer-vision tasks through native text, image, or mixed generation without task-specific prediction heads | detection, OCR, keypoints, segmentation, depth, normals, point maps, camera pose |
 | Qwen-Image-2.0 Technical Report | arXiv 2026 | [Paper](https://arxiv.org/abs/2605.10730) | Couples Qwen3-VL as condition encoder with a Multimodal Diffusion Transformer for unified high-fidelity image generation and precise editing | multimodal understanding, image generation, editing |
 | S1-Omni-Image: A Unified Model for Scientific Image Understanding, Generation, and Editing | arXiv 2026 | [Paper](https://arxiv.org/abs/2606.24441) | Builds on S1-VL-32B and injects reasoning hidden states into an image generation module for scientific image understanding, generation and editing | scientific image understanding, generation and editing |
@@ -720,6 +734,7 @@ Models that extend unified understanding + generation beyond text and image to s
 |---|---|---|---|---|
 | Kling-Omni Technical Report | arXiv 2025 | [Paper](https://arxiv.org/pdf/2512.16776) | Unified Diffusion Transformer (DiT) framework with Prompt Enhancer for high-fidelity video generation and reasoning-based editing | Multi-modal visual language (MVL) for unified generation and understanding |
 | LongCat-Flash-Omni | arXiv 2025 | [Paper](https://arxiv.org/abs/2511.00279) [Code](https://github.com/meituan-longcat/LongCat-Flash-Omni) | Efficient omni model with flash-style acceleration and real-time audio-visual interaction (560B parameters) | any-to-any multimodal generation and understanding |
+| Ming-flash-omni 2.0 | Model release 2026-02-11 | [HF](https://huggingface.co/inclusionAI/Ming-flash-omni-2.0) | Open-weight 100B-total / 6B-active MoE model (MIT) based on Ling-2.0; unifies image, text, video, and audio inputs with image, text, and audio outputs, including image editing and controllable speech/audio/music synthesis | multimodal understanding, image generation/editing, audio generation, streaming video conversation |
 | Ming-Flash-Omni | arXiv 2025 | [Paper](https://arxiv.org/abs/2510.24821) [Code](https://github.com/inclusionAI/Ming) | Sparse unified MoE architecture (100B total, 6.1B active) for efficient multimodal perception and generation | any-to-any multimodal perception and generation |
 | Qwen3-Omni | arXiv 2025 | [Paper](https://arxiv.org/abs/2509.17765) [Code](https://github.com/QwenLM/Qwen3-Omni) | Next-gen Qwen omni model with unified modality space, maintaining SOTA across text/image/audio/video | any-to-any multimodal understanding and generation |
 | Ming-Omni | arXiv 2025 | [Paper](https://arxiv.org/abs/2506.09344) [Code](https://github.com/inclusionAI/Ming) | Unified multimodal architecture for perception + generation (images, text, audio, video) | any-to-any multimodal tasks |
@@ -739,9 +754,9 @@ Models that extend unified understanding + generation beyond text and image to s
 
 ## 5. Native Multimodal Models (NMMs)
 
-**In this section:** [5.1 Design Analyses & Scaling Laws](#51-design-analyses-scaling-laws) · [5.2 Early Fusion NMMs](#52-early-fusion-nmms) · [5.3 Late Fusion NMMs](#53-late-fusion-nmms) · [5.4 Any-to-Any / Omni NMMs](#54-any-to-any-omni-nmms)
+**In this section:** [5.1 Design Analyses & Scaling Laws](#51-design-analyses-scaling-laws) · [5.2 Early Fusion NMMs](#52-early-fusion-nmms) · [5.3 Late Fusion NMMs](#53-late-fusion-nmms) · [5.4 Any-to-Any / Omni NMMs](#54-any-to-any-omni-nmms) · [5.5 Training-Native Models](#55-training-native-models)
 
-> **The most restrictive category.** NMMs are trained **completely from scratch** on multimodal data — no pretrained LLM or vision encoder is used as initialization. All weights are jointly learned end-to-end.
+> **Two dimensions of nativity:** architectural integration and multimodal optimization. Architecture-native entries may inherit pretrained backbones; training-native entries are distinguished from claims about fusion depth. From-scratch initialization is stated only where supported. Models may also retain their UMM classification.
 
 > **What recent arXiv work emphasizes:** native multimodality is increasingly defined by end-to-end multimodal pretraining, tokenizer/representation co-design, and scaling strategies that explicitly address the asymmetry between vision and language.
 
@@ -761,22 +776,35 @@ Recent arXiv papers sharpen the definition of NMMs and identify the main bottlen
 
 ### 5.2 Early Fusion NMMs
 
-> Single Transformer decoder processes tokenized text and image inputs from layer 1, with minimal modality-specific parameters (only a linear patch embedding for images). No separate image encoder component.
+> Modality tokens or embeddings enter shared backbone computation before its first block. Separate input encoders, tokenizers, experts, and decoders are compatible with early fusion. Architecture-native entries are explicitly qualified where pretrained initialization prevents an equally strong from-scratch claim.
 
 Recent scaling-law evidence suggests early-fusion NMMs are often stronger at lower parameter counts and simpler to deploy when paired with sufficiently strong visual representations.
 
 | Model | Paper | Links | Training Scale | Notes | Task |
 |---|---|---|---|---|---|
+| DeepSeek-V4.1-Flash | Model release 2026-09-10 | [Announcement](https://www.deepseek.com/en/news/deepseek-v4-1-flash/) [HF](https://huggingface.co/deepseek-ai/DeepSeek-V4.1-Flash) | 552B backbone; 45T multimodal pretraining tokens; 1M context | Open-weight model (MIT) trained from scratch on multimodal data; DeepSeek-ViT and a two-layer MLP produce image embeddings jointly processed with text from the start of language-model pretraining. Shared computation uses a Causal Encoder-Decoder architecture | image/text understanding, visual reasoning, coding, long-context agents |
+| Qwen3.8-Flash-Next | Model release 2026-08-26 | [Code](https://github.com/QwenLM/Qwen3.8-Flash-Next) [HF](https://huggingface.co/Qwen/Qwen3.8-Flash-Next) [Implementation](https://github.com/huggingface/transformers/blob/main/src/transformers/models/qwen4_exp/modeling_qwen4_exp.py) | 125B backbone / 6B active; 51B n-gram embeddings + 4B MTP | Open-weight experimental architecture preview under Qwen Community License 1.0; architecture-native early fusion inserts image/video embeddings into the shared language-backbone input. Combines Gated DeltaNet, Qwen Sparse Attention, and gated residuals; all-components-from-scratch initialization is unverified | image/video understanding, visual reasoning, coding, long-horizon agents |
+| Qwen3.8-27B | Model release 2026-08-14 | [Code](https://github.com/QwenLM/Qwen3.8) [HF](https://huggingface.co/Qwen/Qwen3.8-27B) | 27B dense; 262K native context, extensible to 1M | Open-weight architecture-native VLM built on Qwen3.5's early-fusion vision-language architecture; image/video embeddings and text share the language backbone. Training stage is pretraining plus post-training; all-components-from-scratch initialization is unverified | image/video understanding, document understanding, visual reasoning, agentic work |
+| Inkling-Small | Model release 2026-07-30 | [Announcement](https://thinkingmachines.ai/news/inkling-small/) [Model Card](https://thinkingmachines.ai/model-card/inkling-small/) [HF](https://huggingface.co/thinkingmachines/Inkling-Small) | 276B total / 12B active | Open-weight MoE model with a hierarchical image-patch encoder and discrete audio encoding; text, image, and audio representations enter a shared hidden space and are jointly processed by one decoder. Outputs text; fusion classification does not assert all-components-from-scratch initialization | text/image/audio understanding, visual and audio reasoning, coding, agentic tool use |
 | Inkling | Thinking Machines Lab, 2026 | [Announcement](https://thinkingmachines.ai/news/introducing-inkling/) [Model Card](https://thinkingmachines.ai/model-card/inkling/) [HF](https://huggingface.co/thinkingmachines/Inkling) | 975B total / 41B active; 45T multimodal pretraining tokens; 1M context | Open-weight MoE model trained from scratch with encoder-free vision and audio inputs; images use 40×40 patches with a lightweight four-layer hMLP, while audio uses dMel spectrograms, jointly processed with text tokens | text/image/audio understanding, visual and audio reasoning, speech transcription, coding, agentic tool use |
+| Gemma 4 12B Unified | Model release 2026-06-03 | [Announcement](https://blog.google/innovation-and-ai/technology/developers-tools/introducing-gemma-4-12b/) [HF](https://huggingface.co/google/gemma-4-12B-it) | 12B | Open-weight encoder-free architecture (Apache 2.0): lightweight linear layers project raw image patches and audio waveforms into the shared decoder's embedding space. Listed separately from encoder-based Gemma 4 variants; "Unified" refers to input architecture, with text-only output | image/video/audio understanding, multimodal reasoning, on-device agents |
 | HYDRA-X: Native Unified Multimodal Models with Holistic Visual Tokenizers | arXiv 2026 | [Paper](https://arxiv.org/abs/2606.13289) | 7B dense model | Native unified multimodal model with a holistic image-video ViT tokenizer, covering image/video understanding, image/video generation, and image editing | image/video understanding, image/video generation, editing |
 | NEO-OV | arXiv 2026 | [Paper](https://arxiv.org/abs/2605.28820) | — | Native one-vision scaling from pixels to words, extending the NEO line toward stronger native visual primitives | vision-language understanding |
-| SenseNova-U1.5-8B-MoT | Model release 2026-08-20 | [Code](https://github.com/OpenSenseNova/SenseNova-U1) [HF](https://huggingface.co/sensenova/SenseNova-U1.5-8B-MoT) | — | NEO-unify-based encoder-free MoT model with improved patchify layers, native 4K generation, text rendering, and image editing; grouped with U1 by architecture, with from-scratch initialization unverified | visual understanding, image generation, editing, interleaved generation |
+| SenseNova-U1.5-8B-MoT | Model release 2026-08-20 | [Paper](https://arxiv.org/abs/2609.11929) [Code](https://github.com/OpenSenseNova/SenseNova-U1) [HF](https://huggingface.co/sensenova/SenseNova-U1.5-8B-MoT) | — | NEO-unify-based encoder-free MoT model with improved patchify layers, native 4K generation, text rendering, and image editing; grouped with U1 by architecture, with from-scratch initialization unverified | visual understanding, image generation, editing, interleaved generation |
 | SenseNova-U1 | arXiv 2026 | [Paper](https://arxiv.org/abs/2605.12500) [Code](https://github.com/OpenSenseNova/SenseNova-U1) | — | NEO-Unify-based native unified multimodal model handling understanding, generation, and reasoning in one model | Unified Understanding & Generation |
 | HiDream-O1-Image | arXiv 2026 | [Paper](https://arxiv.org/abs/2605.11061) | — | Natively unified image generative foundation model with pixel-level unified transformer | image generation, unified modeling |
 | Tuna-2 | arXiv 2026 | [Paper](https://arxiv.org/abs/2604.24763) | — | Native unified multimodal model that discards traditional vision encoders in favor of direct pixel embeddings for end-to-end understanding and generation | Unified Understanding & Generation |
 | NEO | arXiv 2025 | [Paper](https://arxiv.org/abs/2510.14979) | — | Native vision-language primitives at scale; paired with reusable components for cost-effective native VLM development | vision-language understanding |
 | NEO-Unify | Blog 2025 | [Blog](https://huggingface.co/blog/sensenova/neo-unify) | — | Native unified extension of NEO for understanding, generation, and reasoning | Unified Understanding & Generation |
 | Emu3.5 | Nature 2026 | [Paper](https://arxiv.org/abs/2510.26583) [Code](https://github.com/baaivision/Emu3.5) | Large-scale (trillion+ tokens) | Native world model; next-state prediction on interleaved video/text; Discrete Diffusion Adaptation for efficiency | interleaved generation, world modeling, any-to-image |
+| LongCat-Next | arXiv 2026 | [Paper](https://arxiv.org/abs/2603.27538) | — | Early fusion: DiNA represents text, vision, and audio as discrete tokens processed by a shared modality-agnostic autoregressive backbone; Omni capabilities | text/image/audio understanding and generation |
+| Llama4 | arXiv 2026 | [Paper](https://arxiv.org/abs/2601.11659) [Blog](https://ai.meta.com/blog/llama-4-multimodal-intelligence/) | Scout/Maverick: 17B active / ~109B–400B total; Behemoth: ~2T total | Architecture-native early fusion of text and vision tokens in a shared MoE backbone; separately trained vision encoder, so early fusion does not imply all components were trained from scratch | vision-language understanding |
+| Emu3 | arXiv 2024 | [Paper](https://arxiv.org/abs/2409.18869) [Code](https://github.com/baaivision/Emu3) | 8B | Early-fusion autoregressive backbone jointly models text, image, and video tokens; also indexed under [UMM / AR / Pixel Encoding](#pixel-encoding) | visual understanding, visual generation |
+| Chameleon | arXiv 2024 | [Paper](https://arxiv.org/abs/2405.09818) [Code](https://github.com/facebookresearch/chameleon) | — | Early-fusion backbone trained from scratch on interleaved image-text tokens; separate visual tokenizer; also listed under [UMM / AR / Pixel Encoding](#pixel-encoding) | visual understanding, visual generation |
+| Transfusion: Predict the Next Token and Diffuse Images with One Multi-Modal Model | ICLR 2025 | [Paper](https://arxiv.org/abs/2408.11039) | 7B | Early-fusion shared Transformer jointly models text tokens and continuous image latents with next-token prediction and diffusion; also listed under [Hybrid UMMs](#hybrid-ar--diffusion-umms) | visual understanding, visual generation |
+| Show-o: One Single Transformer to Unify Multimodal Understanding and Generation | ICLR 2025 | [Paper](https://arxiv.org/abs/2408.12528) [Code](https://github.com/showlab/Show-o) | — | Architecture-native early fusion with a pretrained language-model initialization; shared Transformer combines autoregressive text modeling and masked image-token diffusion; [UMM entry](#pixel-encoding-1) | multimodal understanding and generation |
+| Show-o2: Improved Native Unified Multimodal Models | arXiv 2025 | [Paper](https://arxiv.org/abs/2506.15564) [Code](https://github.com/showlab/Show-o) | — | Architecture-native early fusion with autoregressive text modeling and visual flow matching; uses a pretrained language backbone, not an all-components-from-scratch model; [UMM entry](#hybrid-encoding-joint) | multimodal understanding and generation |
+| OneCat | arXiv 2025 | [Paper](https://arxiv.org/abs/2509.03498) [Code](https://github.com/onecat-ai/OneCAT) | — | Architecture-native early fusion with a Qwen2.5-initialized decoder and modality-specific experts; unified autoregressive understanding and generation; [UMM entry](#pixel-encoding) | visual understanding, visual generation, editing |
 
 ### 5.3 Late Fusion NMMs
 
@@ -787,16 +815,10 @@ Recent scaling-law evidence suggests early-fusion NMMs are often stronger at low
 | Lance | arXiv 2026 | [Paper](https://lance-project.github.io/assets/lance.pdf) [Code](https://github.com/bytedance/Lance) | 3B (MoE) | Native multimodal MoE  | Unified multimodal understanding and multimodal generation |
 | Kimi K3: Open Frontier Intelligence | arXiv 2026 | [Paper](https://arxiv.org/abs/2607.24653) [HF](https://huggingface.co/moonshotai/Kimi-K3) | 2.8T total / 104B active; 1M context | Joint language-vision training from the outset; MoonViT-V2 is trained from scratch and connected to the language backbone through pixel-shuffle downsampling and an MLP projector | image/video understanding, visual reasoning, long-horizon agents |
 | Kimi K2.6 | Moonshot AI 2026 | [Blog](https://www.kimi.com/blog/kimi-k2-6) | MoE Architecture: 32B active / 1T total parameters; supports 256K context | Native multimodal MoE with MLA (Multi-head Latent Attention) and MoonViT encoder | Unified multimodal understanding, long-horizon coding, and agent swarms |
-| Llama4 | arXiv 2026 | [Paper](https://arxiv.org/abs/2601.11659) [Blog](https://ai.meta.com/blog/llama-4-multimodal-intelligence/) | Scout/Maverick: 17B active / ~109B–400B total; Behemoth: ~2T total | Native multimodal, MoE architecture with early fusion and vision encoder | vision-language understanding |
 | GLM-5V-Turbo: Toward a Native Foundation Model for Multimodal Agents | arXiv 2026 | [Paper](https://arxiv.org/abs/2604.26752) | — | Native multimodal foundation model featuring CogViT vision encoder, Multimodal Multi-Token Prediction (MMTP), and joint RL for agentic GUI/Design2Code tasks | multimodal agentic reasoning |
 | LLaVA-OneVision-2 | arXiv 2026 | [Code](https://github.com/EvolvingLMMs-Lab/LLaVA-OneVision-2) [HF](https://huggingface.co/lmms-lab-encoder/LLaVA-OneVision-2-8B-Instruct) | 8B | Native multimodal training with OneVision-Encoder and Qwen3 text backbone; codec-aligned visual encoding for image, long-video, spatial, document/OCR/chart understanding | visual understanding, video, spatial reasoning |
-| LongCat-Next | arXiv 2026 | [Paper](https://arxiv.org/abs/2603.27538) | — | Discrete Native Any-resolution Visual Transformer | vision-language understanding |
-| LLaVA-OneVision-1.5: Fully Open Framework for Democratized Multimodal Training | arXiv 2025 | [Paper](https://arxiv.org/abs/2509.23661) [Code](https://github.com/EvolvingLMMs-Lab/LLaVA-OneVision-1.5) [HF](https://huggingface.co/collections/lmms-lab/llava-onevision-15-68d385fe73b50bd22de23713) | 4B / 8B; 85M mid-training data + 22M instruction data | Native multimodal training with RICE-ViT, two-layer MLP projector, and Qwen3 backbone; supports image, multi-image, and video | visual understanding, video |
-| InternVL3 | arXiv 2025 | [Paper](https://arxiv.org/abs/2504.10479) | — | A pre-trained InternViT encoder coupled with a cross-attention visual expert, employing a deep but late-fusion strategy to ensure seamless multimodal alignment while strictly preserving native LLM reasoning and linguistic proficiency. | vision-language understanding |
-| InternVL3.5 | arXiv 2025 | [Paper](https://arxiv.org/abs/2508.18265) | — | A pre-trained ViT encoder with a visual expert that uses cross-attention for deep but late-style fusion to the LLM, preserving its capabilities. | vision-language understanding |
 | Qwen3.5 | - | [Blog](https://qwen.ai/blog?id=qwen3.5) | — | Discrete Native Any-resolution Visual Transformer | vision-language understanding |
 | Gemma4 | - | [Blog](https://ai.google.dev/gemma/docs/core/model_card_4) | — | A pre-trained ViT encoder with a visual expert that uses cross-attention for deep but late-style fusion to the LLM, preserving its capabilities. | vision-language understanding |
-| Emu3 | arXiv 2024 | [Paper](https://arxiv.org/abs/2409.18869) [Code](https://github.com/baaivision/Emu3) | 8B | Next-token prediction over VQ image tokens; native multimodal decoder-only; minimal modality-specific params | visual understanding, visual generation |
 
 ### 5.4 Any-to-Any / Omni NMMs
 
@@ -810,6 +832,15 @@ The latest arXiv-native multimodal papers increasingly blur the boundaries betwe
 | Qwen3.5-Omni | Qwen Blog 2026 | [Blog](https://qwen.ai/blog?id=qwen3.5-omni) | — | Discrete native any-resolution visual transformer with omni-modal extension | vision-language understanding, omni |
 | ERNIE 5.0 Technical Report | arXiv 2026 (Late fusion) | [Paper](https://arxiv.org/abs/2602.04705) | — | Natively autoregressive foundation model designed for unified multimodal understanding and generation across text, image, video, and audio | vision-language understanding, omni |
 
+### 5.5 Training-Native Models
+
+These entries record a native multimodal training route separately from fusion topology. This qualification does not claim that every component is trained from scratch; no Early, Mid, or Late Fusion label is assigned without architectural evidence.
+
+| Model | Paper | Links | Training Scale | Notes | Task |
+|---|---|---|---|---|---|
+| InternVL3 | arXiv 2025 | [Paper](https://arxiv.org/abs/2504.10479) | — | Training-native route: native multimodal pretraining within a ViT–MLP–LLM architecture; pretrained components are retained. This training qualification does not establish strict late or mid fusion; fusion depth is left unspecified here. | vision-language understanding |
+| InternVL3.5 | arXiv 2025 | [Paper](https://arxiv.org/abs/2508.18265) | — | Training-native route: native multimodal pretraining within a ViT–MLP–LLM architecture; pretrained components are retained. This training qualification does not establish strict late or mid fusion; fusion depth is left unspecified here. | vision-language understanding |
+
 <p align="right"><a href="#awesome-multimodal-modeling">Back to Top</a></p>
 
 ---
@@ -821,6 +852,13 @@ The latest arXiv-native multimodal papers increasingly blur the boundaries betwe
 
 | Model | Venue | Links | Notes | Task |
 |-------|-------|-------|-------|------|
+| GPT-6 Astra | OpenAI, 2026 | [Announcement](https://openai.com/index/safety-overview-gpt-6-astra/) [System Card](https://deploymentsafety.openai.com/gpt-6-astra) | September 2026 proprietary model with text/image input and text output, supporting visual reasoning, coding, computer use, and long-horizon agentic work | visual understanding, multimodal reasoning, coding, computer use, agents |
+| Claude Fable 5.1 / Mythos 5.1 | Anthropic, 2026 | [Announcement](https://www.anthropic.com/claude-fable-and-mythos-5-1) [Models](https://platform.claude.com/docs/en/models/overview) | September 2026 release; Fable 5.1 and Mythos 5.1 are the same underlying model with different safeguards. Fable is generally available, while Mythos is restricted to trusted access programs; grouped as one entry | visual understanding, reasoning, coding, computer use, long-horizon agents |
+| Muse Spark 1.3 | Meta, 2026 | [Announcement](https://research.meta.ai/blog/introducing-muse-spark-1-3) [Models](https://ai.meta.com/llama) | September 2026 proprietary Muse Spark update for multimodal perception, coding, and agentic work, available through Muse Code and Meta Model API. Open-weight release remains a future plan as of 2026-09-15 | visual understanding, multimodal reasoning, coding, agents |
+| Gemini 3.8 Flash | Google DeepMind, 2026 | [Model Card](https://deepmind.google/models/model-cards/gemini-3-8-flash/) | September 2026 Gemini Flash model supporting text, image, audio, and video inputs with text output; up to 1M input context, with configurable reasoning effort | multimodal understanding, video/audio understanding, reasoning, coding, agents |
+| Grok 4.6 | xAI, 2026 | [Announcement](https://x.ai/news/grok-4-6) [Model Docs](https://docs.x.ai/developers/grok-4-6) | August 2026 proprietary model with text/image input and text output; extends the Grok family with visual work, coding, and long-running agent workflows | visual understanding, multimodal reasoning, coding, agents |
+| Claude 5 Family (Opus 5 / Sonnet 5) | Anthropic, 2026 | [Opus 5](https://www.anthropic.com/news/claude-opus-5) [Sonnet 5](https://www.anthropic.com/news/claude-sonnet-5) [Models](https://platform.claude.com/docs/en/models/overview) | Opus 5 (July 2026) and Sonnet 5 (June 2026) support text/image input and text output, with vision, reasoning, tool use, and agentic coding; retained separately from the Fable/Mythos family | visual understanding, reasoning, coding, computer use, agents |
+| Seed2.1 Pro / Turbo | ByteDance Seed, 2026 | [Announcement](https://seed.bytedance.com/en/blog/seed2-1-officially-released-advancing-ai-productivity) [Models](https://seed.bytedance.com/en/seed2_1) | June 2026 proprietary Seed2.1 family; Pro and Turbo provide different model sizes for visual/video understanding, reasoning, software engineering, and cross-tool agent workflows | visual/video understanding, multimodal reasoning, coding, agents |
 | GPT-5.6 Sol / Terra / Luna | OpenAI, 2026 | [Announcement](https://openai.com/index/gpt-5-6/) | July 2026 general-availability release of the GPT-5.6 family: Sol is the flagship model, Terra balances capability and cost, and Luna prioritizes speed and affordability. | Multimodal Reasoning + Computer Use + Agentic Work |
 | GPT-5.4 / GPT-5.5 | OpenAI Blog | [GPT-5.4](https://openai.com/index/introducing-gpt-5-4/) [GPT-5.5](https://openai.com/index/introducing-gpt-5-5/) | 2026 GPT-5-series updates with improved reasoning, multimodal capability, and deployment efficiency. | Omni-Modal + Professional/Agentic Workflows |
 | Claude 4.6 Family (Opus 4.6 / Sonnet 4.6) | Anthropic Blog | [Opus 4.6](https://www.anthropic.com/news/claude-opus-4-6) [Sonnet 4.6](https://www.anthropic.com/news/claude-sonnet-4-6) | Claude 4.6 proprietary model family with vision, coding, tool use, and computer-use workflows. | Multimodal + Agentic/Coding/Computer-Use |
@@ -908,11 +946,11 @@ We welcome contributions! Please follow these guidelines:
 
 ### Validation Rules
 
-**For NMM submissions (strict):**
-- [ ] Confirm the model does **NOT** use any pretrained LLM backbone
-- [ ] Confirm the model does **NOT** use any pretrained vision encoder (CLIP, ViT, etc.)
-- [ ] All weights are jointly trained from scratch on multimodal data
-- [ ] Classify as Early Fusion or Late Fusion (both must be "from scratch")
+**For NMM submissions:**
+- [ ] Record architectural integration and multimodal training history separately
+- [ ] Identify pretrained backbones, encoders, tokenizers, and the trainable parameters at each stage
+- [ ] Qualify architecture-native or training-native entries; claim from-scratch training only with supporting evidence
+- [ ] Assign fusion depth only when supported by the architecture; otherwise use the Training-Native group with fusion unspecified
 
 **For UMM submissions:**
 - [ ] Confirm the model handles both image understanding AND image generation
@@ -976,3 +1014,53 @@ This list is released under the [CC0 1.0 Universal](https://creativecommons.org/
 [Back to Top](#awesome-multimodal-modeling)
 
 </div>
+
+## Companion Website
+
+The companion research library is designed for
+[openenvision.github.io/Awesome-Multimodal-Modeling/](https://openenvision.github.io/Awesome-Multimodal-Modeling/),
+under the OpenEnvision organization site.
+
+The website derives all catalog entries and category memberships directly from this README.
+Search, nested category filters, year and resource filters, sorting, pagination, entry details,
+shareable filter URLs, and a browser-local reading list are available. Counts represent entries,
+including cross-listed models and analysis papers, rather than unique models.
+
+### Local preview
+
+Node.js 22 or later is sufficient; no package installation or API key is needed.
+
+```sh
+npm test
+npm run dev
+```
+
+Open `http://127.0.0.1:4173/Awesome-Multimodal-Modeling/`.
+The preview builds in memory. Reload after editing files; README and website changes are watched.
+Run `npm run build` to export the static production site into `dist/`.
+Run `npm run preview` to serve that exported build locally at the same URL.
+
+### GitHub Pages deployment
+
+The deployment workflow is included at `.github/workflows/pages.yml`.
+Commit that workflow, the website sources,
+scripts, package.json, and the updated README to this repository.
+
+In the repository's **Settings → Pages**, choose **GitHub Actions** as the source.
+The workflow checks and builds pull requests, and deploys successful builds from `main`.
+Updates to this README automatically rebuild the website after merging.
+
+The project uses relative asset URLs and the repository subpath. It needs no custom domain,
+CNAME file, or change to the OpenEnvision organization's main website.
+See [GitHub's Pages workflow documentation](https://docs.github.com/en/pages/getting-started-with-github-pages/using-custom-workflows-with-github-pages).
+
+### Website files
+
+- `website/`: page template, styles, interactions, and the original OpenEnvision brand mark.
+- `scripts/catalog.mjs`: README parser and data-integrity checks.
+- `scripts/build.mjs`: static site generation.
+- `scripts/serve.mjs`: local preview server.
+- `dist/`: generated deployment output; excluded from version control.
+
+The brand mark comes from the [OpenEnvision site](https://openenvision.github.io/assets/img/brand/openenvision_mark.png).
+Model membership, release annotations, and availability qualifications remain governed by the README.

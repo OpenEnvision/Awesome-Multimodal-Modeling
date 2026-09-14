@@ -1,0 +1,14 @@
+{
+  "name": "awesome-multimodal-modeling",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "node scripts/build.mjs",
+    "dev": "node scripts/serve.mjs",
+    "preview": "node scripts/serve.mjs --production",
+    "test": "node scripts/catalog.mjs --check-catalog"
+  },
+  "engines": {
+    "node": ">=22"
+  }
+}
