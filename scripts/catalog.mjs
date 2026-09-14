@@ -88,7 +88,7 @@ export function parseCatalog(markdown) {
 if(process.argv.includes('--check-catalog')){
   const {readFileSync}=await import('node:fs');
   const {default:assert}=await import('node:assert/strict');
-  const {readState,selectEntries}=await import('../website/library.js');
+  const {readState,selectEntries}=await import('../assets/site/library.js');
   const md=readFileSync(new URL('../README.md',import.meta.url),'utf8'),c=parseCatalog(md),lines=md.split('\n');
   const a=lines.findIndex(l=>l.startsWith('## 2. ')),b=lines.findIndex(l=>l.startsWith('## 7. '));
   const expected=lines.map((l,i)=>({l,i:i+1})).slice(a,b).filter(({l})=>l.startsWith('|')&&!/^\|\s*(?:-+|Paper\s*\||Model\s*\||Title\s*\|)/.test(l)).map(x=>x.i);

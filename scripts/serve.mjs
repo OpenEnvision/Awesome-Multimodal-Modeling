@@ -1,25 +1,20 @@
 import {createServer} from 'node:http';
 import {watch} from 'node:fs';
-import {readFile, readdir} from 'node:fs/promises';
+import {readFile} from 'node:fs/promises';
 import {extname, resolve} from 'node:path';
 import {fileURLToPath} from 'node:url';
-import {build} from './build.mjs';
+import {build, readAssets, generatedPaths} from './build.mjs';
 const root=fileURLToPath(new URL('../',import.meta.url));
 const base='/Awesome-Multimodal-Modeling/';
 const port=Number(process.env.PORT||4173);
 const production=process.argv.includes('--production');
 let files;
 if(production){
-  files=new Map();
+  files=await readAssets();
   try {
-    const names=await readdir(resolve(root,'dist'),{recursive:true,withFileTypes:true});
-    for(const entry of names) if(entry.isFile()) {
-      const path=resolve(entry.parentPath,entry.name);
-      files.set(path.slice(resolve(root,'dist').length+1),await readFile(path));
-    }
-    if(!files.has('index.html')) throw new Error('Missing index.html');
+    for(const name of [...generatedPaths,'README.md']) files.set(name,await readFile(resolve(root,name)));
   } catch(error) {
-    console.error(`No complete production build. Run npm run build first. ${error.message}`);
+    console.error(`Missing root website files. Run npm run build first. ${error.message}`);
     process.exit(1);
   }
 } else {
@@ -33,7 +28,8 @@ if(production){
   };
   const queue=()=>{clearTimeout(timer);timer=setTimeout(rebuild,120);};
   watch(resolve(root,'README.md'),queue);
-  watch(resolve(root,'website'),{recursive:true},queue);
+  watch(resolve(root,'index.html'),queue);
+  watch(resolve(root,'assets'),{recursive:true},queue);
 }
 const types={'.html':'text/html; charset=utf-8','.css':'text/css; charset=utf-8','.js':'text/javascript; charset=utf-8','.json':'application/json; charset=utf-8','.png':'image/png','.svg':'image/svg+xml','.xml':'application/xml','.txt':'text/plain; charset=utf-8'};
 const server=createServer((req,res)=>{
