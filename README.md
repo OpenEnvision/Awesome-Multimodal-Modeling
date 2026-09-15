@@ -514,7 +514,7 @@ The NMM diagrams below illustrate from-scratch variants; initialization and inpu
 | Flamingo: a Visual Language Model for Few-Shot Learning | NeurIPS 2022 | [Paper](https://arxiv.org/abs/2204.14198) | Perceiver Resampler + gated cross-attention layers for few-shot multimodal prompting | few-shot visual understanding |
 | IDEFICS | — | [Hugging Face](https://huggingface.co/HuggingFaceM4/idefics) | 80B Flamingo-inspired model; late fusion with vision encoder and LLM | open-source multimodal understanding |
 
-| HIVE: Hierarchical Pre-Training of Vision Encoders with Large Language Models | CVPR 2026 Workshop (MMFM) | [Paper](https://arxiv.org/abs/2604.00086) [Code](https://github.com/eugenelet/HIVE) | Hierarchical cross-attention fusing multi-layer vision features into the LLM; 3-stage training; gains on MME, GQA, OK-VQA, ScienceQA | vision-language pretraining |
+| HIVE: Hierarchical Pre-Training of Vision Encoders with Large Language Model | CVPR 2026 Workshop (MMFM) | [Paper](https://arxiv.org/abs/2604.00086) [Code](https://github.com/eugenelet/HIVE) | Hierarchical cross-attention fusing multi-layer vision features into the LLM; 3-stage training; gains on MME, GQA, OK-VQA, ScienceQA | vision-language pretraining |
 #### Hybrid Adaptor
 
 | Paper | Venue | Links | Notes | Task |
