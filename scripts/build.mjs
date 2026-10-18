@@ -6,6 +6,9 @@ import {parseCatalog, escapeHTML as esc} from './catalog.mjs';
 import {rowHTML} from '../assets/site/library.js';
 const root = resolve(dirname(fileURLToPath(import.meta.url)), '..');
 export const generatedPaths=['index.html','assets/site/catalog.json','.nojekyll','robots.txt','sitemap.xml'];
+export const staticPages=['website/index.html'];
+// Normalize generated module versions before hashing so rebuilding is idempotent.
+const versionlessImports = source => source.replace(/(['"]\.\/library\.js)\?v=[^'"]+(['"])/g, '$1$2');
 export async function readAssets() {
   const files=new Map();
   const entries=await readdir(resolve(root,'assets'),{recursive:true,withFileTypes:true});
@@ -21,8 +24,12 @@ export async function build({write=true}={}) {
   const catalog = parseCatalog(markdown);
   const files=await readAssets();
   const hash = createHash('sha256').update(catalog.sourceHash);
-  for(const [name,data] of files) hash.update(name).update(data);
+  for(const [name,data] of [...files].sort(([a],[b])=>a.localeCompare(b))) {
+    hash.update(name).update(name==='assets/site/app.js' ? versionlessImports(data.toString()) : data);
+  }
   const version = hash.digest('hex').slice(0,12);
+  const appPath='assets/site/app.js';
+  files.set(appPath,versionlessImports(files.get(appPath).toString()).replace(/(['"]\.\/library\.js)(['"])/g, `$1?v=${version}$2`));
   const diagramDescriptions = {
     traditional:'Two distinct patterns: CLIP-style image and text encoders align embeddings through comparison; fusion models combine modality features before task prediction.',
     mllms:'Text tokens enter a pretrained LLM. Visual features condition it through a modality interface, either as input tokens or through layer-wise attention. The dashed route is an alternative.',
@@ -36,7 +43,7 @@ export async function build({write=true}={}) {
     nmms:'Fusion structure and foundation-training history are assessed separately. UMM membership may overlap.'
   };
   const replacements = {
-    COUNT:catalog.entries.length, SPAN:`${catalog.years.at(-1)}–${catalog.years[0]}`,
+    COUNT:catalog.entries.length, COLLECTION_COUNT:catalog.collections.length, SPAN:`${catalog.years.at(-1)}–${catalog.years[0]}`,
     YEARS:catalog.years.map(y=>`<option value="${y}">${y}</option>`).join(''),
     SIDEBAR:`<h3 class="sidebar-heading">Collections</h3><a class="category-button active" href="?">All entries <span>${catalog.entries.length}</span></a>`+catalog.collections.map(c=>`<a class="category-button" href="?collection=${c.id}#library">${c.label}<span>${c.count}</span></a>`).join(''),
     ENTRIES:catalog.entries.slice(0,12).map(e=>rowHTML(e)).join(''),
@@ -55,9 +62,10 @@ export async function build({write=true}={}) {
   files.set('robots.txt','User-agent: *\nAllow: /\nSitemap: https://openenvision.github.io/Awesome-Multimodal-Modeling/sitemap.xml\n');
   files.set('sitemap.xml','<?xml version="1.0" encoding="UTF-8"?><urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"><url><loc>https://openenvision.github.io/Awesome-Multimodal-Modeling/</loc></url></urlset>');
   files.set('README.md',markdown);
+  for(const name of staticPages) files.set(name,await readFile(resolve(root,name)));
   if(write) {
     // The repository root is deployable as-is. dist/ is only a clean Actions artifact.
-    for(const name of generatedPaths) await writeFile(resolve(root,name),files.get(name));
+    for(const name of [...generatedPaths,appPath]) await writeFile(resolve(root,name),files.get(name));
     await rm(resolve(root,'dist'),{recursive:true,force:true});
     for(const [name,data] of files) {
       const destination=resolve(root,'dist',name);

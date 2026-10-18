@@ -1,4 +1,5 @@
 import { createHash } from 'node:crypto';
+import identityMigrations from '../data/entry-identities.json' with { type: 'json' };
 
 export const collections = [
   { id: 'traditional', label: 'Traditional', fullName: 'Traditional Multimodal Models', description: 'Representations, alignment, fusion, and multimodal pretraining.' },
@@ -6,6 +7,7 @@ export const collections = [
   { id: 'umms', label: 'UMMs', fullName: 'Unified Multimodal Models', description: 'Understanding and generation within one unified framework.' },
   { id: 'nmms', label: 'NMMs', fullName: 'Native Multimodal Models', description: 'Architectural integration and multimodal optimization, with explicit training qualifications.' },
   { id: 'closed', label: 'Closed-source', fullName: 'Closed-Source Multimodal Models', description: 'Proprietary models, organized by the release years recorded in the list.' },
+  { id: 'evaluation', label: 'Evaluation', fullName: 'Benchmarks & Evaluation', description: 'Benchmarks for understanding, generation, interleaved interaction, and multimodal robustness.' },
 ];
 export const repo = 'https://github.com/OpenEnvision/Awesome-Multimodal-Modeling';
 export const escapeHTML = (value = '') => String(value).replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
@@ -27,9 +29,9 @@ export function linksFrom(value) {
 const cleanHeading = text => plain(text).replace(/^\d+(?:\.\d+)*\.?\s*/, '');
 const slug = text => text.toLowerCase().replace(/[^\p{L}\p{N}\s-]/gu, '').trim().replace(/\s+/g, '-');
 
-export function parseCatalog(markdown) {
+export function parseCatalog(markdown, {identities = identityMigrations} = {}) {
   const lines = markdown.split(/\r?\n/), entries = [], sections = new Map(), usedIds = new Set();
-  let stack = [], active = null, headers = null, fence = false;
+  let stack = [], active = null, chapter = null, headers = null, fence = false;
   for (let i = 0; i < lines.length; i++) {
     const line = lines[i];
     if (/^\s*(```|~~~)/.test(line)) { fence = !fence; headers = null; continue; }
@@ -40,9 +42,17 @@ export function parseCatalog(markdown) {
       headers = null;
       if (level === 2) {
         const number = Number(heading[2].match(/^(\d+)\./)?.[1]);
-        active = collections[number - 2] ?? null;
+        chapter = number;
+        active = number >= 2 && number <= 6 ? collections[number - 2] : null;
         stack = [];
-      } else if (active) {
+      } else {
+        // Only the dedicated evaluation section is a catalog within Resources.
+        // Surveys and tool tables retain their separate README formats.
+        if (chapter === 7 && level === 3) {
+          active = cleanHeading(heading[2]) === 'Benchmarks & Evaluation' ? collections.find(c => c.id === 'evaluation') : null;
+          stack = [];
+        }
+        if (!active) continue;
         stack = stack.filter(h => h.level < level);
         const label = cleanHeading(heading[2]);
         const id = [active.id, ...stack.map(s => slug(s.label)), slug(label)].join('/');
@@ -64,22 +74,40 @@ export function parseCatalog(markdown) {
     const title = plain(cells[0]);
     const venue = get('Venue') || (rowHeaders[0] === 'Model' ? get('Paper') : '');
     const year = Number(venue.match(/\b(?:19|20)\d{2}\b/)?.[0] || stack.map(s => s.label).join(' ').match(/\b20\d{2}\b/)?.[0]) || null;
-    const date = venue.match(/\b20\d{2}-\d{2}-\d{2}\b/)?.[0] ?? (year ? `${year}-00-00` : '0000-00-00');
+    const notes = get('Notes') || get('Insights') || get('Focus');
+    // A conference year and a later weights release are not a paper's first date.
+    const firstPublicDate = notes.match(/\bFirst public:\s*(20\d{2}-\d{2}-\d{2})\b/i)?.[1] ?? null;
+    const date = firstPublicDate ?? venue.match(/\b20\d{2}-\d{2}-\d{2}\b/)?.[0] ?? (year ? `${year}-00-00` : '0000-00-00');
     const resources = linksFrom(cells[rowHeaders.indexOf('Links')] ?? '');
     const section = stack.at(-1)?.id ?? active.id;
-    let id = createHash('sha256').update(`${section}|${title}|${venue}|${resources[0]?.url ?? ''}`).digest('hex').slice(0, 12);
-    while (usedIds.has(id)) id += 'x';
+    // An explicit source identity survives corrections to every piece of visible metadata.
+    // Never guess from a title or URL: distinct entries may intentionally share either one.
+    const markers = [...cells[0].matchAll(/<!--\s*entry:([^\s]+)\s*-->/g)];
+    const id = markers[0]?.[1];
+    if (markers.length !== 1 || !/^[a-z0-9][a-z0-9-]{5,63}$/.test(id ?? '')) {
+      throw new Error(`README line ${i + 1}: each catalog row needs one immutable <!-- entry:ID --> in its first cell. Keep existing IDs when editing or moving rows; generate a new ID with node -e "console.log(require('node:crypto').randomUUID())".`);
+    }
+    if (usedIds.has(id)) throw new Error(`README line ${i + 1}: duplicate entry ID "${id}"; distinct rows need distinct immutable IDs.`);
     usedIds.add(id);
     entries.push({id, title, venue, year, date, collection: active.id, section, path: stack.map(s => s.label), ancestors: stack.map(s => s.id),
-      notes: get('Notes') || get('Insights') || get('Focus'), tasks: get('Task'), resources, fields,
-      kind: stack.some(s => s.label === 'Design Analyses & Scaling Laws') ? 'Analysis' : 'Research entry',
+      notes, tasks: get('Task'), resources, fields,
+      kind: active.id === 'evaluation' ? get('Type') || 'Benchmark' : stack.some(s => s.label === 'Design Analyses & Scaling Laws') ? 'Analysis' : 'Research entry',
       sourceLine: i + 1, sourceUrl: `${repo}/blob/main/README.md?plain=1#L${i + 1}`});
   }
   if (!entries.length) throw new Error('No catalog entries found; check README table structure.');
+  const entryAliases = identities.entryAliases ?? {}, sectionAliases = identities.sectionAliases ?? {};
+  for (const [oldId, id] of Object.entries(entryAliases)) {
+    if (usedIds.has(oldId) || !usedIds.has(id)) throw new Error(`Invalid entry migration ${oldId} → ${id}: old IDs must be retired and targets must exist.`);
+  }
+  for (const [oldId, id] of Object.entries(sectionAliases)) {
+    if (sections.has(oldId) || !sections.has(id)) throw new Error(`Invalid section migration ${oldId} → ${id}: old sections must be retired and targets must exist.`);
+  }
   return {
     collections: collections.map(c => ({...c, count: entries.filter(e => e.collection === c.id).length})),
     sections: [...sections.values()].map(s => ({...s, count: entries.filter(e => e.ancestors.includes(s.id)).length})).filter(s => s.count),
     entries,
+    entryAliases,
+    sectionAliases,
     years: [...new Set(entries.map(e => e.year).filter(Boolean))].sort((a,b) => b-a),
     sourceHash: createHash('sha256').update(markdown).digest('hex'),
   };
@@ -90,8 +118,12 @@ if(process.argv.includes('--check-catalog')){
   const {default:assert}=await import('node:assert/strict');
   const {readState,selectEntries}=await import('../assets/site/library.js');
   const md=readFileSync(new URL('../README.md',import.meta.url),'utf8'),c=parseCatalog(md),lines=md.split('\n');
-  const a=lines.findIndex(l=>l.startsWith('## 2. ')),b=lines.findIndex(l=>l.startsWith('## 7. '));
-  const expected=lines.map((l,i)=>({l,i:i+1})).slice(a,b).filter(({l})=>l.startsWith('|')&&!/^\|\s*(?:-+|Paper\s*\||Model\s*\||Title\s*\|)/.test(l)).map(x=>x.i);
+  const expected=[];
+  let exampleFence=false;
+  for (const [i,line] of lines.entries()) {
+    if (/^\s*(```|~~~)/.test(line)) { exampleFence=!exampleFence; continue; }
+    if (!exampleFence && line.startsWith('|') && /<!--\s*entry:/.test(line)) expected.push(i+1);
+  }
   assert.deepEqual(c.entries.map(e=>e.sourceLine),expected);
   assert.equal(new Set(c.entries.map(e=>e.id)).size,c.entries.length);
   assert.equal(c.collections.reduce((n,x)=>n+x.count,0),c.entries.length);
@@ -102,7 +134,7 @@ if(process.argv.includes('--check-catalog')){
   assert(c.entries.every(e=>e.resources.length&&e.title));
   assert(c.entries.filter(e=>e.fields.some(f=>f.label==='Focus')).every(e=>e.notes));
   const t=c.entries.find(e=>e.title.startsWith('Transfusion:')&&e.collection==='umms');
-  if(t){assert(t.fields.some(f=>f.label==='Scale'&&f.value==='7B-scale report'));assert(t.tasks.includes('generation'));}
+  if(t){assert(t.notes.includes('7B-scale report'));assert(t.tasks.includes('generation'));assert(!t.fields.some(f=>f.label.startsWith('Additional notes')));}
   const safe=readState('?page=-1&sort=bad&collection=bad',c);
   assert.equal(safe.page,1);assert.equal(safe.sort,'readme');assert.equal(safe.collection,'');
   console.log('PASS: '+c.entries.length+' source rows, '+c.sections.length+' category filters, IDs, metadata, legacy table formats, URL validation, and HTML escaping.');

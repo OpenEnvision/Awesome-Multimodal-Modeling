@@ -1,0 +1,17 @@
+{
+  "version": 1,
+  "entryAliases": {
+    "804e9375cfd3": "9fac946b2b27",
+    "ab98a6468b1e": "900d8adb0e86",
+    "1317e9b32a52": "2f5bd280c1ba",
+    "0eb7c6ae7c9a": "8403ff00096e"
+  },
+  "sectionAliases": {
+    "traditional/multimodel-representations-alignment": "traditional/multimodal-representations-alignment",
+    "traditional/multimodel-representations-alignment/multimodal-representations": "traditional/multimodal-representations-alignment/multimodal-representations",
+    "traditional/multimodel-representations-alignment/multimodal-fusion": "traditional/multimodal-representations-alignment/multimodal-fusion",
+    "traditional/multimodel-representations-alignment/multimodal-alignment": "traditional/multimodal-representations-alignment/multimodal-alignment",
+    "umms/taxonomy-by-generation-paradigm/autoregressive-ar-umms/hybrid-encoding-pseduo": "umms/taxonomy-by-generation-paradigm/autoregressive-ar-umms/hybrid-encoding-pseudo",
+    "nmms/late-fusion-nmms": "nmms/encoder-based-nmms"
+  }
+}

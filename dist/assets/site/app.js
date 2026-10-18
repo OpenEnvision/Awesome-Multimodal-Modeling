@@ -1,4 +1,4 @@
-import {PAGE_SIZE, esc, normalize, selectEntries, readState, stateSearch, rowHTML, resourceHTML, bookmark} from './library.js';
+import {PAGE_SIZE, esc, normalize, selectEntries, readState, stateSearch, rowHTML, resourceHTML, bookmark, resolveEntryId, migrateSavedEntries} from './library.js?v=f06ff0884e58';
 
 const $ = selector => document.querySelector(selector);
 const dialog = $('#entry-dialog');
@@ -43,12 +43,13 @@ function render({sidebar = true} = {}) {
   const start = (state.page - 1) * PAGE_SIZE;
   const section = catalog.sections.find(s => s.id === state.section);
   const collection = catalog.collections.find(c => c.id === state.collection);
+  const parentLabel = catalog.sections.find(s => s.id === section?.parent)?.label;
   $('#search').value = state.q;
   $('#year').value = state.year;
   $('#sort').value = state.sort;
   $('#resource').value = state.resource;
   $('#results-title').textContent = state.saved ? 'Saved entries' : section?.label || collection?.label || 'All entries';
-  $('#results-description').textContent = state.saved ? 'Your reading list, saved in this browser.' : section ? section.id.split('/').length > 2 ? `${collection.fullName} · ${catalog.sections.find(s=>s.id===section.parent)?.label || ''}` : collection.fullName : collection?.description || 'Browse the complete collection.';
+  $('#results-description').textContent = state.saved ? 'Your reading list, saved in this browser.' : section ? [collection.fullName, parentLabel].filter((label, index, labels) => label && labels.indexOf(label) === index).join(' · ') : collection?.description || 'Browse the complete collection.';
   $('#result-count').textContent = `${entries.length} ${entries.length === 1 ? 'entry' : 'entries'}${state.q ? ` matching “${state.q}”` : ''}`;
   $('#entries').innerHTML = entries.length ? entries.slice(start,start+PAGE_SIZE).map(e=>rowHTML(e,saved.has(e.id))).join('') : `<div class="empty-state"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="10.5" cy="10.5" r="7"/><path d="m16 16 5 5"/></svg><h4>${state.saved && !saved.size ? 'A place for your next read.' : 'No entries found.'}</h4><p>${state.saved && !saved.size ? 'Use the bookmark beside an entry to keep it here.' : 'Try a different search, year, or collection.'}</p><button class="button" data-reset>Browse all entries</button></div>`;
   let pagination = '';
@@ -75,6 +76,15 @@ function update(patch, {push = true, focus = false, hash = location.hash} = {}) 
   syncURL(push, hash);
   render();
   if (focus) { $('#results-title').focus({preventScroll:true}); $('#results-title').scrollIntoView({block:'start',behavior:'auto'}); }
+}
+function closeMobileCategories() {
+  const wasOpen = $('#category-sidebar').classList.contains('mobile-open') && $('#mobile-categories').getClientRects().length > 0;
+  $('#category-sidebar').classList.remove('mobile-open');
+  $('#mobile-categories').setAttribute('aria-expanded', 'false');
+  if (wasOpen) {
+    $('#results-title').focus({preventScroll:true});
+    $('#results-title').scrollIntoView({block:'start', behavior:'auto'});
+  }
 }
 function detail(e, trigger = null, push = true) {
   if (!e) return;
@@ -108,17 +118,23 @@ function save(id) {
 }
 async function init() {
   try {
-    const response = await fetch(new URL('./catalog.json', import.meta.url));
+    const catalogURL = new URL('./catalog.json', import.meta.url);
+    catalogURL.search = new URL(import.meta.url).search;
+    const response = await fetch(catalogURL);
     if (!response.ok) throw new Error(`Catalog request failed: ${response.status}`);
     catalog = await response.json();
     state = readState(location.search, catalog);
     try {
       const stored = JSON.parse(localStorage.getItem('openenvision-reading-list-v1') || '[]');
-      saved = new Set((Array.isArray(stored) ? stored : []).filter(id=>catalog.entries.some(e=>e.id===id)));
+      saved = migrateSavedEntries(catalog, stored);
+      // Canonicalize retired IDs once; a failed write must not discard the in-memory list.
+      if (JSON.stringify(stored) !== JSON.stringify([...saved])) {
+        try { localStorage.setItem('openenvision-reading-list-v1', JSON.stringify([...saved])); } catch { /* The list remains usable for this visit. */ }
+      }
     } catch { saved = new Set(); }
     const initialEntry = new URLSearchParams(location.search).get('entry');
     // Keep a deep link while the first render synchronizes filter parameters.
-    activeEntry = catalog.entries.some(e=>e.id===initialEntry) ? initialEntry : '';
+    activeEntry = resolveEntryId(catalog, initialEntry);
     render();
     document.querySelectorAll('#search-form :disabled, #resource, #share-view').forEach(el=>el.disabled=false);
     if (activeEntry) detail(catalog.entries.find(e=>e.id===activeEntry),null,false);
@@ -132,14 +148,14 @@ async function init() {
         if(target.tagName==='A'&&(event.metaKey||event.ctrlKey||event.shiftKey||event.altKey)) return;
         const fromTaxonomy=Boolean(target.closest('#taxonomy'));
         event.preventDefault();update({collection:target.dataset.collection,section:'',saved:false},{hash:fromTaxonomy?'#library':location.hash});
-        $('#category-sidebar').classList.remove('mobile-open');$('#mobile-categories').setAttribute('aria-expanded','false');
+        closeMobileCategories();
         if (fromTaxonomy) { $('#results-title').focus({preventScroll:true}); $('#library').scrollIntoView({behavior:'auto'}); }
-      } else if (target.hasAttribute('data-section')) {const section=catalog.sections.find(s=>s.id===target.dataset.section); update({collection:section.collection,section:section.id,saved:false});}
+      } else if (target.hasAttribute('data-section')) {const section=catalog.sections.find(s=>s.id===target.dataset.section); update({collection:section.collection,section:section.id,saved:false});closeMobileCategories();}
       else if (target.hasAttribute('data-expand')) {
         const id=target.dataset.expand, el=$(`#sub-${id}`), open=el.hidden;
         el.hidden=!open;target.setAttribute('aria-expanded',String(open));target.setAttribute('aria-label',`${open?'Collapse':'Expand'} ${catalog.collections.find(c=>c.id===id).label} subcategories`);
         if(open)expanded.add(id);else expanded.delete(id);
-      } else if (target.hasAttribute('data-saved-view')) update({saved:true,collection:'',section:'',q:'',year:'',resource:''});
+      } else if (target.hasAttribute('data-saved-view')) {update({saved:true,collection:'',section:'',q:'',year:'',resource:''});closeMobileCategories();}
       else if (target.hasAttribute('data-save')) save(target.dataset.save);
       else if (target.hasAttribute('data-detail-save')) save(target.dataset.detailSave);
       else if (target.hasAttribute('data-detail')) detail(catalog.entries.find(e=>e.id===target.dataset.detail),target);
@@ -153,7 +169,7 @@ async function init() {
     dialog.addEventListener('cancel',event=>{event.preventDefault();closeDetail();});
     dialog.addEventListener('click',event=>{if(event.target===dialog){const box=dialog.getBoundingClientRect();if(event.clientX<box.left||event.clientX>box.right||event.clientY<box.top||event.clientY>box.bottom)closeDetail();}});
     document.addEventListener('keydown',event=>{if(event.key==='/'&&!dialog.open&&!event.ctrlKey&&!event.metaKey&&!event.altKey&&!['INPUT','SELECT','TEXTAREA'].includes(document.activeElement.tagName)&&!document.activeElement.isContentEditable){event.preventDefault();$('#search').focus();}});
-    window.addEventListener('popstate',()=>{clearTimeout(searchTimer);state=readState(location.search,catalog);const id=new URLSearchParams(location.search).get('entry');activeEntry=catalog.entries.some(e=>e.id===id)?id:'';render();if(activeEntry)detail(catalog.entries.find(e=>e.id===activeEntry),null,false);else if(dialog.open)dialog.close();});
+    window.addEventListener('popstate',()=>{clearTimeout(searchTimer);state=readState(location.search,catalog);const id=new URLSearchParams(location.search).get('entry');activeEntry=resolveEntryId(catalog,id);render();if(activeEntry)detail(catalog.entries.find(e=>e.id===activeEntry),null,false);else if(dialog.open)dialog.close();});
   } catch (error) { $('#load-error').hidden=false; console.error('Research library:',error); }
 }
 init();

@@ -2,10 +2,21 @@ export const PAGE_SIZE = 12;
 export const esc = value => String(value ?? '').replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 export const normalize = value => String(value).normalize('NFKD').replace(/[\u0300-\u036f]/g, '').toLowerCase().replace(/[^\p{L}\p{N}]+/gu, ' ').trim();
 export function resourceKind(link) {
-  if (/huggingface\.co/i.test(link.url)) return 'hf';
+  let hostname = '';
+  try { hostname = new URL(link.url).hostname.toLowerCase(); } catch { /* Labels still classify an invalid URL. */ }
+  if (hostname === 'huggingface.co' || hostname.endsWith('.huggingface.co')) return 'hf';
+  if (hostname === 'github.com' || hostname.endsWith('.github.com') || hostname === 'raw.githubusercontent.com') return 'code';
   if (/code|implementation/i.test(link.label)) return 'code';
   if (/paper|arxiv|report/i.test(link.label)) return 'paper';
   return 'other';
+}
+export function resolveEntryId(catalog, id) {
+  if (typeof id !== 'string') return '';
+  const canonical = Object.hasOwn(catalog.entryAliases ?? {}, id) ? catalog.entryAliases[id] : id;
+  return catalog.entries.some(e => e.id === canonical) ? canonical : '';
+}
+export function migrateSavedEntries(catalog, ids) {
+  return new Set((Array.isArray(ids) ? ids : []).map(id => resolveEntryId(catalog, id)).filter(Boolean));
 }
 export function selectEntries(catalog, state, saved = new Set()) {
   const tokens = normalize(state.q).split(' ').filter(Boolean);
@@ -26,7 +37,9 @@ export function selectEntries(catalog, state, saved = new Set()) {
 export function readState(search, catalog) {
   const p = new URLSearchParams(search);
   const collection = catalog.collections.some(c => c.id === p.get('collection')) ? p.get('collection') : '';
-  const section = catalog.sections.some(s => s.id === p.get('section') && (!collection || s.collection === collection)) ? p.get('section') : '';
+  const requestedSection = p.get('section');
+  const canonicalSection = Object.hasOwn(catalog.sectionAliases ?? {}, requestedSection) ? catalog.sectionAliases[requestedSection] : requestedSection;
+  const section = catalog.sections.some(s => s.id === canonicalSection && (!collection || s.collection === collection)) ? canonicalSection : '';
   return {q: (p.get('q') ?? '').slice(0, 300), collection: collection || catalog.sections.find(s=>s.id===section)?.collection || '', section,
     year: catalog.years.map(String).includes(p.get('year')) ? p.get('year') : '',
     resource: ['paper','code','hf'].includes(p.get('resource')) ? p.get('resource') : '',
@@ -53,7 +66,7 @@ export function resourceHTML(r) {
 export function rowHTML(e, saved = false) {
   const shortName = e.title.includes(': ') ? e.title.split(': ')[0] : e.title;
   return `<article class="entry" data-id="${e.id}">
-    <div class="entry-meta"><span class="entry-year">${e.year ?? '—'}</span><span>${esc(e.path.at(-1) ?? e.collection)}</span>${e.kind === 'Analysis' ? '<span class="analysis-label">Analysis</span>' : ''}</div>
+    <div class="entry-meta"><span class="entry-year">${e.year ?? '—'}</span><span>${esc(e.path.at(-1) ?? e.collection)}</span>${e.kind !== 'Research entry' ? `<span class="analysis-label">${esc(e.kind)}</span>` : ''}</div>
     <div class="entry-main"><button class="entry-title" data-detail="${e.id}" title="${esc(e.title)}">${esc(shortName)}</button><p>${esc(e.notes || e.title)}</p><span class="venue">${esc(e.venue || 'See source for details')}</span></div>
     <div class="entry-resources">${e.resources.slice(0,3).map(resourceHTML).join('')}${e.resources.length > 3 ? `<button class="more-links" data-detail="${e.id}">+${e.resources.length-3} more</button>` : ''}</div>
     <button class="save-button ${saved ? 'is-saved' : ''}" data-save="${e.id}" aria-pressed="${saved}" aria-label="${saved ? 'Unsave' : 'Save'} ${esc(shortName)}" title="${saved ? 'Remove from saved' : 'Save for later'}">${bookmark}</button>

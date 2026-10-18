@@ -3,7 +3,7 @@ import {watch} from 'node:fs';
 import {readFile} from 'node:fs/promises';
 import {extname, resolve} from 'node:path';
 import {fileURLToPath} from 'node:url';
-import {build, readAssets, generatedPaths} from './build.mjs';
+import {build, readAssets, generatedPaths, staticPages} from './build.mjs';
 const root=fileURLToPath(new URL('../',import.meta.url));
 const base='/Awesome-Multimodal-Modeling/';
 const port=Number(process.env.PORT||4173);
@@ -12,7 +12,7 @@ let files;
 if(production){
   files=await readAssets();
   try {
-    for(const name of [...generatedPaths,'README.md']) files.set(name,await readFile(resolve(root,name)));
+    for(const name of [...generatedPaths,...staticPages,'README.md']) files.set(name,await readFile(resolve(root,name)));
   } catch(error) {
     console.error(`Missing root website files. Run npm run build first. ${error.message}`);
     process.exit(1);
@@ -37,7 +37,8 @@ const server=createServer((req,res)=>{
     const url=new URL(req.url,'http://localhost');
     if(url.pathname==='/'||url.pathname===base.slice(0,-1)){res.writeHead(302,{Location:base+url.search});res.end();return;}
     if(!url.pathname.startsWith(base)){res.writeHead(404);res.end('Not found');return;}
-    const file=decodeURIComponent(url.pathname.slice(base.length))||'index.html';
+    const path=decodeURIComponent(url.pathname.slice(base.length));
+    const file=path.endsWith('/') ? path+'index.html' : path||'index.html';
     if(!files.has(file)){res.writeHead(404);res.end('Not found');return;}
     const data=files.get(file);
     res.writeHead(200,{'Content-Type':types[extname(file)]||'application/octet-stream','Cache-Control':'no-cache','X-Content-Type-Options':'nosniff'});
