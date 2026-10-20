@@ -1,4 +1,4 @@
-import {PAGE_SIZE, esc, normalize, selectEntries, readState, stateSearch, rowHTML, resourceHTML, bookmark, resolveEntryId, migrateSavedEntries} from './library.js?v=f06ff0884e58';
+import {PAGE_SIZE, esc, normalize, selectEntries, readState, stateSearch, rowHTML, resourceHTML, bookmark, resolveEntryId, migrateSavedEntries} from './library.js?v=b15035128e5c';
 
 const $ = selector => document.querySelector(selector);
 const dialog = $('#entry-dialog');
