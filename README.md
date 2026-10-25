@@ -541,6 +541,7 @@ These groups describe the **vision-to-language interface**, rather than attentio
 | Flamingo: a Visual Language Model for Few-Shot Learning <!-- entry:59c06f66f55e --> | NeurIPS 2022 | [Paper](https://arxiv.org/abs/2204.14198) | Perceiver Resampler + gated cross-attention layers for few-shot multimodal prompting | few-shot visual understanding |
 | IDEFICS <!-- entry:88e2324eb8bd --> | — | [Hugging Face](https://huggingface.co/HuggingFaceM4/idefics) | 80B Flamingo-inspired model; Perceiver resampling and gated cross-attention connect visual features to the language model | open-source multimodal understanding |
 
+| HIVE: Hierarchical Pre-Training of Vision Encoders with Large Language Model | CVPR 2026 Workshop (MMFM) | [Paper](https://arxiv.org/abs/2604.00086) [Code](https://github.com/eugenelet/HIVE) | Hierarchical cross-attention fusing multi-layer vision features into the LLM; 3-stage training; gains on MME, GQA, OK-VQA, ScienceQA | vision-language pretraining |
 #### Hybrid Adaptor
 
 | Paper | Venue | Links | Notes | Task |
