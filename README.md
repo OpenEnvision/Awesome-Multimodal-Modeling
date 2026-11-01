@@ -385,6 +385,7 @@ The NMM diagrams below distinguish fusion topology from input architecture. The 
 | Paper | Venue | Links | Notes | Task |
 |---|---|---|---|---|
 | LanguageBind: Extending Video-Language Pretraining to N-modality by Language-based Semantic Alignment <!-- entry:fbaca709ab17 --> | arXiv 2023 | [Paper](https://arxiv.org/abs/2310.01852) [Code](https://github.com/PKU-YuanGroup/LanguageBind) | Language-centered alignment across image, video, audio, depth, thermal, and IMU modalities | multimodal alignment |
+| EXIF as Language: Learning Cross-Modal Associations between Images and Camera Metadata | CVPR 2023 | [Paper](https://arxiv.org/abs/2301.04647) | Treats EXIF camera metadata as language for cross-modal image-metadata alignment | multimodal alignment |
 | CLIP <!-- entry:a93adb5a3e62 --> | ICML 2021 | [Paper](https://arxiv.org/abs/2103.00020) | 400M+ image-text pairs; dual-encoder (Vision Transformer + Text Transformer); contrastive alignment of separate image/text embeddings; no joint image-text backbone | zero-shot image classification, retrieval |
 | CoMIR: Contrastive Multimodal Image Representation for Registration <!-- entry:15f5d87dfee5 --> | NeurIPS 2020 | [Paper](https://arxiv.org/abs/2006.06325) | Contrastive learning for multimodal image registration alignment | multimodal alignment |
 | Multimodal Transformer for Unaligned Multimodal Language Sequences <!-- entry:3efff8a9c285 --> | ACL 2019 | [Paper](https://arxiv.org/abs/1906.00295) | Transformer-based alignment for unaligned multimodal sequences | sequence alignment |
