@@ -1,13 +1,18 @@
 export const PAGE_SIZE = 12;
 export const esc = value => String(value ?? '').replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 export const normalize = value => String(value).normalize('NFKD').replace(/[\u0300-\u036f]/g, '').toLowerCase().replace(/[^\p{L}\p{N}]+/gu, ' ').trim();
+const isHuggingFace = hostname => hostname === 'huggingface.co' || hostname.endsWith('.huggingface.co');
+function resourceHost(url) {
+  try { return new URL(url).hostname.toLowerCase(); }
+  catch { return ''; }
+}
 export function resourceKind(link) {
-  let hostname = '';
-  try { hostname = new URL(link.url).hostname.toLowerCase(); } catch { /* Labels still classify an invalid URL. */ }
-  if (hostname === 'huggingface.co' || hostname.endsWith('.huggingface.co')) return 'hf';
+  if (/\b(?:paper|arxiv|report|proceedings)\b/i.test(link.label)) return 'paper';
+  if (/\b(?:code|implementation)\b/i.test(link.label)) return 'code';
+  const hostname = resourceHost(link.url);
+  if (isHuggingFace(hostname)) return 'hf';
+  if (/\b(?:announcement|blog|status|project|release history|model[ -]card)\b/i.test(link.label)) return 'other';
   if (hostname === 'github.com' || hostname.endsWith('.github.com') || hostname === 'raw.githubusercontent.com') return 'code';
-  if (/code|implementation/i.test(link.label)) return 'code';
-  if (/paper|arxiv|report/i.test(link.label)) return 'paper';
   return 'other';
 }
 export function resolveEntryId(catalog, id) {
@@ -20,11 +25,14 @@ export function migrateSavedEntries(catalog, ids) {
 }
 export function selectEntries(catalog, state, saved = new Set()) {
   const tokens = normalize(state.q).split(' ').filter(Boolean);
+  const matchesResource = state.resource === 'hf'
+    ? link => isHuggingFace(resourceHost(link.url))
+    : link => resourceKind(link) === state.resource;
   const found = catalog.entries.filter(e => {
     if (state.collection && e.collection !== state.collection) return false;
     if (state.section && !e.ancestors.includes(state.section)) return false;
     if (state.year && String(e.year) !== state.year) return false;
-    if (state.resource && !e.resources.some(r => resourceKind(r) === state.resource)) return false;
+    if (state.resource && !e.resources.some(matchesResource)) return false;
     if (state.saved && !saved.has(e.id)) return false;
     const text = normalize([e.title, e.notes, e.tasks, e.venue, e.collection, ...e.path, ...e.fields.map(f => f.value)].join(' '));
     return tokens.every(t => text.includes(t));

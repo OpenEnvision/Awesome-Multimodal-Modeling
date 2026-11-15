@@ -5,12 +5,12 @@ import {parseCatalog} from './catalog.mjs';
 import {migrateSavedEntries, readState, resolveEntryId, resourceKind, rowHTML, selectEntries, stateSearch} from '../assets/site/library.js';
 
 const noMigrations = {identities: {entryAliases: {}, sectionAliases: {}}};
-const source = ({collection = '2. Traditional', section = 'Original category', title = 'Original model', venue = 'arXiv 2020', url = 'https://example.org/original', id = 'persistent-123'} = {}) => `
+const source = ({collection = '2. Traditional', section = 'Original category', title = 'Original model', venue = 'arXiv 2020', url = 'https://example.org/original', id = 'persistent-123', label = 'Paper', notes = 'A model'} = {}) => `
 ## ${collection}
 ### ${section}
 | Paper | Venue | Links | Notes | Task |
 | --- | --- | --- | --- | --- |
-| ${title} <!-- entry:${id} --> | ${venue} | [Paper](${url}) | A model | Understanding |
+| ${title} <!-- entry:${id} --> | ${venue} | [${label}](${url}) | ${notes} | Understanding |
 `;
 
 test('an existing bookmark and detail URL survive simultaneous title, venue, primary URL and collection changes', () => {
@@ -58,10 +58,12 @@ test('renamed category links keep their filter and reject an incompatible collec
   assert.equal(readState('?collection=mllms&section=' + encodeURIComponent(oldSection), catalog).section, '');
 });
 
-test('all four retired production entries retain their original deep links and bookmarks', () => {
+test('retired production entries retain their original deep links and bookmarks', () => {
   const catalog = parseCatalog(readFileSync(new URL('../README.md', import.meta.url), 'utf8'));
   const expected = [
     ['804e9375cfd3', '9fac946b2b27', 'traditional'],
+    ['a93adb5a3e62', '9fac946b2b27', 'traditional'],
+    ['521128b79b82', '64f43671fa13', 'traditional'],
     ['ab98a6468b1e', '900d8adb0e86', 'mllms'],
     ['1317e9b32a52', '2f5bd280c1ba', 'mllms'],
     ['0eb7c6ae7c9a', '8403ff00096e', 'mllms'],
@@ -90,8 +92,23 @@ test('code filtering recognizes GitHub destinations and HF detection uses the ho
   assert.equal(resourceKind({label: 'HF', url: 'https://example.org/huggingface.co/model'}), 'other');
   assert.equal(resourceKind({label: 'Official', url: 'https://github.com.evil.example/repo'}), 'other');
   assert.equal(resourceKind({label: 'Paper', url: 'https://arxiv.org/abs/2501.00001'}), 'paper');
-  const catalog = parseCatalog(source({url: 'https://github.com/PaddlePaddle/PaddleOCR'}), noMigrations);
+  const catalog = parseCatalog(source({label: 'Official', url: 'https://github.com/PaddlePaddle/PaddleOCR'}), noMigrations);
   assert.equal(selectEntries(catalog, readState('?resource=code', catalog)).length, 1);
+});
+
+test('paper filtering recognizes reports and proceedings across hosts', () => {
+  const report = source({id: 'hosted-report', label: 'Report', url: 'https://huggingface.co/org/model/blob/main/technical-report.pdf'});
+  const proceedings = source({id: 'conference-paper', label: 'Proceedings', url: 'https://aclanthology.org/2026.acl-long.1/'});
+  const code = source({id: 'hosted-code', label: 'Implementation', url: 'https://huggingface.co/org/model/blob/main/modeling.py'});
+  const status = source({id: 'release-status', label: 'Release status', url: 'https://github.com/org/repo'});
+  const catalog = parseCatalog(report + proceedings + code + status, noMigrations);
+  const idsFor = kind => selectEntries(catalog, readState(`?resource=${kind}`, catalog)).map(e => e.id);
+  assert.deepEqual(idsFor('paper'), ['hosted-report', 'conference-paper']);
+  assert.deepEqual(idsFor('hf'), ['hosted-report', 'hosted-code']);
+  assert.deepEqual(idsFor('code'), ['hosted-code']);
+  for (const label of ['Announcement', 'Release status', 'Release history', 'Project', 'Model card']) {
+    assert.equal(resourceKind({label, url: 'https://github.com/org/repo'}), 'other');
+  }
 });
 
 test('only the dedicated Resources evaluation section enters the website catalog', () => {
@@ -126,9 +143,31 @@ test('only the dedicated Resources evaluation section enters the website catalog
 });
 
 test('first-public dates sort independently of conference years and future release promises', () => {
-  const catalog = parseCatalog(source({venue: 'NeurIPS 2026'}).replace('A model', 'First public: 2025-09-01; weights expected 2026-10-31'), noMigrations);
+  const catalog = parseCatalog(source({venue: 'NeurIPS 2026', notes: 'First public: 2025-09-01; weights expected 2026-10-31'}), noMigrations);
   assert.equal(catalog.entries[0].date, '2025-09-01');
   const release = parseCatalog(source({venue: 'Model release 2026-10-15'}), noMigrations);
   assert.equal(release.entries[0].date, '2026-10-15');
   assert.equal(parseCatalog(source(), noMigrations).entries[0].date, '2020-00-00');
+});
+
+test('month-only dates keep release order without inventing a release day', () => {
+  const releases = [
+    source({id: 'september-release', venue: 'Model release 2026-09-01'}),
+    source({id: 'august-month', venue: 'Model release 2026-08, report 2026-11-01'}),
+    source({id: 'july-release', venue: 'Model release 2026-07-31'}),
+    source({id: 'august-release', venue: 'Model release 2026-08-01'}),
+    source({id: 'first-public-month', venue: 'NeurIPS 2026, arXiv 2026-08-15', notes: 'First public: 2025-12 (code)'}),
+  ];
+  const catalog = parseCatalog(releases.join(''), noMigrations);
+  const oldest = selectEntries(catalog, readState('?sort=oldest', catalog));
+  const newest = selectEntries(catalog, readState('?sort=newest', catalog));
+  assert.deepEqual(oldest.map(e => [e.id, e.date]), [
+    ['first-public-month', '2025-12'],
+    ['july-release', '2026-07-31'],
+    ['august-month', '2026-08'],
+    ['august-release', '2026-08-01'],
+    ['september-release', '2026-09-01'],
+  ]);
+  assert.deepEqual(newest.map(e => e.id), oldest.map(e => e.id).reverse());
+  assert.equal(oldest[0].year, 2026);
 });

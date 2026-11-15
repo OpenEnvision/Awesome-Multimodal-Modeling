@@ -75,9 +75,10 @@ export function parseCatalog(markdown, {identities = identityMigrations} = {}) {
     const venue = get('Venue') || (rowHeaders[0] === 'Model' ? get('Paper') : '');
     const year = Number(venue.match(/\b(?:19|20)\d{2}\b/)?.[0] || stack.map(s => s.label).join(' ').match(/\b20\d{2}\b/)?.[0]) || null;
     const notes = get('Notes') || get('Insights') || get('Focus');
-    // A conference year and a later weights release are not a paper's first date.
-    const firstPublicDate = notes.match(/\bFirst public:\s*(20\d{2}-\d{2}-\d{2})\b/i)?.[1] ?? null;
-    const date = firstPublicDate ?? venue.match(/\b20\d{2}-\d{2}-\d{2}\b/)?.[0] ?? (year ? `${year}-00-00` : '0000-00-00');
+    // Preserve the precision of the first public date or the first dated venue/release.
+    const firstPublicDate = notes.match(/\bFirst public:\s*(20\d{2}-\d{2}(?:-\d{2})?)\b/i)?.[1];
+    const venueDate = venue.match(/\b20\d{2}-\d{2}(?:-\d{2})?\b/)?.[0];
+    const date = firstPublicDate ?? venueDate ?? (year ? `${year}-00-00` : '0000-00-00');
     const resources = linksFrom(cells[rowHeaders.indexOf('Links')] ?? '');
     const section = stack.at(-1)?.id ?? active.id;
     // An explicit source identity survives corrections to every piece of visible metadata.
